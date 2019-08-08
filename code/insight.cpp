@@ -3,12 +3,10 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions of the Lines of Code project
+// Purpose:	Provide insight into the code namely the number of lines of code
 //
 // *****************************************************************************************
 
-#ifndef LOC_DEFS_HH_
-#define LOC_DEFS_HH_
 
 // *****************************************************************************************
 //
@@ -16,26 +14,34 @@
 //
 // *****************************************************************************************
 
-// Import C++ system headers
+// Include OSAPI C++ headers
+
+// Include Standard headers
+#include <iostream>
+
+// Import module declarations
+#include "cmdArgs.hh"
+#include "fileSet.hh"
+#include "insight.hh"
+#include "fileExtensions.hh"
+#include "fileSet.hh"
+
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Function definition
 //
 // *****************************************************************************************
 
-#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
+namespace code
+{
 
- #define OS_LINUX		1
- #define LOC_MAIN		main
- #define t_char			char
+void insight( progOptions & options, fileSet * files )
+{
+  for( auto it : *files )
+       it->insight();
+}
 
-#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
 
- #define OS_WINDOWS		1
- #define LOC_MAIN		wmain
- #define t_char			wchar_t
 
-#endif
-
-#endif // LOC_DEFS_HH_
+}	// End of namespace "code"

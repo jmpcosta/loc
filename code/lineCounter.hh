@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions of the Lines of Code project
+// Purpose:	Provide the definitions/declarations for the code counter
 //
 // *****************************************************************************************
 
-#ifndef LOC_DEFS_HH_
-#define LOC_DEFS_HH_
+#ifndef LOC_LINECOUNTER_HH_
+#define LOC_LINECOUNTER_HH_
 
 // *****************************************************************************************
 //
@@ -17,25 +17,36 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <cstdint>
+
+// Import application headers
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
+namespace code
+{
 
- #define OS_LINUX		1
- #define LOC_MAIN		main
- #define t_char			char
+// Count lines of code
+class lineCounter
+{
+public:
+					lineCounter	( void )	{ counter = (uint64_t) 0; }
+		void		reset		( void )	{ counter = (uint64_t) 0; }
 
-#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
+		void		add 		( void )	{ counter++; }
+		void		sub 		( void )	{ counter--; }
 
- #define OS_WINDOWS		1
- #define LOC_MAIN		wmain
- #define t_char			wchar_t
 
-#endif
+private:
+		uint64_t	counter;
+};
 
-#endif // LOC_DEFS_HH_
+
+
+}	// End of namespace "code"
+
+#endif // LOC_LINECOUNTER_HH_

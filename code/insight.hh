@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions of the Lines of Code project
+// Purpose:	Provide the definitions/declarations for the command line arguments
 //
 // *****************************************************************************************
 
-#ifndef LOC_DEFS_HH_
-#define LOC_DEFS_HH_
+#ifndef LOC_INSIGHT_HH_
+#define LOC_INSIGHT_HH_
 
 // *****************************************************************************************
 //
@@ -17,25 +17,26 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <cstdint>
+
+// Import application headers
+#include "options.hh"
+#include "fileSet.hh"
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
+namespace code
+{
 
- #define OS_LINUX		1
- #define LOC_MAIN		main
- #define t_char			char
 
-#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
+void insight( progOptions & options, fileSet * files );
 
- #define OS_WINDOWS		1
- #define LOC_MAIN		wmain
- #define t_char			wchar_t
 
-#endif
 
-#endif // LOC_DEFS_HH_
+}	// End of namespace "code"
+
+#endif // LOC_INSIGHT_HH_

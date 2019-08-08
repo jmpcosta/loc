@@ -3,8 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Lines of Code main C++ function
-//			Read the README.md file for more information on the project
+// Purpose:	Implementation for managing the file system elements to be processed
 //
 // *****************************************************************************************
 
@@ -19,14 +18,14 @@
 
 // Include Standard headers
 #include <iostream>
-#include <cstdlib>
+#include <string>
+#include <vector>
 #include <filesystem>
 
 // Import module declarations
-#include "loc_defs.hh"
-#include "cmdArgs.hh"
-#include "fileSet.hh"
-#include "insight.hh"
+#include "file.hh"
+#include "fileExtensions.hh"
+
 
 using namespace std;
 
@@ -36,30 +35,42 @@ using namespace std;
 //
 // *****************************************************************************************
 
-int LOC_MAIN( int argc, t_char * argv[] )
+
+
+
+file::file( const string & filename )
 {
- progOptions	options;
-
- if( parse_command_line( argc, argv, options ) )
-   {
-	 const string & pathname = options.getPath();
-	 if( ! filesystem::exists( pathname ) )
-	   {
-		 cerr << "Unknown pathname:" << options.getPath() << endl;
-		 return EXIT_FAILURE;
-	   }
-
-	 fileSet * files = fileSet::builder( pathname );
-	 if( files == nullptr )
-	   {
-		 cerr << "Error when creating the list of processing files." << endl;
-		 return EXIT_FAILURE;
-	   }
-
-	 code::insight( options, files );
-	 delete files;
-   }
-
-
- return EXIT_SUCCESS;
+  iName = filename;
+  iLang = fileExtensions::get_language( filename );
 }
+
+file::~file()
+{}
+
+
+file * file::builder( const std::string & pathname )
+{
+  file * p_file = nullptr;
+
+  try
+  {
+	  if( filesystem::is_regular_file( pathname ) )
+	    {
+		  cerr << "New file:" << pathname << endl;
+		  p_file = new file( pathname );
+	    }
+  }
+
+  catch( const std::exception & e )
+       { cerr << "Exception found: " << e.what() << endl; }
+
+  return p_file;
+}
+
+
+
+void file::insight( void )
+{
+  cerr << __FUNCTION__ << ": Processing file:" << iName << endl;
+}
+

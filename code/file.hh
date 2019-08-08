@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions of the Lines of Code project
+// Purpose:	Provide the definitions/declarations for handling the FS elements to be processed
 //
 // *****************************************************************************************
 
-#ifndef LOC_DEFS_HH_
-#define LOC_DEFS_HH_
+#ifndef LOC_FILE_HH_
+#define LOC_FILE_HH_
 
 // *****************************************************************************************
 //
@@ -17,25 +17,40 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <string>
+
+// Import application headers
+#include "languageType.hh"
+#include "lineCounter.hh"
+
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
 
- #define OS_LINUX		1
- #define LOC_MAIN		main
- #define t_char			char
+class file
+{
+public:
+								~file		( void );
+		const std::string &		getName		( void ) const { return iName; };
+		void 					insight		( void );
 
-#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
+								// Factory method
+		static file  *			builder		( const std::string & pathname );
 
- #define OS_WINDOWS		1
- #define LOC_MAIN		wmain
- #define t_char			wchar_t
+private:
 
-#endif
+								file		( const std::string & filename );
 
-#endif // LOC_DEFS_HH_
+		std::string				iName;
+		code::lineCounter		iCounter;
+		languageType			iLang;
+};
+
+
+
+
+#endif // LOC_FILE_HH_

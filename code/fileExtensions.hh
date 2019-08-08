@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions of the Lines of Code project
+// Purpose:	Provide the definitions/declarations for the file extensions API
 //
 // *****************************************************************************************
 
-#ifndef LOC_DEFS_HH_
-#define LOC_DEFS_HH_
+#ifndef LOC_EXTENSIONS_HH_
+#define LOC_EXTENSIONS_HH_
 
 // *****************************************************************************************
 //
@@ -17,25 +17,23 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <string>
+
+// Import application headers
+#include "languageType.hh"
+
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
+class fileExtensions
+{
+public:
+		static	languageType get_language( const std::string & filename );
+		static	languageType get_language( const char * filename 		);
+};
 
- #define OS_LINUX		1
- #define LOC_MAIN		main
- #define t_char			char
-
-#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
-
- #define OS_WINDOWS		1
- #define LOC_MAIN		wmain
- #define t_char			wchar_t
-
-#endif
-
-#endif // LOC_DEFS_HH_
+#endif // LOC_EXTENSIONS_HH_

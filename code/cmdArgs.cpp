@@ -3,8 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Lines of Code main C++ function
-//			Read the README.md file for more information on the project
+// Purpose:	Parse the command line arguments
 //
 // *****************************************************************************************
 
@@ -19,16 +18,11 @@
 
 // Include Standard headers
 #include <iostream>
-#include <cstdlib>
-#include <filesystem>
+#include <cstring>
 
 // Import module declarations
-#include "loc_defs.hh"
 #include "cmdArgs.hh"
-#include "fileSet.hh"
-#include "insight.hh"
-
-using namespace std;
+#include "fileExtensions.hh"
 
 // *****************************************************************************************
 //
@@ -36,30 +30,29 @@ using namespace std;
 //
 // *****************************************************************************************
 
-int LOC_MAIN( int argc, t_char * argv[] )
+bool parse_command_line( int argc, t_char * argv[], progOptions & options )
 {
- progOptions	options;
+ bool ret = false;
 
- if( parse_command_line( argc, argv, options ) )
+ std::cerr << "Number of command line arguments:" << argc << std::endl;
+
+ /*
+ for( int i = 1; i < argc; i++ )
+    {
+	  // Check for Language
+	  if( strcmp( argv[ i ], "-l" ) == 0 && ( i + 1 < argc ) )
+	    {
+
+		  options.setLanguage( fileExtensions::get_language( argv[ i + 1 ] ) );
+	    }
+    }
+*/
+
+ if( argc == 2 && ! ret )	// A file name was provided ?
    {
-	 const string & pathname = options.getPath();
-	 if( ! filesystem::exists( pathname ) )
-	   {
-		 cerr << "Unknown pathname:" << options.getPath() << endl;
-		 return EXIT_FAILURE;
-	   }
-
-	 fileSet * files = fileSet::builder( pathname );
-	 if( files == nullptr )
-	   {
-		 cerr << "Error when creating the list of processing files." << endl;
-		 return EXIT_FAILURE;
-	   }
-
-	 code::insight( options, files );
-	 delete files;
+	 options.setPath( argv[ 1 ] );
+	 ret = true;
    }
 
-
- return EXIT_SUCCESS;
+ return ret;
 }

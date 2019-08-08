@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions of the Lines of Code project
+// Purpose:	Provide the definitions/declarations for the command line arguments
 //
 // *****************************************************************************************
 
-#ifndef LOC_DEFS_HH_
-#define LOC_DEFS_HH_
+#ifndef LOC_ARGS_HH_
+#define LOC_ARGS_HH_
 
 // *****************************************************************************************
 //
@@ -18,24 +18,16 @@
 
 // Import C++ system headers
 
+// Import application headers
+#include "loc_defs.hh"
+#include "options.hh"
+
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
+bool parse_command_line( int argc, t_char * argv[], progOptions & options );
 
- #define OS_LINUX		1
- #define LOC_MAIN		main
- #define t_char			char
-
-#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
-
- #define OS_WINDOWS		1
- #define LOC_MAIN		wmain
- #define t_char			wchar_t
-
-#endif
-
-#endif // LOC_DEFS_HH_
+#endif // LOC_ARGS_HH_
