@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for the code counter
+// Purpose:	Provide the definitions/declarations for aggregation of code statistics
 //
 // *****************************************************************************************
 
-#ifndef LOC_LINECOUNTER_HH_
-#define LOC_LINECOUNTER_HH_
+#ifndef LOC_STATISTICS_HH_
+#define LOC_STATISTICS_HH_
 
 // *****************************************************************************************
 //
@@ -21,6 +21,7 @@
 
 // Import application headers
 
+
 // *****************************************************************************************
 //
 // Section: Function declaration
@@ -30,23 +31,35 @@
 namespace code
 {
 
-// Count lines of code
-class lineCounter
+
+class statistics
 {
 public:
-					lineCounter	( void )	{ counter = (uint64_t) 0; }
-		void		reset		( void )	{ counter = (uint64_t) 0; }
+					statistics()			 { nlines = loc = nEmptyLines = 0; }
+					~statistics() {}
 
-		void		add 		( void )	{ counter++; }
-		void		sub 		( void )	{ counter--; }
+		void		addLoc			( void ) { loc++;				}
+		void		addLine			( void ) { nlines++;			}
+		void		addEmptyLine	( void ) { nEmptyLines++;		}
 
+		uint64_t	getLoc			( void ) { return loc;			}
+		uint64_t	getLines		( void ) { return nlines;		}
+		uint64_t	getEmptyLines	( void ) { return nEmptyLines;	}
 
 private:
-		uint64_t	counter;
+		uint64_t	nlines;
+		uint64_t	loc;
+		uint64_t	nEmptyLines;
+		// ...
 };
 
 
 
-}	// End of namespace "code"
 
-#endif // LOC_LINECOUNTER_HH_
+
+} 		// End of namespace "code"
+
+
+
+
+#endif // LOC_STATISTICS_HH_

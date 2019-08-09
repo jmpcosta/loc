@@ -23,6 +23,8 @@
 // Import application headers
 #include "languageType.hh"
 #include "comment.hh"
+#include "statistics.hh"
+
 
 // *****************************************************************************************
 //
@@ -38,13 +40,24 @@ namespace code
 class language
 {
 public:
-									~language();
-									language   ( languageType which )	{ lang = which;				}
-		void 						addComment ( comment * pc )			{ comments.push_back( pc );	}
-		std::vector<comment *> &	getComments( void ) 	 			{ return comments;			}
-
 		static language *			builder( languageType lang );		// Factory method
+									~language();
+
+		void 						addComment	( comment * pc )			{ comments.push_back( pc );	}
+		std::vector<comment *> &	getComments	( void ) 	 				{ return comments;			}
+		languageType				getType		( void )					{ return lang;				}
+
+
+		void						parse		( std::string & name, statistics & stats );
+
+
 private:
+
+		// Methods
+									language	( languageType which )	{ lang = which;				}
+		void						processLine	( std::string & line, statistics & stats );
+		// Variables
+
 		// Specific language
 		languageType				lang;
 

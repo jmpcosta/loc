@@ -21,7 +21,7 @@
 
 // Import application headers
 #include "languageType.hh"
-#include "lineCounter.hh"
+#include "statistics.hh"
 
 
 // *****************************************************************************************
@@ -46,8 +46,8 @@ private:
 								file		( const std::string & filename );
 
 		std::string				iName;
-		code::lineCounter		iCounter;
 		languageType			iLang;
+		code::statistics		iStats;
 };
 
 

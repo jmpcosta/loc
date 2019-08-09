@@ -25,6 +25,7 @@
 // Import module declarations
 #include "file.hh"
 #include "fileExtensions.hh"
+#include "Provider.hh"
 
 
 using namespace std;
@@ -69,8 +70,15 @@ file * file::builder( const std::string & pathname )
 
 
 
+
 void file::insight( void )
 {
   cerr << __FUNCTION__ << ": Processing file:" << iName << endl;
+
+  code::Provider & prov			= code::Provider::get();
+  code::language * fileParser	= prov.getParser( iLang );
+
+  fileParser->parse( iName, iStats );
+
 }
 

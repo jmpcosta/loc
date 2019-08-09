@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../code/Provider.cpp \
 ../code/cmdArgs.cpp \
 ../code/file.cpp \
 ../code/fileExtensions.cpp \
@@ -13,6 +14,7 @@ CPP_SRCS += \
 ../code/main.cpp 
 
 OBJS += \
+./code/Provider.o \
 ./code/cmdArgs.o \
 ./code/file.o \
 ./code/fileExtensions.o \
@@ -22,6 +24,7 @@ OBJS += \
 ./code/main.o 
 
 CPP_DEPS += \
+./code/Provider.d \
 ./code/cmdArgs.d \
 ./code/file.d \
 ./code/fileExtensions.d \
