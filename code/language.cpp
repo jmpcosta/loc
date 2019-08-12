@@ -21,6 +21,8 @@
 #include <fstream>
 
 // Import module declarations
+#include "trace.hh"
+#include "loc_defs.hh"
 #include "languageType.hh"
 #include "comment.hh"
 #include "language.hh"
@@ -33,8 +35,7 @@
 //
 // *****************************************************************************************
 
-namespace code
-{
+TRACE_CLASSNAME( language )
 
 
 language::~language()
@@ -48,6 +49,7 @@ language * language::builder( languageType type )
  comment * p_cmt	= nullptr;
  language * p_lang	= nullptr;
 
+ TRACE_ENTER
  switch( type )
  {
  	 case languageType::C:
@@ -70,7 +72,7 @@ language * language::builder( languageType type )
   	case languageType::CSH:
   							 p_lang = new language( type );
 	 	 	 	 	 	 	 p_cmt = new comment();
-	 	 	 	 	 	 	 p_cmt->setStart( "//" );
+	 	 	 	 	 	 	 p_cmt->setStart( "#" );
 	 	 	 	 	 	 	 p_lang->addComment( p_cmt );
 	 	 	 	 	 	 	 break;
 
@@ -79,36 +81,8 @@ language * language::builder( languageType type )
   	default:				 break;
  }
 
+ TRACE_EXIT
+
  return p_lang;
 }
 
-void language::processLine( std::string & line, statistics & stats )
-{
- std::cerr << __FUNCTION__ << " : Parsing line:" << line << std::endl;
-
- stats.addLine();
-
-}
-
-void language::parse( std::string & filename, statistics & stats )
-{
- // Open file for reading
- std::ifstream file( filename.c_str() );
-
- std::cerr << __FUNCTION__ << " : Parsing file" << filename << std::endl;
-
- if( file.is_open() )
-   {
-	 std::string line;
-
-	 while( getline( file, line ) )
-	 	    processLine( line, stats );
-
-	 std::cerr << __FUNCTION__ << " : Number of lines in file: " << stats.getLines() << std::endl;
-
-	 file.close();
-   }
-}
-
-
-}	// End of namespace "code"

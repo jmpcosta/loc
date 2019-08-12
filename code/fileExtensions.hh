@@ -20,6 +20,7 @@
 #include <string>
 
 // Import application headers
+#include "trace_macros.hh"
 #include "languageType.hh"
 
 
@@ -34,6 +35,11 @@ class fileExtensions
 public:
 		static	languageType get_language( const std::string & filename );
 		static	languageType get_language( const char * filename 		);
+
+private:
+
+		// Variables
+		TRACE_CLASSNAME_DECLARATION
 };
 
 #endif // LOC_EXTENSIONS_HH_

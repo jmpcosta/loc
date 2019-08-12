@@ -20,7 +20,7 @@
 #include <cstdint>
 
 // Import application headers
-
+#include "trace_macros.hh"
 
 // *****************************************************************************************
 //
@@ -28,36 +28,31 @@
 //
 // *****************************************************************************************
 
-namespace code
-{
 
 
 class statistics
 {
 public:
-					statistics()			 { nlines = loc = nEmptyLines = 0; }
-					~statistics() {}
+					statistics();
+					~statistics();
 
-		void		addLoc			( void ) { loc++;				}
-		void		addLine			( void ) { nlines++;			}
-		void		addEmptyLine	( void ) { nEmptyLines++;		}
+		void		addLoc			( void );
+		void		addLine			( void );
+		void		addEmptyLine	( void );
 
-		uint64_t	getLoc			( void ) { return loc;			}
-		uint64_t	getLines		( void ) { return nlines;		}
-		uint64_t	getEmptyLines	( void ) { return nEmptyLines;	}
+		uint64_t	getLoc			( void );
+		uint64_t	getLines		( void );
+		uint64_t	getEmptyLines	( void );
 
 private:
 		uint64_t	nlines;
 		uint64_t	loc;
 		uint64_t	nEmptyLines;
 		// ...
+		TRACE_CLASSNAME_DECLARATION
 };
 
 
-
-
-
-} 		// End of namespace "code"
 
 
 

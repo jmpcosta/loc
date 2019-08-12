@@ -4,34 +4,37 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../code/Provider.cpp \
+../code/LanguageProvider.cpp \
 ../code/cmdArgs.cpp \
+../code/code.cpp \
 ../code/file.cpp \
 ../code/fileExtensions.cpp \
 ../code/fileSet.cpp \
-../code/insight.cpp \
 ../code/language.cpp \
-../code/main.cpp 
+../code/main.cpp \
+../code/statistics.cpp 
 
 OBJS += \
-./code/Provider.o \
+./code/LanguageProvider.o \
 ./code/cmdArgs.o \
+./code/code.o \
 ./code/file.o \
 ./code/fileExtensions.o \
 ./code/fileSet.o \
-./code/insight.o \
 ./code/language.o \
-./code/main.o 
+./code/main.o \
+./code/statistics.o 
 
 CPP_DEPS += \
-./code/Provider.d \
+./code/LanguageProvider.d \
 ./code/cmdArgs.d \
+./code/code.d \
 ./code/file.d \
 ./code/fileExtensions.d \
 ./code/fileSet.d \
-./code/insight.d \
 ./code/language.d \
-./code/main.d 
+./code/main.d \
+./code/statistics.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

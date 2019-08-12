@@ -20,7 +20,8 @@
 #include <iostream>
 
 // Import module declarations
-#include "Provider.hh"
+#include "trace.hh"
+#include "LanguageProvider.hh"
 
 
 // *****************************************************************************************
@@ -29,22 +30,25 @@
 //
 // *****************************************************************************************
 
-namespace code
+TRACE_CLASSNAME( LanguageProvider )
+
+
+
+LanguageProvider & LanguageProvider::get()
 {
+ static	LanguageProvider instance;
 
-
-
-Provider & Provider::get()
-{
- static	Provider instance;
+ TRACE_POINT
 
  return instance;
 }
 
 
-language * Provider::getParser( languageType which )
+language * LanguageProvider::getParser( languageType which )
 {
  language * p_lang = nullptr;
+
+ TRACE_ENTER
 
  for( const auto & i : iLanguages )
  	  if( which == i->getType() )
@@ -61,12 +65,13 @@ language * Provider::getParser( languageType which )
  // If we were able to create such parser, add it to the list
  if( p_lang != nullptr )
    {
-	 std::cerr << "New language added to list:" << static_cast<int>( which ) << std::endl;
+	 TRACE( "New language added to list:", static_cast<int>( which ) )
 	 iLanguages.push_back( p_lang );
    }
+
+ TRACE_EXIT
 
  return p_lang;
 }
 
 
-}	// End of namespace "code"

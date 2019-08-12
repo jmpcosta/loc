@@ -21,7 +21,7 @@
 #include <vector>
 
 // Import application headers
-#include "languageType.hh"
+
 
 
 
@@ -31,25 +31,24 @@
 //
 // *****************************************************************************************
 
-namespace code
-{
 
 class comment
 {
 public:
-		comment() 							{ start=""; end=""; multiline=false; }
+								comment() 										{ start=""; end=""; multiline=false; }
 
-		void setStart( const std::string & token ) { start = token; }
-		void setStart( const char * token 		 ) { start = token; }
-		const std::string & getStart( void ) const { return start;  }
+		void 					setStart		( const std::string & token )	{ start = token; }
+		void 					setStart		( const char * token 		)	{ start = token; }
+		const std::string & 	getStart		( void ) const					{ return start;  }
 
-		void setEnd( std::string & token ) { end = token; }
-		void setEnd( const char  * token ) { end = token; }
-		const std::string & getEnd( void ) const { return end;  }
+		void					setEnd			( std::string & token )			{ end = token; }
+		void					setEnd			( const char  * token )			{ end = token; }
+		const std::string &		getEnd			( void ) const 					{ return end;  }
+		bool					hasEnd			()								{ return (end.size() > 0); }
 
-		void setMultiline ( void ) { multiline = true;  }
-		void setSingleline( void ) { multiline = false; }
-		bool isMultiLine  ( void ) { return multiline;  }
+		void 					setMultiline	( void ) 						{ multiline = true;  }
+		void 					setSingleline	( void ) 						{ multiline = false; }
+		bool 					isMultiLine  	( void ) 						{ return multiline;  }
 
 private:
 
@@ -59,6 +58,5 @@ private:
 };
 
 
-} 		// End of namespace "code"
 
 #endif // LOC_COMMENT_HH_

@@ -20,6 +20,7 @@
 #include <string>
 
 // Import application headers
+#include "trace_macros.hh"
 #include "languageType.hh"
 #include "statistics.hh"
 
@@ -34,20 +35,20 @@
 class file
 {
 public:
-								~file		( void );
-		const std::string &		getName		( void ) const { return iName; };
-		void 					insight		( void );
+								~file			( void );
+		const std::string &		getName			( void ) const	{ return iName;	}
+		languageType			getLanguage		( void ) const	{ return iLang;	}
 
-								// Factory method
-		static file  *			builder		( const std::string & pathname );
+		// Factory method
+		static file  *			builder			( const std::string & pathname );
 
 private:
-
-								file		( const std::string & filename );
+								file			( const std::string & filename );
 
 		std::string				iName;
 		languageType			iLang;
-		code::statistics		iStats;
+
+		TRACE_CLASSNAME_DECLARATION
 };
 
 

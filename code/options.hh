@@ -20,6 +20,7 @@
 #include <string>
 
 // Import application headers
+#include "trace_macros.hh"
 #include "loc_defs.hh"
 #include "languageType.hh"
 
@@ -35,20 +36,22 @@
 class progOptions
 {
 public:
-								progOptions()  { language = languageType::autodetect; pathname = "."; }
-								~progOptions() {}
+								progOptions		()								{ language = languageType::autodetect; pathname = "."; }
+								~progOptions	()								{}
 
-		void 					setLanguage( languageType lang )	{ language = lang; }
-		languageType			getLanguage( void ) const           { return language; }
+		void 					setLanguage		( languageType lang )			{ language = lang; }
+		languageType			getLanguage		( void ) const           		{ return language; }
 
-		void 					setPath( const std::string & path )   { pathname = path; }
-		void 					setPath( const t_char * path      )   { pathname = path; }
-		const std::string & 	getPath( void ) const         		  { return pathname; }
+		void 					setPath			( const std::string & path )   	{ pathname = path; }
+		void 					setPath			( const t_char * path      )   	{ pathname = path; }
+		const std::string & 	getPath			( void ) const         		  	{ return pathname; }
 
 private:
 
 		languageType			language;
 		std::string				pathname;
+
+		TRACE_CLASSNAME_DECLARATION
 };
 
 

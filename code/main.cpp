@@ -23,10 +23,11 @@
 #include <filesystem>
 
 // Import module declarations
+#include "trace.hh"
 #include "loc_defs.hh"
 #include "cmdArgs.hh"
+#include "code.hh"
 #include "fileSet.hh"
-#include "insight.hh"
 
 using namespace std;
 
@@ -39,6 +40,7 @@ using namespace std;
 int LOC_MAIN( int argc, t_char * argv[] )
 {
  progOptions	options;
+ code			code;
 
  if( parse_command_line( argc, argv, options ) )
    {
@@ -56,7 +58,8 @@ int LOC_MAIN( int argc, t_char * argv[] )
 		 return EXIT_FAILURE;
 	   }
 
-	 code::insight( options, files );
+	 code.insight( options, files );
+
 	 delete files;
    }
 

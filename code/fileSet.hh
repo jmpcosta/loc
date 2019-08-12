@@ -21,6 +21,7 @@
 #include <vector>
 
 // Import application headers
+#include "trace_macros.hh"
 #include "file.hh"
 
 
@@ -60,6 +61,8 @@ private:
 
 		// Pathnames to file system elements
 		std::vector<file *>		locations;
+
+		TRACE_CLASSNAME_DECLARATION
 };
 
 

@@ -23,6 +23,7 @@
 #include <filesystem>
 
 // Import module declarations
+#include "trace.hh"
 #include "file.hh"
 #include "fileSet.hh"
 
@@ -34,82 +35,99 @@ using namespace std;
 //
 // *****************************************************************************************
 
+TRACE_CLASSNAME( fileSet )
 
 
 fileSet * fileSet::directoryBuilder( const std::string & pathname )
 {
-  fileSet * 		p_files	= nullptr;
-  file	  * 		p_file	= nullptr;
-  vector<file *>	vec;
+ fileSet * 		p_files	= nullptr;
+ file	  * 		p_file	= nullptr;
+ vector<file *>	vec;
 
-  try
-  {
-	  for( auto & it: filesystem::recursive_directory_iterator( pathname ) )
-	  	 {
-		   p_file = file::builder( it.path() );
+ TRACE_ENTER
 
-		   if( p_file != nullptr )
-		   	 {
-			   cerr << "Adding file to list:" << it.path() << endl;
-			   vec.push_back( p_file );
-		   	 }
-	  	 }
+ try
+ {
+  for( auto & it: filesystem::recursive_directory_iterator( pathname ) )
+  	 {
+	   p_file = file::builder( it.path() );
 
-	  if( vec.size() > 0 )
-		  p_files = new fileSet( vec );
-  }
+	   if( p_file != nullptr )
+	     {
+		   TRACE( "Adding file to list:", it.path() )
+		   vec.push_back( p_file );
+	     }
+  	 }
 
-  catch( const std::exception & e )
-       { cerr << "Exception found: " << e.what() << endl; }
+  if( vec.size() > 0 )
+	  p_files = new fileSet( vec );
+ }
 
-  return p_files;
+ catch( const std::exception & e )
+ { cerr << "Exception found: " << e.what() << endl; }
+
+ TRACE_EXIT
+
+ return p_files;
 }
 
 
 fileSet * fileSet::builder( const std::string & pathname )
 {
-  fileSet * p_files	= nullptr;
-  file	  *	p_file	= nullptr;
+ fileSet * p_files	= nullptr;
+ file	  *	p_file	= nullptr;
 
-  try
-  {
-	  if( filesystem::is_regular_file( pathname ) )
-	    {
-		  p_file = file::builder( pathname );
-		  if( p_file != nullptr )
-		    {
-			  cerr << "Adding file to list:" << pathname << endl;
-			  p_files = new fileSet( p_file );
-		    }
-	    }
+ TRACE_ENTER
 
-	  if( filesystem::is_directory( pathname ) )
-		  p_files = fileSet::directoryBuilder( pathname );
-  }
+ try
+ {
+   if( filesystem::is_regular_file( pathname ) )
+     {
+	   p_file = file::builder( pathname );
+	   if( p_file != nullptr )
+	     {
+		   TRACE( "Adding file to list:", pathname )
+		   p_files = new fileSet( p_file );
+	     }
+     }
 
-  catch( const std::exception & e )
-       { cerr << "Exception found: " << e.what() << endl; }
+   if( filesystem::is_directory( pathname ) )
+	   p_files = fileSet::directoryBuilder( pathname );
+ }
 
-  return p_files;
+ catch( const std::exception & e )
+ { cerr << "Exception found: " << e.what() << endl; }
+
+ TRACE_EXIT
+
+ return p_files;
 }
 
 
 
 fileSet::fileSet( file * p_file )
 {
-  locations.push_back( p_file );
+ TRACE_ENTER
+
+ locations.push_back( p_file );
 }
 
 
 fileSet::fileSet( vector<file *> & vec )
 {
-  locations = std::move( vec );
+ TRACE_ENTER
+
+ locations = std::move( vec );
+
+ TRACE_EXIT
 }
 
 fileSet::~fileSet()
 {
-  for( const auto i : locations )
-	   delete i;
+ TRACE_POINT
+
+ for( const auto i : locations )
+	  delete i;
 }
 
 

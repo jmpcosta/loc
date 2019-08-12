@@ -19,13 +19,12 @@
 // Include Standard headers
 #include <iostream>
 #include <string>
-#include <vector>
 #include <filesystem>
 
 // Import module declarations
-#include "file.hh"
+#include "trace.hh"
 #include "fileExtensions.hh"
-#include "Provider.hh"
+#include "file.hh"
 
 
 using namespace std;
@@ -36,28 +35,36 @@ using namespace std;
 //
 // *****************************************************************************************
 
-
+TRACE_CLASSNAME( file )
 
 
 file::file( const string & filename )
 {
-  iName = filename;
-  iLang = fileExtensions::get_language( filename );
+ TRACE_ENTER
+
+ iName 		= filename;
+ iLang		= fileExtensions::get_language( filename );
+
+ TRACE_EXIT
 }
 
 file::~file()
-{}
+{
+ TRACE_POINT
+}
 
 
 file * file::builder( const std::string & pathname )
 {
   file * p_file = nullptr;
 
+  TRACE_ENTER
+
   try
   {
 	  if( filesystem::is_regular_file( pathname ) )
 	    {
-		  cerr << "New file:" << pathname << endl;
+		  TRACE( "New file:", pathname )
 		  p_file = new file( pathname );
 	    }
   }
@@ -65,20 +72,9 @@ file * file::builder( const std::string & pathname )
   catch( const std::exception & e )
        { cerr << "Exception found: " << e.what() << endl; }
 
+  TRACE_EXIT
+
   return p_file;
 }
 
-
-
-
-void file::insight( void )
-{
-  cerr << __FUNCTION__ << ": Processing file:" << iName << endl;
-
-  code::Provider & prov			= code::Provider::get();
-  code::language * fileParser	= prov.getParser( iLang );
-
-  fileParser->parse( iName, iStats );
-
-}
 

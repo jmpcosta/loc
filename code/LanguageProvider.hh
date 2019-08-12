@@ -7,8 +7,8 @@
 //
 // ***********************************************************************************************
 
-#ifndef LOC_CODE_PROVIDER_HH_
-#define LOC_CODE_PROVIDER_HH_
+#ifndef LOC_LANGUAGEPROVIDER_HH_
+#define LOC_LANGUAGEPROVIDER_HH_
 
 // *****************************************************************************************
 //
@@ -19,6 +19,7 @@
 // Import C++ system headers
 
 // Import application headers
+#include "trace_macros.hh"
 #include "languageType.hh"
 #include "language.hh"
 
@@ -28,40 +29,36 @@
 //
 // *****************************************************************************************
 
-namespace code
-{
 
-
-class Provider
+class LanguageProvider
 {
 public:
-									~Provider() {}
+									~LanguageProvider() {}
 
-		static Provider	&			get( void );		// Singleton method
+		static LanguageProvider	&	get( void );		// Singleton method
 		language		*			getParser( languageType which );
 
 		// delete copy and move constructors and assign operators
-		Provider(Provider const&) 				= delete;		// Copy construct
-		Provider(Provider &&     )				= delete;		// Move construct
-		Provider& operator=(Provider const&)	= delete; 		// Copy assign
-		Provider& operator=(Provider &&    )	= delete;		// Move assign
+		LanguageProvider(LanguageProvider const&) 				= delete;		// Copy construct
+		LanguageProvider(LanguageProvider &&     )				= delete;		// Move construct
+		LanguageProvider& operator=(LanguageProvider const&)	= delete; 		// Copy assign
+		LanguageProvider& operator=(LanguageProvider &&    )	= delete;		// Move assign
 
 private:
 		// Methods
-									Provider() {}
+									LanguageProvider() {}
 
 
 		// Variables
 		std::vector<language *>		iLanguages;
+
+		TRACE_CLASSNAME_DECLARATION
 };
 
 
 
 
 
-} 		// End of namespace "code"
 
 
-
-
-#endif // LOC_CODE_PROVIDER_HH_
+#endif // LOC_LANGUAGEPROVIDER_HH_

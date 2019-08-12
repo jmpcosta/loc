@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide insight into the code namely the number of lines of code
+// Purpose:	Implementation for processing code statistics
 //
 // *****************************************************************************************
 
@@ -18,14 +18,13 @@
 
 // Include Standard headers
 #include <iostream>
+#include <string>
 
 // Import module declarations
-#include "cmdArgs.hh"
-#include "fileSet.hh"
-#include "insight.hh"
-#include "fileExtensions.hh"
-#include "fileSet.hh"
+#include "trace.hh"
+#include "statistics.hh"
 
+using namespace std;
 
 // *****************************************************************************************
 //
@@ -33,15 +32,49 @@
 //
 // *****************************************************************************************
 
-namespace code
-{
+TRACE_CLASSNAME( statistics )
 
-void insight( progOptions & options, fileSet * files )
+statistics::statistics()
 {
-  for( auto it : *files )
-       it->insight();
+ TRACE_POINT
+ nlines = loc = nEmptyLines = 0;
+}
+statistics::~statistics()
+{
+ TRACE_POINT
 }
 
+void statistics::addLoc( void )
+{
+ TRACE_POINT
+ loc++;
+}
+void statistics::addLine( void )
+{
+ TRACE_POINT
+ nlines++;
+}
 
+void statistics::addEmptyLine( void )
+{
+ TRACE_POINT
+ nEmptyLines++;
+}
 
-}	// End of namespace "code"
+uint64_t statistics::getLoc( void )
+{
+ TRACE_POINT
+ return loc;
+}
+
+uint64_t statistics::getLines( void )
+{
+ TRACE_POINT
+ return nlines;
+}
+uint64_t statistics::getEmptyLines( void )
+{
+ TRACE_POINT
+ return nEmptyLines;
+}
+

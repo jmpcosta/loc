@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for the command line arguments
+// Purpose:	Provide tracing declarations/definitions
 //
 // *****************************************************************************************
 
-#ifndef LOC_INSIGHT_HH_
-#define LOC_INSIGHT_HH_
+#ifndef LOC_TRACE_HH_
+#define LOC_TRACE_HH_
 
 // *****************************************************************************************
 //
@@ -17,26 +17,39 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <cstdint>
+#include <iostream>
 
-// Import application headers
-#include "options.hh"
-#include "fileSet.hh"
 
 // *****************************************************************************************
 //
-// Section: Function declaration
+// Section: Trace API declaration/definition
 //
 // *****************************************************************************************
 
-namespace code
+
+#ifdef LOC_TRACING
+
+// Trace template composed of the next two entries
+template <typename V>
+void trace( const V & value  )
 {
+ std::cerr << value;
+ std::cerr << std::endl;
+}
+
+template <typename V, typename... R>
+void trace( const V & value, const R & ... rest  )
+{
+ std::cerr << value;
+
+ trace( rest... );
+}
 
 
-void insight( progOptions & options, fileSet * files );
+#endif	// LOC_TRACING
 
 
 
-}	// End of namespace "code"
 
-#endif // LOC_INSIGHT_HH_
+
+#endif /* LOC_TRACE_HH_ */
