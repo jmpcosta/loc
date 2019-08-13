@@ -33,16 +33,17 @@
 class statistics
 {
 public:
-					statistics();
-					~statistics();
+					statistics() 				{ loc = 0; nlines = 0; nEmptyLines = 0;	}
+					~statistics()				{										}
 
-		void		addLoc			( void );
-		void		addLine			( void );
-		void		addEmptyLine	( void );
+		void		reset			( void )	{ loc = 0; nlines = 0; nEmptyLines = 0;	}
+		void		addLoc			( void )	{ loc++;								}
+		void		addLine			( void )	{ nlines++;								}
+		void		addEmptyLine	( void )	{ nEmptyLines++;						}
 
-		uint64_t	getLoc			( void );
-		uint64_t	getLines		( void );
-		uint64_t	getEmptyLines	( void );
+		uint64_t	getLoc			( void )	{ return loc;							}
+		uint64_t	getLines		( void )	{ return nlines;						}
+		uint64_t	getEmptyLines	( void )	{ return nEmptyLines;					}
 
 private:
 		uint64_t	nlines;

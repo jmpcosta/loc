@@ -50,6 +50,16 @@ code::code()
 }
 
 
+inline void code::addLine( void )
+{ gStats.addLine(); fStats.addLine(); }
+
+inline void code::addEmptyLine( void )
+{ gStats.addEmptyLine(); fStats.addEmptyLine(); }
+
+inline void code::addLoc( void )
+{ gStats.addLoc(); fStats.addLoc(); }
+
+
 // Check if there are relevant characters in the string up to a given search length
 bool code::hasInformation( const char * str, std::size_t len )
 {
@@ -89,8 +99,9 @@ void code::endComment( std::string & line, std::size_t start )
 {
  std::size_t				len 		= 0;
  std::size_t				token_pos	= std::string::npos;
- const char 	*			ptr			= &(line.c_str()[ start ]);
  language::iterator			it;
+
+ TRACE_IF( const char 	*			ptr			= &(line.c_str()[ start ]); )
 
  TRACE_ENTER
 
@@ -222,12 +233,12 @@ void code::processLine( std::string & line )
  TRACE( "------------------------------------------------------------" )
  TRACE( "Entering with commentOpen:", commentOpen ? "true": "false" )
 
- iStats.addLine();
+ addLine();
 
  // Check for empty lines
  if( line.size() == 0 || ! hasInformation( line.c_str(), line.size() ) )
    {
-	 iStats.addEmptyLine();
+	 addEmptyLine();
 	 return;
    }
 
@@ -235,10 +246,9 @@ void code::processLine( std::string & line )
 
  search( line, 0 );
 
- if( codeAvailable )
-	 iStats.addLoc();
+ if( codeAvailable ) addLoc();
 
- TRACE( " : current LOC: ", iStats.getLoc() )
+ TRACE( " : current LOC: ", fStats.getLoc() )
 
  TRACE_EXIT
 }
@@ -266,6 +276,9 @@ void code::loc( file * fl )
 {
  TRACE_ENTER
 
+ // Reset file statistics
+ fStats.reset();
+
  // Open file for reading
  std::ifstream sourceFile( fl->getName().c_str() );
 
@@ -277,9 +290,10 @@ void code::loc( file * fl )
      sourceFile.close();
    }
 
- std::cout << "Number of TOTAL lines in file: " << iStats.getLines() 		<< std::endl;
- std::cout << "Number of EMPTY lines in file: " << iStats.getEmptyLines()	<< std::endl;
- std::cout << "Number of LOC in file: "         << iStats.getLoc()			<< std::endl;
+ std::cout << "Lines in file: "			<< fStats.getLines() 		<< std::endl;
+ std::cout << "Empty lines in file: "	<< fStats.getEmptyLines()	<< std::endl;
+ std::cout << "LOC in file: "			<< fStats.getLoc()			<< std::endl;
+ std::cout << std::endl;
 
  TRACE_EXIT
 }
@@ -291,6 +305,9 @@ void code::insight( progOptions & options, fileSet * files )
 
  LanguageProvider & prov	= LanguageProvider::get();
 
+ // Reset Global stats
+ gStats.reset();
+
  // Get insight for the set of file
  for( auto it : *files )
     {
@@ -299,6 +316,11 @@ void code::insight( progOptions & options, fileSet * files )
 	  p_lang = prov.getParser( it->getLanguage() );
 	  loc( it );
     }
+
+ std::cout << "TOTAL of processed lines: " 	  << gStats.getLines() 		<< std::endl;
+ std::cout << "Total number of EMPTY lines: " << gStats.getEmptyLines()	<< std::endl;
+ std::cout << "Total Lines of Code: "         << gStats.getLoc()		<< std::endl;
+ std::cout << std::endl;
 
  TRACE_EXIT
 }

@@ -31,18 +31,34 @@
 
 using namespace std;
 
+
+// *****************************************************************************************
+//
+// Section: Function declaration
+//
+// *****************************************************************************************
+
+void display_usage( t_char * progname );
+
 // *****************************************************************************************
 //
 // Section: Function definition
 //
 // *****************************************************************************************
 
+void display_usage( t_char * progname )
+{
+	cout << progname << "\t[ base code directory | source file name ]" << endl << endl;
+}
+
 int LOC_MAIN( int argc, t_char * argv[] )
 {
  progOptions	options;
  code			code;
 
- if( parse_command_line( argc, argv, options ) )
+ if( ! parse_command_line( argc, argv, options ) )
+	 display_usage( argv[ 0 ] );
+ else
    {
 	 const string & pathname = options.getPath();
 	 if( ! filesystem::exists( pathname ) )

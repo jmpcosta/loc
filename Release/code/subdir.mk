@@ -11,8 +11,7 @@ CPP_SRCS += \
 ../code/fileExtensions.cpp \
 ../code/fileSet.cpp \
 ../code/language.cpp \
-../code/main.cpp \
-../code/statistics.cpp 
+../code/main.cpp 
 
 OBJS += \
 ./code/LanguageProvider.o \
@@ -22,8 +21,7 @@ OBJS += \
 ./code/fileExtensions.o \
 ./code/fileSet.o \
 ./code/language.o \
-./code/main.o \
-./code/statistics.o 
+./code/main.o 
 
 CPP_DEPS += \
 ./code/LanguageProvider.d \
@@ -33,8 +31,7 @@ CPP_DEPS += \
 ./code/fileExtensions.d \
 ./code/fileSet.d \
 ./code/language.d \
-./code/main.d \
-./code/statistics.d 
+./code/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
