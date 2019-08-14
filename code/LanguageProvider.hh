@@ -20,6 +20,7 @@
 
 // Import application headers
 #include "trace_macros.hh"
+#include "singleton.hh"
 #include "languageType.hh"
 #include "language.hh"
 
@@ -30,24 +31,13 @@
 // *****************************************************************************************
 
 
-class LanguageProvider
+class LanguageProvider : public Singleton<LanguageProvider>
 {
 public:
-									~LanguageProvider() {}
-
-		static LanguageProvider	&	get( void );		// Singleton method
 		language		*			getParser( languageType which );
-
-		// delete copy and move constructors and assign operators
-		LanguageProvider(LanguageProvider const&) 				= delete;		// Copy construct
-		LanguageProvider(LanguageProvider &&     )				= delete;		// Move construct
-		LanguageProvider& operator=(LanguageProvider const&)	= delete; 		// Copy assign
-		LanguageProvider& operator=(LanguageProvider &&    )	= delete;		// Move assign
 
 private:
 		// Methods
-									LanguageProvider() {}
-
 
 		// Variables
 		std::vector<language *>		iLanguages;

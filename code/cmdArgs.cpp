@@ -30,11 +30,10 @@
 //
 // *****************************************************************************************
 
+
 bool parse_command_line( int argc, t_char * argv[], progOptions & options )
 {
  bool ret = false;
-
- TRACE( "Number of command line arguments:" , argc )
 
  /*
  for( int i = 1; i < argc; i++ )

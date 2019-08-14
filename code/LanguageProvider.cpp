@@ -34,15 +34,6 @@ TRACE_CLASSNAME( LanguageProvider )
 
 
 
-LanguageProvider & LanguageProvider::get()
-{
- static	LanguageProvider instance;
-
- TRACE_POINT
-
- return instance;
-}
-
 
 language * LanguageProvider::getParser( languageType which )
 {

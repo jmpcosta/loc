@@ -45,7 +45,7 @@ languageType fileExtensions::get_language( const std::string & filename )
  int 			i, j;
  string			ext;
 
- TRACE_ENTER
+ TRACE( "Entering with filename:", filename )
 
  // Get filename extension
  filesystem::path myPath( filename );

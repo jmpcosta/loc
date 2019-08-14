@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef LOC_ARGS_HH_
-#define LOC_ARGS_HH_
+#ifndef LOC_CMDARGS_HH_
+#define LOC_CMDARGS_HH_
 
 // *****************************************************************************************
 //
@@ -30,4 +30,4 @@
 
 bool parse_command_line( int argc, t_char * argv[], progOptions & options );
 
-#endif // LOC_ARGS_HH_
+#endif // LOC_CMDARGS_HH_

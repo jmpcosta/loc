@@ -95,7 +95,7 @@ bool code::hasInformation( const char * str, std::size_t len )
 
 
 
-void code::endComment( std::string & line, std::size_t start )
+inline void code::endComment( std::string & line, std::size_t start )
 {
  std::size_t				len 		= 0;
  std::size_t				token_pos	= std::string::npos;
@@ -128,6 +128,7 @@ void code::endComment( std::string & line, std::size_t start )
  if( token_pos != std::string::npos )
    {
 	 commentOpen = false;
+	 TRACE( "Search for remaining of the line starting at position: ", token_pos + len )
 	 search( line, token_pos + len );
    }
 
@@ -136,7 +137,7 @@ TRACE_EXIT
 
 
 // Process begin comment
-void code::beginComment( std::string & line, std::size_t start )
+inline void code::beginComment( std::string & line, std::size_t start )
 {
  std::size_t				len			= 0;
  std::size_t				token_pos	= std::string::npos;
@@ -186,7 +187,7 @@ void code::beginComment( std::string & line, std::size_t start )
 
 		 TRACE( "Search length:", len )
 
-		 if( hasInformation( ptr, len ) )
+		 if( token_pos > 0 && hasInformation( ptr, len ) )
 			 codeAvailable = true;
 
 		 TRACE_EXIT
@@ -195,7 +196,7 @@ void code::beginComment( std::string & line, std::size_t start )
 	 else
 	   {
 		 // Check if there is code before begin comment token
-		 if( hasInformation( ptr, token_pos - 1 ) )
+		 if( token_pos > 0 && hasInformation( ptr, token_pos - 1 ) )
 			 codeAvailable = true;
 
 	     commentOpen = true;
@@ -215,13 +216,13 @@ void code::search( std::string & line, std::size_t start )
  TRACE( "Entering with start position:", start );
 
  // Recursion Stop condition
- if( start >= line.size() || codeAvailable ) return;
-
- if( commentOpen )
-	 endComment		( line, start );	// Looking for end comment token
-
- if( ! commentOpen )
-	 beginComment	( line, start );	// Look for start comment token
+ if( start < line.size() && ! codeAvailable )
+   {
+	 if( commentOpen )
+		 endComment		( line, start );	// Looking for end comment token
+	 else
+		 beginComment	( line, start );	// Look for start comment token
+   }
 
  TRACE_EXIT
 }
@@ -233,10 +234,8 @@ void code::processLine( std::string & line )
  TRACE( "------------------------------------------------------------" )
  TRACE( "Entering with commentOpen:", commentOpen ? "true": "false" )
 
- addLine();
-
  // Check for empty lines
- if( line.size() == 0 || ! hasInformation( line.c_str(), line.size() ) )
+ if( ! commentOpen && ( line.size() == 0 || ! hasInformation( line.c_str(), line.size() ) ) )
    {
 	 addEmptyLine();
 	 return;
@@ -265,7 +264,11 @@ void code::parse( std::ifstream  & sourceFile )
  line.reserve( LOC_FILE_READ_BUFFER_SIZE );
 
  while( getline( sourceFile, line ) )
- 	    processLine( line );
+      {
+	 	addLine();
+	 	processLine( line );
+      }
+
 
  TRACE_EXIT
 }
@@ -303,7 +306,7 @@ void code::insight( progOptions & options, fileSet * files )
 {
  TRACE_ENTER
 
- LanguageProvider & prov	= LanguageProvider::get();
+ LanguageProvider & prov	= LanguageProvider::getInstance();
 
  // Reset Global stats
  gStats.reset();
