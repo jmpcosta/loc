@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Provide the definitions/declarations for a generic programming language
 //
 // *****************************************************************************************
 
@@ -20,10 +20,8 @@
 #include <string>
 #include <vector>
 
-// Import application headers
-#include "trace_macros.hh"
-#include "languageType.hh"
-#include "comment.hh"
+#include "language/comment.hh"
+#include "language/languageType.hh"
 
 
 
@@ -38,35 +36,36 @@
 class language
 {
 public:
-		static language *			builder( languageType lang );		// Factory method
-									~language();
+		virtual								~language	( void ) {}
+											language	( void );
 
 		typedef std::vector<comment *>::iterator							iterator;
 		typedef std::vector<comment *>::const_iterator						const_iterator;
 
 		// Forward fileSet iterator for the container vector
-		iterator					begin		() 							{ return comments.begin();	}
-		const_iterator 				begin		() const 					{ return comments.begin();	}
-		iterator					end			()							{ return comments.end();	}
-		const_iterator				end			() const					{ return comments.end();	}
+		virtual iterator					begin		() 							{ return comments.begin();	}
+		virtual const_iterator 				begin		() const 					{ return comments.begin();	}
+		virtual iterator					end			()							{ return comments.end();	}
+		virtual const_iterator				end			() const					{ return comments.end();	}
 
-		void 						addComment	( comment * pc )			{ comments.push_back( pc );	}
-		std::vector<comment *> &	getComments	( void ) 	 				{ return comments;			}
-		languageType				getType		( void )					{ return lang;				}
+		virtual void						addComment	( comment * pc )			{ comments.push_back( pc );	}
+		virtual std::vector<comment *> &	getComments	( void ) 	 				{ return comments;			}
+		virtual languageType				getType		( void )					{ return lang;				}
+		virtual const char *				getName		( void )					{ return name.c_str();		}
 
-private:
-		// Methods
-									language		( languageType which )	{ lang = which;				}
+		// Is this a file extension for this programming language
+		virtual bool						isExtension	( const char * ext 			) = 0;
+		virtual bool						isExtension	( const std::string & ext	) = 0;
 
-		// Variables
+protected:
 
 		// Specific language
-		languageType				lang;
+		languageType						lang;
+		std::string							name;
 
 		// Support more than one comment tokens in the language
-		std::vector<comment *>		comments;
+		std::vector<comment *>				comments;
 
-		TRACE_CLASSNAME_DECLARATION
 };
 
 

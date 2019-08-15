@@ -3,33 +3,24 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions for the supported programming languages
+// Purpose:	Import all C family languages
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGETYPE_HH_
-#define LOC_LANGUAGETYPE_HH_
+#ifndef LOC_FAMILY_C_LANGUAGES_HH_
+#define LOC_FAMILY_C_LANGUAGES_HH_
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Import headers
 //
 // *****************************************************************************************
 
-enum class languageType
-{
-	autodetect	= -1,
-	unknown		= -1,
-	C			= 0,
-	CPP 		= 1,
-	JAVA		= 2,
-	BASH		= 3,
-	BOURNE		= 4,
-	CSH			= 5
-};
+// Import all C family language headers
+#include "language/family_c/language_c.hh"
+#include "language/family_c/language_cpp.hh"
+#include "language/family_c/language_java.hh"
 
 
 
-
-
-#endif // LOC_LANGUAGETYPE_HH_
+#endif // LOC_FAMILY_C_LANGUAGES_HH_

@@ -22,10 +22,12 @@
 #include <vector>
 #include <filesystem>
 
+
 // Import module declarations
 #include "trace.hh"
-#include "file.hh"
-#include "fileSet.hh"
+#include "files/file.hh"
+#include "files/fileSet.hh"
+
 
 using namespace std;
 

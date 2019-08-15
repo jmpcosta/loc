@@ -22,8 +22,7 @@
 
 // Import application headers
 #include "trace_macros.hh"
-#include "file.hh"
-
+#include "files/file.hh"
 
 // *****************************************************************************************
 //

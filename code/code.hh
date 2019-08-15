@@ -21,12 +21,11 @@
 #include <cstdint>
 #include <iostream>
 
-// Import application headers
+#include "files/file.hh"
+#include "files/fileSet.hh"
+#include "language/language.hh"
 #include "trace_macros.hh"
 #include "options.hh"
-#include "file.hh"
-#include "fileSet.hh"
-#include "language.hh"
 
 
 // *****************************************************************************************

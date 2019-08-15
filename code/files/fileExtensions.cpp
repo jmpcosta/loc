@@ -17,14 +17,16 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+
 #include <iostream>
 #include <string>
 #include <filesystem>
 
-// Import module declarations
+// Import project headers
 #include "trace.hh"
-#include "file_extensions.hh"
-#include "fileExtensions.hh"
+#include "files/fileExtensions.hh"
+#include "files/file_extensions.hh"
+
 
 
 using namespace std;

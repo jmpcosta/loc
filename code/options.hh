@@ -19,10 +19,9 @@
 // Import C++ system headers
 #include <string>
 
-// Import application headers
+#include "language/languageType.hh"
 #include "trace_macros.hh"
 #include "loc_defs.hh"
-#include "languageType.hh"
 
 
 // *****************************************************************************************

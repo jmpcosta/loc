@@ -1,14 +1,14 @@
-// ***********************************************************************************************
+// *****************************************************************************************
 //
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a Provider of a programming language parser
+// Purpose:	Provide the definitions/declarations for a C family of programming languages
 //
-// ***********************************************************************************************
+// *****************************************************************************************
 
-#ifndef LOC_LANGUAGEPROVIDER_HH_
-#define LOC_LANGUAGEPROVIDER_HH_
+#ifndef LOC_LANGUAGE_FAMILY_C_HH_
+#define LOC_LANGUAGE_FAMILY_C_HH_
 
 // *****************************************************************************************
 //
@@ -20,9 +20,9 @@
 
 // Import application headers
 #include "trace_macros.hh"
-#include "singleton.hh"
-#include "languageType.hh"
-#include "language.hh"
+#include "language/language.hh"
+
+
 
 // *****************************************************************************************
 //
@@ -31,17 +31,13 @@
 // *****************************************************************************************
 
 
-class LanguageProvider : public Singleton<LanguageProvider>
+
+class language_family_c : public language
 {
 public:
-		language		*			getParser( languageType which );
+		language_family_c();
 
 private:
-		// Methods
-
-		// Variables
-		std::vector<language *>		iLanguages;
-
 		TRACE_CLASSNAME_DECLARATION
 };
 
@@ -51,4 +47,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGEPROVIDER_HH_
+#endif // LOC_LANGUAGE_FAMILY_C_HH_

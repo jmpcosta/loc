@@ -24,4 +24,8 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 code \
+code/files \
+code/language \
+code/language/family_bourne \
+code/language/family_c \
 

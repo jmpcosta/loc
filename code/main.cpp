@@ -22,12 +22,11 @@
 #include <cstdlib>
 #include <filesystem>
 
-// Import module declarations
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "cmdArgs.hh"
 #include "code.hh"
-#include "fileSet.hh"
+#include "files/fileSet.hh"
 
 using namespace std;
 

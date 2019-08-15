@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for the file extensions API
+// Purpose:	Provide the definitions/declarations for a programming language
 //
 // *****************************************************************************************
 
-#ifndef LOC_EXTENSIONS_HH_
-#define LOC_EXTENSIONS_HH_
+#ifndef LOC_LANGUAGE_C_HH_
+#define LOC_LANGUAGE_C_HH_
 
 // *****************************************************************************************
 //
@@ -17,11 +17,10 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
 // Import application headers
+#include "language/family_c/language_family_c.hh"
 #include "trace_macros.hh"
-#include "languageType.hh"
 
 
 // *****************************************************************************************
@@ -30,16 +29,24 @@
 //
 // *****************************************************************************************
 
-class fileExtensions
+
+
+class language_c : public language_family_c
 {
 public:
-		static	languageType get_language( const std::string & filename );
-		static	languageType get_language( const char * filename 		);
+						language_c	( void );
+
+		bool			isExtension	( const char * ext 			);
+		bool			isExtension	( const std::string & ext	);
 
 private:
-
-		// Variables
 		TRACE_CLASSNAME_DECLARATION
 };
 
-#endif // LOC_EXTENSIONS_HH_
+
+
+
+
+
+
+#endif // LOC_LANGUAGE_C_HH_

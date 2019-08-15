@@ -23,9 +23,10 @@
 // Import module declarations
 #include "trace.hh"
 #include "options.hh"
-#include "LanguageProvider.hh"
-#include "fileSet.hh"
 #include "code.hh"
+
+#include "files/fileSet.hh"
+#include "language/LanguageProvider.hh"
 
 using namespace std;
 

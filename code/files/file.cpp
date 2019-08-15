@@ -21,10 +21,10 @@
 #include <string>
 #include <filesystem>
 
-// Import module declarations
+// Import project headers
 #include "trace.hh"
-#include "fileExtensions.hh"
-#include "file.hh"
+#include "files/fileExtensions.hh"
+#include "files/file.hh"
 
 
 using namespace std;

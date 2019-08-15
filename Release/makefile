@@ -8,6 +8,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include code/language/family_c/subdir.mk
+-include code/language/family_bourne/subdir.mk
+-include code/language/subdir.mk
+-include code/files/subdir.mk
 -include code/subdir.mk
 -include subdir.mk
 -include objects.mk

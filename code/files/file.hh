@@ -21,8 +21,8 @@
 
 // Import application headers
 #include "trace_macros.hh"
-#include "languageType.hh"
 #include "statistics.hh"
+#include "language/languageType.hh"
 
 
 // *****************************************************************************************
