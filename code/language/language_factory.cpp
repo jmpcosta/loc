@@ -45,12 +45,15 @@ language * language_factory::build( languageType type )
 
  switch( type )
  {
- 	case languageType::C: 	 	p_lang = new language_c();			break;
-  	case languageType::CPP: 	p_lang = new language_cpp();		break;
-  	case languageType::JAVA: 	p_lang = new language_java();		break;
-  	case languageType::BOURNE: 	p_lang = new language_bourne(); 	break;
-  	case languageType::BASH:	p_lang = new language_bourne(); 	break;
-  	case languageType::CSH:		p_lang = new language_csh();	 	break;
+ 	case languageType::C: 	 		p_lang = new language_c();				break;
+  	case languageType::CPP: 		p_lang = new language_cpp();			break;
+  	case languageType::JAVA: 		p_lang = new language_java();			break;
+  	case languageType::CSHARP: 		p_lang = new language_csharp();			break;
+  	case languageType::BOURNE: 		p_lang = new language_bourne(); 		break;
+  	case languageType::BASH:		p_lang = new language_bourne(); 		break;
+  	case languageType::CSH:			p_lang = new language_csh();	 		break;
+  	case languageType::DOS:			p_lang = new language_dos();	 		break;
+  	case languageType::POWERSHELL:	p_lang = new language_powershell();	 	break;
 
 	// The next case is just to silence the compiler
   	case languageType::unknown:										break;

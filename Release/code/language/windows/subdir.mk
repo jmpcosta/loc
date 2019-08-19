@@ -4,23 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../files/file.cpp \
-../files/fileExtensions.cpp \
-../files/fileSet.cpp 
+../code/language/windows/language_dos.cpp \
+../code/language/windows/language_powershell.cpp 
 
 OBJS += \
-./files/file.o \
-./files/fileExtensions.o \
-./files/fileSet.o 
+./code/language/windows/language_dos.o \
+./code/language/windows/language_powershell.o 
 
 CPP_DEPS += \
-./files/file.d \
-./files/fileExtensions.d \
-./files/fileSet.d 
+./code/language/windows/language_dos.d \
+./code/language/windows/language_powershell.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-files/%.o: ../files/%.cpp
+code/language/windows/%.o: ../code/language/windows/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++17 -I"/home/joao/workspace/loc/code" -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

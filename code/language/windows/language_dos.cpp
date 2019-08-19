@@ -3,12 +3,10 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a Bourne shell family of programming languages
+// Purpose:	Define the Bourne language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_FAMILY_BOURNE_HH_
-#define LOC_LANGUAGE_FAMILY_BOURNE_HH_
 
 // *****************************************************************************************
 //
@@ -16,37 +14,48 @@
 //
 // *****************************************************************************************
 
-// Import C++ system headers
+// Include OSAPI C++ headers
 
-// Import application headers
-#include "trace_macros.hh"
-#include "language/language.hh"
+// Include Standard headers
+
+// Import module declarations
+#include "trace.hh"
+#include "language/languageType.hh"
+#include "language/windows/language_dos.hh"
 
 
 
 // *****************************************************************************************
 //
-// Section: Function declaration
+// Section: Function definition
 //
 // *****************************************************************************************
 
+TRACE_CLASSNAME( language_dos )
 
 
-class language_family_bourne : public language
+language_dos::language_dos()
 {
-public:
+ TRACE_POINT
 
-protected:
-		language_family_bourne();
+ lang = languageType::DOS;
+ name = "DOS shell";
 
-private:
-		TRACE_CLASSNAME_DECLARATION
-};
+ comment * p_cmt = new comment();
+ p_cmt->setStart( "rem" );
+ p_cmt->setCaseInsensitive();
+ comments.push_back( p_cmt );
 
-
-
-
-
+}
 
 
-#endif // LOC_LANGUAGE_FAMILY_BOURNE_HH_
+bool language_dos::isExtension( const char * extension )
+{
+ return true;
+}
+
+bool language_dos::isExtension( const std::string & extension )
+{
+ return true;
+}
+

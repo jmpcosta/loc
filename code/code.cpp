@@ -184,6 +184,8 @@ inline void code::beginComment( std::string & line, std::size_t start )
 	   {
 		 TRACE( "Comment has no end token.")
 
+		 commentOpen = false;
+
 		 len = token_pos - start;
 
 		 TRACE( "Search length:", len )
@@ -261,6 +263,10 @@ void code::parse( std::ifstream  & sourceFile )
 
  TRACE_ENTER
 
+ // Reset own variables
+ commentOpen   = false;
+ codeAvailable = false;
+
  // Reserve capacity on the string to avoid reallocs
  line.reserve( LOC_FILE_READ_BUFFER_SIZE );
 
@@ -317,8 +323,14 @@ void code::insight( progOptions & options, fileSet * files )
     {
 	  std::cout << "Processing file:" << it->getName() << endl;
 
-	  p_lang = prov.getParser( it->getLanguage() );
-	  loc( it );
+	  if( it->getLanguage() == languageType::unknown )
+		  std::cerr << "Unknown programming language: Skipping it !" << std::endl << std::endl ;
+	  else
+	    {
+		  // Set code language
+		  p_lang = prov.getParser( it->getLanguage() );
+		  loc( it );
+	    }
     }
 
  std::cout << "TOTAL of processed lines: " 	  << gStats.getLines() 		<< std::endl;

@@ -28,18 +28,24 @@
 
 #define LOC_LANGUAGE_C		{ ".c", ".h", ".hhh", nullptr 													}
 #define LOC_LANGUAGE_CPP	{ ".c++", ".cc", ".cpp", ".hh", ".cls", ".cxx", ".h++", ".hpp", ".hxx", nullptr	}
+#define LOC_LANGUAGE_CSHARP	{ ".c++", ".cc", ".cpp", ".hh", ".cls", ".cxx", ".h++", ".hpp", ".hxx", nullptr	}
 #define LOC_LANGUAGE_JAVA	{ ".java", ".jav", nullptr														}
 #define LOC_LANGUAGE_BASH	{ ".bash", nullptr																}
 #define LOC_LANGUAGE_BOURNE	{ ".sh", nullptr																}
 #define LOC_LANGUAGE_CSH	{ ".csh", nullptr																}
+#define LOC_LANGUAGE_DOS	{ ".bat", ".cmd", nullptr														}
+#define LOC_LANGUAGE_PSHELL	{ ".ps1", "psm1", ".ps2", ".msh2", nullptr										}
 
 const char * file_extensions[][ LOC_LANGUAGE_EXTENSIONS_MAX ] = {
 		LOC_LANGUAGE_C,
 		LOC_LANGUAGE_CPP,
+		LOC_LANGUAGE_CSHARP,
 		LOC_LANGUAGE_JAVA,
 		LOC_LANGUAGE_BASH,
 		LOC_LANGUAGE_BOURNE,
 		LOC_LANGUAGE_CSH,
+		LOC_LANGUAGE_DOS,
+		LOC_LANGUAGE_PSHELL,
 		nullptr
 };
 

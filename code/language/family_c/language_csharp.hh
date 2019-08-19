@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a Bourne shell family of programming languages
+// Purpose:	Provide the definitions/declarations for the C# programming language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_FAMILY_BOURNE_HH_
-#define LOC_LANGUAGE_FAMILY_BOURNE_HH_
+#ifndef LOC_LANGUAGE_CSHARP_HH_
+#define LOC_LANGUAGE_CSHARP_HH_
 
 // *****************************************************************************************
 //
@@ -19,9 +19,8 @@
 // Import C++ system headers
 
 // Import application headers
+#include "language/family_c/language_family_c.hh"
 #include "trace_macros.hh"
-#include "language/language.hh"
-
 
 
 // *****************************************************************************************
@@ -32,14 +31,16 @@
 
 
 
-class language_family_bourne : public language
+class language_csharp : public language_family_c
 {
 public:
+						language_csharp	( void );
 
-protected:
-		language_family_bourne();
+		bool			isExtension	( const char * ext 			);
+		bool			isExtension	( const std::string & ext	);
 
 private:
+
 		TRACE_CLASSNAME_DECLARATION
 };
 
@@ -49,4 +50,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_FAMILY_BOURNE_HH_
+#endif // LOC_LANGUAGE_CSHARP_HH_

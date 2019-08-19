@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a Bourne shell family of programming languages
+// Purpose:	Provide the definitions/declarations for the powershell scripting language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_FAMILY_BOURNE_HH_
-#define LOC_LANGUAGE_FAMILY_BOURNE_HH_
+#ifndef LOC_LANGUAGE_POWERSHELL_HH_
+#define LOC_LANGUAGE_POWERSHELL_HH_
 
 // *****************************************************************************************
 //
@@ -23,7 +23,6 @@
 #include "language/language.hh"
 
 
-
 // *****************************************************************************************
 //
 // Section: Function declaration
@@ -32,14 +31,17 @@
 
 
 
-class language_family_bourne : public language
+class language_powershell : public language
 {
 public:
+					language_powershell	( void );
 
-protected:
-		language_family_bourne();
+		bool		isExtension	( const char * ext 			);
+		bool		isExtension	( const std::string & ext	);
+
 
 private:
+
 		TRACE_CLASSNAME_DECLARATION
 };
 
@@ -49,4 +51,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_FAMILY_BOURNE_HH_
+#endif // LOC_LANGUAGE_POWERSHELL_HH_

@@ -42,9 +42,9 @@ TRACE_CLASSNAME( fileSet )
 
 fileSet * fileSet::directoryBuilder( const std::string & pathname )
 {
- fileSet * 		p_files	= nullptr;
+ fileSet  * 		p_files	= nullptr;
  file	  * 		p_file	= nullptr;
- vector<file *>	vec;
+ vector<file *>		vec;
 
  TRACE_ENTER
 

@@ -44,7 +44,7 @@ language * LanguageProvider::getParser( languageType which )
  for( const auto & i : iLanguages )
  	  if( which == i->getType() )
 		{
-		  std::cerr << "Found a matching language" << std::endl;
+		  std::cerr << "Found a matching language: " << i->getName() << std::endl;
 		  p_lang = i;
 		  return p_lang;
 		}

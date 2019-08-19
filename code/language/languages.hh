@@ -19,7 +19,7 @@
 // Import all language headers
 #include "language/family_c/languages.hh"
 #include "language/family_bourne/languages.hh"
-
+#include "language/windows/languages.hh"
 
 
 #endif // LOC_LANGUAGES_HH_

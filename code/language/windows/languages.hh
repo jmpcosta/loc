@@ -3,37 +3,22 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions for the supported programming languages
+// Purpose:	Import all windows family of shell scripting languages
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGETYPE_HH_
-#define LOC_LANGUAGETYPE_HH_
+#ifndef LOC_WINDOWS_LANGUAGES_HH_
+#define LOC_WINDOWS_LANGUAGES_HH_
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Import headers
 //
 // *****************************************************************************************
 
-enum class languageType
-{
-	autodetect	= -1,
-	unknown		= -1,
-	C			= 0,
-	CPP 		,
-	CSHARP		,
-	JAVA		,
-	BASH		,
-	BOURNE		,
-	CSH			,
-	DOS			,
-	POWERSHELL	,
-	MAX
-};
+// Import all C family language headers
+#include "language/windows/language_dos.hh"
+#include "language/windows/language_powershell.hh"
 
 
-
-
-
-#endif // LOC_LANGUAGETYPE_HH_
+#endif // LOC_WINDOWS_LANGUAGES_HH_
