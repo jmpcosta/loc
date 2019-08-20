@@ -20,6 +20,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "language/languageType.hh"
 #include "language/family_bourne/language_bash.hh"
 
@@ -42,12 +43,12 @@ language_bash::language_bash()
  name = "BASH";
 }
 
-bool language_bash::isExtension( const char * extension )
+bool language_bash::isExtension( const t_char * extension )
 {
  return true;
 }
 
-bool language_bash::isExtension( const std::string & extension )
+bool language_bash::isExtension( const t_string & extension )
 {
  return true;
 }

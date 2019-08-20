@@ -47,7 +47,9 @@ void display_usage( t_char * progname );
 
 void display_usage( t_char * progname )
 {
-	cout << progname << "\t[ base code directory | source file name ]" << endl << endl;
+	cout << progname << "\t<options>\t[ base code directory | source file name ]" << endl << endl;
+	cout << "  Where <options>:" << endl;
+	cout << "\t\t\t-v => enable verbose output" << endl << endl;
 }
 
 int LOC_MAIN( int argc, t_char * argv[] )

@@ -20,6 +20,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "language/languageType.hh"
 #include "language/windows/language_dos.hh"
 
@@ -49,12 +50,12 @@ language_dos::language_dos()
 }
 
 
-bool language_dos::isExtension( const char * extension )
+bool language_dos::isExtension( const t_char * extension )
 {
  return true;
 }
 
-bool language_dos::isExtension( const std::string & extension )
+bool language_dos::isExtension( const t_string & extension )
 {
  return true;
 }

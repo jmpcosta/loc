@@ -22,6 +22,7 @@
 
 // Import application headers
 #include "trace_macros.hh"
+#include "loc_defs.hh"
 #include "files/file.hh"
 
 // *****************************************************************************************
@@ -49,7 +50,7 @@ public:
 		const_iterator			end() const			{ return locations.end();	}
 
 		// Factory method
-		static fileSet  *		builder				( const std::string & pathname );
+		static fileSet  *		builder				( const t_string & pathname );
 
 private:
 								fileSet				( file * file );

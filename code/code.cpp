@@ -19,6 +19,8 @@
 // Include Standard headers
 #include <iostream>
 #include <fstream>
+#include <iomanip>
+#include <filesystem>
 
 // Import module declarations
 #include "trace.hh"
@@ -46,19 +48,117 @@ code::code()
  p_lang			= nullptr;
  codeAvailable	= false;
  commentOpen	= false;
+ ip_file		= nullptr;
+
+ TRACE_EXIT
+}
+
+void code::reset( file * p_file )
+{
+ TRACE_ENTER
+
+ if( p_file == nullptr ) return;
+
+ // Reset file stats
+ p_file->getStatistics().reset();
+
+ TRACE_EXIT
+}
+
+void code::setAvailable( file * p_file, bool value )
+{
+ TRACE_ENTER
+
+ if( p_file == nullptr ) return;
+
+ // Set availability of file statistics
+ p_file->getStatistics().setAvailable( value );
 
  TRACE_EXIT
 }
 
 
-inline void code::addLine( void )
-{ gStats.addLine(); fStats.addLine(); }
+void code::addLine( void )
+{
+ if( ip_file == nullptr ) return;
 
-inline void code::addEmptyLine( void )
-{ gStats.addEmptyLine(); fStats.addEmptyLine(); }
+ gStats.addLine();
+ ip_file->getStatistics().addLine();
+}
 
-inline void code::addLoc( void )
-{ gStats.addLoc(); fStats.addLoc(); }
+void code::addEmptyLine( void )
+{
+ if( ip_file == nullptr ) return;
+
+ gStats.addEmptyLine();
+ ip_file->getStatistics().addEmptyLine();
+}
+
+void code::addLoc( void )
+{
+ if( ip_file == nullptr ) return;
+
+ gStats.addLoc();
+ ip_file->getStatistics().addLoc();
+}
+
+
+
+void code::printSeparator( void )
+{
+ std::cout.width(100);
+ std::cout.fill('=');
+ std::cout << std::left << "=";
+/*
+ std::cout.width(20);
+ std::cout.fill('=');
+ std::cout << " =";
+
+ std::cout.width(20);
+ std::cout.fill('=');
+ std::cout << " =";
+
+ std::cout.width(20);
+ std::cout.fill('=');
+ std::cout << " =";
+*/
+ std::cout << std::endl;
+}
+
+void code::printHeader( void )
+{
+ std::cout << std::left << std::endl;
+
+ std::cout.fill(' ');
+ std::cout << std::setw(40) << "File name";
+
+ std::cout.fill(' ');
+ std::cout << std::right << std::setw(20) << " Number of lines";
+
+ std::cout.fill(' ');
+ std::cout << std::setw(20) << " Empty lines";
+
+ std::cout.fill(' ');
+ std::cout << std::setw(20) << " Lines of Code";
+
+ std::cout << std::endl;
+
+ printSeparator();
+}
+
+void code::printStats( const char * str, statistics & stats )
+{
+ std::cout << std::left;
+
+ std::cout.fill(' ');
+ std::cout << std::setw(40) << str;
+
+ std::cout << std::right;
+ std::cout << std::setw(20) << stats.getLines();
+ std::cout << std::setw(20) << stats.getEmptyLines();
+ std::cout << std::setw(20) << stats.getLoc();
+ std::cout << std::endl;
+}
 
 
 // Check if there are relevant characters in the string up to a given search length
@@ -250,8 +350,6 @@ void code::processLine( std::string & line )
 
  if( codeAvailable ) addLoc();
 
- TRACE( " : current LOC: ", fStats.getLoc() )
-
  TRACE_EXIT
 }
 
@@ -282,49 +380,47 @@ void code::parse( std::ifstream  & sourceFile )
 
 
 
-void code::loc( file * fl )
+void code::loc( file * p_file )
 {
  TRACE_ENTER
 
- // Reset file statistics
- fStats.reset();
+ if( p_file == nullptr ) return;	// Safety check
+
+ ip_file = p_file;
 
  // Open file for reading
- std::ifstream sourceFile( fl->getName().c_str() );
+ std::ifstream sourceFile( p_file->getName().c_str() );
 
- TRACE( " : Parsing file" , fl->getName() )
+ TRACE( " : Parsing file" , p_file->getName() )
 
  if( sourceFile.is_open() )
    {
+	 reset( ip_file );		// Reset file statistics
+	 setAvailable( p_file, true );
+
      parse( sourceFile );
+
      sourceFile.close();
    }
-
- std::cout << "Lines in file: "			<< fStats.getLines() 		<< std::endl;
- std::cout << "Empty lines in file: "	<< fStats.getEmptyLines()	<< std::endl;
- std::cout << "LOC in file: "			<< fStats.getLoc()			<< std::endl;
- std::cout << std::endl;
 
  TRACE_EXIT
 }
 
-
-void code::insight( progOptions & options, fileSet * files )
+void code::processFiles( progOptions & options, fileSet * p_files )
 {
  TRACE_ENTER
 
  LanguageProvider & prov	= LanguageProvider::getInstance();
 
- // Reset Global stats
- gStats.reset();
+ gStats.reset();	// Reset Global stats
 
  // Get insight for the set of file
- for( auto it : *files )
+ for( auto it : *p_files )
     {
-	  std::cout << "Processing file:" << it->getName() << endl;
+	  TRACE( "Processing file:", it->getName() )
 
 	  if( it->getLanguage() == languageType::unknown )
-		  std::cerr << "Unknown programming language: Skipping it !" << std::endl << std::endl ;
+	    { TRACE( "Unknown programming language: Skipping it !" ) }
 	  else
 	    {
 		  // Set code language
@@ -333,10 +429,42 @@ void code::insight( progOptions & options, fileSet * files )
 	    }
     }
 
- std::cout << "TOTAL of processed lines: " 	  << gStats.getLines() 		<< std::endl;
- std::cout << "Total number of EMPTY lines: " << gStats.getEmptyLines()	<< std::endl;
- std::cout << "Total Lines of Code: "         << gStats.getLoc()		<< std::endl;
- std::cout << std::endl;
+ TRACE_EXIT
+}
+
+void code::printReport( progOptions & options, fileSet * p_files )
+{
+ std::filesystem::path		myPath;
+ LanguageProvider 		&	prov	= LanguageProvider::getInstance();
+
+ printHeader();
+
+ if( options.isVerbose() )
+   {
+	 // Print each file statistics
+	 for( auto it : *p_files )
+	    {
+		  statistics & stats = it->getStatistics();
+		  myPath = it->getName();
+		  if( stats.areAvailable() )
+		    {
+			  printStats( myPath.filename().c_str(), stats );
+		    }
+	    }
+	 printSeparator();
+   }
+
+ printStats( "Total:", gStats );
+
+}
+
+void code::insight( progOptions & options, fileSet * p_files )
+{
+ TRACE_ENTER
+
+ processFiles( options, p_files );
+
+ printReport( options, p_files );
 
  TRACE_EXIT
 }

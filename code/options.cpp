@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Bourne language
+// Purpose:	Implement the progOptions class
 //
 // *****************************************************************************************
 
@@ -19,11 +19,7 @@
 // Include Standard headers
 
 // Import module declarations
-#include "trace.hh"
-#include "loc_defs.hh"
-#include "language/languageType.hh"
-#include "language/family_bourne/language_bourne.hh"
-
+#include "options.hh"
 
 
 // *****************************************************************************************
@@ -32,25 +28,10 @@
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_bourne )
 
-
-language_bourne::language_bourne()
+progOptions::progOptions()
 {
- TRACE_POINT
-
- lang = languageType::BOURNE;
- name = "Bourne shell";
+ language = languageType::autodetect;
+ pathname = ".";
+ iVerbose = false;
 }
-
-
-bool language_bourne::isExtension( const t_char * extension )
-{
- return true;
-}
-
-bool language_bourne::isExtension( const t_string & extension )
-{
- return true;
-}
-

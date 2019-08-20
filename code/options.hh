@@ -19,9 +19,10 @@
 // Import C++ system headers
 #include <string>
 
-#include "language/languageType.hh"
+// Import own headers
 #include "trace_macros.hh"
 #include "loc_defs.hh"
+#include "language/languageType.hh"
 
 
 // *****************************************************************************************
@@ -35,20 +36,24 @@
 class progOptions
 {
 public:
-								progOptions		()								{ language = languageType::autodetect; pathname = "."; }
+								progOptions		();
 								~progOptions	()								{}
 
-		void 					setLanguage		( languageType lang )			{ language = lang; }
-		languageType			getLanguage		( void ) const           		{ return language; }
+		void 					setLanguage		( languageType lang )			{ language = lang;	}
+		languageType			getLanguage		( void ) const           		{ return language;	}
 
-		void 					setPath			( const std::string & path )   	{ pathname = path; }
-		void 					setPath			( const t_char * path      )   	{ pathname = path; }
-		const std::string & 	getPath			( void ) const         		  	{ return pathname; }
+		void 					setPath			( const t_string & path		)  	{ pathname = path;	}
+		void 					setPath			( const t_char * path		)  	{ pathname = path;	}
+		const t_string &	 	getPath			( void ) const         		  	{ return pathname;	}
+
+		void					setVerbose		( bool verb )					{ iVerbose = verb;	}
+		bool					isVerbose		( void 		)					{ return iVerbose;	}
 
 private:
 
 		languageType			language;
-		std::string				pathname;
+		t_string				pathname;
+		bool					iVerbose;
 
 		TRACE_CLASSNAME_DECLARATION
 };

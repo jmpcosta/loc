@@ -20,6 +20,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "language/languageType.hh"
 #include "language/family_c/language_cpp.hh"
 
@@ -43,12 +44,12 @@ language_cpp::language_cpp()
 }
 
 
-bool language_cpp::isExtension( const char * extension )
+bool language_cpp::isExtension( const t_char * extension )
 {
  return true;
 }
 
-bool language_cpp::isExtension( const std::string & extension )
+bool language_cpp::isExtension( const t_string & extension )
 {
  return true;
 }

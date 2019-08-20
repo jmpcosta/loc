@@ -20,6 +20,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "language/languageType.hh"
 #include "language/windows/language_powershell.hh"
 
@@ -55,12 +56,12 @@ language_powershell::language_powershell()
 
 }
 
-bool language_powershell::isExtension( const char * extension )
+bool language_powershell::isExtension( const t_char * extension )
 {
  return true;
 }
 
-bool language_powershell::isExtension( const std::string & extension )
+bool language_powershell::isExtension( const t_string & extension )
 {
  return true;
 }

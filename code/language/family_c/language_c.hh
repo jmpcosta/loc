@@ -19,8 +19,9 @@
 // Import C++ system headers
 
 // Import application headers
-#include "language/family_c/language_family_c.hh"
+#include "loc_defs.hh"
 #include "trace_macros.hh"
+#include "language/family_c/language_family_c.hh"
 
 
 // *****************************************************************************************
@@ -36,8 +37,8 @@ class language_c : public language_family_c
 public:
 						language_c	( void );
 
-		bool			isExtension	( const char * ext 			);
-		bool			isExtension	( const std::string & ext	);
+		bool			isExtension	( const t_char * ext	);
+		bool			isExtension	( const t_string & ext	);
 
 private:
 		TRACE_CLASSNAME_DECLARATION

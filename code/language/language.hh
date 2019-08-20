@@ -20,6 +20,8 @@
 #include <string>
 #include <vector>
 
+// Import own headers
+#include "loc_defs.hh"
 #include "language/comment.hh"
 #include "language/languageType.hh"
 
@@ -54,8 +56,8 @@ public:
 		virtual const char *				getName		( void )					{ return name.c_str();		}
 
 		// Is this a file extension for this programming language
-		virtual bool						isExtension	( const char * ext 			) = 0;
-		virtual bool						isExtension	( const std::string & ext	) = 0;
+		virtual bool						isExtension	( const t_char * ext		) = 0;
+		virtual bool						isExtension	( const t_string & ext		) = 0;
 
 protected:
 

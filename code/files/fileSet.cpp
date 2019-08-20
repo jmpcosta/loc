@@ -25,6 +25,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "files/file.hh"
 #include "files/fileSet.hh"
 
@@ -40,7 +41,7 @@ using namespace std;
 TRACE_CLASSNAME( fileSet )
 
 
-fileSet * fileSet::directoryBuilder( const std::string & pathname )
+fileSet * fileSet::directoryBuilder( const t_string & pathname )
 {
  fileSet  * 		p_files	= nullptr;
  file	  * 		p_file	= nullptr;
@@ -74,7 +75,7 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
 }
 
 
-fileSet * fileSet::builder( const std::string & pathname )
+fileSet * fileSet::builder( const t_string & pathname )
 {
  fileSet * p_files	= nullptr;
  file	  *	p_file	= nullptr;

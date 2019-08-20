@@ -33,12 +33,14 @@
  #define OS_LINUX		1
  #define LOC_MAIN		main
  #define t_char			char
+ #define t_string		std::string
 
 #elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
 
  #define OS_WINDOWS		1
  #define LOC_MAIN		wmain
  #define t_char			wchar_t
+ #define t_string		std::wstring
 
 #endif
 

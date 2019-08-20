@@ -33,22 +33,31 @@
 class statistics
 {
 public:
-					statistics() 				{ loc = 0; nlines = 0; nEmptyLines = 0;	}
-					~statistics()				{										}
+					statistics();
+					~statistics() {}
 
-		void		reset			( void )	{ loc = 0; nlines = 0; nEmptyLines = 0;	}
-		void		addLoc			( void )	{ loc++;								}
-		void		addLine			( void )	{ nlines++;								}
-		void		addEmptyLine	( void )	{ nEmptyLines++;						}
+		void		reset			( void );
 
-		uint64_t	getLoc			( void )	{ return loc;							}
-		uint64_t	getLines		( void )	{ return nlines;						}
-		uint64_t	getEmptyLines	( void )	{ return nEmptyLines;					}
+		void		addLoc			( void )		{ i_loc++;				}
+		void		addLine			( void )		{ i_nlines++;			}
+		void		addEmptyLine	( void )		{ i_nEmptyLines++;		}
+
+		void		addLocs			( uint64_t n )	{ i_loc 		+= n;	}
+		void		addLines		( uint64_t n )	{ i_nlines		+= n;	}
+		void		addEmptyLines	( uint64_t n )	{ i_nEmptyLines	+= n;	}
+
+		uint64_t	getLoc			( void )		{ return i_loc;			}
+		uint64_t	getLines		( void )		{ return i_nlines;		}
+		uint64_t	getEmptyLines	( void )		{ return i_nEmptyLines;	}
+
+		bool		areAvailable	( void )		{ return i_available;	}
+		void		setAvailable	( bool b )		{ i_available = b;		}
 
 private:
-		uint64_t	nlines;
-		uint64_t	loc;
-		uint64_t	nEmptyLines;
+		bool		i_available;
+		uint64_t	i_nlines;
+		uint64_t	i_loc;
+		uint64_t	i_nEmptyLines;
 		// ...
 		TRACE_CLASSNAME_DECLARATION
 };

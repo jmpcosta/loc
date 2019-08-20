@@ -36,21 +36,32 @@ bool parse_command_line( int argc, t_char * argv[], progOptions & options )
 {
  bool ret = false;
 
- /*
+ // Set defaults
+ options.setVerbose( false );
+
  for( int i = 1; i < argc; i++ )
     {
-	  // Check for Language
+	  /* Check for Language
 	  if( strcmp( argv[ i ], "-l" ) == 0 && ( i + 1 < argc ) )
 	    {
 
 		  options.setLanguage( fileExtensions::get_language( argv[ i + 1 ] ) );
 	    }
-    }
-*/
+	  */
 
- if( argc == 2 && ! ret )	// A file name was provided ?
+	  // Check for Verbosity
+	  if( strcmp( argv[ i ], "-v" ) == 0 )
+	    {
+		  options.setVerbose( true );
+	    }
+
+    }
+
+
+ if( argc > 1 && ! ret )	// A file name was provided ?
    {
-	 options.setPath( argv[ 1 ] );
+	 // The last argument must be the source directory or filename
+	 options.setPath( argv[ argc - 1 ] );
 	 ret = true;
    }
 

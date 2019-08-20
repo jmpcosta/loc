@@ -20,6 +20,7 @@
 
 // Import application headers
 #include "trace_macros.hh"
+#include "loc_defs.hh"
 #include "language/language.hh"
 
 
@@ -36,8 +37,8 @@ class language_powershell : public language
 public:
 					language_powershell	( void );
 
-		bool		isExtension	( const char * ext 			);
-		bool		isExtension	( const std::string & ext	);
+		bool		isExtension	( const t_char * ext 	);
+		bool		isExtension	( const t_string & ext	);
 
 
 private:

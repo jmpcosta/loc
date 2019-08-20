@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Bourne language
+// Purpose:	Implement the statistics class
 //
 // *****************************************************************************************
 
@@ -19,11 +19,7 @@
 // Include Standard headers
 
 // Import module declarations
-#include "trace.hh"
-#include "loc_defs.hh"
-#include "language/languageType.hh"
-#include "language/family_bourne/language_bourne.hh"
-
+#include "statistics.hh"
 
 
 // *****************************************************************************************
@@ -32,25 +28,19 @@
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_bourne )
 
-
-language_bourne::language_bourne()
+statistics::statistics()
 {
- TRACE_POINT
-
- lang = languageType::BOURNE;
- name = "Bourne shell";
+ i_loc			= 0;
+ i_nlines		= 0;
+ i_nEmptyLines	= 0;
+ i_available	= false;
 }
 
-
-bool language_bourne::isExtension( const t_char * extension )
+void statistics::reset( void )
 {
- return true;
+ i_loc			= 0;
+ i_nlines		= 0;
+ i_nEmptyLines	= 0;
+ i_available	= false;
 }
-
-bool language_bourne::isExtension( const t_string & extension )
-{
- return true;
-}
-

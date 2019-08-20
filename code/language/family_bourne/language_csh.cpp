@@ -20,6 +20,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "language/languageType.hh"
 #include "language/family_bourne/language_csh.hh"
 
@@ -43,12 +44,12 @@ language_csh::language_csh()
 }
 
 
-bool language_csh::isExtension( const char * extension )
+bool language_csh::isExtension( const t_char * extension )
 {
  return true;
 }
 
-bool language_csh::isExtension( const std::string & extension )
+bool language_csh::isExtension( const t_string & extension )
 {
  return true;
 }

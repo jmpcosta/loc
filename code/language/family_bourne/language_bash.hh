@@ -20,6 +20,7 @@
 
 // Import application headers
 #include "trace_macros.hh"
+#include "loc_defs.hh"
 #include "language/family_bourne/language_family_bourne.hh"
 
 
@@ -36,8 +37,8 @@ class language_bash : public language_family_bourne
 public:
 					language_bash	( void );
 
-		bool		isExtension	( const char * ext 			);
-		bool		isExtension	( const std::string & ext	);
+		bool		isExtension	( const t_char * ext	);
+		bool		isExtension	( const t_string & ext	);
 
 
 private:

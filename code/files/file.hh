@@ -21,6 +21,7 @@
 
 // Import application headers
 #include "trace_macros.hh"
+#include "loc_defs.hh"
 #include "statistics.hh"
 #include "language/languageType.hh"
 
@@ -36,8 +37,9 @@ class file
 {
 public:
 								~file			( void );
-		const std::string &		getName			( void ) const	{ return iName;	}
-		languageType			getLanguage		( void ) const	{ return iLang;	}
+		const t_string &		getName			( void ) const	{ return iName;		}
+		languageType			getLanguage		( void ) const	{ return iLang;		}
+		statistics & 			getStatistics	( void ) 		{ return iStats;	}
 
 		// Factory method
 		static file  *			builder			( const std::string & pathname );
@@ -45,8 +47,9 @@ public:
 private:
 								file			( const std::string & filename );
 
-		std::string				iName;
+		t_string				iName;
 		languageType			iLang;
+		statistics				iStats;
 
 		TRACE_CLASSNAME_DECLARATION
 };
