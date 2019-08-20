@@ -61,17 +61,17 @@ int LOC_MAIN( int argc, t_char * argv[] )
 	 display_usage( argv[ 0 ] );
  else
    {
-	 const string & pathname = options.getPath();
+	 const t_string & pathname = options.getPath();
 	 if( ! filesystem::exists( pathname ) )
 	   {
-		 cerr << "Unknown pathname:" << options.getPath() << endl;
+		 loc_cerr << "Unknown pathname:" << options.getPath() << endl;
 		 return EXIT_FAILURE;
 	   }
 
 	 fileSet * files = fileSet::builder( pathname );
 	 if( files == nullptr )
 	   {
-		 cerr << "Error when creating the list of processing files." << endl;
+		 loc_cerr << "Error when creating the list of processing files." << endl;
 		 return EXIT_FAILURE;
 	   }
 
