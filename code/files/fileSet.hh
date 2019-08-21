@@ -57,7 +57,7 @@ private:
 								fileSet				( std::vector<file *> & vec );
 
 		// Private Factory method when a pathname is a directory
-		static fileSet  *		directoryBuilder	( const std::string & pathname );
+		static fileSet  *		directoryBuilder	( const t_string & pathname );
 
 		// Pathnames to file system elements
 		std::vector<file *>		locations;

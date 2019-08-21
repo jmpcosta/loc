@@ -19,6 +19,7 @@
 // Include Standard headers
 
 // Import module declarations
+#include "loc_defs.hh"
 #include "options.hh"
 
 
@@ -32,6 +33,6 @@
 progOptions::progOptions()
 {
  language = languageType::autodetect;
- pathname = ".";
+ pathname = LOC_STRING(".");
  iVerbose = false;
 }
