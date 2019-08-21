@@ -17,6 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
 // Import module declarations
 #include "trace.hh"
@@ -56,12 +57,12 @@ language_powershell::language_powershell()
 
 }
 
-bool language_powershell::isExtension( const t_char * extension )
+bool language_powershell::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_powershell::isExtension( const t_string & extension )
+bool language_powershell::isExtension( const std::string & extension )
 {
  return true;
 }

@@ -19,7 +19,6 @@
 // Include Standard headers
 #include <iostream>
 #include <fstream>
-#include <iomanip>
 #include <filesystem>
 
 // Import module declarations
@@ -29,6 +28,7 @@
 
 #include "files/fileSet.hh"
 #include "language/LanguageProvider.hh"
+#include "report/report.hh"
 
 using namespace std;
 
@@ -82,7 +82,6 @@ void code::addLine( void )
 {
  if( ip_file == nullptr ) return;
 
- gStats.addLine();
  ip_file->getStatistics().addLine();
 }
 
@@ -90,7 +89,6 @@ void code::addEmptyLine( void )
 {
  if( ip_file == nullptr ) return;
 
- gStats.addEmptyLine();
  ip_file->getStatistics().addEmptyLine();
 }
 
@@ -98,67 +96,10 @@ void code::addLoc( void )
 {
  if( ip_file == nullptr ) return;
 
- gStats.addLoc();
  ip_file->getStatistics().addLoc();
 }
 
 
-
-void code::printSeparator( void )
-{
- std::cout.width(100);
- std::cout.fill('=');
- std::cout << std::left << "=";
-/*
- std::cout.width(20);
- std::cout.fill('=');
- std::cout << " =";
-
- std::cout.width(20);
- std::cout.fill('=');
- std::cout << " =";
-
- std::cout.width(20);
- std::cout.fill('=');
- std::cout << " =";
-*/
- std::cout << std::endl;
-}
-
-void code::printHeader( void )
-{
- std::cout << std::left << std::endl;
-
- std::cout.fill(' ');
- std::cout << std::setw(40) << "File name";
-
- std::cout.fill(' ');
- std::cout << std::right << std::setw(20) << " Number of lines";
-
- std::cout.fill(' ');
- std::cout << std::setw(20) << " Empty lines";
-
- std::cout.fill(' ');
- std::cout << std::setw(20) << " Lines of Code";
-
- std::cout << std::endl;
-
- printSeparator();
-}
-
-void code::printStats( const char * str, statistics & stats )
-{
- std::cout << std::left;
-
- std::cout.fill(' ');
- std::cout << std::setw(40) << str;
-
- std::cout << std::right;
- std::cout << std::setw(20) << stats.getLines();
- std::cout << std::setw(20) << stats.getEmptyLines();
- std::cout << std::setw(20) << stats.getLoc();
- std::cout << std::endl;
-}
 
 
 // Check if there are relevant characters in the string up to a given search length
@@ -406,13 +347,11 @@ void code::loc( file * p_file )
  TRACE_EXIT
 }
 
-void code::processFiles( progOptions & options, fileSet * p_files )
+inline void code::processFiles( progOptions & options, fileSet * p_files )
 {
  TRACE_ENTER
 
  LanguageProvider & prov	= LanguageProvider::getInstance();
-
- gStats.reset();	// Reset Global stats
 
  // Get insight for the set of file
  for( auto it : *p_files )
@@ -432,39 +371,25 @@ void code::processFiles( progOptions & options, fileSet * p_files )
  TRACE_EXIT
 }
 
-void code::printReport( progOptions & options, fileSet * p_files )
+inline void code::generateReport( progOptions & options, fileSet * p_files )
 {
- std::filesystem::path		myPath;
- LanguageProvider 		&	prov	= LanguageProvider::getInstance();
+ TRACE_ENTER
 
- printHeader();
+ report * rep = report::build( options.getFormat() );
 
- if( options.isVerbose() )
-   {
-	 // Print each file statistics
-	 for( auto it : *p_files )
-	    {
-		  statistics & stats = it->getStatistics();
-		  myPath = it->getName();
-		  if( stats.areAvailable() )
-		    {
-			  printStats( myPath.filename().c_str(), stats );
-		    }
-	    }
-	 printSeparator();
-   }
+ if( rep != nullptr )
+	 rep->generate( options, p_files );
 
- printStats( "Total:", gStats );
-
+ TRACE_EXIT
 }
+
 
 void code::insight( progOptions & options, fileSet * p_files )
 {
  TRACE_ENTER
 
- processFiles( options, p_files );
-
- printReport( options, p_files );
+ processFiles	( options, p_files );
+ generateReport	( options, p_files );
 
  TRACE_EXIT
 }

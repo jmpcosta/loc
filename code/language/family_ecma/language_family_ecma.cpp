@@ -3,12 +3,10 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Define an ECMA family of programming languages
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_CPP_HH_
-#define LOC_LANGUAGE_CPP_HH_
 
 // *****************************************************************************************
 //
@@ -16,40 +14,43 @@
 //
 // *****************************************************************************************
 
-// Import C++ system headers
-#include <string>
+// Include OSAPI C++ headers
 
-// Import application headers
-#include "trace_macros.hh"
+// Include Standard headers
+
+// Import module declarations
+#include "trace.hh"
 #include "loc_defs.hh"
-#include "language/family_c/language_family_c.hh"
+#include "language/comment.hh"
+#include "language/languageType.hh"
+#include "language/family_ecma/language_family_ecma.hh"
+
 
 
 // *****************************************************************************************
 //
-// Section: Function declaration
+// Section: Function definition
 //
 // *****************************************************************************************
 
+TRACE_CLASSNAME( language_family_ecma )
 
 
-class language_cpp : public language_family_c
+language_family_ecma::language_family_ecma( void )
 {
-public:
-						language_cpp	( void );
+ lang = languageType::ECMASCRIPT;
 
-		bool			isExtension	( const char * ext 			);
-		bool			isExtension	( const std::string & ext	);
+ comment * p_cmt = new comment();
 
-private:
+ p_cmt->setStart( "//" );
+ comments.push_back( p_cmt );
 
-		TRACE_CLASSNAME_DECLARATION
-};
+ p_cmt = new comment();
+ p_cmt->setStart( "/*" );
+ p_cmt->setEnd  ( "*/" );
+ p_cmt->setMultiline();
+
+ comments.push_back( p_cmt );
+}
 
 
-
-
-
-
-
-#endif // LOC_LANGUAGE_CPP_HH_

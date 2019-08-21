@@ -18,13 +18,13 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <commandLine.hh>
 #include <iostream>
 #include <cstdlib>
 #include <filesystem>
 
 #include "trace.hh"
 #include "loc_defs.hh"
-#include "cmdArgs.hh"
 #include "code.hh"
 #include "files/fileSet.hh"
 
@@ -49,19 +49,22 @@ void display_usage( t_char * progname )
 {
 	cout << progname << "\t<options>\t[ base code directory | source file name ]" << endl << endl;
 	cout << "  Where <options>:" << endl;
-	cout << "\t\t\t-v => enable verbose output" << endl << endl;
+	cout << "\t\t\t-d \t\t=> enable verbose output"      				<< endl;
+	cout << "\t\t\t-t [text | csv] => output format (text is default)"	<< endl;
+	cout << endl;
 }
 
 int LOC_MAIN( int argc, t_char * argv[] )
 {
+ commandLine	cmdLine;
  progOptions	options;
  code			code;
 
- if( ! parse_command_line( argc, argv, options ) )
+ if( ! cmdLine.parse( argc, argv, options ) )
 	 display_usage( argv[ 0 ] );
  else
    {
-	 const t_string & pathname = options.getPath();
+	 const std::string & pathname = options.getPath();
 	 if( ! filesystem::exists( pathname ) )
 	   {
 		 loc_cerr << "Unknown pathname:" << options.getPath() << endl;

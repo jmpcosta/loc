@@ -44,12 +44,12 @@ language_csh::language_csh()
 }
 
 
-bool language_csh::isExtension( const t_char * extension )
+bool language_csh::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_csh::isExtension( const t_string & extension )
+bool language_csh::isExtension( const std::string & extension )
 {
  return true;
 }

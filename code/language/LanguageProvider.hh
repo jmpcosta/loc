@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <vector>
 
 // Import application headers
 #include "../language/language.hh"
@@ -34,7 +35,8 @@
 class LanguageProvider : public Singleton<LanguageProvider>
 {
 public:
-		language		*			getParser( languageType which );
+									~LanguageProvider	( void 					);
+		language		*			getParser			( languageType which	);
 
 private:
 		// Methods

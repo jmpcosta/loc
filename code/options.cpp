@@ -19,7 +19,7 @@
 // Include Standard headers
 
 // Import module declarations
-#include "loc_defs.hh"
+#include "trace.hh"
 #include "options.hh"
 
 
@@ -29,10 +29,15 @@
 //
 // *****************************************************************************************
 
+TRACE_CLASSNAME( progOptions )
+
 
 progOptions::progOptions()
 {
+ TRACE_POINT
+
  language = languageType::autodetect;
- pathname = LOC_STRING(".");
+ pathname = ".";
  iVerbose = false;
+ iType	  = reportType::text;
 }

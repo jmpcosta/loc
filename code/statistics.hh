@@ -42,16 +42,15 @@ public:
 		void		addLine			( void )		{ i_nlines++;			}
 		void		addEmptyLine	( void )		{ i_nEmptyLines++;		}
 
-		void		addLocs			( uint64_t n )	{ i_loc 		+= n;	}
-		void		addLines		( uint64_t n )	{ i_nlines		+= n;	}
-		void		addEmptyLines	( uint64_t n )	{ i_nEmptyLines	+= n;	}
-
 		uint64_t	getLoc			( void )		{ return i_loc;			}
 		uint64_t	getLines		( void )		{ return i_nlines;		}
 		uint64_t	getEmptyLines	( void )		{ return i_nEmptyLines;	}
 
 		bool		areAvailable	( void )		{ return i_available;	}
 		void		setAvailable	( bool b )		{ i_available = b;		}
+
+		void		addStats		( statistics & s );
+
 
 private:
 		bool		i_available;

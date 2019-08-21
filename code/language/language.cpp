@@ -19,6 +19,7 @@
 // Include Standard headers
 
 // Import project headers
+#include "trace.hh"
 #include "language.hh"
 
 
@@ -28,9 +29,27 @@
 //
 // *****************************************************************************************
 
+TRACE_CLASSNAME( language )
+
+
 
 language::language()
 {
  lang = languageType::unknown;
 }
 
+
+language::~language()
+{
+ TRACE_ENTER
+
+ for( auto i : comments )
+    {
+	  TRACE( "Deleting comment: ", i->getStart() )
+	  delete i;
+    }
+
+ comments.clear();
+
+ TRACE_EXIT
+}

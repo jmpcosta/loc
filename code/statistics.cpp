@@ -17,6 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <cstdint>
 
 // Import module declarations
 #include "statistics.hh"
@@ -44,3 +45,12 @@ void statistics::reset( void )
  i_nEmptyLines	= 0;
  i_available	= false;
 }
+
+
+void statistics::addStats( statistics & stats )
+{
+ i_loc			+= stats.getLoc();
+ i_nlines		+= stats.getLines();
+ i_nEmptyLines	+= stats.getEmptyLines();
+}
+

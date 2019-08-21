@@ -44,12 +44,12 @@ language_cpp::language_cpp()
 }
 
 
-bool language_cpp::isExtension( const t_char * extension )
+bool language_cpp::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_cpp::isExtension( const t_string & extension )
+bool language_cpp::isExtension( const std::string & extension )
 {
  return true;
 }

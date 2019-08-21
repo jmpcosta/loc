@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Provide the definitions/declarations for a SGML family of programming languages
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_CPP_HH_
-#define LOC_LANGUAGE_CPP_HH_
+#ifndef LOC_LANGUAGE_FAMILY_SGML_HH_
+#define LOC_LANGUAGE_FAMILY_SGML_HH_
 
 // *****************************************************************************************
 //
@@ -17,12 +17,11 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
 // Import application headers
 #include "trace_macros.hh"
-#include "loc_defs.hh"
-#include "language/family_c/language_family_c.hh"
+#include "language/language.hh"
+
 
 
 // *****************************************************************************************
@@ -33,16 +32,12 @@
 
 
 
-class language_cpp : public language_family_c
+class language_family_sgml : public language
 {
 public:
-						language_cpp	( void );
-
-		bool			isExtension	( const char * ext 			);
-		bool			isExtension	( const std::string & ext	);
+		language_family_sgml();
 
 private:
-
 		TRACE_CLASSNAME_DECLARATION
 };
 
@@ -52,4 +47,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_CPP_HH_
+#endif // LOC_LANGUAGE_FAMILY_SGML_HH_

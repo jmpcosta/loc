@@ -44,12 +44,12 @@ language_csharp::language_csharp()
 }
 
 
-bool language_csharp::isExtension( const t_char * extension )
+bool language_csharp::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_csharp::isExtension( const t_string & extension )
+bool language_csharp::isExtension( const std::string & extension )
 {
  return true;
 }

@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <string>
 
 // Import application headers
 #include "trace_macros.hh"
@@ -37,8 +38,8 @@ class language_bourne : public language_family_bourne
 public:
 					language_bourne	( void );
 
-		bool		isExtension	( const t_char * ext 	);
-		bool		isExtension	( const t_string & ext	);
+		bool		isExtension	( const char * ext 			);
+		bool		isExtension	( const std::string & ext	);
 
 private:
 

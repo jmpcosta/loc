@@ -21,6 +21,7 @@
 #include <vector>
 
 // Import own headers
+#include "trace_macros.hh"
 #include "loc_defs.hh"
 #include "language/comment.hh"
 #include "language/languageType.hh"
@@ -38,7 +39,7 @@
 class language
 {
 public:
-		virtual								~language	( void ) {}
+		virtual								~language	( void );
 											language	( void );
 
 		typedef std::vector<comment *>::iterator							iterator;
@@ -56,8 +57,8 @@ public:
 		virtual const char *				getName		( void )					{ return name.c_str();		}
 
 		// Is this a file extension for this programming language
-		virtual bool						isExtension	( const t_char * ext		) = 0;
-		virtual bool						isExtension	( const t_string & ext		) = 0;
+		virtual bool						isExtension	( const char * ext				) = 0;
+		virtual bool						isExtension	( const std::string & ext		) = 0;
 
 protected:
 
@@ -67,6 +68,8 @@ protected:
 
 		// Support more than one comment tokens in the language
 		std::vector<comment *>				comments;
+
+		TRACE_CLASSNAME_DECLARATION
 
 };
 

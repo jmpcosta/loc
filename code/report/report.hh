@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Provide the definitions/declarations for a generic Report
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_CPP_HH_
-#define LOC_LANGUAGE_CPP_HH_
+#ifndef LOC_REPORT_HH_
+#define LOC_REPORT_HH_
 
 // *****************************************************************************************
 //
@@ -17,12 +17,14 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
-// Import application headers
+// Import own headers
 #include "trace_macros.hh"
-#include "loc_defs.hh"
-#include "language/family_c/language_family_c.hh"
+#include "options.hh"
+#include "files/fileSet.hh"
+#include "report/reportType.hh"
+
+
 
 
 // *****************************************************************************************
@@ -32,24 +34,22 @@
 // *****************************************************************************************
 
 
-
-class language_cpp : public language_family_c
+class report
 {
 public:
-						language_cpp	( void );
+		virtual					~report	( void ) {}
+								report	( void ) {}
 
-		bool			isExtension	( const char * ext 			);
-		bool			isExtension	( const std::string & ext	);
+		// All reports must have a generate method with the same signature
+		virtual void			generate	( progOptions & options, fileSet * files ) = 0;
+
+		// Factory method
+		static	report *		build( reportType type );
 
 private:
-
 		TRACE_CLASSNAME_DECLARATION
 };
 
 
 
-
-
-
-
-#endif // LOC_LANGUAGE_CPP_HH_
+#endif // LOC_REPORT_HH_

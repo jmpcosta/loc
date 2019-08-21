@@ -27,7 +27,6 @@
 #include "files/file.hh"
 
 
-using namespace std;
 
 // *****************************************************************************************
 //
@@ -38,7 +37,7 @@ using namespace std;
 TRACE_CLASSNAME( file )
 
 
-file::file( const string & filename )
+file::file( const std::string & filename )
 {
  TRACE_ENTER
 
@@ -62,7 +61,7 @@ file * file::builder( const std::string & pathname )
 
   try
   {
-	  if( filesystem::is_regular_file( pathname ) )
+	  if( std::filesystem::is_regular_file( pathname ) )
 	    {
 		  TRACE( "New file:", pathname )
 		  p_file = new file( pathname );
@@ -70,7 +69,7 @@ file * file::builder( const std::string & pathname )
   }
 
   catch( const std::exception & e )
-       { cerr << "Exception found: " << e.what() << endl; }
+       { std::cerr << "Exception found: " << e.what() << std::endl; }
 
   TRACE_EXIT
 

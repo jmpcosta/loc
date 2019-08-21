@@ -36,7 +36,6 @@
  #define t_string				std::string
  #define loc_cout				std::cout
  #define loc_cerr				std::cerr
- #define LOC_STRING(x)			x
 
 #elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
 
@@ -46,7 +45,7 @@
  #define t_string				std::wstring
  #define loc_cout				std::wcout
  #define loc_cerr				std::wcerr
- #define LOC_STRING(x)			Lx
+
 #endif
 
 
@@ -57,5 +56,12 @@
 
 #define		LOC_FILE_READ_BUFFER_SIZE	1024
 const char	LOC_LINE_IGNORE_CHARS[]		= { ' ', '\t', '\0' };
+
+#define		LOC_SWITCH_DETAILS		"-d"
+#define		LOC_SWITCH_OUTPUT_FILE	"-o"
+#define		LOC_SWITCH_OUTPUT		"-t"
+
+#define		LOC_OUTPUT_TYPE_TERM	"term"
+#define		LOC_OUTPUT_TYPE_CSV		"csv"
 
 #endif // LOC_DEFS_HH_

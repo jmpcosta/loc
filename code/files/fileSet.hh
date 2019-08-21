@@ -50,14 +50,14 @@ public:
 		const_iterator			end() const			{ return locations.end();	}
 
 		// Factory method
-		static fileSet  *		builder				( const t_string & pathname );
+		static fileSet  *		builder				( const std::string & pathname );
 
 private:
 								fileSet				( file * file );
 								fileSet				( std::vector<file *> & vec );
 
 		// Private Factory method when a pathname is a directory
-		static fileSet  *		directoryBuilder	( const t_string & pathname );
+		static fileSet  *		directoryBuilder	( const std::string & pathname );
 
 		// Pathnames to file system elements
 		std::vector<file *>		locations;

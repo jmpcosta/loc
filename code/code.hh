@@ -55,6 +55,7 @@ private:
 		void			processLine		( std::string & line							);
 		void			loc				( file * fl										);
 		void			processFiles	( progOptions & options, fileSet * files		);
+		void			generateReport	( progOptions & options, fileSet * files		);
 
 		// Wrapper methods for statistics
 		void			reset			( file 	*	p_file								);
@@ -63,17 +64,11 @@ private:
 		void			addEmptyLine	( void 											);
 		void			addLoc			( void 											);
 
-		// Output result
-		void			printStats		( const char * str, statistics &				);
-		void			printHeader		( void											);
-		void			printSeparator	( void											);
-		void			printReport		( progOptions & options, fileSet * p_files		);
 
 		// Variables
 		language *		p_lang;
 		bool			codeAvailable;
 		bool			commentOpen;
-		statistics		gStats;			// Accumulated statistics, i.e. global
 		file	*		ip_file;
 
 		TRACE_CLASSNAME_DECLARATION

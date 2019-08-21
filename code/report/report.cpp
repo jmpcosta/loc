@@ -3,12 +3,10 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Define a generic report
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_CPP_HH_
-#define LOC_LANGUAGE_CPP_HH_
 
 // *****************************************************************************************
 //
@@ -16,40 +14,33 @@
 //
 // *****************************************************************************************
 
-// Import C++ system headers
-#include <string>
+// Include OSAPI C++ headers
 
-// Import application headers
-#include "trace_macros.hh"
-#include "loc_defs.hh"
-#include "language/family_c/language_family_c.hh"
+// Include Standard headers
+
+// Import project headers
+#include "trace.hh"
+#include "report/csvReport.hh"
+#include "report/textReport.hh"
+#include "report/report.hh"
 
 
 // *****************************************************************************************
 //
-// Section: Function declaration
+// Section: Function definition
 //
 // *****************************************************************************************
 
+TRACE_CLASSNAME( report )
 
-
-class language_cpp : public language_family_c
+report * report::build( reportType type )
 {
-public:
-						language_cpp	( void );
+ switch( type )
+ {
+ 	 case reportType::text:		return new textReport;
+ 	 case reportType::csv:		return new csvReport;
+ }
 
-		bool			isExtension	( const char * ext 			);
-		bool			isExtension	( const std::string & ext	);
+ return nullptr;
+}
 
-private:
-
-		TRACE_CLASSNAME_DECLARATION
-};
-
-
-
-
-
-
-
-#endif // LOC_LANGUAGE_CPP_HH_

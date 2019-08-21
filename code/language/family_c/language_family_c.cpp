@@ -41,6 +41,7 @@ language_family_c::language_family_c( void )
  lang = languageType::C;
 
  comment * p_cmt = new comment();
+
  p_cmt->setStart( "//" );
  comments.push_back( p_cmt );
 
@@ -48,8 +49,8 @@ language_family_c::language_family_c( void )
  p_cmt->setStart( "/*" );
  p_cmt->setEnd  ( "*/" );
  p_cmt->setMultiline();
- comments.push_back( p_cmt );
 
- }
+ comments.push_back( p_cmt );
+}
 
 

@@ -17,9 +17,10 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
+// Import project headers
 #include "trace.hh"
-//#include "loc_defs.hh"
 #include "languageType.hh"
 #include "language.hh"
 

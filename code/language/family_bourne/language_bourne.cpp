@@ -44,12 +44,12 @@ language_bourne::language_bourne()
 }
 
 
-bool language_bourne::isExtension( const t_char * extension )
+bool language_bourne::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_bourne::isExtension( const t_string & extension )
+bool language_bourne::isExtension( const std::string & extension )
 {
  return true;
 }

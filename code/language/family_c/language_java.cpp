@@ -44,12 +44,12 @@ language_java::language_java()
  name = "Java";
 }
 
-bool language_java::isExtension( const t_char * extension )
+bool language_java::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_java::isExtension( const t_string & extension )
+bool language_java::isExtension( const std::string & extension )
 {
  return true;
 }

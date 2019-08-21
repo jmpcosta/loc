@@ -32,7 +32,20 @@
 
 TRACE_CLASSNAME( LanguageProvider )
 
+LanguageProvider::~LanguageProvider( void )
+{
+ TRACE_ENTER
 
+ for( auto i : iLanguages )
+    {
+	  TRACE( "Deleting language: ", i->getName() )
+	  delete i;
+    }
+
+ iLanguages.clear();
+
+ TRACE_EXIT
+}
 
 
 language * LanguageProvider::getParser( languageType which )

@@ -17,6 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
 // Import module declarations
 #include "trace.hh"
@@ -43,12 +44,12 @@ language_c::language_c()
  name = "C";
 }
 
-bool language_c::isExtension( const t_char * extension )
+bool language_c::isExtension( const char * extension )
 {
  return true;
 }
 
-bool language_c::isExtension( const t_string & extension	)
+bool language_c::isExtension( const std::string & extension	)
 {
  return true;
 }

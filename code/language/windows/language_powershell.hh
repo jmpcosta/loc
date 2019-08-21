@@ -37,8 +37,8 @@ class language_powershell : public language
 public:
 					language_powershell	( void );
 
-		bool		isExtension	( const t_char * ext 	);
-		bool		isExtension	( const t_string & ext	);
+		bool		isExtension	( const char * ext 			);
+		bool		isExtension	( const std::string & ext	);
 
 
 private:

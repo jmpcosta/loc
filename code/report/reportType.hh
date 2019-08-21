@@ -3,41 +3,26 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions for the supported programming languages
+// Purpose:	Provide the definitions to distinguish reports
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGETYPE_HH_
-#define LOC_LANGUAGETYPE_HH_
+#ifndef LOC_REPORTTYPE_HH_
+#define LOC_REPORTTYPE_HH_
+
 
 // *****************************************************************************************
 //
-// Section: Type declaration/definition
+// Section: Declaration
 //
 // *****************************************************************************************
 
-enum class languageType
+
+enum class reportType
 {
-	autodetect	= -1,
-	unknown		= -1,
-	C			= 0,
-	CPP 		,
-	CSHARP		,
-	JAVA		,
-	BASH		,
-	BOURNE		,
-	CSH			,
-	DOS			,
-	POWERSHELL	,
-	ECMASCRIPT	,
-	JAVASCRIPT	,
-	SGML		,
-	XML			,
-	MAX
+	text,
+	csv
 };
 
 
-
-
-
-#endif // LOC_LANGUAGETYPE_HH_
+#endif // LOC_REPORTTYPE_HH_

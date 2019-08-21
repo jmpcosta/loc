@@ -28,5 +28,8 @@ code/files \
 code/language \
 code/language/family_bourne \
 code/language/family_c \
+code/language/family_ecma \
+code/language/family_sgml \
 code/language/windows \
+code/report \
 

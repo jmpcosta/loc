@@ -30,8 +30,6 @@
 #include "files/fileSet.hh"
 
 
-using namespace std;
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -41,17 +39,17 @@ using namespace std;
 TRACE_CLASSNAME( fileSet )
 
 
-fileSet * fileSet::directoryBuilder( const t_string & pathname )
+fileSet * fileSet::directoryBuilder( const std::string & pathname )
 {
- fileSet  * 		p_files	= nullptr;
- file	  * 		p_file	= nullptr;
- vector<file *>		vec;
+ fileSet  * 			p_files	= nullptr;
+ file	  *	 			p_file	= nullptr;
+ std::vector<file *>	vec;
 
  TRACE_ENTER
 
  try
  {
-  for( auto & it: filesystem::recursive_directory_iterator( pathname ) )
+  for( auto & it: std::filesystem::recursive_directory_iterator( pathname ) )
   	 {
 	   p_file = file::builder( it.path() );
 
@@ -67,7 +65,7 @@ fileSet * fileSet::directoryBuilder( const t_string & pathname )
  }
 
  catch( const std::exception & e )
- { cerr << "Exception found: " << e.what() << endl; }
+ { std::cerr << "Exception found: " << e.what() << std::endl; }
 
  TRACE_EXIT
 
@@ -75,7 +73,7 @@ fileSet * fileSet::directoryBuilder( const t_string & pathname )
 }
 
 
-fileSet * fileSet::builder( const t_string & pathname )
+fileSet * fileSet::builder( const std::string & pathname )
 {
  fileSet * p_files	= nullptr;
  file	  *	p_file	= nullptr;
@@ -84,7 +82,7 @@ fileSet * fileSet::builder( const t_string & pathname )
 
  try
  {
-   if( filesystem::is_regular_file( pathname ) )
+   if( std::filesystem::is_regular_file( pathname ) )
      {
 	   p_file = file::builder( pathname );
 	   if( p_file != nullptr )
@@ -94,12 +92,12 @@ fileSet * fileSet::builder( const t_string & pathname )
 	     }
      }
 
-   if( filesystem::is_directory( pathname ) )
+   if( std::filesystem::is_directory( pathname ) )
 	   p_files = fileSet::directoryBuilder( pathname );
  }
 
  catch( const std::exception & e )
- { cerr << "Exception found: " << e.what() << endl; }
+ { std::cerr << "Exception found: " << e.what() << std::endl; }
 
  TRACE_EXIT
 
@@ -116,7 +114,7 @@ fileSet::fileSet( file * p_file )
 }
 
 
-fileSet::fileSet( vector<file *> & vec )
+fileSet::fileSet( std::vector<file *> & vec )
 {
  TRACE_ENTER
 

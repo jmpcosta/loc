@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <string>
 
 // Import application headers
 #include "loc_defs.hh"
@@ -37,8 +38,8 @@ class language_c : public language_family_c
 public:
 						language_c	( void );
 
-		bool			isExtension	( const t_char * ext	);
-		bool			isExtension	( const t_string & ext	);
+		bool			isExtension	( const char * ext			);
+		bool			isExtension	( const std::string & ext	);
 
 private:
 		TRACE_CLASSNAME_DECLARATION

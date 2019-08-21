@@ -3,12 +3,10 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for the command line arguments
+// Purpose:	Define a SGML family of languages
 //
 // *****************************************************************************************
 
-#ifndef LOC_CMDARGS_HH_
-#define LOC_CMDARGS_HH_
 
 // *****************************************************************************************
 //
@@ -16,18 +14,39 @@
 //
 // *****************************************************************************************
 
-// Import C++ system headers
+// Include OSAPI C++ headers
 
-// Import application headers
+// Include Standard headers
+
+// Import module declarations
+#include "trace.hh"
 #include "loc_defs.hh"
-#include "options.hh"
+#include "language/comment.hh"
+#include "language/languageType.hh"
+#include "language/family_sgml/language_family_sgml.hh"
+
+
 
 // *****************************************************************************************
 //
-// Section: Function declaration
+// Section: Function definition
 //
 // *****************************************************************************************
 
-bool parse_command_line( int argc, t_char * argv[], progOptions & options );
+TRACE_CLASSNAME( language_family_sgml )
 
-#endif // LOC_CMDARGS_HH_
+
+language_family_sgml::language_family_sgml( void )
+{
+ lang = languageType::SGML;
+
+ comment * p_cmt = new comment();
+
+ p_cmt->setStart( "<!--" );
+ p_cmt->setEnd  ( "-->"  );
+ p_cmt->setMultiline();
+
+ comments.push_back( p_cmt );
+}
+
+
