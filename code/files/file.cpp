@@ -23,9 +23,11 @@
 
 // Import project headers
 #include "trace.hh"
-#include "files/fileExtensions.hh"
+#include "language/language_factory.hh"
 #include "files/file.hh"
 
+
+using namespace std::filesystem;
 
 
 // *****************************************************************************************
@@ -42,7 +44,11 @@ file::file( const std::string & filename )
  TRACE_ENTER
 
  iName 		= filename;
- iLang		= fileExtensions::get_language( filename );
+
+ std::filesystem::path	pathname( filename );
+ std::string			extension( pathname.extension() );
+
+ iLang		= language_factory::getLanguage( extension );
 
  TRACE_EXIT
 }
@@ -61,7 +67,7 @@ file * file::builder( const std::string & pathname )
 
   try
   {
-	  if( std::filesystem::is_regular_file( pathname ) )
+	  if( is_regular_file( pathname ) )
 	    {
 		  TRACE( "New file:", pathname )
 		  p_file = new file( pathname );

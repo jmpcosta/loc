@@ -36,10 +36,9 @@
 class language_bash : public language_family_bourne
 {
 public:
-					language_bash	( void );
+							language_bash	( void				);
 
-		bool		isExtension	( const char * ext			);
-		bool		isExtension	( const std::string & ext	);
+		static	bool		isExtension		( const char * ext	);
 
 
 private:

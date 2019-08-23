@@ -25,6 +25,13 @@
 #include "language/family_bourne/language_csh.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_CSH[] = { ".csh", nullptr	};
 
 // *****************************************************************************************
 //
@@ -44,13 +51,8 @@ language_csh::language_csh()
 }
 
 
-bool language_csh::isExtension( const char * extension )
+bool language_csh::isExtension( const char * p_extension )
 {
- return true;
-}
-
-bool language_csh::isExtension( const std::string & extension )
-{
- return true;
+	return language::checkExtension( p_extension, LOC_LANGUAGE_CSH );
 }
 

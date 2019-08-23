@@ -56,18 +56,15 @@ public:
 		virtual languageType				getType		( void )					{ return lang;				}
 		virtual const char *				getName		( void )					{ return name.c_str();		}
 
-		// Is this a file extension for this programming language
-		virtual bool						isExtension	( const char * ext				) = 0;
-		virtual bool						isExtension	( const std::string & ext		) = 0;
-
 protected:
+		static  bool				checkExtension		( const char * extension, const char ** extensionList	);
 
 		// Specific language
-		languageType						lang;
-		std::string							name;
+		languageType				lang;
+		std::string					name;
 
 		// Support more than one comment tokens in the language
-		std::vector<comment *>				comments;
+		std::vector<comment *>		comments;
 
 		TRACE_CLASSNAME_DECLARATION
 

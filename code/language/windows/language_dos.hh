@@ -36,10 +36,9 @@
 class language_dos : public language
 {
 public:
-					language_dos	( void );
+								language_dos	( void 				);
 
-		bool		isExtension	( const char * ext 			);
-		bool		isExtension	( const std::string & ext	);
+		static	bool			isExtension		( const char * ext	);
 
 private:
 

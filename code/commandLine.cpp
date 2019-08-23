@@ -25,7 +25,6 @@
 
 // Import module declarations
 #include "trace.hh"
-#include "files/fileExtensions.hh"
 #include "commandLine.hh"
 
 
@@ -117,12 +116,14 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
 
 	  if( checkParam( opt, LOC_SWITCH_OUTPUT_FILE ) && argc > i + 1 )
 	    {
-		  // Ensure that output file name is in UTF-8
-		  convert2UTF8( argv[ i + 1 ], arg );
+		  if( argv[ i + 1 ][0] != '-' )
+		    {
+		      // Ensure that output file name is in UTF-8
+			  convert2UTF8( argv[ i + 1 ], arg );
 
-		  if( arg.length() > 0 )  options.setOutput( arg );
+			  if( arg.length() > 0 )  options.setOutput( arg );
+		    }
 	    }
-
     }
 
  if( argc > 1 && ! ret )	// A file name was provided ?

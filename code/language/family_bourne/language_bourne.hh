@@ -36,10 +36,9 @@
 class language_bourne : public language_family_bourne
 {
 public:
-					language_bourne	( void );
+							language_bourne	( void 				);
 
-		bool		isExtension	( const char * ext 			);
-		bool		isExtension	( const std::string & ext	);
+		static	bool		isExtension		( const char * ext	);
 
 private:
 

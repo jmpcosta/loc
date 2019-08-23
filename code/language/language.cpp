@@ -17,6 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <cstring>
 
 // Import project headers
 #include "trace.hh"
@@ -52,4 +53,33 @@ language::~language()
  comments.clear();
 
  TRACE_EXIT
+}
+
+
+
+bool language::checkExtension( const char * p_extension, const char ** p_extensionList )
+{
+ int i = 0;
+
+ if( p_extension != nullptr && p_extensionList != nullptr )
+   {
+	 TRACE( "Searching extension:", p_extension )
+
+	 while( p_extensionList[ i ] != nullptr )
+      	  {
+		 	if( strcasecmp( p_extensionList[ i ], p_extension ) == 0 )	// Strings match
+		 	  {
+		 		TRACE( "Exiting with language:", i )
+
+	 			return true;
+		 	  }
+		 	i++;
+      	  }
+   }
+
+ TRACE( "Unknown language" )
+
+ TRACE_EXIT
+
+ return false;
 }

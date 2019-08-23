@@ -45,11 +45,13 @@ public:
 
 private:
 		// Output result
-		void			printStats		( const char * str, statistics &				);
-		void			printHeader		( void											);
-		void			printSeparator	( void											);
+		void			writeDetails	( fileSet * files,  bool details, std::size_t & counter, statistics & stats	);
+		void			writeStats		( const char * name, statistics & stats										);
+		void			writeHeader		( void																		);
+		void			writeSeparator	( void																		);
 
 		// Variables
+
 		TRACE_CLASSNAME_DECLARATION
 };
 

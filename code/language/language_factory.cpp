@@ -26,6 +26,7 @@
 
 // All supported languages
 #include "language/languages.hh"
+#include "language/language_fileExtensions.hh"
 #include "language_factory.hh"
 
 
@@ -55,6 +56,8 @@ language * language_factory::build( languageType type )
   	case languageType::CSH:			p_lang = new language_csh();	 		break;
   	case languageType::DOS:			p_lang = new language_dos();	 		break;
   	case languageType::POWERSHELL:	p_lang = new language_powershell();	 	break;
+  	case languageType::JAVASCRIPT:	p_lang = new language_javascript();	 	break;
+  	case languageType::XML:			p_lang = new language_xml();		 	break;
 
 	// The next case is just to silence the compiler
   	case languageType::unknown:										break;
@@ -69,13 +72,23 @@ language * language_factory::build( languageType type )
 
 languageType language_factory::getLanguage( const char * p_fileExtension  )
 {
- languageType lang	= languageType::unknown;
+ TRACE_ENTER
 
- // TODO
+ if( isLanguage<language_c>				( p_fileExtension ) ) return languageType::C;
+ if( isLanguage<language_cpp>			( p_fileExtension ) ) return languageType::CPP;
+ if( isLanguage<language_csharp>		( p_fileExtension ) ) return languageType::CSHARP;
+ if( isLanguage<language_java>			( p_fileExtension ) ) return languageType::JAVA;
+ if( isLanguage<language_bash>			( p_fileExtension ) ) return languageType::BASH;
+ if( isLanguage<language_bourne>		( p_fileExtension ) ) return languageType::BOURNE;
+ if( isLanguage<language_csh>			( p_fileExtension ) ) return languageType::CSH;
+ if( isLanguage<language_dos>			( p_fileExtension ) ) return languageType::DOS;
+ if( isLanguage<language_powershell>	( p_fileExtension ) ) return languageType::POWERSHELL;
+ if( isLanguage<language_javascript>	( p_fileExtension ) ) return languageType::JAVASCRIPT;
+ if( isLanguage<language_xml>			( p_fileExtension ) ) return languageType::XML;
 
  TRACE_EXIT
 
- return lang;
+ return languageType::unknown;
 }
 
 

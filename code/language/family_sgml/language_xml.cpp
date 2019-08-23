@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Bourne language
+// Purpose:	Define the XML language
 //
 // *****************************************************************************************
 
@@ -17,12 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
 // Import module declarations
 #include "trace.hh"
-#include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/family_bourne/language_bourne.hh"
+#include "language/family_sgml/language_xml.hh"
 
 
 // *****************************************************************************************
@@ -31,7 +31,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_BOURNE[] = { ".sh", nullptr };
+const char * LOC_LANGUAGE_XML[] = { ".xml", ".xsl", ".xslt", nullptr };
 
 // *****************************************************************************************
 //
@@ -39,21 +39,21 @@ const char * LOC_LANGUAGE_BOURNE[] = { ".sh", nullptr };
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_bourne )
+TRACE_CLASSNAME( language_xml )
 
 
-language_bourne::language_bourne()
+language_xml::language_xml()
 {
  TRACE_POINT
 
- lang = languageType::BOURNE;
- name = "Bourne shell";
+ lang = languageType::C;
+ name = "C";
 }
 
-
-bool language_bourne::isExtension( const char * p_extension )
+bool language_xml::isExtension( const char * p_extension )
 {
-	return language::checkExtension( p_extension, LOC_LANGUAGE_BOURNE );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_XML );
 }
+
 
 

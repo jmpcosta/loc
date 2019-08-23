@@ -45,8 +45,9 @@ public:
 
 private:
 		// Output result
-		void			writeStats		( const char * str, statistics &				);
-		void			writeHeader		( void											);
+		void 			writeDetails	( fileSet * files,  bool details, statistics & stats	);
+		void			writeStats		( const char * str, statistics &						);
+		void			writeHeader		( void													);
 
 		// variables
 		char			separator;

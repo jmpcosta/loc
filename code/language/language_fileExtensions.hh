@@ -3,12 +3,13 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Provide the definitions/declarations for a template to check if an extension
+//			implies a language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_CPP_HH_
-#define LOC_LANGUAGE_CPP_HH_
+#ifndef LOC_LANGUAGE_FILEEXTENSIONS_HH_
+#define LOC_LANGUAGE_FILEEXTENSIONS_HH_
 
 // *****************************************************************************************
 //
@@ -17,12 +18,8 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
-// Import application headers
-#include "trace_macros.hh"
-#include "loc_defs.hh"
-#include "language/family_c/language_family_c.hh"
+// Import project headers
 
 
 // *****************************************************************************************
@@ -31,24 +28,10 @@
 //
 // *****************************************************************************************
 
-
-
-class language_cpp : public language_family_c
+template <class T> bool isLanguage( const char * p_extension )
 {
-public:
-							language_cpp	( void 				);
-
-		static	bool		isExtension		( const char * ext	);
-
-private:
-
-		TRACE_CLASSNAME_DECLARATION
-};
+ return T::isExtension( p_extension );
+}
 
 
-
-
-
-
-
-#endif // LOC_LANGUAGE_CPP_HH_
+#endif // LOC_LANGUAGE_FILEEXTENSIONS_HH_

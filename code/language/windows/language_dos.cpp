@@ -26,6 +26,14 @@
 #include "language/windows/language_dos.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_DOS[] = { ".bat", ".cmd", nullptr	};
+
 
 // *****************************************************************************************
 //
@@ -51,13 +59,9 @@ language_dos::language_dos()
 }
 
 
-bool language_dos::isExtension( const char * extension )
+bool language_dos::isExtension( const char * p_extension )
 {
- return true;
+ return language::checkExtension( p_extension, LOC_LANGUAGE_DOS );
 }
 
-bool language_dos::isExtension( const std::string & extension )
-{
- return true;
-}
 

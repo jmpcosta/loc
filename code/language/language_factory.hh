@@ -36,8 +36,8 @@ public:
 
 	static language *	build		( languageType lang					);
 
-	languageType		getLanguage	( const std::string & fileExtension	);
-	languageType		getLanguage	( const char *        fileExtension	);
+	static languageType		getLanguage	( const std::string & fileExtension	);
+	static languageType		getLanguage	( const char *        fileExtension	);
 
 private:
 

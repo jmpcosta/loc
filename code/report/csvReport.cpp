@@ -18,6 +18,7 @@
 
 // Include Standard headers
 #include <iostream>
+#include <fstream>
 #include <iomanip>
 #include <filesystem>
 
@@ -38,7 +39,8 @@ TRACE_CLASSNAME( csvReport )
 
 void csvReport::writeHeader( void )
 {
- std::cout << std::endl;
+ TRACE_POINT
+
 
  std::cout << "File name" << separator;
 
@@ -53,6 +55,8 @@ void csvReport::writeHeader( void )
 
 void csvReport::writeStats( const char * str, statistics & stats )
 {
+ TRACE_POINT
+
  std::cout << str 					<< separator;
  std::cout << stats.getLines()      << separator;
  std::cout << stats.getEmptyLines() << separator;
@@ -61,6 +65,34 @@ void csvReport::writeStats( const char * str, statistics & stats )
  std::cout << std::endl;
 }
 
+
+
+void csvReport::writeDetails( fileSet * p_files, bool details, statistics & gStats )
+{
+ std::filesystem::path		myPath;
+
+ TRACE_POINT
+
+ // Print each file statistics
+ for( auto it : *p_files )
+    {
+	  statistics & stats = it->getStatistics();
+
+	  if( stats.areAvailable() )
+	    {
+		  // Add current file statistics to global
+		  gStats.addStats( stats );
+
+		  if( details )
+		    {
+			  myPath = it->getName();
+			  writeStats( myPath.filename().c_str(), stats );
+		    }
+	    }
+    }
+
+ TRACE_EXIT
+}
 
 
 // *****************************************************************************************
@@ -73,28 +105,31 @@ void csvReport::writeStats( const char * str, statistics & stats )
 void csvReport::generate( progOptions & options, fileSet * p_files )
 {
  statistics					gStats;
- std::filesystem::path		myPath;
+
  //LanguageProvider 		&	prov	= LanguageProvider::getInstance();
 
- writeHeader();
+ TRACE_ENTER
 
- // Print each file statistics
- for( auto it : *p_files )
-    {
-	  statistics & stats = it->getStatistics();
+ std::streambuf * coubuf = std::cout.rdbuf(); //save old buf
 
-	  if( stats.areAvailable() )
-	    {
-		  // Add current file statistics to global
-		  gStats.addStats( stats );
+ std::ofstream out( options.getOutput().c_str() );
+ if( options.getOutput().size() == 0 )
+	 std::cout << std::endl;
+ else
+   {
+	 TRACE( "Output file exists: ", options.getOutput().c_str() )
 
-		  if( options.isVerbose() )
-		    {
-			  myPath = it->getName();
-			  writeStats( myPath.filename().c_str(), stats );
-		    }
-	    }
-    }
+	 std::cout.rdbuf( out.rdbuf() );	// Redirect Standard Output to "out" file stream
+   }
 
- writeStats( "Total", gStats );
+ writeHeader	();
+ writeDetails	( p_files, options.isVerbose(), gStats );
+ writeStats		( "Total", gStats );
+
+ std::cout.rdbuf( coubuf ); 		//reset to standard output again
+
+ if( options.getOutput().size() == 0 )	// When on terminal. write one more line separator
+ 	 std::cout << std::endl;
+
+ TRACE_EXIT
 }

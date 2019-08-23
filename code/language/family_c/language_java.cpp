@@ -26,6 +26,13 @@
 #include "language/family_c/language_java.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_JAVA[] = { ".java", ".jav", nullptr };
 
 // *****************************************************************************************
 //
@@ -44,14 +51,10 @@ language_java::language_java()
  name = "Java";
 }
 
-bool language_java::isExtension( const char * extension )
+bool language_java::isExtension( const char * p_extension )
 {
- return true;
+ return language::checkExtension( p_extension, LOC_LANGUAGE_JAVA );
 }
 
-bool language_java::isExtension( const std::string & extension )
-{
- return true;
-}
 
 

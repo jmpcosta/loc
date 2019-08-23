@@ -20,6 +20,8 @@
 #include "language/family_c/languages.hh"
 #include "language/family_bourne/languages.hh"
 #include "language/windows/languages.hh"
+#include "language/family_sgml/languages.hh"
+#include "language/family_ecma/languages.hh"
 
 
 #endif // LOC_LANGUAGES_HH_

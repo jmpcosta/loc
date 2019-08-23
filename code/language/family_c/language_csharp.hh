@@ -36,10 +36,9 @@
 class language_csharp : public language_family_c
 {
 public:
-						language_csharp	( void );
+							language_csharp	( void 				);
 
-		bool			isExtension	( const char * ext			);
-		bool			isExtension	( const std::string & ext	);
+		static	bool		isExtension		( const char * ext	);
 
 private:
 

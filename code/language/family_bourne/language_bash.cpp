@@ -25,6 +25,13 @@
 #include "language/family_bourne/language_bash.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_BASH[] = { ".bash", nullptr };
 
 // *****************************************************************************************
 //
@@ -43,14 +50,9 @@ language_bash::language_bash()
  name = "BASH";
 }
 
-bool language_bash::isExtension( const t_char * extension )
+bool language_bash::isExtension( const t_char * p_extension )
 {
- return true;
-}
-
-bool language_bash::isExtension( const t_string & extension )
-{
- return true;
+	return language::checkExtension( p_extension, LOC_LANGUAGE_BASH );
 }
 
 

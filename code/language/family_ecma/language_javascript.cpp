@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Bourne language
+// Purpose:	Define the JavaScript language
 //
 // *****************************************************************************************
 
@@ -17,12 +17,13 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
 // Import module declarations
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/family_bourne/language_bourne.hh"
+#include "language/family_ecma/language_javascript.hh"
 
 
 // *****************************************************************************************
@@ -31,7 +32,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_BOURNE[] = { ".sh", nullptr };
+const char * LOC_LANGUAGE_JAVASCRIPT[] = { ".js", nullptr };
 
 // *****************************************************************************************
 //
@@ -39,21 +40,21 @@ const char * LOC_LANGUAGE_BOURNE[] = { ".sh", nullptr };
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_bourne )
+TRACE_CLASSNAME( language_javascript )
 
 
-language_bourne::language_bourne()
+language_javascript::language_javascript()
 {
  TRACE_POINT
 
- lang = languageType::BOURNE;
- name = "Bourne shell";
+ lang = languageType::JAVASCRIPT;
+ name = "C";
 }
 
-
-bool language_bourne::isExtension( const char * p_extension )
+bool language_javascript::isExtension( const char * p_extension )
 {
-	return language::checkExtension( p_extension, LOC_LANGUAGE_BOURNE );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_JAVASCRIPT );
 }
+
 
 

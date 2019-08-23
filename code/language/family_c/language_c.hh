@@ -36,10 +36,9 @@
 class language_c : public language_family_c
 {
 public:
-						language_c	( void );
+								language_c	( void				);
 
-		bool			isExtension	( const char * ext			);
-		bool			isExtension	( const std::string & ext	);
+		static	bool			isExtension	( const char * ext	);
 
 private:
 		TRACE_CLASSNAME_DECLARATION

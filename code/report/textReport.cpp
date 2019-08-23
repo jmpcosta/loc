@@ -18,6 +18,7 @@
 
 // Include Standard headers
 #include <iostream>
+#include <fstream>
 #include <iomanip>
 #include <filesystem>
 
@@ -35,16 +36,20 @@
 
 TRACE_CLASSNAME( textReport )
 
-void textReport::printSeparator( void )
+inline void textReport::writeSeparator( void )
 {
+ TRACE_POINT
+
  std::cout.width(100);
  std::cout.fill('=');
  std::cout << std::left << "=";
  std::cout << std::endl;
 }
 
-void textReport::printHeader( void )
+void textReport::writeHeader( void )
 {
+ TRACE_POINT
+
  std::cout << std::left << std::endl;
 
  std::cout.fill(' ');
@@ -61,11 +66,13 @@ void textReport::printHeader( void )
 
  std::cout << std::endl;
 
- printSeparator();
+ writeSeparator();
 }
 
-void textReport::printStats( const char * str, statistics & stats )
+void textReport::writeStats( const char * str, statistics & stats )
 {
+ TRACE_POINT
+
  std::cout << std::left;
 
  std::cout.fill(' ');
@@ -80,6 +87,38 @@ void textReport::printStats( const char * str, statistics & stats )
 
 
 
+void textReport::writeDetails( fileSet * p_files, bool details, std::size_t & counter, statistics & gStats )
+{
+ std::filesystem::path		myPath;
+
+ TRACE_POINT
+
+ // Print each file statistics
+ for( auto it : *p_files )
+    {
+	  statistics & stats = it->getStatistics();
+
+	  if( stats.areAvailable() )
+	    {
+		  counter++;
+
+		  // Add current file statistics to global
+		  gStats.addStats( stats );
+
+		  if( details )
+		    {
+			  myPath = it->getName();
+			  writeStats( myPath.filename().c_str(), stats );
+		    }
+	    }
+    }
+
+ if( details )	 writeSeparator();
+
+ TRACE_EXIT
+}
+
+
 // *****************************************************************************************
 //
 // Section: Public Function definition
@@ -91,31 +130,34 @@ void textReport::generate( progOptions & options, fileSet * p_files )
 {
  statistics					gStats;
  std::filesystem::path		myPath;
+ std::size_t				counter = 0;
+
+ TRACE_ENTER
+
  //LanguageProvider 		&	prov	= LanguageProvider::getInstance();
 
- printHeader();
+ std::streambuf * coubuf = std::cout.rdbuf(); //save old buf
 
- // Print each file statistics
- for( auto it : *p_files )
-    {
-	  statistics & stats = it->getStatistics();
+ std::ofstream out( options.getOutput().c_str() );
+ if( options.getOutput().size() > 0 )
+   {
+	 TRACE( "Output file exists: ", options.getOutput().c_str() )
 
-	  if( stats.areAvailable() )
-	    {
-		  // Add current file statistics to global
-		  gStats.addStats( stats );
+	 std::cout.rdbuf( out.rdbuf() );	// Redirect Standard Output to "out" file stream
+   }
 
-		  if( options.isVerbose() )
-		    {
-			  myPath = it->getName();
-			  printStats( myPath.filename().c_str(), stats );
-		    }
-	    }
-  }
+ writeHeader	();
+ writeDetails	( p_files, options.isVerbose(), counter, gStats );
 
- if( options.isVerbose() )
-	 printSeparator();
+ // Summary
+ std::string msg = "Total (";
+ msg += std::to_string( counter );
+ msg += " files)";
+ writeStats( msg.c_str(), gStats );
 
- printStats( "Total:", gStats );
+ std::cout << std::endl;
 
+ std::cout.rdbuf( coubuf ); 		//reset to standard output again
+
+ TRACE_EXIT
 }

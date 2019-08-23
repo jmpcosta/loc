@@ -29,6 +29,7 @@
 #include "files/file.hh"
 #include "files/fileSet.hh"
 
+using namespace std::filesystem;
 
 // *****************************************************************************************
 //
@@ -49,13 +50,16 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
 
  try
  {
-  for( auto & it: std::filesystem::recursive_directory_iterator( pathname ) )
+
+  recursive_directory_iterator	dirIterator( pathname, directory_options::skip_permission_denied );
+
+  for( const auto & it: dirIterator )
   	 {
-	   p_file = file::builder( it.path() );
+	   p_file = file::builder( it.path().c_str() );
 
 	   if( p_file != nullptr )
 	     {
-		   TRACE( "Adding file to list:", it.path() )
+		   TRACE( "Adding file to list:", it.path().c_str() )
 		   vec.push_back( p_file );
 	     }
   	 }
@@ -82,7 +86,7 @@ fileSet * fileSet::builder( const std::string & pathname )
 
  try
  {
-   if( std::filesystem::is_regular_file( pathname ) )
+   if( is_regular_file( pathname ) )
      {
 	   p_file = file::builder( pathname );
 	   if( p_file != nullptr )
@@ -92,7 +96,7 @@ fileSet * fileSet::builder( const std::string & pathname )
 	     }
      }
 
-   if( std::filesystem::is_directory( pathname ) )
+   if( is_directory( pathname ) )
 	   p_files = fileSet::directoryBuilder( pathname );
  }
 

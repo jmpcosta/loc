@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for the file extensions API
+// Purpose:	Provide the definitions/declarations for the JavaScript programming language
 //
 // *****************************************************************************************
 
-#ifndef LOC_EXTENSIONS_HH_
-#define LOC_EXTENSIONS_HH_
+#ifndef LOC_LANGUAGE_JAVASCRIPT_HH_
+#define LOC_LANGUAGE_JAVASCRIPT_HH_
 
 // *****************************************************************************************
 //
@@ -17,11 +17,11 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
-// Import project headers
+// Import application headers
+#include "loc_defs.hh"
 #include "trace_macros.hh"
-#include "language/languageType.hh"
+#include "language/family_ecma/language_family_ecma.hh"
 
 
 // *****************************************************************************************
@@ -30,16 +30,23 @@
 //
 // *****************************************************************************************
 
-class fileExtensions
+
+
+class language_javascript : public language_family_ecma
 {
 public:
-		static	languageType get_language( const std::string & filename );
-		static	languageType get_language( const char * filename 		);
+								language_javascript	( void				);
+
+		static	bool			isExtension			( const char * ext	);
 
 private:
-
-		// Variables
 		TRACE_CLASSNAME_DECLARATION
 };
 
-#endif // LOC_EXTENSIONS_HH_
+
+
+
+
+
+
+#endif // LOC_LANGUAGE_JAVASCRIPT_HH_

@@ -36,10 +36,9 @@
 class language_java : public language_family_c
 {
 public:
-						language_java	( void );
+							language_java	( void 				);
 
-		bool			isExtension	( const char * ext 			);
-		bool			isExtension	( const std::string & ext	);
+		static	bool		isExtension		( const char * ext	);
 
 private:
 

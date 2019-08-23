@@ -35,10 +35,9 @@
 class language_csh : public language_family_bourne
 {
 public:
-					language_csh ( void );
+							language_csh 	( void 				);
 
-		bool		isExtension	( const char * ext			);
-		bool		isExtension	( const std::string & ext	);
+		static	bool		isExtension		( const char * ext	);
 
 private:
 

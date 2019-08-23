@@ -26,6 +26,13 @@
 #include "language/family_c/language_c.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_C[] = { ".c", ".h", ".hhh", nullptr };
 
 // *****************************************************************************************
 //
@@ -44,14 +51,10 @@ language_c::language_c()
  name = "C";
 }
 
-bool language_c::isExtension( const char * extension )
+bool language_c::isExtension( const char * p_extension )
 {
- return true;
+ return language::checkExtension( p_extension, LOC_LANGUAGE_C );
 }
 
-bool language_c::isExtension( const std::string & extension	)
-{
- return true;
-}
 
 

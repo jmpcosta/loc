@@ -16,8 +16,8 @@
 //
 // *****************************************************************************************
 
-// Import all C family language headers
-//#include "language/family_c/language_c.hh"
+// Import all ECMAScript family language headers
+#include "language/family_ecma/language_javascript.hh"
 
 
 

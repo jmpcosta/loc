@@ -25,6 +25,14 @@
 #include "language/family_c/language_csharp.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_CSHARP[] = { ".c++", ".cc", ".cpp", ".hh", ".cls", ".cxx", ".h++", ".hpp", ".hxx", nullptr };
+
 
 // *****************************************************************************************
 //
@@ -44,13 +52,9 @@ language_csharp::language_csharp()
 }
 
 
-bool language_csharp::isExtension( const char * extension )
+bool language_csharp::isExtension( const char * p_extension )
 {
- return true;
+ return language::checkExtension( p_extension, LOC_LANGUAGE_CSHARP );
 }
 
-bool language_csharp::isExtension( const std::string & extension )
-{
- return true;
-}
 

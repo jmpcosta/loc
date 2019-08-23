@@ -37,7 +37,7 @@ class file
 {
 public:
 								~file			( void );
-		const t_string &		getName			( void ) const	{ return iName;		}
+		const std::string &		getName			( void ) const	{ return iName;		}
 		languageType			getLanguage		( void ) const	{ return iLang;		}
 		statistics & 			getStatistics	( void ) 		{ return iStats;	}
 
@@ -47,7 +47,7 @@ public:
 private:
 								file			( const std::string & filename );
 
-		t_string				iName;
+		std::string				iName;
 		languageType			iLang;
 		statistics				iStats;
 

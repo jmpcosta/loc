@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Provide the definitions/declarations for the XML language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_CPP_HH_
-#define LOC_LANGUAGE_CPP_HH_
+#ifndef LOC_LANGUAGE_XML_HH_
+#define LOC_LANGUAGE_XML_HH_
 
 // *****************************************************************************************
 //
@@ -17,12 +17,10 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
 // Import application headers
 #include "trace_macros.hh"
-#include "loc_defs.hh"
-#include "language/family_c/language_family_c.hh"
+#include "language/family_sgml/language_family_sgml.hh"
 
 
 // *****************************************************************************************
@@ -33,15 +31,14 @@
 
 
 
-class language_cpp : public language_family_c
+class language_xml : public language_family_sgml
 {
 public:
-							language_cpp	( void 				);
+								language_xml	( void				);
 
-		static	bool		isExtension		( const char * ext	);
+		static	bool			isExtension		( const char * ext	);
 
 private:
-
 		TRACE_CLASSNAME_DECLARATION
 };
 
@@ -51,4 +48,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_CPP_HH_
+#endif // LOC_LANGUAGE_XML_HH_

@@ -26,6 +26,14 @@
 #include "language/windows/language_powershell.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constant declarations
+//
+// *****************************************************************************************
+
+const char * LOC_LANGUAGE_PSHELL[] = { ".ps1", "psm1", ".ps2", ".msh2", nullptr	};
+
 
 // *****************************************************************************************
 //
@@ -57,14 +65,10 @@ language_powershell::language_powershell()
 
 }
 
-bool language_powershell::isExtension( const char * extension )
+bool language_powershell::isExtension( const char * p_extension )
 {
- return true;
+ return language::checkExtension( p_extension, LOC_LANGUAGE_PSHELL );
 }
 
-bool language_powershell::isExtension( const std::string & extension )
-{
- return true;
-}
 
 
