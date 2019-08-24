@@ -46,8 +46,8 @@ language_xml::language_xml()
 {
  TRACE_POINT
 
- lang = languageType::C;
- name = "C";
+ lang = languageType::XML;
+ name = "XML";
 }
 
 bool language_xml::isExtension( const char * p_extension )

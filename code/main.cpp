@@ -67,7 +67,7 @@ int LOC_MAIN( int argc, t_char * argv[] )
 	 const std::string & pathname = options.getPath();
 	 if( ! filesystem::exists( pathname ) )
 	   {
-		 loc_cerr << "Unknown pathname:" << options.getPath() << endl;
+		 cerr << "Unknown pathname:" << options.getPath() << endl;
 		 return EXIT_FAILURE;
 	   }
 

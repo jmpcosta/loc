@@ -17,6 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <stdexcept>
 #include <iostream>
 
 // Import project declarations
@@ -79,3 +80,38 @@ language * LanguageProvider::getParser( languageType which )
 }
 
 
+language * LanguageProvider::getLanguage( languageType which )
+{
+ language * p_lang = nullptr;
+
+ TRACE_ENTER
+
+ for( const auto & i : iLanguages )
+ 	  if( which == i->getType() )
+		{
+		  TRACE( "Found a matching language: ", i->getName() )
+		  p_lang = i;
+		  break;
+		}
+
+ TRACE_EXIT
+
+ return p_lang;
+}
+
+
+bool LanguageProvider::isLanguageAvailable( languageType which )
+{
+ TRACE_ENTER
+
+ for( const auto & i : iLanguages )
+ 	  if( which == i->getType() )
+		{
+		  TRACE( "Found a matching language: ", i->getName() )
+		  return true;
+		}
+
+ TRACE_EXIT
+
+ return false;
+}

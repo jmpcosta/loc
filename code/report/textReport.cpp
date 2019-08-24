@@ -36,6 +36,11 @@
 
 TRACE_CLASSNAME( textReport )
 
+textReport::textReport()
+{
+ TRACE_POINT
+}
+
 inline void textReport::writeSeparator( void )
 {
  TRACE_POINT
@@ -69,6 +74,20 @@ void textReport::writeHeader( void )
  writeSeparator();
 }
 
+void textReport::writeSummary( void )
+{
+ std::string msg = "Total (";
+ msg += std::to_string( nFiles );
+ msg += " files)";
+
+ if( details ) writeSeparator();
+
+ writeLangStats();
+ writeStats( msg.c_str(), global );
+
+ std::cout << std::endl;
+}
+
 void textReport::writeStats( const char * str, statistics & stats )
 {
  TRACE_POINT
@@ -87,77 +106,3 @@ void textReport::writeStats( const char * str, statistics & stats )
 
 
 
-void textReport::writeDetails( fileSet * p_files, bool details, std::size_t & counter, statistics & gStats )
-{
- std::filesystem::path		myPath;
-
- TRACE_POINT
-
- // Print each file statistics
- for( auto it : *p_files )
-    {
-	  statistics & stats = it->getStatistics();
-
-	  if( stats.areAvailable() )
-	    {
-		  counter++;
-
-		  // Add current file statistics to global
-		  gStats.addStats( stats );
-
-		  if( details )
-		    {
-			  myPath = it->getName();
-			  writeStats( myPath.filename().c_str(), stats );
-		    }
-	    }
-    }
-
- if( details )	 writeSeparator();
-
- TRACE_EXIT
-}
-
-
-// *****************************************************************************************
-//
-// Section: Public Function definition
-//
-// *****************************************************************************************
-
-
-void textReport::generate( progOptions & options, fileSet * p_files )
-{
- statistics					gStats;
- std::filesystem::path		myPath;
- std::size_t				counter = 0;
-
- TRACE_ENTER
-
- //LanguageProvider 		&	prov	= LanguageProvider::getInstance();
-
- std::streambuf * coubuf = std::cout.rdbuf(); //save old buf
-
- std::ofstream out( options.getOutput().c_str() );
- if( options.getOutput().size() > 0 )
-   {
-	 TRACE( "Output file exists: ", options.getOutput().c_str() )
-
-	 std::cout.rdbuf( out.rdbuf() );	// Redirect Standard Output to "out" file stream
-   }
-
- writeHeader	();
- writeDetails	( p_files, options.isVerbose(), counter, gStats );
-
- // Summary
- std::string msg = "Total (";
- msg += std::to_string( counter );
- msg += " files)";
- writeStats( msg.c_str(), gStats );
-
- std::cout << std::endl;
-
- std::cout.rdbuf( coubuf ); 		//reset to standard output again
-
- TRACE_EXIT
-}

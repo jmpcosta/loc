@@ -38,17 +38,15 @@ class textReport : public report
 {
 public:
 						~textReport		( void ) {}
-						textReport		( void ) {}
-
-		// All reports must have a generate method with the same signature
-		void			generate		( progOptions & options, fileSet * files );
+						textReport		( void );
 
 private:
 		// Output result
-		void			writeDetails	( fileSet * files,  bool details, std::size_t & counter, statistics & stats	);
-		void			writeStats		( const char * name, statistics & stats										);
-		void			writeHeader		( void																		);
-		void			writeSeparator	( void																		);
+		void			writeStats		( const char * name, statistics & stats	);
+
+		void			writeHeader		( void	);
+		void			writeSeparator	( void	);
+		void			writeSummary	( void 	);
 
 		// Variables
 

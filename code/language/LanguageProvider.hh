@@ -20,10 +20,10 @@
 #include <vector>
 
 // Import application headers
-#include "../language/language.hh"
-#include "../language/languageType.hh"
 #include "trace_macros.hh"
 #include "singleton.hh"
+#include "language/language.hh"
+#include "language/languageType.hh"
 
 // *****************************************************************************************
 //
@@ -36,7 +36,10 @@ class LanguageProvider : public Singleton<LanguageProvider>
 {
 public:
 									~LanguageProvider	( void 					);
+
 		language		*			getParser			( languageType which	);
+		bool 						isLanguageAvailable	( languageType which	);
+		language		*			getLanguage			( languageType which	);
 
 private:
 		// Methods

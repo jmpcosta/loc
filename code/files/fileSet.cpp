@@ -51,7 +51,8 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
  try
  {
 
-  recursive_directory_iterator	dirIterator( pathname, directory_options::skip_permission_denied );
+  path	dirname( pathname, path::format::generic_format );
+  recursive_directory_iterator	dirIterator( dirname, directory_options::skip_permission_denied );
 
   for( const auto & it: dirIterator )
   	 {
@@ -86,7 +87,9 @@ fileSet * fileSet::builder( const std::string & pathname )
 
  try
  {
-   if( is_regular_file( pathname ) )
+   path		pname( pathname, path::format::generic_format );
+
+   if( is_regular_file( pname ) )
      {
 	   p_file = file::builder( pathname );
 	   if( p_file != nullptr )
@@ -96,7 +99,7 @@ fileSet * fileSet::builder( const std::string & pathname )
 	     }
      }
 
-   if( is_directory( pathname ) )
+   if( is_directory( pname ) )
 	   p_files = fileSet::directoryBuilder( pathname );
  }
 

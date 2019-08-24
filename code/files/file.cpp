@@ -67,7 +67,9 @@ file * file::builder( const std::string & pathname )
 
   try
   {
-	  if( is_regular_file( pathname ) )
+	  path		pname( pathname, path::format::generic_format );
+
+	  if( is_regular_file( pname ) )
 	    {
 		  TRACE( "New file:", pathname )
 		  p_file = new file( pathname );

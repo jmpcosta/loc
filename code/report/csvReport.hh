@@ -40,14 +40,12 @@ public:
 						~csvReport	( void ) {}
 						csvReport	( void ) { separator = ';'; }
 
-		// All reports must have a generate method with the same signature
-		void			generate		( progOptions & options, fileSet * files );
-
 private:
 		// Output result
-		void 			writeDetails	( fileSet * files,  bool details, statistics & stats	);
-		void			writeStats		( const char * str, statistics &						);
-		void			writeHeader		( void													);
+		void			writeStats		( const char * str, statistics & s	);
+
+		void			writeHeader		( void );
+		void			writeSummary	( void );
 
 		// variables
 		char			separator;
