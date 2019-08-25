@@ -21,7 +21,9 @@
 
 // Import project headers
 #include "trace.hh"
-#include "language.hh"
+#include "converter.hh"
+#include "language/language.hh"
+
 
 
 // *****************************************************************************************
@@ -63,11 +65,15 @@ bool language::checkExtension( const char * p_extension, const char ** p_extensi
 
  if( p_extension != nullptr && p_extensionList != nullptr )
    {
-	 TRACE( "Searching extension:", p_extension )
+	 std::string ext( p_extension );
+	 converter::lower( ext );
+	 const char * p_ext = ext.c_str();
+
+	 TRACE( "Searching extension:", p_ext )
 
 	 while( p_extensionList[ i ] != nullptr )
       	  {
-		 	if( strcasecmp( p_extensionList[ i ], p_extension ) == 0 )	// Strings match
+		 	if( strcmp( p_extensionList[ i ], p_ext ) == 0 )	// Strings match
 		 	  {
 		 		TRACE( "Exiting with language:", i )
 

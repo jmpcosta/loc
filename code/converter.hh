@@ -48,6 +48,10 @@ public:
 		/// @param [in,out]  str - A string to be converted
 		static void 	lower		( std::string & str								 			);
 
+		/// @brief Convert a string to lower case
+		/// @param [in,out]  str - A string to be converted
+		static void 	lower		( char * str									 			);
+
 private:
 
 		// Variables

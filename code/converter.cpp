@@ -68,4 +68,13 @@ void converter::lower( std::string & str )
 }
 
 
+void converter::lower( char * p_str )
+{
+ int i = 0;
+
+ while( p_str[ i++ ] != '\0' )
+	    p_str[ i ] = tolower( (int) p_str[ i ] );
+
+}
+
 
