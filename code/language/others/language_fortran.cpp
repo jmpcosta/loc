@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the BASH language
+// Purpose:	Define the Fortran language
 //
 // *****************************************************************************************
 
@@ -17,12 +17,13 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
 // Import module declarations
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/family_bourne/language_bash.hh"
+#include "language/others/language_fortran.hh"
 
 
 // *****************************************************************************************
@@ -31,7 +32,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_BASH[] = { ".bash", nullptr };
+const char * LOC_LANGUAGE_FORTRAN[] = { ".c", ".h", ".hhh", nullptr };
 
 // *****************************************************************************************
 //
@@ -39,20 +40,26 @@ const char * LOC_LANGUAGE_BASH[] = { ".bash", nullptr };
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_bash )
+TRACE_CLASSNAME( language_fortran )
 
 
-language_bash::language_bash()
+language_fortran::language_fortran()
 {
  TRACE_POINT
 
- lang = languageType::BASH;
- name = "BASH";
+ lang = languageType::FORTRAN;
+ name = "Fortran";
+
+ comment * p_cmt = new comment();
+ p_cmt->setStart( "!" );
+ p_cmt->setCaseInsensitive();
+ comments.push_back( p_cmt );
 }
 
-bool language_bash::isExtension( const char * p_extension )
+bool language_fortran::isExtension( const char * p_extension )
 {
-	return language::checkExtension( p_extension, LOC_LANGUAGE_BASH );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_FORTRAN );
 }
+
 
 

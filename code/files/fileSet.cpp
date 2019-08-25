@@ -56,11 +56,14 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
 
   for( const auto & it: dirIterator )
   	 {
-	   p_file = file::builder( it.path().c_str() );
+	   const path & myPath = it.path();
+	   std::string itName = myPath.c_str();
+
+	   p_file = file::builder( itName );
 
 	   if( p_file != nullptr )
 	     {
-		   TRACE( "Adding file to list:", it.path().c_str() )
+		   TRACE( "Adding file to list:", itName )
 		   vec.push_back( p_file );
 	     }
   	 }

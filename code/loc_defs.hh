@@ -33,7 +33,6 @@
  #define OS_LINUX				1
  #define LOC_MAIN				main
  #define t_char					char
- #define t_string				std::string
  #define loc_cout				std::cout
  #define loc_cerr				std::cerr
 
@@ -42,7 +41,6 @@
  #define OS_WINDOWS				1
  #define LOC_MAIN				wmain
  #define t_char					wchar_t
- #define t_string				std::wstring
  #define loc_cout				std::wcout
  #define loc_cerr				std::wcerr
 

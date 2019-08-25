@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include code/report/subdir.mk
 -include code/language/windows/subdir.mk
+-include code/language/others/subdir.mk
 -include code/language/family_sgml/subdir.mk
 -include code/language/family_ecma/subdir.mk
 -include code/language/family_c/subdir.mk

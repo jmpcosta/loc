@@ -49,10 +49,12 @@ void display_usage( t_char * progname );
 
 void display_usage( t_char * progname )
 {
-	cout << progname << "\t<options>\t[ base code directory | source file name ]" << endl << endl;
-	cout << "  Where <options>:" << endl;
-	cout << "\t\t\t-d \t\t=> enable verbose output"      				<< endl;
-	cout << "\t\t\t-t [text | csv] => output format (text is default)"	<< endl;
+	loc_cout << progname;
+	cout << "\t<options>\t[ base code directory | source file name ]" 			<< endl 	<< endl;
+
+	cout << "  Where <options>:" 															<< endl;
+	cout << "\t\t\t-d \t\t=> enable verbose output"  		    							<< endl;
+	cout << "\t\t\t-t [text | csv | xml] => output format (text is default)"				<< endl;
 	cout << endl;
 }
 

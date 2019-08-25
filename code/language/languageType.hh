@@ -24,15 +24,21 @@ enum class languageType
 	CPP 		,
 	CSHARP		,
 	JAVA		,
+	PHP			,
+	SWIFT		,
 	BASH		,
 	BOURNE		,
 	CSH			,
 	DOS			,
 	POWERSHELL	,
+	BASIC		,
 	ECMASCRIPT	,
 	JAVASCRIPT	,
 	SGML		,
 	XML			,
+	AWK			,
+	FORTRAN		,
+	COBOL		,
 	MAX
 };
 

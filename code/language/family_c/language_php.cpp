@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the BASH language
+// Purpose:	Define the PHP language
 //
 // *****************************************************************************************
 
@@ -17,12 +17,13 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <string>
 
 // Import module declarations
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/family_bourne/language_bash.hh"
+#include "language/family_c/language_php.hh"
 
 
 // *****************************************************************************************
@@ -31,7 +32,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_BASH[] = { ".bash", nullptr };
+const char * LOC_LANGUAGE_PHP[] = { ".php", nullptr };
 
 // *****************************************************************************************
 //
@@ -39,20 +40,21 @@ const char * LOC_LANGUAGE_BASH[] = { ".bash", nullptr };
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_bash )
+TRACE_CLASSNAME( language_php )
 
 
-language_bash::language_bash()
+language_php::language_php()
 {
  TRACE_POINT
 
- lang = languageType::BASH;
- name = "BASH";
+ lang = languageType::PHP;
+ name = "PHP";
 }
 
-bool language_bash::isExtension( const char * p_extension )
+bool language_php::isExtension( const char * p_extension )
 {
-	return language::checkExtension( p_extension, LOC_LANGUAGE_BASH );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_PHP );
 }
+
 
 
