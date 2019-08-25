@@ -44,6 +44,10 @@ public:
 		/// @param [out] target - A destination UTF-8 string
 		static void 	UTF8		( const std::wstring & source,		std::string & target 	);
 
+		/// @brief Convert a string to lower case
+		/// @param [in,out]  str - A string to be converted
+		static void 	lower		( std::string & str								 			);
+
 private:
 
 		// Variables

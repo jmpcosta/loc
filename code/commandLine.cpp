@@ -38,9 +38,11 @@
 TRACE_CLASSNAME( commandLine )
 
 
-bool commandLine::checkParam( const std::string & parameter, const char * option )
+bool commandLine::checkParam( const char * option, std::string & parameter )
 {
  TRACE_ENTER
+
+ converter::lower( parameter );
 
  if( strcmp( parameter.c_str(), option ) == 0 ) return true;
 
@@ -50,14 +52,20 @@ bool commandLine::checkParam( const std::string & parameter, const char * option
 }
 
 
-void commandLine::setOutputFormat( const std::string & format, progOptions & options )
+void commandLine::setOutputFormat( std::string & format, progOptions & options )
 {
  TRACE_ENTER
 
- if( checkParam( format, LOC_OUTPUT_TYPE_CSV ) )
+ if( checkParam( LOC_OUTPUT_TYPE_CSV, format ) )
    {
 	 TRACE( "Setting output report as CSV" )
 	 options.setFormat( reportType::csv );
+   }
+
+ if( checkParam( LOC_OUTPUT_TYPE_XML, format ) )
+   {
+	 TRACE( "Setting output report as XML" )
+	 options.setFormat( reportType::xml );
    }
 
  // Other formats...
@@ -84,10 +92,10 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
 	  // Make sure that each command line argument is in UTF-8
 	  converter::UTF8( argv[ i ], opt );
 
-	  if( checkParam( opt, LOC_SWITCH_DETAILS ) )
+	  if( checkParam( LOC_SWITCH_DETAILS, opt ) )
 		  options.setVerbose( true );
 
-	  if( checkParam( opt, LOC_SWITCH_OUTPUT ) && argc > i + 1 )
+	  if( checkParam( LOC_SWITCH_OUTPUT, opt  ) && argc > i + 1 )
 	    {
 		  TRACE( "Output format switch found")
 		  // What type is selected
@@ -95,7 +103,7 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
 		  setOutputFormat( arg, options );
 	    }
 
-	  if( checkParam( opt, LOC_SWITCH_OUTPUT_FILE ) && argc > i + 1 )
+	  if( checkParam( LOC_SWITCH_OUTPUT_FILE, opt ) && argc > i + 1 )
 	    {
 		  if( argv[ i + 1 ][0] != '-' )
 		    {

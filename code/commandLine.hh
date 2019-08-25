@@ -41,23 +41,23 @@ public:
 				~commandLine	( void ) {}
 
 		/// @brief Parse the program command line parameters
-		/// @param [in] argc - The number of command line parameters
-		/// @param [in] argv - The command line parameters
-		/// @param [out] options - The object that represents the program parameterization
+		/// @param [in] argc 		- The number of command line parameters
+		/// @param [in] argv 		- The command line parameters
+		/// @param [out] options 	- The object that represents the program parameterization
 		/// @return Was the parsing of command line parameters successful ?
 		bool 	parse				( int argc, t_char * argv[],		progOptions & options	);
 
 private:
 		/// @brief Verify if a user input parameter matches a program option
-		/// @param [in] parameter - The input parameter (to the program)
-		/// @param [in] options   - The program option to check for
+		/// @param [in] options 	 	- The program option to check for
+		/// @param [in,out] parameter 	- The input parameter (to the program)
 		/// @return True if input parameter and program option match. False otherwise.
-		bool 	checkParam			( const std::string  & parameter,	const char * option		);
+		bool 	checkParam			( const char * option, std::string  & parameter				);
 
 		/// @brief Set the report format option
-		/// @param [in] format   - Report format to generate
-		/// @param [out] options - The object that represents the program parameterization
-		void 	setOutputFormat		( const std::string  & format,		progOptions & options	);
+		/// @param [in,out] format 	- Report format to generate
+		/// @param [out] options 	- The object that represents the program parameterization
+		void 	setOutputFormat		( std::string  & format,		progOptions & options		);
 
 		// Variables
 		TRACE_CLASSNAME_DECLARATION

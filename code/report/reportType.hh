@@ -21,7 +21,8 @@
 enum class reportType
 {
 	text,
-	csv
+	csv,
+	xml
 };
 
 

@@ -17,6 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
+#include <cctype>
 #include <cstring>
 #include <codecvt>
 //#include <iostream>
@@ -55,4 +56,16 @@ void converter::UTF8( const std::wstring & source, std::string & target )
 
  TRACE_EXIT
 }
+
+
+void converter::lower( std::string & str )
+{
+ std::size_t i = 0;
+
+ while( str[ i++ ] != '\0' )
+	    str[ i ] = tolower( (int) str[ i ] );
+
+}
+
+
 

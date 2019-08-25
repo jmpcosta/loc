@@ -27,6 +27,7 @@
 
 #include "report/csvReport.hh"
 #include "report/textReport.hh"
+#include "report/xmlReport.hh"
 #include "report/report.hh"
 
 
@@ -42,8 +43,9 @@ report * report::build( reportType type )
 {
  switch( type )
  {
- 	 case reportType::text:		return new textReport;
- 	 case reportType::csv:		return new csvReport;
+  case reportType::text:	return new textReport;
+  case reportType::csv:		return new csvReport;
+  case reportType::xml:		return new xmlReport;
  }
 
  return nullptr;

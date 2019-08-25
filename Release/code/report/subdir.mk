@@ -6,17 +6,20 @@
 CPP_SRCS += \
 ../code/report/csvReport.cpp \
 ../code/report/report.cpp \
-../code/report/textReport.cpp 
+../code/report/textReport.cpp \
+../code/report/xmlReport.cpp 
 
 OBJS += \
 ./code/report/csvReport.o \
 ./code/report/report.o \
-./code/report/textReport.o 
+./code/report/textReport.o \
+./code/report/xmlReport.o 
 
 CPP_DEPS += \
 ./code/report/csvReport.d \
 ./code/report/report.d \
-./code/report/textReport.d 
+./code/report/textReport.d \
+./code/report/xmlReport.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
