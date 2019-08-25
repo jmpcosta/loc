@@ -6,6 +6,7 @@
 CPP_SRCS += \
 ../code/code.cpp \
 ../code/commandLine.cpp \
+../code/converter.cpp \
 ../code/main.cpp \
 ../code/options.cpp \
 ../code/statistics.cpp 
@@ -13,6 +14,7 @@ CPP_SRCS += \
 OBJS += \
 ./code/code.o \
 ./code/commandLine.o \
+./code/converter.o \
 ./code/main.o \
 ./code/options.o \
 ./code/statistics.o 
@@ -20,6 +22,7 @@ OBJS += \
 CPP_DEPS += \
 ./code/code.d \
 ./code/commandLine.d \
+./code/converter.d \
 ./code/main.d \
 ./code/options.d \
 ./code/statistics.d 

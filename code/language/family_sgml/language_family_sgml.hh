@@ -31,10 +31,11 @@
 // *****************************************************************************************
 
 
-
+/// @brief Class responsible for implementing a SGML language
 class language_family_sgml : public language
 {
 public:
+		/// @brief Class constructor
 		language_family_sgml();
 
 private:

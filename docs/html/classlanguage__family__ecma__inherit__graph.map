@@ -1,4 +1,4 @@
 <map id="language_family_ecma" name="language_family_ecma">
-<area shape="rect" id="node3" href="$classlanguage__javascript.html" title="language_javascript" alt="" coords="14,155,151,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="language" alt="" coords="45,5,120,32"/>
+<area shape="rect" id="node3" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language. " alt="" coords="14,155,151,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="45,5,120,32"/>
 </map>

@@ -1,0 +1,20 @@
+<map id="generate" name="generate">
+<area shape="rect" id="node2" href="$classprog_options.html#a1f2a2289e019e8fa3fb02cfef830ad82" title="Are file statistics required. " alt="" coords="125,51,284,77"/>
+<area shape="rect" id="node3" href="$classreport.html#a74611502f43eb6b6a7fd600c3a28cf66" title="Direct output either for console or file. " alt="" coords="165,101,244,128"/>
+<area shape="rect" id="node5" href="$classreport.html#aa31a5884f3b72d86ab9238bc1932afda" title="Interface to write a report header. " alt="" coords="159,152,251,179"/>
+<area shape="rect" id="node6" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="165,203,244,229"/>
+<area shape="rect" id="node18" href="$classreport.html#aa1116d7515bde1cb14dcfdeb4b86fc2b" title="Interface to write the report summary statistics. " alt="" coords="151,253,258,280"/>
+<area shape="rect" id="node19" href="$classreport.html#a5702f02721cae4afe55178c550e214d7" title="Restore output to the console, in case the output was redirected to a file. " alt="" coords="154,304,255,331"/>
+<area shape="rect" id="node4" href="$classprog_options.html#a8e26ebc1022ceffbc9b52ecbef63a6e7" title="What is the report pathname to generate? " alt="" coords="357,5,515,32"/>
+<area shape="rect" id="node7" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="340,57,532,98"/>
+<area shape="rect" id="node8" href="$classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="359,123,513,149"/>
+<area shape="rect" id="node9" href="$classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="369,173,503,200"/>
+<area shape="rect" id="node13" href="$class_language_provider.html#a37fdb0851aec96f6d421106cd840c614" title="Verify if a language is already provided. " alt="" coords="336,225,536,266"/>
+<area shape="rect" id="node14" href="$class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="332,291,540,317"/>
+<area shape="rect" id="node15" href="$classlanguage.html#a04dda4f0a81c72ef23db823f3b9f66e7" title="Get a reference to the language statistics. " alt="" coords="359,341,513,368"/>
+<area shape="rect" id="node17" href="$classreport.html#a22b8d46a0a31e7ec65b9371824dd34a2" title="Interface to write statistics for the given item. " alt="" coords="395,392,477,419"/>
+<area shape="rect" id="node10" href="$classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="614,123,737,149"/>
+<area shape="rect" id="node11" href="$classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="609,173,741,200"/>
+<area shape="rect" id="node12" href="$classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="590,224,761,251"/>
+<area shape="rect" id="node16" href="$classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="588,341,763,368"/>
+</map>

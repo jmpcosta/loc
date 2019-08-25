@@ -31,12 +31,13 @@
 // *****************************************************************************************
 
 
-
+/// @brief Class responsible for implementing a language for the Bourne shell family of languages
 class language_family_bourne : public language
 {
 public:
 
 protected:
+		/// @brief Class constructor
 		language_family_bourne();
 
 private:

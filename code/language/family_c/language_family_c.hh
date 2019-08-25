@@ -31,10 +31,11 @@
 // *****************************************************************************************
 
 
-
+/// @brief Class responsible for implementing a language of the C family
 class language_family_c : public language
 {
 public:
+		/// @brief Class constructor
 		language_family_c();
 
 private:

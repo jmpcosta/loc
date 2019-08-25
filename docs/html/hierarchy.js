@@ -3,6 +3,7 @@ var hierarchy =
     [ "code", "classcode.html", null ],
     [ "commandLine", "classcommand_line.html", null ],
     [ "comment", "classcomment.html", null ],
+    [ "converter", "classconverter.html", null ],
     [ "file", "classfile.html", null ],
     [ "fileSet", "classfile_set.html", null ],
     [ "language", "classlanguage.html", [

@@ -3,6 +3,7 @@ var annotated_dup =
     [ "code", "classcode.html", "classcode" ],
     [ "commandLine", "classcommand_line.html", "classcommand_line" ],
     [ "comment", "classcomment.html", "classcomment" ],
+    [ "converter", "classconverter.html", null ],
     [ "csvReport", "classcsv_report.html", "classcsv_report" ],
     [ "file", "classfile.html", "classfile" ],
     [ "fileSet", "classfile_set.html", "classfile_set" ],

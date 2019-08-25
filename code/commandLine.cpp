@@ -25,6 +25,7 @@
 
 // Import module declarations
 #include "trace.hh"
+#include "converter.hh"
 #include "commandLine.hh"
 
 
@@ -37,27 +38,7 @@
 TRACE_CLASSNAME( commandLine )
 
 
-// Already in UTF-8
-void commandLine::convert2UTF8( const std::string & source, std::string & target )
-{
- TRACE_POINT
- target = source;
-}
-
-// Convert to UTF-8
-void commandLine::convert2UTF8( const std::wstring & source, std::string & target )
-{
- TRACE_ENTER
-
- std::wstring_convert< std::codecvt_utf8<wchar_t>, wchar_t > converter;
-
- target = converter.to_bytes( source );
-
- TRACE_EXIT
-}
-
-
-bool commandLine::checkParam	( const std::string & parameter, const char * option )
+bool commandLine::checkParam( const std::string & parameter, const char * option )
 {
  TRACE_ENTER
 
@@ -101,7 +82,7 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
  for( int i = 1; i < argc - 1 ; i++ )
     {
 	  // Make sure that each command line argument is in UTF-8
-	  convert2UTF8( argv[ i ], opt );
+	  converter::UTF8( argv[ i ], opt );
 
 	  if( checkParam( opt, LOC_SWITCH_DETAILS ) )
 		  options.setVerbose( true );
@@ -110,7 +91,7 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
 	    {
 		  TRACE( "Output format switch found")
 		  // What type is selected
-		  convert2UTF8( argv[ i + 1 ], arg );
+		  converter::UTF8( argv[ i + 1 ], arg );
 		  setOutputFormat( arg, options );
 	    }
 
@@ -119,7 +100,7 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
 		  if( argv[ i + 1 ][0] != '-' )
 		    {
 		      // Ensure that output file name is in UTF-8
-			  convert2UTF8( argv[ i + 1 ], arg );
+			  converter::UTF8( argv[ i + 1 ], arg );
 
 			  if( arg.length() > 0 )  options.setOutput( arg );
 		    }
@@ -128,7 +109,7 @@ bool commandLine::parse( int argc, t_char * argv[], progOptions & options )
 
  if( argc > 1 && ! ret )	// A file name was provided ?
    {
-	 convert2UTF8( argv[ argc - 1 ], arg );
+	 converter::UTF8( argv[ argc - 1 ], arg );
 
 	 TRACE( "Processing pathname:", arg )
 

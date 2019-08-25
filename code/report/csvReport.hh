@@ -33,22 +33,31 @@
 //
 // *****************************************************************************************
 
-
+/// @brief Class responsible for generating a CSV based report
 class csvReport : public report
 {
 public:
+		/// @brief Class destructor
 						~csvReport	( void ) {}
+
+		/// @brief Class constructor
 						csvReport	( void ) { separator = ';'; }
 
 private:
-		// Output result
+		// Methods
+		/// @brief Write statistics for the given item to a file or standard output
+		/// @param [in] str   - A item name
+		/// @param [in] stats - The statistics to generate for the item
 		void			writeStats		( const char * str, statistics & s	);
 
+		/// @brief Write a report header to a file or standard output
 		void			writeHeader		( void );
+
+		/// @brief Write a report summary to a file or standard output
 		void			writeSummary	( void );
 
 		// variables
-		char			separator;
+		char			separator;			///< Output separator character for CSV
 
 		TRACE_CLASSNAME_DECLARATION
 };

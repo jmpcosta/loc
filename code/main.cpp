@@ -37,6 +37,7 @@ using namespace std;
 //
 // *****************************************************************************************
 
+/// @brief Global function to provide a usage help message
 void display_usage( t_char * progname );
 
 // *****************************************************************************************
@@ -44,6 +45,7 @@ void display_usage( t_char * progname );
 // Section: Function definition
 //
 // *****************************************************************************************
+
 
 void display_usage( t_char * progname )
 {
@@ -53,6 +55,8 @@ void display_usage( t_char * progname )
 	cout << "\t\t\t-t [text | csv] => output format (text is default)"	<< endl;
 	cout << endl;
 }
+
+
 
 int LOC_MAIN( int argc, t_char * argv[] )
 {

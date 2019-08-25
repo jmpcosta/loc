@@ -35,42 +35,68 @@
 //
 // *****************************************************************************************
 
-
+/// @brief Class that represents a generic report
 class report
 {
 public:
+
+		/// @brief Class constructor
 		virtual					~report	( void ) {}
+
+		/// @brief Class destructor
 								report	( void );
 
 		// All reports must have a generate method with the same signature
+		/// @brief Interface method to generate a report
+		/// @param [in] options - The operator selection
+		/// @param [in] files   - The files for which the report must be generated
 		virtual void			generate		( progOptions & options, fileSet * files );
 
 		// Factory method
+		/// @brief Create a report of the type selected by the operator
+		/// @param [in] type - The report identifier
+		/// @return A pointer to the newly created report
 		static	report *		build( reportType type );
 
 protected:
 		// Methods
+
+		/// @brief Interface to write statistics for the given item
+		/// @param [in] str   - A item name
+		/// @param [in] stats - The statistics to generate for the item
 		virtual void 			writeStats		( const char * str, statistics & stats 	)	= 0;
+
+		/// @brief Write summary statistics for the given language
 		virtual void			writeLangStats	( void									);
 
+		/// @brief Interface to write a report header
 		virtual void			writeHeader		( void 									)	= 0;
+
+		/// @brief Write statistics for the file set
+		/// @param [in] files - The files for which the report must be generated
 		virtual void			writeFiles		( fileSet * files						);
+
+		/// @brief Interface to write the report summary statistics
 		virtual void			writeSummary	( void 									)	= 0;
 
 
 		// For output redirect
+		/// @brief Direct output either for console or file
+		/// @param [in] options - Selected output medium
 		virtual void			setOutput		( progOptions & options 				);
+
+		/// @brief Restore output to the console, in case the output was redirected to a file
 		virtual void			restoreOutput	( void					 				);
 
 		// Variables
-		bool					details;
-		std::size_t				nFiles;
-		statistics				global;
-		std::set<languageType>	langTypes;
+		bool					details;		///< Provide file statistics
+		std::size_t				nFiles;			///< Number of processed files
+		statistics				global;			///< Summary statistics for all processed files
+		std::set<languageType>	langTypes;		///< Set of processed language types
 
 		// Output redirect
-		std::streambuf * 		p_iStreamBuf;
-		std::ofstream			output;
+		std::streambuf * 		p_iStreamBuf;	///< Output buffer stream
+		std::ofstream			output;			///< Output file stream
 
 private:
 		TRACE_CLASSNAME_DECLARATION

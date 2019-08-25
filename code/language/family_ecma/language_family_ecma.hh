@@ -31,10 +31,11 @@
 // *****************************************************************************************
 
 
-
+/// @brief Class responsible for implementing a language representing the ECMAScript family of languages
 class language_family_ecma : public language
 {
 public:
+		/// @brief Class constructor
 		language_family_ecma();
 
 private:

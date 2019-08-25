@@ -66,19 +66,140 @@ $(document).ready(function(){initNavTree('classlanguage__factory.html','');});
 <div class="title">language_factory Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class responsible for creating new specific languages.  
+ <a href="classlanguage__factory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="language__factory_8hh_source.html">language_factory.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af0c78f9ed1fabd465bc13caaa3d34776"><td class="memItemLeft" align="right" valign="top"><a id="af0c78f9ed1fabd465bc13caaa3d34776"></a>
-static <a class="el" href="classlanguage.html">language</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> (languageType lang)</td></tr>
+<tr class="memitem:af0c78f9ed1fabd465bc13caaa3d34776"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlanguage.html">language</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776">build</a> (languageType lang)</td></tr>
+<tr class="memdesc:af0c78f9ed1fabd465bc13caaa3d34776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new language object.  <a href="#af0c78f9ed1fabd465bc13caaa3d34776">More...</a><br /></td></tr>
 <tr class="separator:af0c78f9ed1fabd465bc13caaa3d34776"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab53b913f1296d2eddfba5adde2c1ba8f"><td class="memItemLeft" align="right" valign="top"><a id="ab53b913f1296d2eddfba5adde2c1ba8f"></a>
-static languageType&#160;</td><td class="memItemRight" valign="bottom"><b>getLanguage</b> (const std::string &amp;fileExtension)</td></tr>
+<tr class="memitem:ab53b913f1296d2eddfba5adde2c1ba8f"><td class="memItemLeft" align="right" valign="top">static languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__factory.html#ab53b913f1296d2eddfba5adde2c1ba8f">getLanguage</a> (const std::string &amp;fileExtension)</td></tr>
+<tr class="memdesc:ab53b913f1296d2eddfba5adde2c1ba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language identifier based on a file extension.  <a href="#ab53b913f1296d2eddfba5adde2c1ba8f">More...</a><br /></td></tr>
 <tr class="separator:ab53b913f1296d2eddfba5adde2c1ba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a360ac14cd70a64655e0a738846ad90d2"><td class="memItemLeft" align="right" valign="top"><a id="a360ac14cd70a64655e0a738846ad90d2"></a>
-static languageType&#160;</td><td class="memItemRight" valign="bottom"><b>getLanguage</b> (const char *fileExtension)</td></tr>
+<tr class="memitem:a360ac14cd70a64655e0a738846ad90d2"><td class="memItemLeft" align="right" valign="top">static languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__factory.html#a360ac14cd70a64655e0a738846ad90d2">getLanguage</a> (const char *fileExtension)</td></tr>
+<tr class="memdesc:a360ac14cd70a64655e0a738846ad90d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language identifier based on a file extension.  <a href="#a360ac14cd70a64655e0a738846ad90d2">More...</a><br /></td></tr>
 <tr class="separator:a360ac14cd70a64655e0a738846ad90d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class responsible for creating new specific languages. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af0c78f9ed1fabd465bc13caaa3d34776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c78f9ed1fabd465bc13caaa3d34776">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlanguage.html">language</a> * build </td>
+          <td>(</td>
+          <td class="paramtype">languageType&#160;</td>
+          <td class="paramname"><em>lang</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a new language object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lang</td><td>- The language identifier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a new language object </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classlanguage__factory_af0c78f9ed1fabd465bc13caaa3d34776_icgraph.png" border="0" usemap="#classlanguage__factory_af0c78f9ed1fabd465bc13caaa3d34776_icgraph" alt=""/></div>
+<map name="classlanguage__factory_af0c78f9ed1fabd465bc13caaa3d34776_icgraph" id="classlanguage__factory_af0c78f9ed1fabd465bc13caaa3d34776_icgraph">
+<area shape="rect" id="node2" href="class_language_provider.html#a45a0d1943954df1a9f4535d2058fa3b9" title="Obtain a language parser. " alt="" coords="103,5,293,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab53b913f1296d2eddfba5adde2c1ba8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab53b913f1296d2eddfba5adde2c1ba8f">&#9670;&nbsp;</a></span>getLanguage() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">languageType getLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileExtension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain a language identifier based on a file extension. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileExtension</td><td>- The given file extension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The language identifier for the file extension </dd></dl>
+
+</div>
+</div>
+<a id="a360ac14cd70a64655e0a738846ad90d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360ac14cd70a64655e0a738846ad90d2">&#9670;&nbsp;</a></span>getLanguage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">languageType getLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileExtension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain a language identifier based on a file extension. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileExtension</td><td>- The given file extension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The language identifier for the file extension </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>code/language/<a class="el" href="language__factory_8hh_source.html">language_factory.hh</a></li>
 <li>code/language/language_factory.cpp</li>

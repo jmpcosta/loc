@@ -32,12 +32,16 @@
 // *****************************************************************************************
 
 
-
+/// @brief Class responsible for implementing a BATCH language
 class language_dos : public language
 {
 public:
+		/// @brief Class constructor
 								language_dos	( void 				);
 
+		/// @brief Check if a file extension is a known extension for this programming language
+		/// @param [in] ext - File extension
+		/// @return True if the language is a known extension for the language
 		static	bool			isExtension		( const char * ext	);
 
 private:

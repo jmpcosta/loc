@@ -66,13 +66,90 @@ $(document).ready(function(){initNavTree('classcommand_line.html','');});
 <div class="title">commandLine Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class responsible for representing the program command line parameters.  
+ <a href="classcommand_line.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="command_line_8hh_source.html">commandLine.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae340cdcd75843b7d243234c71a57b447"><td class="memItemLeft" align="right" valign="top"><a id="ae340cdcd75843b7d243234c71a57b447"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (int argc, t_char *argv[], <a class="el" href="classprog_options.html">progOptions</a> &amp;options)</td></tr>
+<tr class="memitem:a71cf0b6e5020ed76bd3e194c1b2577da"><td class="memItemLeft" align="right" valign="top"><a id="a71cf0b6e5020ed76bd3e194c1b2577da"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcommand_line.html#a71cf0b6e5020ed76bd3e194c1b2577da">commandLine</a> (void)</td></tr>
+<tr class="memdesc:a71cf0b6e5020ed76bd3e194c1b2577da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor. <br /></td></tr>
+<tr class="separator:a71cf0b6e5020ed76bd3e194c1b2577da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da0afe2c52ad625febffad115a8bc52"><td class="memItemLeft" align="right" valign="top"><a id="a2da0afe2c52ad625febffad115a8bc52"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcommand_line.html#a2da0afe2c52ad625febffad115a8bc52">~commandLine</a> (void)</td></tr>
+<tr class="memdesc:a2da0afe2c52ad625febffad115a8bc52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br /></td></tr>
+<tr class="separator:a2da0afe2c52ad625febffad115a8bc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae340cdcd75843b7d243234c71a57b447"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcommand_line.html#ae340cdcd75843b7d243234c71a57b447">parse</a> (int argc, t_char *argv[], <a class="el" href="classprog_options.html">progOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:ae340cdcd75843b7d243234c71a57b447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the program command line parameters.  <a href="#ae340cdcd75843b7d243234c71a57b447">More...</a><br /></td></tr>
 <tr class="separator:ae340cdcd75843b7d243234c71a57b447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class responsible for representing the program command line parameters. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae340cdcd75843b7d243234c71a57b447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae340cdcd75843b7d243234c71a57b447">&#9670;&nbsp;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parse </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classprog_options.html">progOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse the program command line parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>- The number of command line parameters </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>- The command line parameters </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">options</td><td>- The object that represents the program parameterization </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Was the parsing of command line parameters successful ? </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcommand_line_ae340cdcd75843b7d243234c71a57b447_cgraph.png" border="0" usemap="#classcommand_line_ae340cdcd75843b7d243234c71a57b447_cgraph" alt=""/></div>
+<map name="classcommand_line_ae340cdcd75843b7d243234c71a57b447_cgraph" id="classcommand_line_ae340cdcd75843b7d243234c71a57b447_cgraph">
+<area shape="rect" id="node2" href="classconverter.html#a212ba7aab6137d8a0e1d7c9dd9f6346a" title="Convert a source string to an UTF&#45;8 string. " alt="" coords="108,5,225,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcommand_line_ae340cdcd75843b7d243234c71a57b447_icgraph.png" border="0" usemap="#classcommand_line_ae340cdcd75843b7d243234c71a57b447_icgraph" alt=""/></div>
+<map name="classcommand_line_ae340cdcd75843b7d243234c71a57b447_icgraph" id="classcommand_line_ae340cdcd75843b7d243234c71a57b447_icgraph">
+<area shape="rect" id="node2" href="classcommand_line.html#a2da0afe2c52ad625febffad115a8bc52" title="Class destructor. " alt="" coords="108,5,219,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>code/<a class="el" href="command_line_8hh_source.html">commandLine.hh</a></li>
 <li>code/commandLine.cpp</li>

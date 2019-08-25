@@ -33,19 +33,30 @@
 //
 // *****************************************************************************************
 
-
+/// @brief Class responsible for generating a text based report
 class textReport : public report
 {
 public:
+		/// @brief Class destructor
 						~textReport		( void ) {}
+
+		/// @brief Class constructor
 						textReport		( void );
 
 private:
-		// Output result
+		// Methods
+		/// @brief Write statistics for the given item to a file or standard output
+		/// @param [in] str   - A item name
+		/// @param [in] stats - The statistics to generate for the item
 		void			writeStats		( const char * name, statistics & stats	);
 
+		/// @brief Write a report header to a file or standard output
 		void			writeHeader		( void	);
+
+		/// @brief Write a report line separator to a file or standard output
 		void			writeSeparator	( void	);
+
+		/// @brief Write a report summary to a file or standard output
 		void			writeSummary	( void 	);
 
 		// Variables

@@ -31,21 +31,33 @@
 //
 // *****************************************************************************************
 
-
+/// @brief This class provides acts as a service provider of languages
 class LanguageProvider : public Singleton<LanguageProvider>
 {
 public:
+		/// @brief Class destructor
 									~LanguageProvider	( void 					);
 
+		/// @brief Obtain a language parser
+		/// @param [in] which - For which language the parser is required
+		/// @return Pointer to the requested language parser. A null pointer otherwise
 		language		*			getParser			( languageType which	);
+
+		/// @brief Verify if a language is already provided
+		/// @param [in] which - The language identifier
+		/// @return True if language is managed by this class. False otherwise
 		bool 						isLanguageAvailable	( languageType which	);
+
+		/// @brief Obtain a language object pointer for a given language
+		/// @param [in] which - For which language the parser is required
+		/// @return Pointer to the requested language object. An exception otherwise
 		language		*			getLanguage			( languageType which	);
 
 private:
 		// Methods
 
 		// Variables
-		std::vector<language *>		iLanguages;
+		std::vector<language *>		iLanguages;		///< List of pointers to different language objects
 
 		TRACE_CLASSNAME_DECLARATION
 };

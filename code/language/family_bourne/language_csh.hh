@@ -31,12 +31,16 @@
 // *****************************************************************************************
 
 
-
+/// @brief Class responsible for implementing a CSH shell language
 class language_csh : public language_family_bourne
 {
 public:
+		/// @brief Class constructor
 							language_csh 	( void 				);
 
+		/// @brief Check if a file extension is a known extension for this programming language
+		/// @param [in] ext - File extension
+		/// @return True if the language is a known extension for the language
 		static	bool		isExtension		( const char * ext	);
 
 private:
