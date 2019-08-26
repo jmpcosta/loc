@@ -45,8 +45,8 @@ file::file( const std::string & filename )
 
  iName 		= filename;
 
- std::filesystem::path	pathname( filename, path::format::generic_format );
- std::string			extension( pathname.extension() );
+ path			pathname	( filename, path::format::generic_format );
+ std::string	extension	( pathname.extension().generic_string() );
 
  iLang		= language_factory::getLanguage( extension );
 

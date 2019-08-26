@@ -91,7 +91,7 @@ void report::writeFiles( fileSet * p_files )
 		  if( details )
 		    {
 			  myPath = it->getName();
-			  writeStats( myPath.filename().c_str(), stats );
+			  writeStats( myPath.filename().generic_string().c_str(), stats );
 		    }
 	    }
     }

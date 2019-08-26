@@ -57,7 +57,7 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
   for( const auto & it: dirIterator )
   	 {
 	   const path & myPath = it.path();
-	   std::string itName = myPath.c_str();
+	   std::string itName = myPath.generic_string();
 
 	   p_file = file::builder( itName );
 
