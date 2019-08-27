@@ -4,17 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../code/language/others/language_fortran.cpp 
+../code/language/parser/parser_factory.cpp \
+../code/language/parser/streamParser.cpp 
 
 OBJS += \
-./code/language/others/language_fortran.o 
+./code/language/parser/parser_factory.o \
+./code/language/parser/streamParser.o 
 
 CPP_DEPS += \
-./code/language/others/language_fortran.d 
+./code/language/parser/parser_factory.d \
+./code/language/parser/streamParser.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-code/language/others/%.o: ../code/language/others/%.cpp
+code/language/parser/%.o: ../code/language/parser/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -std=c++17 -I"${LOC_DIR}/code" -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

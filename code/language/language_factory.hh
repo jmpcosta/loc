@@ -34,20 +34,26 @@ class language_factory
 {
 public:
 
+	/// @brief Class constructor
+						language_factory	() {}
+
+	/// @brief Class destructor
+						~language_factory	() {}
+
 	/// @brief Create a new language object
 	/// @param [in] lang - The language identifier
 	/// @return A pointer to a new language object
-	static language *	build		( languageType lang					);
+	language 	*		build				( languageType lang					);
 
 	/// @brief Obtain a language identifier based on a file extension
 	/// @param [in] fileExtension - The given file extension
 	/// @return The language identifier for the file extension
-	static languageType		getLanguage	( const std::string & fileExtension	);
+	languageType		getLanguageType		( const std::string & fileExtension	);
 
 	/// @brief Obtain a language identifier based on a file extension
 	/// @param [in] fileExtension - The given file extension
 	/// @return The language identifier for the file extension
-	static languageType		getLanguage	( const char   *     fileExtension	);
+	languageType		getLanguageType		( const char   *     fileExtension	);
 
 private:
 

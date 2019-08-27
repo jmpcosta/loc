@@ -26,7 +26,7 @@
 #include "statistics.hh"
 #include "language/comment.hh"
 #include "language/languageType.hh"
-
+#include "parser/parserType.hh"
 
 
 // *****************************************************************************************
@@ -87,6 +87,10 @@ public:
 		/// @return The language statistics
 		virtual statistics &				getStatistics	( void )					{ return stats;				}
 
+		/// @brief Obtain the type of parser for a language
+		/// @return The type of parser required for the language
+		 parserType							getParserType	( void													);
+
 protected:
 		// Methods
 
@@ -94,7 +98,7 @@ protected:
 		/// @param [in] extension - File Extension
 		/// @param [in] extensionList - The list of known extensions for this language
 		/// @return True if the extension matches one of the known language file extensions. False otherwise
-		static  bool				checkExtension		( const char * extension, const char ** extensionList	);
+		static  bool						checkExtension	( const char * extension, const char ** extensionList	);
 
 		// Variables
 

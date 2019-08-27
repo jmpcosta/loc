@@ -72,7 +72,7 @@ void report::writeFiles( fileSet * p_files )
  for( auto it : *p_files )
     {
 	  statistics & stats	= it->getStatistics();
-	  languageType lType	= it->getLanguage();
+	  languageType lType	= it->getLanguageType();
 
 	  if( stats.areAvailable() )
 	    {

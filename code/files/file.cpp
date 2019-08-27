@@ -23,7 +23,7 @@
 
 // Import project headers
 #include "trace.hh"
-#include "language/language_factory.hh"
+#include "language/LanguageProvider.hh"
 #include "files/file.hh"
 
 
@@ -48,7 +48,7 @@ file::file( const std::string & filename )
  path			pathname	( filename, path::format::generic_format );
  std::string	extension	( pathname.extension().generic_string() );
 
- iLang		= language_factory::getLanguage( extension );
+ iLang		= LanguageProvider::getInstance().getLanguageType( extension );
 
  TRACE_EXIT
 }

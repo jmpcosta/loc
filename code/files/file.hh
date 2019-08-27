@@ -45,7 +45,7 @@ public:
 
 		/// @brief Obtain the language identifier for the file
 		/// @return The file language identifier
-		languageType			getLanguage		( void ) const	{ return iLang;		}
+		languageType			getLanguageType	( void ) const	{ return iLang;		}
 
 		/// @brief Get access to the file statistics
 		/// @return A reference to the file statistics object

@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide insight into the code namely the number of lines of code
+// Purpose:	Parse a language
 //
 // *****************************************************************************************
 
@@ -24,13 +24,12 @@
 // Import module declarations
 #include "trace.hh"
 #include "options.hh"
-#include "code.hh"
-
 #include "files/fileSet.hh"
 #include "language/LanguageProvider.hh"
-#include "report/report.hh"
+#include "parser/streamParser.hh"
 
 using namespace std;
+
 
 // *****************************************************************************************
 //
@@ -38,74 +37,66 @@ using namespace std;
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( code )
+TRACE_CLASSNAME( streamParser )
 
 
-code::code()
+streamParser::streamParser()
 {
  TRACE_ENTER
 
- //p_lang			= nullptr;
- /*
+ p_lang			= nullptr;
  codeAvailable	= false;
  commentOpen	= false;
- ip_file		= nullptr;
-*/
- TRACE_EXIT
-}
-
-/*
-void code::reset( file * p_file )
-{
- TRACE_ENTER
-
- if( p_file == nullptr ) return;
-
- // Reset file stats
- p_file->getStatistics().reset();
+ p_iFile		= nullptr;
 
  TRACE_EXIT
 }
 
-void code::setAvailable( file * p_file, bool value )
-{
- TRACE_ENTER
 
- if( p_file == nullptr ) return;
+void streamParser::setAvailable( file * p_file, bool value )
+{
+ TRACE_POINT
 
  // Set availability of file statistics
- p_file->getStatistics().setAvailable( value );
+ if( p_file != nullptr )
+	 p_file->getStatistics().setAvailable( value );
+}
 
- TRACE_EXIT
+void streamParser::reset( file * p_file )
+{
+ TRACE_POINT
+
+ // Reset file stats
+ if( p_file != nullptr )
+	 p_file->getStatistics().reset();
+
+ p_file->getStatistics().setAvailable( true );
 }
 
 
-void code::addLine( void )
+void streamParser::addLine( void )
 {
- if( ip_file == nullptr ) return;
-
- ip_file->getStatistics().addLine();
+ if( p_iFile != nullptr )
+	 p_iFile->getStatistics().addLine();
 }
 
-void code::addEmptyLine( void )
+void streamParser::addEmptyLine( void )
 {
- if( ip_file == nullptr ) return;
-
- ip_file->getStatistics().addEmptyLine();
+ if( p_iFile != nullptr )
+	 p_iFile->getStatistics().addEmptyLine();
 }
 
-void code::addLoc( void )
+void streamParser::addLoc( void )
 {
- if( ip_file == nullptr ) return;
-
- ip_file->getStatistics().addLoc();
+ if( p_iFile != nullptr )
+	 p_iFile->getStatistics().addLoc();
 }
 
 
 
 
 // Check if there are relevant characters in the string up to a given search length
-bool code::hasInformation( const char * str, std::size_t len )
+bool streamParser::hasInformation( const char * str, std::size_t len )
 {
  std::size_t	i, j, ignore;
 
@@ -139,7 +130,7 @@ bool code::hasInformation( const char * str, std::size_t len )
 
 
 
-inline void code::endComment( std::string & line, std::size_t start )
+inline void streamParser::endComment( std::string & line, std::size_t start )
 {
  std::size_t				len 		= 0;
  std::size_t				token_pos	= std::string::npos;
@@ -181,7 +172,7 @@ TRACE_EXIT
 
 
 // Process begin comment
-inline void code::beginComment( std::string & line, std::size_t start )
+inline void streamParser::beginComment( std::string & line, std::size_t start )
 {
  std::size_t				len			= 0;
  std::size_t				token_pos	= std::string::npos;
@@ -257,7 +248,7 @@ inline void code::beginComment( std::string & line, std::size_t start )
 
 
 
-void code::search( std::string & line, std::size_t start )
+void streamParser::search( std::string & line, std::size_t start )
 {
  TRACE( "Entering with start position:", start );
 
@@ -275,7 +266,7 @@ void code::search( std::string & line, std::size_t start )
 
 
 
-void code::processLine( std::string & line )
+void streamParser::processLine( std::string & line )
 {
  TRACE( "------------------------------------------------------------" )
  TRACE( "Entering with commentOpen:", commentOpen ? "true": "false" )
@@ -298,94 +289,47 @@ void code::processLine( std::string & line )
 
 
 
-void code::parse( std::ifstream  & sourceFile )
+void streamParser::parse( file * p_file )
 {
  std::string line;
 
  TRACE_ENTER
 
+ if( p_file == nullptr ) return;	// Safety check
+
+ p_iFile	= p_file;
+ p_lang		= LanguageProvider::getInstance().getLanguage( p_file->getLanguageType() );
+
+ if( p_lang == nullptr )
+   {
+	 cerr << "Error when retrieving the language instance. Skipping file parsing: " << p_file->getName() << endl;
+	 return;
+   }
+
  // Reset own variables
  commentOpen   = false;
  codeAvailable = false;
 
+ reset( p_iFile );					// Reset file statistics
+
+ // Open file for reading
+ std::ifstream sourceFile( p_file->getName().c_str() );
+
+ TRACE( " : Parsing file" , p_file->getName() )
+
  // Reserve capacity on the string to avoid reallocs
  line.reserve( LOC_FILE_READ_BUFFER_SIZE );
 
- while( getline( sourceFile, line ) )
-      {
-	 	addLine();
-	 	processLine( line );
-      }
+ if( sourceFile.is_open() )
+   {
+	 while( getline( sourceFile, line ) )
+	      {
+		 	addLine();
+		 	processLine( line );
+	      }
 
-
- TRACE_EXIT
-}
-*/
-
-
-inline void code::processFiles( fileSet * p_files )
-{
- parser		*	p_parser	= nullptr;
- language	*	p_lang		= nullptr;
- languageType	lType		= languageType::unknown;
-
- TRACE_ENTER
-
- LanguageProvider & prov	= LanguageProvider::getInstance();
-
- // Get insight for the set of file
- for( auto it : *p_files )
-    {
-	  TRACE( "Processing file:", it->getName() )
-
-	  if( it->getLanguageType() == languageType::unknown )
-	    { TRACE( "Unknown programming language: Skipping it !" ) }
-	  else
-	    {
-		  lType = it->getLanguageType();
-		  if( lType == languageType::unknown )
-		    {
-			  cerr << "Unknown language. Skipping file." << endl;
-			  continue;
-		    }
-
-		  p_lang = prov.getLanguage( lType );
-		  if( p_lang == nullptr )
-		    {
-			  cerr << "No language available. Skip file." << endl;
-			  continue;
-		    }
-
-		  p_parser = prov.getParser( p_lang );
-		  if( p_parser == nullptr )
-			  cerr << "No parser available. Skip file." << endl;
-		  else
-			  p_parser->parse( it );
-	    }
-    }
-
- TRACE_EXIT
-}
-
-inline void code::generateReport( progOptions & options, fileSet * p_files )
-{
- TRACE_ENTER
-
- report * rep = report::build( options.getFormat() );
-
- if( rep != nullptr )
-	 rep->generate( options, p_files );
-
- TRACE_EXIT
-}
-
-
-void code::insight( progOptions & options, fileSet * p_files )
-{
- TRACE_ENTER
-
- processFiles	( p_files );
- generateReport	( options, p_files );
+     sourceFile.close();
+   }
 
  TRACE_EXIT
 }

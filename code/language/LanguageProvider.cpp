@@ -22,7 +22,6 @@
 
 // Import project declarations
 #include "trace.hh"
-#include "language/language_factory.hh"
 #include "language/LanguageProvider.hh"
 
 // *****************************************************************************************
@@ -49,7 +48,7 @@ LanguageProvider::~LanguageProvider( void )
 }
 
 
-language * LanguageProvider::getParser( languageType which )
+language * LanguageProvider::getLanguage( languageType which )
 {
  language * p_lang = nullptr;
 
@@ -65,7 +64,7 @@ language * LanguageProvider::getParser( languageType which )
 
  // If no current language parser exists, create one
  if( p_lang == nullptr )
-	 p_lang = language_factory::build( which );
+	 p_lang = iLFactory.build( which );
 
  // If we were able to create such parser, add it to the list
  if( p_lang != nullptr )
@@ -80,23 +79,38 @@ language * LanguageProvider::getParser( languageType which )
 }
 
 
-language * LanguageProvider::getLanguage( languageType which )
+parser * LanguageProvider::getParser( language * p_lang )
 {
- language * p_lang = nullptr;
+ parser 	* 	p_parser	= nullptr;
+ parserType		pType		= p_lang->getParserType();
 
  TRACE_ENTER
 
- for( const auto & i : iLanguages )
- 	  if( which == i->getType() )
+ if( p_lang == nullptr ) throw std::invalid_argument( "Language pointer is null" );
+
+ // Each language decides which parser they want
+ for( const auto & i : iParsers )
+ 	  if( pType == i->getType() )
 		{
-		  TRACE( "Found a matching language: ", i->getName() )
-		  p_lang = i;
-		  break;
+		  TRACE( "Found a matching parser: " )
+		  p_parser = i;
+		  return p_parser;
 		}
+
+ // If no current language parser exists, create one
+ if( p_parser == nullptr )
+	 p_parser = iPFactory.build( pType );
+
+ // If we were able to create such parser, add it to the list
+ if( p_parser != nullptr )
+   {
+	 TRACE( "New parser added to list:" )
+	 iParsers.push_back( p_parser );
+   }
 
  TRACE_EXIT
 
- return p_lang;
+ return p_parser;
 }
 
 
@@ -115,3 +129,16 @@ bool LanguageProvider::isLanguageAvailable( languageType which )
 
  return false;
 }
+
+
+languageType LanguageProvider::getLanguageType( const char * p_fileExtension )
+{
+ return iLFactory.getLanguageType( p_fileExtension );
+}
+
+
+languageType LanguageProvider::getLanguageType( const std::string & fileExtension )
+{
+ return iLFactory.getLanguageType( fileExtension );
+}
+

@@ -53,8 +53,9 @@ void display_usage( t_char * progname )
 	cout << "\t<options>\t[ base code directory | source file name ]" 			<< endl 	<< endl;
 
 	cout << "  Where <options>:" 															<< endl;
-	cout << "\t\t\t-d \t\t=> enable verbose output"  		    							<< endl;
-	cout << "\t\t\t-t [text | csv | xml] => output format (text is default)"				<< endl;
+	cout << "\t\t\t-d \t\t\t=> enable verbose output"  		    							<< endl;
+	cout << "\t\t\t-o <file> \t\t=> send output to <file>"    							<< endl;
+	cout << "\t\t\t-t [text | csv | xml]   => output format (text is default)"				<< endl;
 	cout << endl;
 }
 

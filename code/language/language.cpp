@@ -75,7 +75,7 @@ bool language::checkExtension( const char * p_extension, const char ** p_extensi
       	  {
 		 	if( strcmp( p_extensionList[ i ], p_ext ) == 0 )	// Strings match
 		 	  {
-		 		TRACE( "Exiting with language:", i )
+		 		TRACE( "Exiting with language extension:", p_ext )
 
 	 			return true;
 		 	  }
@@ -89,3 +89,13 @@ bool language::checkExtension( const char * p_extension, const char ** p_extensi
 
  return false;
 }
+
+
+
+parserType language::getParserType( void )
+{
+ return parserType::stream;	// Set a default parser type
+}
+
+
+
