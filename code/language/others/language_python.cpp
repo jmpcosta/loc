@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Bourne language
+// Purpose:	Define the Python language
 //
 // *****************************************************************************************
 
@@ -23,7 +23,7 @@
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/windows/language_dos.hh"
+#include "language/others/language_python.hh"
 
 
 // *****************************************************************************************
@@ -32,8 +32,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_DOS[] = { ".bat", ".cmd", nullptr	};
-
+const char * LOC_LANGUAGE_PYTHON[] = { ".py", nullptr };
 
 // *****************************************************************************************
 //
@@ -41,27 +40,25 @@ const char * LOC_LANGUAGE_DOS[] = { ".bat", ".cmd", nullptr	};
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_dos )
+TRACE_CLASSNAME( language_python )
 
 
-language_dos::language_dos()
+language_python::language_python()
 {
  TRACE_POINT
 
- lang = languageType::DOS;
- name = "DOS shell";
+ lang = languageType::PYTHON;
+ name = "Python";
 
  comment * p_cmt = new comment();
- p_cmt->setStart( "rem" );
- p_cmt->setCaseInsensitive();
+ p_cmt->setStart( "#" );
  comments.push_back( p_cmt );
-
 }
 
-
-bool language_dos::isExtension( const char * p_extension )
+bool language_python::isExtension( const char * p_extension )
 {
- return language::checkExtension( p_extension, LOC_LANGUAGE_DOS );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_PYTHON );
 }
+
 
 

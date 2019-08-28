@@ -94,15 +94,21 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#aa48a4de9ba8ffc58e940afc7dfd17b7a">~LanguageProvider</a> (void)</td></tr>
 <tr class="memdesc:aa48a4de9ba8ffc58e940afc7dfd17b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br /></td></tr>
 <tr class="separator:aa48a4de9ba8ffc58e940afc7dfd17b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a0d1943954df1a9f4535d2058fa3b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlanguage.html">language</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#a45a0d1943954df1a9f4535d2058fa3b9">getParser</a> (languageType which)</td></tr>
-<tr class="memdesc:a45a0d1943954df1a9f4535d2058fa3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language parser.  <a href="#a45a0d1943954df1a9f4535d2058fa3b9">More...</a><br /></td></tr>
-<tr class="separator:a45a0d1943954df1a9f4535d2058fa3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d716b4c1d3863d38ef0366c77bb4e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classparser.html">parser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#a05d716b4c1d3863d38ef0366c77bb4e8">getParser</a> (<a class="el" href="classlanguage.html">language</a> *lang)</td></tr>
+<tr class="memdesc:a05d716b4c1d3863d38ef0366c77bb4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language parser.  <a href="#a05d716b4c1d3863d38ef0366c77bb4e8">More...</a><br /></td></tr>
+<tr class="separator:a05d716b4c1d3863d38ef0366c77bb4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37fdb0851aec96f6d421106cd840c614"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#a37fdb0851aec96f6d421106cd840c614">isLanguageAvailable</a> (languageType which)</td></tr>
 <tr class="memdesc:a37fdb0851aec96f6d421106cd840c614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a language is already provided.  <a href="#a37fdb0851aec96f6d421106cd840c614">More...</a><br /></td></tr>
 <tr class="separator:a37fdb0851aec96f6d421106cd840c614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f4b7fbcc746bd8ba6703663b8668395"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlanguage.html">language</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395">getLanguage</a> (languageType which)</td></tr>
 <tr class="memdesc:a3f4b7fbcc746bd8ba6703663b8668395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language object pointer for a given language.  <a href="#a3f4b7fbcc746bd8ba6703663b8668395">More...</a><br /></td></tr>
 <tr class="separator:a3f4b7fbcc746bd8ba6703663b8668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c88a519ce8e2267e0462857de39ff13"><td class="memItemLeft" align="right" valign="top">languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#a5c88a519ce8e2267e0462857de39ff13">getLanguageType</a> (const char *ext)</td></tr>
+<tr class="memdesc:a5c88a519ce8e2267e0462857de39ff13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the language identifier based on the file extension.  <a href="#a5c88a519ce8e2267e0462857de39ff13">More...</a><br /></td></tr>
+<tr class="separator:a5c88a519ce8e2267e0462857de39ff13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392bbe4ca13f1386c1048bd129ac8946"><td class="memItemLeft" align="right" valign="top">languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_language_provider.html#a392bbe4ca13f1386c1048bd129ac8946">getLanguageType</a> (const std::string &amp;ext)</td></tr>
+<tr class="memdesc:a392bbe4ca13f1386c1048bd129ac8946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the language identifier based on the file extension.  <a href="#a392bbe4ca13f1386c1048bd129ac8946">More...</a><br /></td></tr>
+<tr class="separator:a392bbe4ca13f1386c1048bd129ac8946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_singleton')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_singleton.html">Singleton&lt; LanguageProvider &gt;</a></td></tr>
 <tr class="memitem:a4261e9a2454202cd68bdb9c2fa4bf294 inherit pub_methods_class_singleton"><td class="memItemLeft" align="right" valign="top"><a id="a4261e9a2454202cd68bdb9c2fa4bf294"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Singleton</b> (const <a class="el" href="class_singleton.html">Singleton</a> &amp;)=delete</td></tr>
@@ -153,32 +159,112 @@ static <a class="el" href="class_language_provider.html">LanguageProvider</a> &a
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the requested language object. An exception otherwise </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_cgraph.png" border="0" usemap="#class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_cgraph" alt=""/></div>
+<map name="class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_cgraph" id="class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_cgraph">
+<area shape="rect" id="node2" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="149,5,305,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_icgraph.png" border="0" usemap="#class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_icgraph" alt=""/></div>
 <map name="class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_icgraph" id="class_language_provider_a3f4b7fbcc746bd8ba6703663b8668395_icgraph">
-<area shape="rect" id="node2" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="165,56,284,83"/>
-<area shape="rect" id="node5" href="classreport.html#a1a892bdcd9efcf7d6b7cac50cc2136ca" title="Write summary statistics for the given language. " alt="" coords="149,107,300,133"/>
-<area shape="rect" id="node3" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="367,5,481,32"/>
-<area shape="rect" id="node4" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="576,56,680,83"/>
-<area shape="rect" id="node6" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="348,157,500,184"/>
-<area shape="rect" id="node7" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="548,157,708,184"/>
+<area shape="rect" id="node2" href="classstream_parser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="155,19,295,45"/>
+<area shape="rect" id="node4" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="165,81,284,108"/>
+<area shape="rect" id="node7" href="classreport.html#a1a892bdcd9efcf7d6b7cac50cc2136ca" title="Write summary statistics for the given language. " alt="" coords="149,157,300,184"/>
+<area shape="rect" id="node3" href="classstream_parser.html#a3fb0ce71d6ab0c4ea9cc931508a9b5c6" title="Class destructor. " alt="" coords="348,5,543,32"/>
+<area shape="rect" id="node5" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="389,56,502,83"/>
+<area shape="rect" id="node6" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="619,107,723,133"/>
+<area shape="rect" id="node8" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="369,208,521,235"/>
+<area shape="rect" id="node9" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="591,208,751,235"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a45a0d1943954df1a9f4535d2058fa3b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45a0d1943954df1a9f4535d2058fa3b9">&#9670;&nbsp;</a></span>getParser()</h2>
+<a id="a5c88a519ce8e2267e0462857de39ff13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c88a519ce8e2267e0462857de39ff13">&#9670;&nbsp;</a></span>getLanguageType() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classlanguage.html">language</a> * getParser </td>
+          <td class="memname">languageType getLanguageType </td>
           <td>(</td>
-          <td class="paramtype">languageType&#160;</td>
-          <td class="paramname"><em>which</em></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the language identifier based on the file extension. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ext</td><td>- File extension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Language Identifier </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_language_provider_a5c88a519ce8e2267e0462857de39ff13_cgraph.png" border="0" usemap="#class_language_provider_a5c88a519ce8e2267e0462857de39ff13_cgraph" alt=""/></div>
+<map name="class_language_provider_a5c88a519ce8e2267e0462857de39ff13_cgraph" id="class_language_provider_a5c88a519ce8e2267e0462857de39ff13_cgraph">
+<area shape="rect" id="node2" href="classlanguage__factory.html#afae9e5e7546fd8a05ab950a369ad8d15" title="Obtain a language identifier based on a file extension. " alt="" coords="179,5,411,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a392bbe4ca13f1386c1048bd129ac8946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392bbe4ca13f1386c1048bd129ac8946">&#9670;&nbsp;</a></span>getLanguageType() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">languageType getLanguageType </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the language identifier based on the file extension. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ext</td><td>- File extension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Language Identifier </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_language_provider_a392bbe4ca13f1386c1048bd129ac8946_cgraph.png" border="0" usemap="#class_language_provider_a392bbe4ca13f1386c1048bd129ac8946_cgraph" alt=""/></div>
+<map name="class_language_provider_a392bbe4ca13f1386c1048bd129ac8946_cgraph" id="class_language_provider_a392bbe4ca13f1386c1048bd129ac8946_cgraph">
+<area shape="rect" id="node2" href="classlanguage__factory.html#afae9e5e7546fd8a05ab950a369ad8d15" title="Obtain a language identifier based on a file extension. " alt="" coords="179,5,411,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05d716b4c1d3863d38ef0366c77bb4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d716b4c1d3863d38ef0366c77bb4e8">&#9670;&nbsp;</a></span>getParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classparser.html">parser</a> * getParser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlanguage.html">language</a> *&#160;</td>
+          <td class="paramname"><em>lang</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -187,7 +273,7 @@ Here is the caller graph for this function:</div>
 <p>Obtain a language parser. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">which</td><td>- For which language the parser is required </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lang</td><td>- The language object from where to retrieve the parser type </td></tr>
   </table>
   </dd>
 </dl>
@@ -195,9 +281,10 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_language_provider_a45a0d1943954df1a9f4535d2058fa3b9_cgraph.png" border="0" usemap="#class_language_provider_a45a0d1943954df1a9f4535d2058fa3b9_cgraph" alt=""/></div>
-<map name="class_language_provider_a45a0d1943954df1a9f4535d2058fa3b9_cgraph" id="class_language_provider_a45a0d1943954df1a9f4535d2058fa3b9_cgraph">
-<area shape="rect" id="node2" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="132,5,288,32"/>
+<div class="center"><img src="class_language_provider_a05d716b4c1d3863d38ef0366c77bb4e8_cgraph.png" border="0" usemap="#class_language_provider_a05d716b4c1d3863d38ef0366c77bb4e8_cgraph" alt=""/></div>
+<map name="class_language_provider_a05d716b4c1d3863d38ef0366c77bb4e8_cgraph" id="class_language_provider_a05d716b4c1d3863d38ef0366c77bb4e8_cgraph">
+<area shape="rect" id="node2" href="classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="132,5,299,32"/>
+<area shape="rect" id="node3" href="classparser__factory.html#adecc5aa47fc53ca656fc33cf43882418" title="Create a new parser object. " alt="" coords="145,56,285,83"/>
 </map>
 </div>
 

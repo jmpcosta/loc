@@ -39,6 +39,22 @@ using namespace std::filesystem;
 
 TRACE_CLASSNAME( fileSet )
 
+file * fileSet::fileBuilder( const path & pathname )
+{
+ std::string		filename;
+ file  			*	p_file		= nullptr;
+
+ if( is_regular_file( pathname ) )
+   {
+	 filename = pathname.generic_string();
+
+	 // TODO: Add only files that are known extensions of languages that this application supports
+
+	 p_file = file::builder( filename );
+   }
+
+ return p_file;
+}
 
 fileSet * fileSet::directoryBuilder( const std::string & pathname )
 {
@@ -56,16 +72,9 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
 
   for( const auto & it: dirIterator )
   	 {
-	   const path & myPath = it.path();
-	   std::string itName = myPath.generic_string();
-
-	   p_file = file::builder( itName );
-
+	   p_file = fileSet::fileBuilder( it.path() );
 	   if( p_file != nullptr )
-	     {
-		   TRACE( "Adding file to list:", itName )
 		   vec.push_back( p_file );
-	     }
   	 }
 
   if( vec.size() > 0 )
@@ -92,18 +101,15 @@ fileSet * fileSet::builder( const std::string & pathname )
  {
    path		pname( pathname, path::format::generic_format );
 
-   if( is_regular_file( pname ) )
-     {
-	   p_file = file::builder( pathname );
-	   if( p_file != nullptr )
-	     {
-		   TRACE( "Adding file to list:", pathname )
-		   p_files = new fileSet( p_file );
-	     }
-     }
-
    if( is_directory( pname ) )
 	   p_files = fileSet::directoryBuilder( pathname );
+   else
+     {
+	   p_file = fileSet::fileBuilder( pname );
+	   if( p_file != nullptr )
+		   p_files = new fileSet( p_file );
+     }
+
  }
 
  catch( const std::exception & e )

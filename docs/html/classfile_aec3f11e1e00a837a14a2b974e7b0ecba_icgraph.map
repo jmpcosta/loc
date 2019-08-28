@@ -1,6 +1,4 @@
 <map id="builder" name="builder">
-<area shape="rect" id="node2" href="$classfile.html#a7653477a653f651a9df66463466c40f3" title="Get access to the file statistics. " alt="" coords="119,5,213,32"/>
-<area shape="rect" id="node4" href="$classfile_set.html#a51c6c47af3c5d1fad5c9b6c6022c4982" title="Factory method for a set of files. " alt="" coords="113,56,219,83"/>
-<area shape="rect" id="node3" href="$classcode.html#ab09356b52e00cf46f1ee5be7344c9139" title="Class constructor. " alt="" coords="267,5,354,32"/>
-<area shape="rect" id="node5" href="$classfile_set.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc" title="Return a constant iterator proxy to the end of the files vector. " alt="" coords="267,56,355,83"/>
+<area shape="rect" id="node2" href="$classfile.html#a7653477a653f651a9df66463466c40f3" title="Get access to the file statistics. " alt="" coords="113,5,208,32"/>
+<area shape="rect" id="node3" href="$classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="256,5,443,32"/>
 </map>

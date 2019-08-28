@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for the DOS scripting programming language
+// Purpose:	Provide the definitions/declarations for a programming language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_DOS_HH_
-#define LOC_LANGUAGE_DOS_HH_
+#ifndef LOC_LANGUAGE_PYTHON_HH_
+#define LOC_LANGUAGE_PYTHON_HH_
 
 // *****************************************************************************************
 //
@@ -20,8 +20,8 @@
 #include <string>
 
 // Import application headers
-#include "trace_macros.hh"
 #include "loc_defs.hh"
+#include "trace_macros.hh"
 #include "language/language.hh"
 
 
@@ -32,12 +32,12 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing a BATCH language
-class language_dos : public language
+/// @brief Class responsible for implementing the python language
+class language_python : public language
 {
 public:
 		/// @brief Class constructor
-								language_dos	( void 				);
+								language_python	( void				);
 
 		/// @brief Check if a file extension is a known extension for this programming language
 		/// @param [in] ext - File extension
@@ -45,7 +45,6 @@ public:
 		static	bool			isExtension		( const char * ext	);
 
 private:
-
 		TRACE_CLASSNAME_DECLARATION
 };
 
@@ -55,4 +54,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_DOS_HH_
+#endif // LOC_LANGUAGE_PYTHON_HH_

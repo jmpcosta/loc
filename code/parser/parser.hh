@@ -46,7 +46,7 @@ public:
 
 
 		/// @brief Obtain the parser type
-		/// @preturn The parser identifier
+		/// @return The parser identifier
 		virtual parserType	getType	( void				) = 0;
 
 protected:

@@ -19,6 +19,7 @@
 // Import C++ system headers
 #include <string>
 #include <vector>
+#include <filesystem>
 
 // Import application headers
 #include "trace_macros.hh"
@@ -73,6 +74,11 @@ private:
 		/// @brief Class constructor
 		/// @param [in] vec - Build a fileset based on a list of file objects
 								fileSet				( std::vector<file *> & vec );
+
+		/// @brief Factory method for a file.
+		/// @param [in] pathname - The file name to add
+		/// @return A pointer to a new file object. Null pointer if an error occurs
+		static file *			fileBuilder			( const std::filesystem::path & pathname );
 
 		// Private Factory method when a pathname is a directory
 		/// @brief Factory method for a directory, i.e. when the pathname is a directory and not a file

@@ -48,7 +48,7 @@ language_javascript::language_javascript()
  TRACE_POINT
 
  lang = languageType::JAVASCRIPT;
- name = "C";
+ name = "JavaScript";
 }
 
 bool language_javascript::isExtension( const char * p_extension )

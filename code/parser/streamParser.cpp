@@ -203,7 +203,7 @@ inline void streamParser::beginComment( std::string & line, std::size_t start )
  // No start of a comment found, check for code on the remaining of the line
  if( token_pos == std::string::npos )
    {
-	 len = line.size() - start - 1;
+	 len = line.size() - start;
 
 	 TRACE( "Line length:", line.size() );
 	 TRACE( "subline length:", ptr );

@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Import all C family language headers
-#include "language/windows/language_dos.hh"
+#include "language/windows/language_batch.hh"
 #include "language/windows/language_powershell.hh"
 
 

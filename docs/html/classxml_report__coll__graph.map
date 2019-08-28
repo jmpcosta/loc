@@ -1,0 +1,4 @@
+<map id="xmlReport" name="xmlReport">
+<area shape="rect" id="node2" href="$classreport.html" title="Class that represents a generic report. " alt="" coords="19,95,74,121"/>
+<area shape="rect" id="node3" href="$classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="9,5,84,32"/>
+</map>

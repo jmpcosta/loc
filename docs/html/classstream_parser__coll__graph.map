@@ -1,0 +1,6 @@
+<map id="streamParser" name="streamParser">
+<area shape="rect" id="node2" href="$classparser.html" title="Class responsible for parsing a file language code. " alt="" coords="31,184,90,211"/>
+<area shape="rect" id="node3" href="$classfile.html" title="Class responsible to represent an individual file for analysis. " alt="" coords="5,95,44,121"/>
+<area shape="rect" id="node4" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="69,95,143,121"/>
+<area shape="rect" id="node5" href="$classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="69,5,143,32"/>
+</map>

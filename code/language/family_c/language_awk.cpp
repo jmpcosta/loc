@@ -47,22 +47,15 @@ language_awk::language_awk()
 {
  TRACE_POINT
 
+ lang = languageType::AWK;
+ name = "AWK";
+
  comments.clear();		// To remove family inheritance
 
  comment * p_cmt = new comment();
 
- p_cmt->setStart( "//" );
+ p_cmt->setStart( "#" );
  comments.push_back( p_cmt );
-
- p_cmt = new comment();
- p_cmt->setStart( "/*" );
- p_cmt->setEnd  ( "*/" );
- p_cmt->setMultiline();
-
- comments.push_back( p_cmt );
-
- lang = languageType::AWK;
- name = "AWK";
 }
 
 bool language_awk::isExtension( const char * p_extension )

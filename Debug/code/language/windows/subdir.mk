@@ -4,15 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../code/language/windows/language_dos.cpp \
+../code/language/windows/language_batch.cpp \
 ../code/language/windows/language_powershell.cpp 
 
 OBJS += \
-./code/language/windows/language_dos.o \
+./code/language/windows/language_batch.o \
 ./code/language/windows/language_powershell.o 
 
 CPP_DEPS += \
-./code/language/windows/language_dos.d \
+./code/language/windows/language_batch.d \
 ./code/language/windows/language_powershell.d 
 
 

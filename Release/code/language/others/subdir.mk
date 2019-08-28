@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../code/language/others/language_fortran.cpp 
+../code/language/others/language_fortran.cpp \
+../code/language/others/language_python.cpp 
 
 OBJS += \
-./code/language/others/language_fortran.o 
+./code/language/others/language_fortran.o \
+./code/language/others/language_python.o 
 
 CPP_DEPS += \
-./code/language/others/language_fortran.d 
+./code/language/others/language_fortran.d \
+./code/language/others/language_python.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

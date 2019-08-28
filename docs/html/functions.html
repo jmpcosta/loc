@@ -87,10 +87,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>begin()
 : <a class="el" href="classfile_set.html#ad69bd11391be1a1dba5c8202259664f8">fileSet</a>
-, <a class="el" href="classlanguage.html#a50ecf97008068a253fbe8e484c4b73cc">language</a>
+, <a class="el" href="classlanguage.html#a75c8622768cc198b593fc462556dcf51">language</a>
 </li>
 <li>build()
 : <a class="el" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776">language_factory</a>
+, <a class="el" href="classparser__factory.html#adecc5aa47fc53ca656fc33cf43882418">parser_factory</a>
 , <a class="el" href="classreport.html#a4052d321242823a20dd09ada16a3c22e">report</a>
 </li>
 <li>builder()
@@ -158,10 +159,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5">Singleton&lt; T &gt;</a>
 </li>
 <li>getLanguage()
-: <a class="el" href="classfile.html#a85c1a103e916429ccc3cef3013b61f16">file</a>
-, <a class="el" href="classlanguage__factory.html#ab53b913f1296d2eddfba5adde2c1ba8f">language_factory</a>
-, <a class="el" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395">LanguageProvider</a>
+: <a class="el" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395">LanguageProvider</a>
 , <a class="el" href="classprog_options.html#a85c1a103e916429ccc3cef3013b61f16">progOptions</a>
+</li>
+<li>getLanguageType()
+: <a class="el" href="classfile.html#a0acc9f0424dd3f9ac4080b7ad7ca8297">file</a>
+, <a class="el" href="classlanguage__factory.html#afae9e5e7546fd8a05ab950a369ad8d15">language_factory</a>
+, <a class="el" href="class_language_provider.html#a5c88a519ce8e2267e0462857de39ff13">LanguageProvider</a>
 </li>
 <li>getLines()
 : <a class="el" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d">statistics</a>
@@ -177,7 +181,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classprog_options.html#a8e26ebc1022ceffbc9b52ecbef63a6e7">progOptions</a>
 </li>
 <li>getParser()
-: <a class="el" href="class_language_provider.html#a45a0d1943954df1a9f4535d2058fa3b9">LanguageProvider</a>
+: <a class="el" href="class_language_provider.html#a05d716b4c1d3863d38ef0366c77bb4e8">LanguageProvider</a>
+</li>
+<li>getParserType()
+: <a class="el" href="classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538">language</a>
 </li>
 <li>getPath()
 : <a class="el" href="classprog_options.html#a1503c267b11002b2b4517cf6bdad78cb">progOptions</a>
@@ -191,6 +198,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>getType()
 : <a class="el" href="classlanguage.html#aa4eba76db94074c26d6c3b12ab080d23">language</a>
+, <a class="el" href="classparser.html#aa9bc71afbcb401c99e1f4f0f6b6f0cdb">parser</a>
+, <a class="el" href="classstream_parser.html#ab8407cf1b50e0874f141f43e50b84595">streamParser</a>
 </li>
 <li>global
 : <a class="el" href="classreport.html#a2b55c210f336c3827d8470f87e66fe3f">report</a>
@@ -213,16 +222,21 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classcomment.html#a564a6b96126a28a661379de6cbfaeafc">comment</a>
 </li>
 <li>isExtension()
-: <a class="el" href="classlanguage__bash.html#ad51e0ea19d75bb130630d3470972407b">language_bash</a>
+: <a class="el" href="classlanguage__awk.html#ad51e0ea19d75bb130630d3470972407b">language_awk</a>
+, <a class="el" href="classlanguage__bash.html#ad51e0ea19d75bb130630d3470972407b">language_bash</a>
+, <a class="el" href="classlanguage__batch.html#ad51e0ea19d75bb130630d3470972407b">language_batch</a>
 , <a class="el" href="classlanguage__bourne.html#ad51e0ea19d75bb130630d3470972407b">language_bourne</a>
 , <a class="el" href="classlanguage__c.html#ad51e0ea19d75bb130630d3470972407b">language_c</a>
 , <a class="el" href="classlanguage__cpp.html#ad51e0ea19d75bb130630d3470972407b">language_cpp</a>
 , <a class="el" href="classlanguage__csh.html#ad51e0ea19d75bb130630d3470972407b">language_csh</a>
 , <a class="el" href="classlanguage__csharp.html#ad51e0ea19d75bb130630d3470972407b">language_csharp</a>
-, <a class="el" href="classlanguage__dos.html#ad51e0ea19d75bb130630d3470972407b">language_dos</a>
+, <a class="el" href="classlanguage__fortran.html#ad51e0ea19d75bb130630d3470972407b">language_fortran</a>
 , <a class="el" href="classlanguage__java.html#ad51e0ea19d75bb130630d3470972407b">language_java</a>
 , <a class="el" href="classlanguage__javascript.html#ad51e0ea19d75bb130630d3470972407b">language_javascript</a>
+, <a class="el" href="classlanguage__php.html#ad51e0ea19d75bb130630d3470972407b">language_php</a>
 , <a class="el" href="classlanguage__powershell.html#ad51e0ea19d75bb130630d3470972407b">language_powershell</a>
+, <a class="el" href="classlanguage__python.html#ad51e0ea19d75bb130630d3470972407b">language_python</a>
+, <a class="el" href="classlanguage__swift.html#ad51e0ea19d75bb130630d3470972407b">language_swift</a>
 , <a class="el" href="classlanguage__xml.html#ad51e0ea19d75bb130630d3470972407b">language_xml</a>
 </li>
 <li>isLanguageAvailable()
@@ -251,8 +265,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>language()
 : <a class="el" href="classlanguage.html#a83edba9aafdf3985795cb3b27ee0e1f4">language</a>
 </li>
+<li>language_awk()
+: <a class="el" href="classlanguage__awk.html#a7f6a86dc02723e079b29b7e9711980a1">language_awk</a>
+</li>
 <li>language_bash()
 : <a class="el" href="classlanguage__bash.html#a7693f728b257209cacf7698c21dba4dc">language_bash</a>
+</li>
+<li>language_batch()
+: <a class="el" href="classlanguage__batch.html#acd45deab6a0444851737ebcad061d8ce">language_batch</a>
 </li>
 <li>language_bourne()
 : <a class="el" href="classlanguage__bourne.html#af0bb471f1e4b391a3f696dcef5bf87bc">language_bourne</a>
@@ -269,8 +289,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>language_csharp()
 : <a class="el" href="classlanguage__csharp.html#aa7cb99e4f29b4947eb4aee4766c35b6c">language_csharp</a>
 </li>
-<li>language_dos()
-: <a class="el" href="classlanguage__dos.html#aa79b1cec94ab7154758a900571f56f6a">language_dos</a>
+<li>language_factory()
+: <a class="el" href="classlanguage__factory.html#ae3ec74b9f3694a02c59ade548693e940">language_factory</a>
 </li>
 <li>language_family_bourne()
 : <a class="el" href="classlanguage__family__bourne.html#af37759a3c07b81fa3d37f821a6de1cfb">language_family_bourne</a>
@@ -284,17 +304,32 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>language_family_sgml()
 : <a class="el" href="classlanguage__family__sgml.html#a562a307efa1afa997727da73cb71645b">language_family_sgml</a>
 </li>
+<li>language_fortran()
+: <a class="el" href="classlanguage__fortran.html#a8295be44cdd0b78c74ce1703c0a4422f">language_fortran</a>
+</li>
 <li>language_java()
 : <a class="el" href="classlanguage__java.html#a1e59eccabba8a450877990d9c1e1eb7e">language_java</a>
 </li>
 <li>language_javascript()
 : <a class="el" href="classlanguage__javascript.html#a86b254abc9f0a13dbb182e2120694b93">language_javascript</a>
 </li>
+<li>language_php()
+: <a class="el" href="classlanguage__php.html#a7d8d54c2f69cea353d81a7ffb34d6b75">language_php</a>
+</li>
 <li>language_powershell()
 : <a class="el" href="classlanguage__powershell.html#ab313b000fa1e3c4fff7c27a21d3c44be">language_powershell</a>
 </li>
+<li>language_python()
+: <a class="el" href="classlanguage__python.html#ae1e89b26901cf6a9f807408e064571da">language_python</a>
+</li>
+<li>language_swift()
+: <a class="el" href="classlanguage__swift.html#a77984ea06d0cda87f9dc2c092c463086">language_swift</a>
+</li>
 <li>language_xml()
 : <a class="el" href="classlanguage__xml.html#a1957520c04368ca725d648e47d6c3cb1">language_xml</a>
+</li>
+<li>lower()
+: <a class="el" href="classconverter.html#a72dbb82162340105ee1ece149929b676">converter</a>
 </li>
 </ul>
 
@@ -317,11 +352,25 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>p_iFile
+: <a class="el" href="classparser.html#a4e8b727144769c03cd75508f4bfd8eec">parser</a>
+</li>
 <li>p_iStreamBuf
 : <a class="el" href="classreport.html#a8a13f6dcb153a793dcde4d438e0ed3f7">report</a>
 </li>
+<li>p_lang
+: <a class="el" href="classparser.html#a2d10ad286275f7c5539467fe2c49cdf3">parser</a>
+</li>
 <li>parse()
 : <a class="el" href="classcommand_line.html#ae340cdcd75843b7d243234c71a57b447">commandLine</a>
+, <a class="el" href="classparser.html#a8b662fbaddb120f669c7c78492bec30e">parser</a>
+, <a class="el" href="classstream_parser.html#ace0c8293ed0943bdbd4200f0c9201d02">streamParser</a>
+</li>
+<li>parser()
+: <a class="el" href="classparser.html#a764bbc5dc5d6cf4bcddde9ff3eea7db9">parser</a>
+</li>
+<li>parser_factory()
+: <a class="el" href="classparser__factory.html#aa58a1f18ac8551810aad0e37160a7c27">parser_factory</a>
 </li>
 <li>progOptions()
 : <a class="el" href="classprog_options.html#a49acac7438d266011176bb5bbd2692f3">progOptions</a>
@@ -386,6 +435,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>stats
 : <a class="el" href="classlanguage.html#aaf2b4b79de6c7104a7177eb97f311d9d">language</a>
 </li>
+<li>streamParser()
+: <a class="el" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe">streamParser</a>
+</li>
 </ul>
 
 
@@ -422,6 +474,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </ul>
 
 
+<h3><a id="index_x"></a>- x -</h3><ul>
+<li>xmlReport()
+: <a class="el" href="classxml_report.html#a06e2a9bd8a8c35d820b256866d0dc59b">xmlReport</a>
+</li>
+</ul>
+
+
 <h3><a id="index_0x7e"></a>- ~ -</h3><ul>
 <li>~code()
 : <a class="el" href="classcode.html#a9dc34482f66940fc745857c12dda851a">code</a>
@@ -441,8 +500,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>~language()
 : <a class="el" href="classlanguage.html#aed90ff8c671f1e9fb990968d406a674b">language</a>
 </li>
+<li>~language_factory()
+: <a class="el" href="classlanguage__factory.html#a6f0bb997c95dd465f1f6752427754a1e">language_factory</a>
+</li>
 <li>~LanguageProvider()
 : <a class="el" href="class_language_provider.html#aa48a4de9ba8ffc58e940afc7dfd17b7a">LanguageProvider</a>
+</li>
+<li>~parser()
+: <a class="el" href="classparser.html#a681e46fac15f784fe55e415a236c1476">parser</a>
+</li>
+<li>~parser_factory()
+: <a class="el" href="classparser__factory.html#a1770f449594350a268160a1285d93ceb">parser_factory</a>
 </li>
 <li>~progOptions()
 : <a class="el" href="classprog_options.html#a4818b9dc3aa21ad011af49b36ce5ce28">progOptions</a>
@@ -453,8 +521,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>~statistics()
 : <a class="el" href="classstatistics.html#a149af26ee4d6aeea1ea2c102bf24844d">statistics</a>
 </li>
+<li>~streamParser()
+: <a class="el" href="classstream_parser.html#a3fb0ce71d6ab0c4ea9cc931508a9b5c6">streamParser</a>
+</li>
 <li>~textReport()
 : <a class="el" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc">textReport</a>
+</li>
+<li>~xmlReport()
+: <a class="el" href="classxml_report.html#a4effe4de90336783b4852a0547e22d74">xmlReport</a>
 </li>
 </ul>
 </div><!-- contents -->
