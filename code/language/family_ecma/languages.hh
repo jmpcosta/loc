@@ -20,5 +20,4 @@
 #include "language/family_ecma/language_javascript.hh"
 
 
-
 #endif // LOC_FAMILY_ECMA_LANGUAGES_HH_

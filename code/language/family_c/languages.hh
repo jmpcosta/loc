@@ -22,5 +22,7 @@
 #include "language/family_c/language_java.hh"
 #include "language/family_c/language_csharp.hh"
 #include "language/family_c/language_awk.hh"
+#include "language/family_c/language_php.hh"
+#include "language/family_c/language_swift.hh"
 
 #endif // LOC_FAMILY_C_LANGUAGES_HH_

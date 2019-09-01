@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_PHP_HH_
-#define LOC_LANGUAGE_PHP_HH_
+#ifndef LOC_LANGUAGE_PERL_HH_
+#define LOC_LANGUAGE_PERL_HH_
 
 // *****************************************************************************************
 //
@@ -17,11 +17,12 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <string>
 
 // Import application headers
 #include "loc_defs.hh"
 #include "trace_macros.hh"
-#include "language/family_c/language_family_c.hh"
+#include "language/language.hh"
 
 
 // *****************************************************************************************
@@ -31,17 +32,17 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing a PHP language
-class language_php : public language_family_c
+/// @brief Class responsible for implementing the Perl language
+class language_perl : public language
 {
 public:
 		/// @brief Class constructor
-								language_php	( void				);
+								language_perl	( void				);
 
 		/// @brief Check if a file extension is a known extension for this programming language
 		/// @param [in] ext - File extension
 		/// @return True if the language is a known extension for the language
-		static	bool			isExtension	( const char * ext	);
+		static	bool			isExtension		( const char * ext	);
 
 private:
 		TRACE_CLASSNAME_DECLARATION
@@ -53,4 +54,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_PHP_HH_
+#endif // LOC_LANGUAGE_PERL_HH_

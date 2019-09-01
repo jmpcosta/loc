@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the PHP language
+// Purpose:	Define the HTML language
 //
 // *****************************************************************************************
 
@@ -21,9 +21,9 @@
 
 // Import module declarations
 #include "trace.hh"
-#include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/family_c/language_php.hh"
+#include "language/family_sgml/language_html.hh"
+
 
 // *****************************************************************************************
 //
@@ -31,7 +31,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_PHP[] = { ".php", nullptr };
+const char * LOC_LANGUAGE_HTML[] = { ".html", ".htm", nullptr };
 
 // *****************************************************************************************
 //
@@ -39,20 +39,20 @@ const char * LOC_LANGUAGE_PHP[] = { ".php", nullptr };
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_php )
+TRACE_CLASSNAME( language_html )
 
 
-language_php::language_php()
+language_html::language_html()
 {
  TRACE_POINT
 
- lang = languageType::PHP;
- name = "PHP";
+ lang = languageType::HTML;
+ name = "HTML";
 }
 
-bool language_php::isExtension( const char * p_extension )
+bool language_html::isExtension( const char * p_extension )
 {
- return language::checkExtension( p_extension, LOC_LANGUAGE_PHP );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_HTML );
 }
 
 

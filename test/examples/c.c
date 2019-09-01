@@ -3,12 +3,10 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Import any other languages
+// Purpose:	C programming language example
 //
 // *****************************************************************************************
 
-#ifndef LOC_OTHER_LANGUAGES_HH_
-#define LOC_OTHER_LANGUAGES_HH_
 
 // *****************************************************************************************
 //
@@ -16,9 +14,10 @@
 //
 // *****************************************************************************************
 
-// Import all C family language headers
-//#include "language/others/language_fortran.hh"
-#include "language/others/language_python.hh"
-#include "language/others/language_perl.hh"
+// Include Standard headers
+#include <stdio.h>
 
-#endif // LOC_OTHER_LANGUAGES_HH_
+int main( int argc, char * argv[] )
+{
+ printf( "Hello World \n" );
+}

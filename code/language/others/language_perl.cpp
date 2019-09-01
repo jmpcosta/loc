@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the PHP language
+// Purpose:	Define the Python language
 //
 // *****************************************************************************************
 
@@ -23,7 +23,8 @@
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "language/languageType.hh"
-#include "language/family_c/language_php.hh"
+#include "language/others/language_perl.hh"
+
 
 // *****************************************************************************************
 //
@@ -31,7 +32,7 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_PHP[] = { ".php", nullptr };
+const char * LOC_LANGUAGE_PERL[] = { ".pl", nullptr };
 
 // *****************************************************************************************
 //
@@ -39,20 +40,24 @@ const char * LOC_LANGUAGE_PHP[] = { ".php", nullptr };
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_php )
+TRACE_CLASSNAME( language_perl )
 
 
-language_php::language_php()
+language_perl::language_perl()
 {
  TRACE_POINT
 
- lang = languageType::PHP;
- name = "PHP";
+ lang = languageType::PERL;
+ name = "Perl";
+
+ comment * p_cmt = new comment();
+ p_cmt->setStart( "#" );
+ comments.push_back( p_cmt );
 }
 
-bool language_php::isExtension( const char * p_extension )
+bool language_perl::isExtension( const char * p_extension )
 {
- return language::checkExtension( p_extension, LOC_LANGUAGE_PHP );
+ return language::checkExtension( p_extension, LOC_LANGUAGE_PERL );
 }
 
 

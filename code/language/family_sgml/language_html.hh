@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide the definitions/declarations for a programming language
+// Purpose:	Provide the definitions/declarations for the HTML language
 //
 // *****************************************************************************************
 
-#ifndef LOC_LANGUAGE_PHP_HH_
-#define LOC_LANGUAGE_PHP_HH_
+#ifndef LOC_LANGUAGE_HTML_HH_
+#define LOC_LANGUAGE_HTML_HH_
 
 // *****************************************************************************************
 //
@@ -19,9 +19,8 @@
 // Import C++ system headers
 
 // Import application headers
-#include "loc_defs.hh"
 #include "trace_macros.hh"
-#include "language/family_c/language_family_c.hh"
+#include "language/family_sgml/language_family_sgml.hh"
 
 
 // *****************************************************************************************
@@ -31,17 +30,17 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing a PHP language
-class language_php : public language_family_c
+/// @brief Class responsible for implementing the HTML language
+class language_html : public language_family_sgml
 {
 public:
 		/// @brief Class constructor
-								language_php	( void				);
+								language_html	( void				);
 
 		/// @brief Check if a file extension is a known extension for this programming language
 		/// @param [in] ext - File extension
 		/// @return True if the language is a known extension for the language
-		static	bool			isExtension	( const char * ext	);
+		static	bool			isExtension		( const char * ext	);
 
 private:
 		TRACE_CLASSNAME_DECLARATION
@@ -53,4 +52,4 @@ private:
 
 
 
-#endif // LOC_LANGUAGE_PHP_HH_
+#endif // LOC_LANGUAGE_HTML_HH_
