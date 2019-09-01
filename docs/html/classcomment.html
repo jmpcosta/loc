@@ -106,17 +106,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a6c65b282a8a0717d9acbd63e1505fe9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#a6c65b282a8a0717d9acbd63e1505fe9d">isMultiLine</a> (void)</td></tr>
 <tr class="memdesc:a6c65b282a8a0717d9acbd63e1505fe9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can the comment can span across several lines?  <a href="#a6c65b282a8a0717d9acbd63e1505fe9d">More...</a><br /></td></tr>
 <tr class="separator:a6c65b282a8a0717d9acbd63e1505fe9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18232ed262f8a28dd575c3ef10a806ac"><td class="memItemLeft" align="right" valign="top"><a id="a18232ed262f8a28dd575c3ef10a806ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#a18232ed262f8a28dd575c3ef10a806ac">setCaseSensitive</a> (void)</td></tr>
-<tr class="memdesc:a18232ed262f8a28dd575c3ef10a806ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set comment tokens as case sensitive. <br /></td></tr>
-<tr class="separator:a18232ed262f8a28dd575c3ef10a806ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b4ea533fbd87490d562def0264eb1b3"><td class="memItemLeft" align="right" valign="top"><a id="a3b4ea533fbd87490d562def0264eb1b3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#a3b4ea533fbd87490d562def0264eb1b3">setCaseInsensitive</a> (void)</td></tr>
-<tr class="memdesc:a3b4ea533fbd87490d562def0264eb1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set comment tokens as case insensitive. <br /></td></tr>
-<tr class="separator:a3b4ea533fbd87490d562def0264eb1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a564a6b96126a28a661379de6cbfaeafc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#a564a6b96126a28a661379de6cbfaeafc">isCaseSensitive</a> (void)</td></tr>
-<tr class="memdesc:a564a6b96126a28a661379de6cbfaeafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are comment tokens case sensitive? REM vs rem, in Batch, for instance.  <a href="#a564a6b96126a28a661379de6cbfaeafc">More...</a><br /></td></tr>
-<tr class="separator:a564a6b96126a28a661379de6cbfaeafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0bc998d4b0dc754f7b454fa3c1f889"><td class="memItemLeft" align="right" valign="top"><a id="afe0bc998d4b0dc754f7b454fa3c1f889"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#afe0bc998d4b0dc754f7b454fa3c1f889">setSingleCase</a> (void)</td></tr>
+<tr class="memdesc:afe0bc998d4b0dc754f7b454fa3c1f889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set comment tokens as having only one case (//) <br /></td></tr>
+<tr class="separator:afe0bc998d4b0dc754f7b454fa3c1f889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac249341a8782e80f557c148ebbf4a6e4"><td class="memItemLeft" align="right" valign="top"><a id="ac249341a8782e80f557c148ebbf4a6e4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#ac249341a8782e80f557c148ebbf4a6e4">setMultipleCase</a> (void)</td></tr>
+<tr class="memdesc:ac249341a8782e80f557c148ebbf4a6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set comment tokens as having more than one case (rem vs REM) <br /></td></tr>
+<tr class="separator:ac249341a8782e80f557c148ebbf4a6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2dd2099f193916f8cadb00aff7a0bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcomment.html#acb2dd2099f193916f8cadb00aff7a0bf">isSingleCase</a> (void)</td></tr>
+<tr class="memdesc:acb2dd2099f193916f8cadb00aff7a0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are tokens composed of a single case token? REM vs rem, in Batch, for instance.  <a href="#acb2dd2099f193916f8cadb00aff7a0bf">More...</a><br /></td></tr>
+<tr class="separator:acb2dd2099f193916f8cadb00aff7a0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for representing a language comment. </p>
@@ -207,35 +207,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a564a6b96126a28a661379de6cbfaeafc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a564a6b96126a28a661379de6cbfaeafc">&#9670;&nbsp;</a></span>isCaseSensitive()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isCaseSensitive </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Are comment tokens case sensitive? REM vs rem, in Batch, for instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>True is token is case sensitive. False otherwise. </dd></dl>
-
-</div>
-</div>
 <a id="a6c65b282a8a0717d9acbd63e1505fe9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c65b282a8a0717d9acbd63e1505fe9d">&#9670;&nbsp;</a></span>isMultiLine()</h2>
 
@@ -262,6 +233,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Can the comment can span across several lines? </p>
 <dl class="section return"><dt>Returns</dt><dd>True if can cross several lines. False otherwise </dd></dl>
+
+</div>
+</div>
+<a id="acb2dd2099f193916f8cadb00aff7a0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2dd2099f193916f8cadb00aff7a0bf">&#9670;&nbsp;</a></span>isSingleCase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isSingleCase </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Are tokens composed of a single case token? REM vs rem, in Batch, for instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>True is token supports only one case. False otherwise </dd></dl>
 
 </div>
 </div>

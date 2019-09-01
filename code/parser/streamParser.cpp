@@ -24,6 +24,7 @@
 // Import module declarations
 #include "trace.hh"
 #include "files/fileSet.hh"
+#include "converter.hh"
 #include "language/LanguageProvider.hh"
 #include "statistics/StatisticsProvider.hh"
 #include "parser/streamParser.hh"
@@ -145,7 +146,11 @@ inline void streamParser::endComment( std::string & line, std::size_t start )
 		  continue;
 
 	  len		= (*it)->getEnd().length();
-	  token_pos = line.find( (*it)->getEnd(), start );
+
+	  if( (*it)->isSingleCase())
+		  token_pos = line.find( (*it)->getEnd(), start );				// Use fast version
+	  else
+		  token_pos = findToken( (*it)->getEnd(), line, start );		// Slower version
 
 	  TRACE( "End token (", len, "): |", (*it)->getEnd(), "|" );
 
@@ -187,8 +192,12 @@ inline void streamParser::beginComment( std::string & line, std::size_t start )
 	  len = (*it)->getStart().length();
 
 	  TRACE( "Token length:", len );
+	  TRACE( "Token is case sensitive:", (*it)->isSingleCase() ? "true": "false" );
 
-	  token_pos = line.find( (*it)->getStart(), start );
+	  if( (*it)->isSingleCase() )
+		  token_pos = line.find( (*it)->getStart(), start );			// Use fast version
+	  else
+		  token_pos = findToken( (*it)->getStart(), line, start );		// Slower version
 
       if( token_pos != std::string::npos )
         {

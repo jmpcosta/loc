@@ -3,8 +3,9 @@
 <area shape="rect" id="node4" href="$classlanguage__c.html" title="Class responsible for implementing a C language. " alt="" coords="323,56,411,83"/>
 <area shape="rect" id="node5" href="$classlanguage__cpp.html" title="Class responsible for implementing a C++ language. " alt="" coords="315,107,418,133"/>
 <area shape="rect" id="node6" href="$classlanguage__csharp.html" title="Class responsible for implementing a C# language. " alt="" coords="307,157,427,184"/>
-<area shape="rect" id="node7" href="$classlanguage__java.html" title="Class responsible for implementing a Java language. " alt="" coords="314,208,419,235"/>
-<area shape="rect" id="node8" href="$classlanguage__php.html" title="Class responsible for implementing a C language. " alt="" coords="315,259,418,285"/>
-<area shape="rect" id="node9" href="$classlanguage__swift.html" title="Class responsible for implementing a C language. " alt="" coords="312,309,421,336"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="5,157,80,184"/>
+<area shape="rect" id="node7" href="$classlanguage__go.html" title="Class responsible for implementing the GO language. " alt="" coords="319,208,414,235"/>
+<area shape="rect" id="node8" href="$classlanguage__java.html" title="Class responsible for implementing a Java language. " alt="" coords="314,259,419,285"/>
+<area shape="rect" id="node9" href="$classlanguage__php.html" title="Class responsible for implementing a PHP language. " alt="" coords="315,309,418,336"/>
+<area shape="rect" id="node10" href="$classlanguage__swift.html" title="Class responsible for implementing a C language. " alt="" coords="312,360,421,387"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="5,183,80,209"/>
 </map>

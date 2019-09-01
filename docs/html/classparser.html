@@ -115,6 +115,9 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a066177b0209d9dda8731e332f4093f9f">specificParse</a> (void)=0</td></tr>
 <tr class="memdesc:a066177b0209d9dda8731e332f4093f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls a parser to process an open file. <br /></td></tr>
 <tr class="separator:a066177b0209d9dda8731e332f4093f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c99766f48181a9b2c5895bfd1981e2d"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a3c99766f48181a9b2c5895bfd1981e2d">findToken</a> (const std::string &amp;what, const std::string &amp;where, std::size_t start)</td></tr>
+<tr class="memdesc:a3c99766f48181a9b2c5895bfd1981e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a comment token in string.  <a href="#a3c99766f48181a9b2c5895bfd1981e2d">More...</a><br /></td></tr>
+<tr class="separator:a3c99766f48181a9b2c5895bfd1981e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -138,6 +141,66 @@ std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for parsing a file language code. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3c99766f48181a9b2c5895bfd1981e2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c99766f48181a9b2c5895bfd1981e2d">&#9670;&nbsp;</a></span>findToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t findToken </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>what</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>where</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>start</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Search a comment token in string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">what</td><td>- What to search (token) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">where</td><td>- String where to search </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- Start position in string </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph.png" border="0" usemap="#classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph" alt=""/></div>
+<map name="classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph" id="classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph">
+<area shape="rect" id="node2" href="classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="132,5,199,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aa9bc71afbcb401c99e1f4f0f6b6f0cdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9bc71afbcb401c99e1f4f0f6b6f0cdb">&#9670;&nbsp;</a></span>getType()</h2>
 

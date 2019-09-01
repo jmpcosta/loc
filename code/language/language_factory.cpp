@@ -51,6 +51,7 @@ language * language_factory::build( languageType type )
   	case languageType::CPP: 		p_lang = new language_cpp();			break;
   	case languageType::JAVA: 		p_lang = new language_java();			break;
   	case languageType::SWIFT: 		p_lang = new language_swift();			break;
+  	case languageType::GO: 	 		p_lang = new language_go();				break;
   	case languageType::PYTHON: 		p_lang = new language_python();			break;
   	case languageType::PERL: 		p_lang = new language_perl();			break;
   	case languageType::CSHARP: 		p_lang = new language_csharp();			break;
@@ -86,6 +87,7 @@ languageType language_factory::getLanguageType( const char * p_fileExtension  )
  if( isLanguage<language_java>			( p_fileExtension ) ) return languageType::JAVA;
  if( isLanguage<language_php>			( p_fileExtension ) ) return languageType::PHP;
  if( isLanguage<language_swift>			( p_fileExtension ) ) return languageType::SWIFT;
+ if( isLanguage<language_go>			( p_fileExtension ) ) return languageType::GO;
 
  if( isLanguage<language_bash>			( p_fileExtension ) ) return languageType::BASH;
  if( isLanguage<language_python>		( p_fileExtension ) ) return languageType::PYTHON;

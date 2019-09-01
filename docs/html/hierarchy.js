@@ -19,6 +19,7 @@ var hierarchy =
         [ "language_c", "classlanguage__c.html", null ],
         [ "language_cpp", "classlanguage__cpp.html", null ],
         [ "language_csharp", "classlanguage__csharp.html", null ],
+        [ "language_go", "classlanguage__go.html", null ],
         [ "language_java", "classlanguage__java.html", null ],
         [ "language_php", "classlanguage__php.html", null ],
         [ "language_swift", "classlanguage__swift.html", null ]
@@ -27,9 +28,11 @@ var hierarchy =
         [ "language_javascript", "classlanguage__javascript.html", null ]
       ] ],
       [ "language_family_sgml", "classlanguage__family__sgml.html", [
+        [ "language_html", "classlanguage__html.html", null ],
         [ "language_xml", "classlanguage__xml.html", null ]
       ] ],
       [ "language_fortran", "classlanguage__fortran.html", null ],
+      [ "language_perl", "classlanguage__perl.html", null ],
       [ "language_powershell", "classlanguage__powershell.html", null ],
       [ "language_python", "classlanguage__python.html", null ]
     ] ],

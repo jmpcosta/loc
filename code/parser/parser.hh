@@ -36,25 +36,30 @@ class parser
 {
 public:
 		/// @brief Class constructor
-							parser	() { p_lang = nullptr; p_iFile = nullptr; }
+								parser	() { p_lang = nullptr; p_iFile = nullptr; }
 
 		/// @brief Class destructor
-		virtual				~parser	() {}
+		virtual					~parser	() {}
 
 		/// @brief Parse a source file
 		/// @param [in] sourceFile - The input file to parse
-		virtual void		parse	( file * sourceFile	);
+		virtual void			parse	( file * sourceFile	);
 
 
 		/// @brief Obtain the parser type
 		/// @return The parser identifier
-		virtual parserType	getType	( void				) = 0;
+		virtual parserType		getType			( void				) = 0;
 
 protected:
 		// Methods
 		/// @brief Calls a parser to process an open file
-		virtual void specificParse	( void				) = 0;
+		virtual void 			specificParse	( void				) = 0;
 
+		/// @brief Search a comment token in string
+		/// @param [in] what  - What to search (token)
+		/// @param [in] where - String where to search
+		/// @param [in] start - Start position in string
+		virtual std::size_t		findToken		( const std::string & what, const std::string & where, std::size_t start );
 
 		// Variables
 		language *		p_lang;					///< Pointer to a language object

@@ -24,6 +24,7 @@ enum class languageType
 	CPP 		,
 	CSHARP		,
 	JAVA		,
+	GO			,
 	PYTHON		,
 	PHP			,
 	SWIFT		,

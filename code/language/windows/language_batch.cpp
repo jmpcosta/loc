@@ -52,7 +52,7 @@ language_batch::language_batch()
 
  comment * p_cmt = new comment();
  p_cmt->setStart( "rem" );
- p_cmt->setCaseInsensitive();
+ p_cmt->setMultipleCase();
  comments.push_back( p_cmt );
 
 }

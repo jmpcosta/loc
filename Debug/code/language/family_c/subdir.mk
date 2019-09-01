@@ -9,6 +9,7 @@ CPP_SRCS += \
 ../code/language/family_c/language_cpp.cpp \
 ../code/language/family_c/language_csharp.cpp \
 ../code/language/family_c/language_family_c.cpp \
+../code/language/family_c/language_go.cpp \
 ../code/language/family_c/language_java.cpp \
 ../code/language/family_c/language_php.cpp \
 ../code/language/family_c/language_swift.cpp 
@@ -19,6 +20,7 @@ OBJS += \
 ./code/language/family_c/language_cpp.o \
 ./code/language/family_c/language_csharp.o \
 ./code/language/family_c/language_family_c.o \
+./code/language/family_c/language_go.o \
 ./code/language/family_c/language_java.o \
 ./code/language/family_c/language_php.o \
 ./code/language/family_c/language_swift.o 
@@ -29,6 +31,7 @@ CPP_DEPS += \
 ./code/language/family_c/language_cpp.d \
 ./code/language/family_c/language_csharp.d \
 ./code/language/family_c/language_family_c.d \
+./code/language/family_c/language_go.d \
 ./code/language/family_c/language_java.d \
 ./code/language/family_c/language_php.d \
 ./code/language/family_c/language_swift.d 

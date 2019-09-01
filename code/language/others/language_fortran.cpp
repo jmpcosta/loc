@@ -52,7 +52,7 @@ language_fortran::language_fortran()
 
  comment * p_cmt = new comment();
  p_cmt->setStart( "!" );
- p_cmt->setCaseInsensitive();
+ p_cmt->setMultipleCase();
  comments.push_back( p_cmt );
 }
 

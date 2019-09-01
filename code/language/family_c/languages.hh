@@ -24,5 +24,6 @@
 #include "language/family_c/language_awk.hh"
 #include "language/family_c/language_php.hh"
 #include "language/family_c/language_swift.hh"
+#include "language/family_c/language_go.hh"
 
 #endif // LOC_FAMILY_C_LANGUAGES_HH_

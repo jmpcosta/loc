@@ -137,6 +137,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>fileStatistics()
 : <a class="el" href="classfile_statistics.html#a01fe9d26f1fdbb24a2eba00d46e81179">fileStatistics</a>
 </li>
+<li>findToken()
+: <a class="el" href="classparser.html#a3c99766f48181a9b2c5895bfd1981e2d">parser</a>
+</li>
 </ul>
 
 
@@ -231,9 +234,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>insight()
 : <a class="el" href="classcode.html#a8b45e7fda0b0f271d77f32e19590059c">code</a>
 </li>
-<li>isCaseSensitive()
-: <a class="el" href="classcomment.html#a564a6b96126a28a661379de6cbfaeafc">comment</a>
-</li>
 <li>isExtension()
 : <a class="el" href="classlanguage__awk.html#ad51e0ea19d75bb130630d3470972407b">language_awk</a>
 , <a class="el" href="classlanguage__bash.html#ad51e0ea19d75bb130630d3470972407b">language_bash</a>
@@ -244,8 +244,11 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classlanguage__csh.html#ad51e0ea19d75bb130630d3470972407b">language_csh</a>
 , <a class="el" href="classlanguage__csharp.html#ad51e0ea19d75bb130630d3470972407b">language_csharp</a>
 , <a class="el" href="classlanguage__fortran.html#ad51e0ea19d75bb130630d3470972407b">language_fortran</a>
+, <a class="el" href="classlanguage__go.html#ad51e0ea19d75bb130630d3470972407b">language_go</a>
+, <a class="el" href="classlanguage__html.html#ad51e0ea19d75bb130630d3470972407b">language_html</a>
 , <a class="el" href="classlanguage__java.html#ad51e0ea19d75bb130630d3470972407b">language_java</a>
 , <a class="el" href="classlanguage__javascript.html#ad51e0ea19d75bb130630d3470972407b">language_javascript</a>
+, <a class="el" href="classlanguage__perl.html#ad51e0ea19d75bb130630d3470972407b">language_perl</a>
 , <a class="el" href="classlanguage__php.html#ad51e0ea19d75bb130630d3470972407b">language_php</a>
 , <a class="el" href="classlanguage__powershell.html#ad51e0ea19d75bb130630d3470972407b">language_powershell</a>
 , <a class="el" href="classlanguage__python.html#ad51e0ea19d75bb130630d3470972407b">language_python</a>
@@ -257,6 +260,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>isMultiLine()
 : <a class="el" href="classcomment.html#a6c65b282a8a0717d9acbd63e1505fe9d">comment</a>
+</li>
+<li>isSingleCase()
+: <a class="el" href="classcomment.html#acb2dd2099f193916f8cadb00aff7a0bf">comment</a>
 </li>
 <li>isVerbose()
 : <a class="el" href="classprog_options.html#a1f2a2289e019e8fa3fb02cfef830ad82">progOptions</a>
@@ -310,11 +316,20 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>language_fortran()
 : <a class="el" href="classlanguage__fortran.html#a8295be44cdd0b78c74ce1703c0a4422f">language_fortran</a>
 </li>
+<li>language_go()
+: <a class="el" href="classlanguage__go.html#a738f4a3dfbc2410834c09c512234a4e3">language_go</a>
+</li>
+<li>language_html()
+: <a class="el" href="classlanguage__html.html#a0fa08d4000792677905e27f7822686e9">language_html</a>
+</li>
 <li>language_java()
 : <a class="el" href="classlanguage__java.html#a1e59eccabba8a450877990d9c1e1eb7e">language_java</a>
 </li>
 <li>language_javascript()
 : <a class="el" href="classlanguage__javascript.html#a86b254abc9f0a13dbb182e2120694b93">language_javascript</a>
+</li>
+<li>language_perl()
+: <a class="el" href="classlanguage__perl.html#a3370e7e7aa14ffc591562897ab2fa748">language_perl</a>
 </li>
 <li>language_php()
 : <a class="el" href="classlanguage__php.html#a7d8d54c2f69cea353d81a7ffb34d6b75">language_php</a>
@@ -385,12 +400,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>setCapacity()
 : <a class="el" href="class_statistics_provider.html#a54f027c1a0761667248e61093c09a119">StatisticsProvider</a>
 </li>
-<li>setCaseInsensitive()
-: <a class="el" href="classcomment.html#a3b4ea533fbd87490d562def0264eb1b3">comment</a>
-</li>
-<li>setCaseSensitive()
-: <a class="el" href="classcomment.html#a18232ed262f8a28dd575c3ef10a806ac">comment</a>
-</li>
 <li>setEnd()
 : <a class="el" href="classcomment.html#a1f1de8dfe1e8e733e3c5394bb6b134c2">comment</a>
 </li>
@@ -403,12 +412,18 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>setMultiline()
 : <a class="el" href="classcomment.html#ab1ed58437c5c587678bf532dcd48a246">comment</a>
 </li>
+<li>setMultipleCase()
+: <a class="el" href="classcomment.html#ac249341a8782e80f557c148ebbf4a6e4">comment</a>
+</li>
 <li>setOutput()
 : <a class="el" href="classprog_options.html#ae65c76f2442129abfef459bbf21574da">progOptions</a>
 , <a class="el" href="classreport.html#a74611502f43eb6b6a7fd600c3a28cf66">report</a>
 </li>
 <li>setPath()
 : <a class="el" href="classprog_options.html#a8f39c41cb8dc25eb08948ab3f53c0c88">progOptions</a>
+</li>
+<li>setSingleCase()
+: <a class="el" href="classcomment.html#afe0bc998d4b0dc754f7b454fa3c1f889">comment</a>
 </li>
 <li>setSingleline()
 : <a class="el" href="classcomment.html#ac58a69483845be5aeeca37b32b8df27c">comment</a>

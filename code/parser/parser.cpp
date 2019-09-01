@@ -20,6 +20,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <algorithm>
 
 // Import module declarations
 #include "trace.hh"
@@ -62,4 +63,16 @@ void parser::parse( file * p_file )
 
 }
 
+// Insensitive Case search
+std::size_t parser::findToken( const std::string & what, const std::string & where, std::size_t start )
+{
+ // Not very efficient..
+ std::string what_cpy	= what;
+ std::string where_cpy	= where ;
+
+ std::transform( what_cpy.begin(),  what_cpy.end(),  what_cpy.begin(),  ::tolower );
+ std::transform( where_cpy.begin(), where_cpy.end(), where_cpy.begin(), ::tolower );
+
+ return where_cpy.find( what_cpy, start );
+}
 

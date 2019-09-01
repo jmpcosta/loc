@@ -35,7 +35,7 @@
 class comment
 {
 public:
-								comment() 										{ start=""; end=""; multiline=false; ignoreCase=true;}
+								comment() 										{ start=""; end=""; multiline=false; singleCase=true;}
 
 		/// @brief Identify the begining of a comment by a start token
 		/// @param [in] token - string start token
@@ -76,22 +76,22 @@ public:
 		/// @return True if can cross several lines. False otherwise
 		bool 					isMultiLine  		( void ) 						{ return multiline;  }
 
-		/// @brief Set comment tokens as case sensitive
-		void 					setCaseSensitive	( void ) 						{ ignoreCase = false;		}
+		/// @brief Set comment tokens as having only one case (//)
+		void 					setSingleCase		( void ) 						{ singleCase = true;	}
 
-		/// @brief Set comment tokens as case insensitive
-		void 					setCaseInsensitive	( void ) 						{ ignoreCase = true;		}
+		/// @brief Set comment tokens as having more than one case (rem vs REM)
+		void 					setMultipleCase		( void ) 						{ singleCase = false;	}
 
-		/// @brief Are comment tokens case sensitive? REM vs rem, in Batch, for instance.
-		/// @return True is token is case sensitive. False otherwise.
-		bool 					isCaseSensitive  	( void ) 						{ return (! ignoreCase);	}
+		/// @brief Are tokens composed of a single case token? REM vs rem, in Batch, for instance.
+		/// @return True is token supports only one case. False otherwise
+		bool 					isSingleCase	  	( void ) 						{ return singleCase;	}
 
 private:
 
 		std::string start;			///< Comment start token
 		std::string end;			///< Comment end token
 		bool		multiline;		///< Comment is multiline?
-		bool		ignoreCase;		///< Ignore case of tokens?
+		bool		singleCase;		///< Token was only one case?
 };
 
 
