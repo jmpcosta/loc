@@ -76,8 +76,12 @@ $(document).ready(function(){initNavTree('classstatistics.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa74dc6dbca1d4866d59f941012417d5e"><td class="memItemLeft" align="right" valign="top"><a id="aa74dc6dbca1d4866d59f941012417d5e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatistics.html#aa74dc6dbca1d4866d59f941012417d5e">statistics</a> ()</td></tr>
-<tr class="memdesc:aa74dc6dbca1d4866d59f941012417d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor. <br /></td></tr>
+<tr class="memdesc:aa74dc6dbca1d4866d59f941012417d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Class constructor. <br /></td></tr>
 <tr class="separator:aa74dc6dbca1d4866d59f941012417d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f554f82b6c9b122afc407c5113e775"><td class="memItemLeft" align="right" valign="top"><a id="a92f554f82b6c9b122afc407c5113e775"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatistics.html#a92f554f82b6c9b122afc407c5113e775">statistics</a> (<a class="el" href="classstatistics.html">statistics</a> &amp;s)</td></tr>
+<tr class="memdesc:a92f554f82b6c9b122afc407c5113e775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor using another statisics object. <br /></td></tr>
+<tr class="separator:a92f554f82b6c9b122afc407c5113e775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a149af26ee4d6aeea1ea2c102bf24844d"><td class="memItemLeft" align="right" valign="top"><a id="a149af26ee4d6aeea1ea2c102bf24844d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatistics.html#a149af26ee4d6aeea1ea2c102bf24844d">~statistics</a> ()</td></tr>
 <tr class="memdesc:a149af26ee4d6aeea1ea2c102bf24844d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br /></td></tr>
@@ -113,21 +117,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a0d671aa5a3c77aaad36f58ede633699e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e">setAvailable</a> (bool b)</td></tr>
 <tr class="memdesc:a0d671aa5a3c77aaad36f58ede633699e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set statistics to an available state.  <a href="#a0d671aa5a3c77aaad36f58ede633699e">More...</a><br /></td></tr>
 <tr class="separator:a0d671aa5a3c77aaad36f58ede633699e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8babe74768c1f783f1804ee175fe3f56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56">addStats</a> (<a class="el" href="classstatistics.html">statistics</a> &amp;s)</td></tr>
-<tr class="memdesc:a8babe74768c1f783f1804ee175fe3f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the provided statistics to the current ones.  <a href="#a8babe74768c1f783f1804ee175fe3f56">More...</a><br /></td></tr>
-<tr class="separator:a8babe74768c1f783f1804ee175fe3f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d713e18eb431db14279a1df393d3ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstatistics.html#a1d713e18eb431db14279a1df393d3ee2">add</a> (<a class="el" href="classstatistics.html">statistics</a> &amp;s)</td></tr>
+<tr class="memdesc:a1d713e18eb431db14279a1df393d3ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the provided statistics to the current ones.  <a href="#a1d713e18eb431db14279a1df393d3ee2">More...</a><br /></td></tr>
+<tr class="separator:a1d713e18eb431db14279a1df393d3ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for holding statistics. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8babe74768c1f783f1804ee175fe3f56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8babe74768c1f783f1804ee175fe3f56">&#9670;&nbsp;</a></span>addStats()</h2>
+<a id="a1d713e18eb431db14279a1df393d3ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d713e18eb431db14279a1df393d3ee2">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void addStats </td>
+          <td class="memname">void add </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classstatistics.html">statistics</a> &amp;&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
@@ -146,23 +150,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classstatistics_a8babe74768c1f783f1804ee175fe3f56_cgraph.png" border="0" usemap="#classstatistics_a8babe74768c1f783f1804ee175fe3f56_cgraph" alt=""/></div>
-<map name="classstatistics_a8babe74768c1f783f1804ee175fe3f56_cgraph" id="classstatistics_a8babe74768c1f783f1804ee175fe3f56_cgraph">
-<area shape="rect" id="node2" href="classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="152,5,213,32"/>
-<area shape="rect" id="node3" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="147,56,218,83"/>
-<area shape="rect" id="node4" href="classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="128,107,237,133"/>
+<div class="center"><img src="classstatistics_a1d713e18eb431db14279a1df393d3ee2_cgraph.png" border="0" usemap="#classstatistics_a1d713e18eb431db14279a1df393d3ee2_cgraph" alt=""/></div>
+<map name="classstatistics_a1d713e18eb431db14279a1df393d3ee2_cgraph" id="classstatistics_a1d713e18eb431db14279a1df393d3ee2_cgraph">
+<area shape="rect" id="node2" href="classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="104,5,197,32"/>
+<area shape="rect" id="node3" href="classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="120,56,181,83"/>
+<area shape="rect" id="node4" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="115,107,186,133"/>
+<area shape="rect" id="node5" href="classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="96,157,205,184"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classstatistics_a8babe74768c1f783f1804ee175fe3f56_icgraph.png" border="0" usemap="#classstatistics_a8babe74768c1f783f1804ee175fe3f56_icgraph" alt=""/></div>
-<map name="classstatistics_a8babe74768c1f783f1804ee175fe3f56_icgraph" id="classstatistics_a8babe74768c1f783f1804ee175fe3f56_icgraph">
-<area shape="rect" id="node2" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="128,56,247,83"/>
-<area shape="rect" id="node5" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="141,107,234,133"/>
-<area shape="rect" id="node3" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="331,5,445,32"/>
-<area shape="rect" id="node4" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="529,31,633,57"/>
-<area shape="rect" id="node6" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="295,107,481,133"/>
+<div class="center"><img src="classstatistics_a1d713e18eb431db14279a1df393d3ee2_icgraph.png" border="0" usemap="#classstatistics_a1d713e18eb431db14279a1df393d3ee2_icgraph" alt=""/></div>
+<map name="classstatistics_a1d713e18eb431db14279a1df393d3ee2_icgraph" id="classstatistics_a1d713e18eb431db14279a1df393d3ee2_icgraph">
+<area shape="rect" id="node2" href="classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file. " alt="" coords="96,5,275,32"/>
+<area shape="rect" id="node3" href="classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language. " alt="" coords="121,57,250,98"/>
+<area shape="rect" id="node4" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="139,123,232,149"/>
+<area shape="rect" id="node5" href="class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones. " alt="" coords="123,174,248,215"/>
+<area shape="rect" id="node6" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="323,152,509,179"/>
+<area shape="rect" id="node7" href="class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="353,203,479,245"/>
+<area shape="rect" id="node8" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="557,211,709,237"/>
+<area shape="rect" id="node9" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="757,211,917,237"/>
 </map>
 </div>
 
@@ -199,9 +207,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstatistics_a632d2626f70e1cb99de33fd65a2659e4_icgraph.png" border="0" usemap="#classstatistics_a632d2626f70e1cb99de33fd65a2659e4_icgraph" alt=""/></div>
 <map name="classstatistics_a632d2626f70e1cb99de33fd65a2659e4_icgraph" id="classstatistics_a632d2626f70e1cb99de33fd65a2659e4_icgraph">
-<area shape="rect" id="node2" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="147,31,265,57"/>
-<area shape="rect" id="node3" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="313,5,427,32"/>
-<area shape="rect" id="node4" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="475,31,579,57"/>
+<area shape="rect" id="node2" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="147,56,265,83"/>
+<area shape="rect" id="node5" href="classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones. " alt="" coords="185,165,227,192"/>
+<area shape="rect" id="node3" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="346,5,459,32"/>
+<area shape="rect" id="node4" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="581,31,685,57"/>
+<area shape="rect" id="node6" href="classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file. " alt="" coords="313,107,492,133"/>
+<area shape="rect" id="node7" href="classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language. " alt="" coords="338,158,467,199"/>
+<area shape="rect" id="node8" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="356,224,449,251"/>
+<area shape="rect" id="node9" href="class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones. " alt="" coords="340,275,465,317"/>
+<area shape="rect" id="node10" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="540,253,727,280"/>
+<area shape="rect" id="node11" href="class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="571,305,696,346"/>
+<area shape="rect" id="node12" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="775,312,927,339"/>
+<area shape="rect" id="node13" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="975,312,1135,339"/>
 </map>
 </div>
 
@@ -238,14 +255,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstatistics_aab201e0dd9071588ae5f60d3e6f9079d_icgraph.png" border="0" usemap="#classstatistics_aab201e0dd9071588ae5f60d3e6f9079d_icgraph" alt=""/></div>
 <map name="classstatistics_aab201e0dd9071588ae5f60d3e6f9079d_icgraph" id="classstatistics_aab201e0dd9071588ae5f60d3e6f9079d_icgraph">
-<area shape="rect" id="node2" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="163,5,315,32"/>
-<area shape="rect" id="node4" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="201,56,276,83"/>
-<area shape="rect" id="node3" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="363,5,523,32"/>
-<area shape="rect" id="node5" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="383,56,502,83"/>
-<area shape="rect" id="node8" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="396,107,489,133"/>
-<area shape="rect" id="node6" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="607,5,721,32"/>
-<area shape="rect" id="node7" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="805,31,909,57"/>
-<area shape="rect" id="node9" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="571,107,757,133"/>
+<area shape="rect" id="node2" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="715,86,867,113"/>
+<area shape="rect" id="node4" href="classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones. " alt="" coords="163,82,205,109"/>
+<area shape="rect" id="node3" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="915,86,1075,113"/>
+<area shape="rect" id="node5" href="classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file. " alt="" coords="253,24,432,50"/>
+<area shape="rect" id="node6" href="classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language. " alt="" coords="278,75,407,116"/>
+<area shape="rect" id="node7" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="296,141,389,168"/>
+<area shape="rect" id="node8" href="class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones. " alt="" coords="280,192,405,234"/>
+<area shape="rect" id="node9" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="480,141,667,168"/>
+<area shape="rect" id="node10" href="class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="511,192,636,234"/>
 </map>
 </div>
 
@@ -282,14 +300,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstatistics_a9f8670f9c36882e88fbc423de845e98d_icgraph.png" border="0" usemap="#classstatistics_a9f8670f9c36882e88fbc423de845e98d_icgraph" alt=""/></div>
 <map name="classstatistics_a9f8670f9c36882e88fbc423de845e98d_icgraph" id="classstatistics_a9f8670f9c36882e88fbc423de845e98d_icgraph">
-<area shape="rect" id="node2" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="124,5,276,32"/>
-<area shape="rect" id="node4" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="163,56,237,83"/>
-<area shape="rect" id="node3" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="324,5,484,32"/>
-<area shape="rect" id="node5" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="345,56,463,83"/>
-<area shape="rect" id="node8" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="357,107,451,133"/>
-<area shape="rect" id="node6" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="569,5,682,32"/>
-<area shape="rect" id="node7" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="767,31,871,57"/>
-<area shape="rect" id="node9" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="532,107,719,133"/>
+<area shape="rect" id="node2" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="676,86,828,113"/>
+<area shape="rect" id="node4" href="classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones. " alt="" coords="124,82,167,109"/>
+<area shape="rect" id="node3" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="876,86,1036,113"/>
+<area shape="rect" id="node5" href="classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file. " alt="" coords="215,24,393,50"/>
+<area shape="rect" id="node6" href="classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language. " alt="" coords="239,75,369,116"/>
+<area shape="rect" id="node7" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="257,141,351,168"/>
+<area shape="rect" id="node8" href="class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones. " alt="" coords="241,192,367,234"/>
+<area shape="rect" id="node9" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="441,141,628,168"/>
+<area shape="rect" id="node10" href="class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="472,192,597,234"/>
 </map>
 </div>
 
@@ -326,14 +345,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstatistics_ae5294037d129a7e8a8e69dcf00d282de_icgraph.png" border="0" usemap="#classstatistics_ae5294037d129a7e8a8e69dcf00d282de_icgraph" alt=""/></div>
 <map name="classstatistics_ae5294037d129a7e8a8e69dcf00d282de_icgraph" id="classstatistics_ae5294037d129a7e8a8e69dcf00d282de_icgraph">
-<area shape="rect" id="node2" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="115,5,267,32"/>
-<area shape="rect" id="node4" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="153,56,228,83"/>
-<area shape="rect" id="node3" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="315,5,475,32"/>
-<area shape="rect" id="node5" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="335,56,454,83"/>
-<area shape="rect" id="node8" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="348,107,441,133"/>
-<area shape="rect" id="node6" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="559,5,673,32"/>
-<area shape="rect" id="node7" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="757,31,861,57"/>
-<area shape="rect" id="node9" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="523,107,709,133"/>
+<area shape="rect" id="node2" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="667,86,819,113"/>
+<area shape="rect" id="node4" href="classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones. " alt="" coords="115,82,157,109"/>
+<area shape="rect" id="node3" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="867,86,1027,113"/>
+<area shape="rect" id="node5" href="classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file. " alt="" coords="205,24,384,50"/>
+<area shape="rect" id="node6" href="classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language. " alt="" coords="230,75,359,116"/>
+<area shape="rect" id="node7" href="classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="248,141,341,168"/>
+<area shape="rect" id="node8" href="class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones. " alt="" coords="232,192,357,234"/>
+<area shape="rect" id="node9" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="432,141,619,168"/>
+<area shape="rect" id="node10" href="class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="463,192,588,234"/>
 </map>
 </div>
 
@@ -375,26 +395,19 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstatistics_a0d671aa5a3c77aaad36f58ede633699e_cgraph.png" border="0" usemap="#classstatistics_a0d671aa5a3c77aaad36f58ede633699e_cgraph" alt=""/></div>
 <map name="classstatistics_a0d671aa5a3c77aaad36f58ede633699e_cgraph" id="classstatistics_a0d671aa5a3c77aaad36f58ede633699e_cgraph">
-<area shape="rect" id="node2" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="147,56,221,83"/>
-<area shape="rect" id="node3" href="classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="293,5,355,32"/>
-<area shape="rect" id="node4" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="289,56,359,83"/>
-<area shape="rect" id="node5" href="classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="269,107,379,133"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classstatistics_a0d671aa5a3c77aaad36f58ede633699e_icgraph.png" border="0" usemap="#classstatistics_a0d671aa5a3c77aaad36f58ede633699e_icgraph" alt=""/></div>
-<map name="classstatistics_a0d671aa5a3c77aaad36f58ede633699e_icgraph" id="classstatistics_a0d671aa5a3c77aaad36f58ede633699e_icgraph">
-<area shape="rect" id="node2" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="147,5,333,32"/>
+<area shape="rect" id="node2" href="classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones. " alt="" coords="147,81,189,108"/>
+<area shape="rect" id="node3" href="classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="245,5,339,32"/>
+<area shape="rect" id="node4" href="classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="261,56,323,83"/>
+<area shape="rect" id="node5" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="257,107,327,133"/>
+<area shape="rect" id="node6" href="classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="237,157,347,184"/>
 </map>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>code/<a class="el" href="statistics_8hh_source.html">statistics.hh</a></li>
-<li>code/statistics.cpp</li>
+<li>code/statistics/<a class="el" href="statistics_8hh_source.html">statistics.hh</a></li>
+<li>code/statistics/statistics.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

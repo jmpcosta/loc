@@ -1,5 +1,4 @@
 <map id="language_csh" name="language_csh">
-<area shape="rect" id="node2" href="$classlanguage__family__bourne.html" title="Class responsible for implementing a language for the Bourne shell family of languages. " alt="" coords="5,171,168,197"/>
-<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="49,95,124,121"/>
-<area shape="rect" id="node4" href="$classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="49,5,124,32"/>
+<area shape="rect" id="node2" href="$classlanguage__family__bourne.html" title="Class responsible for implementing a language for the Bourne shell family of languages. " alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="49,5,124,32"/>
 </map>

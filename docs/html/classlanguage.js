@@ -12,10 +12,8 @@ var classlanguage =
     [ "getComments", "classlanguage.html#a1ec0ed14119e1e1339c6312ea56b767d", null ],
     [ "getName", "classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c", null ],
     [ "getParserType", "classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538", null ],
-    [ "getStatistics", "classlanguage.html#a04dda4f0a81c72ef23db823f3b9f66e7", null ],
     [ "getType", "classlanguage.html#aa4eba76db94074c26d6c3b12ab080d23", null ],
     [ "comments", "classlanguage.html#ab26739f45e9e8542d75cc1f65419b7fb", null ],
     [ "lang", "classlanguage.html#ab58b85b32e98f63649d99eddb8fa7b02", null ],
-    [ "name", "classlanguage.html#a9b45b3e13bd9167aab02e17e08916231", null ],
-    [ "stats", "classlanguage.html#aaf2b4b79de6c7104a7177eb97f311d9d", null ]
+    [ "name", "classlanguage.html#a9b45b3e13bd9167aab02e17e08916231", null ]
 ];

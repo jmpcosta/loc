@@ -25,6 +25,7 @@
 // Import project headers
 #include "trace.hh"
 #include "language/LanguageProvider.hh"
+#include "statistics/StatisticsProvider.hh"
 #include "report/textReport.hh"
 
 
@@ -53,7 +54,7 @@ inline void textReport::writeSeparator( void )
 
 void textReport::writeHeader( void )
 {
- TRACE_POINT
+ TRACE_ENTER
 
  std::cout << std::left << std::endl;
 
@@ -72,25 +73,42 @@ void textReport::writeHeader( void )
  std::cout << std::endl;
 
  writeSeparator();
+
+ TRACE_EXIT
 }
 
 void textReport::writeSummary( void )
 {
+ StatisticsProvider		&	prov	= StatisticsProvider::getInstance();
+
+ TRACE_ENTER
+
  std::string msg = "Total (";
- msg += std::to_string( nFiles );
+ msg += std::to_string( prov.getNumberFiles() );
  msg += " files)";
 
  if( details ) writeSeparator();
 
  writeLangStats();
- writeStats( msg.c_str(), global );
+ writeItem( msg.c_str(), prov.getGlobal() );
 
  std::cout << std::endl;
+
+ TRACE_EXIT
 }
 
-void textReport::writeStats( const char * str, statistics & stats )
+void textReport::writeItem( const char * str, statistics & stats )
 {
- TRACE_POINT
+ TRACE_ENTER
+
+ textReport::writeStatistics( str, stats );
+
+ TRACE_EXIT
+}
+
+void textReport::writeStatistics( const char * str, statistics & stats )
+{
+ TRACE_ENTER
 
  std::cout << std::left;
 
@@ -102,7 +120,18 @@ void textReport::writeStats( const char * str, statistics & stats )
  std::cout << std::setw(20) << stats.getEmptyLines();
  std::cout << std::setw(20) << stats.getLoc();
  std::cout << std::endl;
+
+ TRACE_EXIT
 }
 
+
+void textReport::writeLangStats( void )
+{
+ TRACE_ENTER
+
+ StatisticsProvider::getInstance().walk( writeStatistics );
+
+ TRACE_EXIT
+}
 
 

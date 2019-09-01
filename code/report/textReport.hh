@@ -21,6 +21,7 @@
 // Import own headers
 #include "trace_macros.hh"
 #include "options.hh"
+#include "statistics/statistics.hh"
 #include "files/fileSet.hh"
 #include "report/report.hh"
 
@@ -48,7 +49,12 @@ private:
 		/// @brief Write statistics for the given item to a file or standard output
 		/// @param [in] str   - A item name
 		/// @param [in] stats - The statistics to generate for the item
-		void			writeStats		( const char * name, statistics & stats	);
+		void			writeItem		( const char * name, statistics & stats	);
+
+		/// @brief Write statistics for the given item to a file or standard output
+		/// @param [in] str   - A item name
+		/// @param [in] stats - The statistics to generate for the item
+		static void		writeStatistics	( const char * name, statistics & stats	);
 
 		/// @brief Write a report header to a file or standard output
 		void			writeHeader		( void	);
@@ -58,6 +64,9 @@ private:
 
 		/// @brief Write a report summary to a file or standard output
 		void			writeSummary	( void 	);
+
+		/// @brief Write summary statistics for the given language
+		void 			writeLangStats	( void );
 
 		// Variables
 

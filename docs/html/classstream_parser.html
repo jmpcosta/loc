@@ -84,10 +84,10 @@ Collaboration diagram for streamParser:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstream_parser__coll__graph.png" border="0" usemap="#stream_parser_coll__map" alt="Collaboration graph"/></div>
 <map name="stream_parser_coll__map" id="stream_parser_coll__map">
-<area shape="rect" id="node2" href="classparser.html" title="Class responsible for parsing a file language code. " alt="" coords="31,184,90,211"/>
-<area shape="rect" id="node3" href="classfile.html" title="Class responsible to represent an individual file for analysis. " alt="" coords="5,95,44,121"/>
-<area shape="rect" id="node4" href="classlanguage.html" title="Class that represents a generic language. " alt="" coords="69,95,143,121"/>
-<area shape="rect" id="node5" href="classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="69,5,143,32"/>
+<area shape="rect" id="node2" href="classparser.html" title="Class responsible for parsing a file language code. " alt="" coords="95,95,153,121"/>
+<area shape="rect" id="node3" href="classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node4" href="classfile.html" title="Class responsible to represent an individual file for analysis. " alt="" coords="105,5,143,32"/>
+<area shape="rect" id="node5" href="classlanguage.html" title="Class that represents a generic language. " alt="" coords="168,5,243,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -101,9 +101,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstream_parser.html#a3fb0ce71d6ab0c4ea9cc931508a9b5c6">~streamParser</a> ()</td></tr>
 <tr class="memdesc:a3fb0ce71d6ab0c4ea9cc931508a9b5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br /></td></tr>
 <tr class="separator:a3fb0ce71d6ab0c4ea9cc931508a9b5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace0c8293ed0943bdbd4200f0c9201d02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstream_parser.html#ace0c8293ed0943bdbd4200f0c9201d02">parse</a> (<a class="el" href="classfile.html">file</a> *sourceFile)</td></tr>
-<tr class="memdesc:ace0c8293ed0943bdbd4200f0c9201d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a source file.  <a href="#ace0c8293ed0943bdbd4200f0c9201d02">More...</a><br /></td></tr>
-<tr class="separator:ace0c8293ed0943bdbd4200f0c9201d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8407cf1b50e0874f141f43e50b84595"><td class="memItemLeft" align="right" valign="top">parserType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstream_parser.html#ab8407cf1b50e0874f141f43e50b84595">getType</a> (void)</td></tr>
 <tr class="memdesc:ab8407cf1b50e0874f141f43e50b84595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the parser type.  <a href="#ab8407cf1b50e0874f141f43e50b84595">More...</a><br /></td></tr>
 <tr class="separator:ab8407cf1b50e0874f141f43e50b84595"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,6 +113,9 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a681e46fac15f784fe55e415a236c1476">~parser</a> ()</td></tr>
 <tr class="memdesc:a681e46fac15f784fe55e415a236c1476 inherit pub_methods_classparser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br /></td></tr>
 <tr class="separator:a681e46fac15f784fe55e415a236c1476 inherit pub_methods_classparser"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0c8293ed0943bdbd4200f0c9201d02 inherit pub_methods_classparser"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#ace0c8293ed0943bdbd4200f0c9201d02">parse</a> (<a class="el" href="classfile.html">file</a> *sourceFile)</td></tr>
+<tr class="memdesc:ace0c8293ed0943bdbd4200f0c9201d02 inherit pub_methods_classparser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a source file.  <a href="classparser.html#ace0c8293ed0943bdbd4200f0c9201d02">More...</a><br /></td></tr>
+<tr class="separator:ace0c8293ed0943bdbd4200f0c9201d02 inherit pub_methods_classparser"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -128,6 +128,14 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="classfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a4e8b727144769c03cd75508f4bfd8eec">p_iFile</a></td></tr>
 <tr class="memdesc:a4e8b727144769c03cd75508f4bfd8eec inherit pro_attribs_classparser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current file being processed. <br /></td></tr>
 <tr class="separator:a4e8b727144769c03cd75508f4bfd8eec inherit pro_attribs_classparser"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddae5b64610ddc35106c138679175f4 inherit pro_attribs_classparser"><td class="memItemLeft" align="right" valign="top"><a id="a5ddae5b64610ddc35106c138679175f4"></a>
+std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a5ddae5b64610ddc35106c138679175f4">iSourceFile</a></td></tr>
+<tr class="memdesc:a5ddae5b64610ddc35106c138679175f4 inherit pro_attribs_classparser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream to read file. <br /></td></tr>
+<tr class="separator:a5ddae5b64610ddc35106c138679175f4 inherit pro_attribs_classparser"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad733d53d181fda3d467dce85fc8ec3cb inherit pro_attribs_classparser"><td class="memItemLeft" align="right" valign="top"><a id="ad733d53d181fda3d467dce85fc8ec3cb"></a>
+<a class="el" href="classstatistics.html">statistics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#ad733d53d181fda3d467dce85fc8ec3cb">iStats</a></td></tr>
+<tr class="memdesc:ad733d53d181fda3d467dce85fc8ec3cb inherit pro_attribs_classparser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal statistics for the current parsed file. <br /></td></tr>
+<tr class="separator:ad733d53d181fda3d467dce85fc8ec3cb inherit pro_attribs_classparser"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for parsing a file language code. </p>
@@ -160,62 +168,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The parser identifier </dd></dl>
 
 <p>Implements <a class="el" href="classparser.html#aa9bc71afbcb401c99e1f4f0f6b6f0cdb">parser</a>.</p>
-
-</div>
-</div>
-<a id="ace0c8293ed0943bdbd4200f0c9201d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace0c8293ed0943bdbd4200f0c9201d02">&#9670;&nbsp;</a></span>parse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void parse </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classfile.html">file</a> *&#160;</td>
-          <td class="paramname"><em>sourceFile</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Parse a source file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sourceFile</td><td>- The input file to parse </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classparser.html#a8b662fbaddb120f669c7c78492bec30e">parser</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph.png" border="0" usemap="#classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph" alt=""/></div>
-<map name="classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph" id="classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph">
-<area shape="rect" id="node2" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="116,5,308,47"/>
-<area shape="rect" id="node3" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="108,71,316,98"/>
-<area shape="rect" id="node5" href="classfile.html#a0acc9f0424dd3f9ac4080b7ad7ca8297" title="Obtain the language identifier for the file. " alt="" coords="137,122,287,149"/>
-<area shape="rect" id="node6" href="classfile.html#a6b465994f8ae60c0c1a097b2a5aa2700" title="Obtain the file name. " alt="" coords="162,173,262,199"/>
-<area shape="rect" id="node4" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="364,71,520,98"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph.png" border="0" usemap="#classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph" alt=""/></div>
-<map name="classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph" id="classstream_parser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph">
-<area shape="rect" id="node2" href="classstream_parser.html#a3fb0ce71d6ab0c4ea9cc931508a9b5c6" title="Class destructor. " alt="" coords="108,5,216,32"/>
-</map>
-</div>
 
 </div>
 </div>

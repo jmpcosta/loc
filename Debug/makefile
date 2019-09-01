@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include code/statistics/subdir.mk
 -include code/report/subdir.mk
 -include code/parser/subdir.mk
 -include code/language/windows/subdir.mk

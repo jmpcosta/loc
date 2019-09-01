@@ -25,6 +25,7 @@
 // Import project headers
 #include "trace.hh"
 #include "language/LanguageProvider.hh"
+#include "statistics/StatisticsProvider.hh"
 #include "report/xmlReport.hh"
 
 
@@ -60,9 +61,18 @@ void xmlReport::writeHeader( void )
  std::cout << "<details>" 										<< std::endl;
 }
 
-void xmlReport::writeStats( const char * str, statistics & stats )
+void xmlReport::writeItem( const char * str, statistics & stats )
 {
- TRACE_POINT
+ TRACE_ENTER
+
+ xmlReport::writeStatistics( str, stats );
+
+ TRACE_EXIT
+}
+
+void xmlReport::writeStatistics( const char * str, statistics & stats )
+{
+ TRACE_ENTER
 
  std::cout << "<item>" 															<< std::endl;
 
@@ -72,25 +82,40 @@ void xmlReport::writeStats( const char * str, statistics & stats )
  std::cout << "<loc>" 			<< stats.getLoc() 			<< "</loc>"			<< std::endl;
 
  std::cout << "</item>" 														<< std::endl;
+
+ TRACE_EXIT
 }
 
 
 void xmlReport::writeSummary( void )
 {
+ StatisticsProvider		&	prov	= StatisticsProvider::getInstance();
+
  if( details )
  std::cout << "</details>" 		<< std::endl;
 
  std::cout << "<summary>" 		<< std::endl;
 
  std::string msg = "Total (";
- msg += std::to_string( nFiles );
+ msg += std::to_string( prov.getNumberFiles() );
  msg += " files)";
 
  writeLangStats();
- writeStats( msg.c_str(), global );
+ writeItem( msg.c_str(), prov.getGlobal() );
 
  std::cout << "</summary>" 		<< std::endl;
  std::cout << "</report>" 		<< std::endl;
 }
 
+
+
+
+void xmlReport::writeLangStats( void )
+{
+ TRACE_ENTER
+
+ StatisticsProvider::getInstance().walk( writeStatistics );
+
+ TRACE_EXIT
+}
 

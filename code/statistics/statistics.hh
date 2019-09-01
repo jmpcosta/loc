@@ -33,8 +33,11 @@
 class statistics
 {
 public:
-		/// @brief Class constructor
+		/// @brief Default Class constructor
 					statistics();
+
+		/// @brief Class constructor using another statisics object
+					statistics( statistics & s );
 
 		/// @brief Class destructor
 					~statistics() {}
@@ -73,7 +76,7 @@ public:
 
 		/// @brief Add the provided statistics to the current ones
 		/// @param [in] s - Statistics to add
-		void		addStats		( statistics & s );
+		void		add				( statistics & s );
 
 
 private:
@@ -90,4 +93,4 @@ private:
 
 
 
-#endif // LOC_STATISTICS_HH_
+#endif // LOC_STATISTICS_STATISTICS_HH_

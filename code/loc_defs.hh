@@ -53,6 +53,8 @@
 // *****************************************************************************************
 
 #define		LOC_FILE_READ_BUFFER_SIZE	1024
+#define		LOC_LANGUAGE_DEFAULT_SIZE	10		// Initial reserve capacity for languages
+
 const char	LOC_LINE_IGNORE_CHARS[]		= { ' ', '\t', '\0' };
 
 #define		LOC_SWITCH_DETAILS		"-d"

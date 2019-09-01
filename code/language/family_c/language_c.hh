@@ -45,6 +45,7 @@ public:
 		static	bool			isExtension	( const char * ext	);
 
 private:
+
 		TRACE_CLASSNAME_DECLARATION
 };
 

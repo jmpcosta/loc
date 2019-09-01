@@ -62,6 +62,7 @@ $(document).ready(function(){initNavTree('classparser.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">parser Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -85,9 +86,9 @@ Collaboration diagram for parser:</div>
 <div class="dyncontent">
 <div class="center"><img src="classparser__coll__graph.png" border="0" usemap="#parser_coll__map" alt="Collaboration graph"/></div>
 <map name="parser_coll__map" id="parser_coll__map">
-<area shape="rect" id="node2" href="classfile.html" title="Class responsible to represent an individual file for analysis. " alt="" coords="5,95,44,121"/>
-<area shape="rect" id="node3" href="classlanguage.html" title="Class that represents a generic language. " alt="" coords="69,95,143,121"/>
-<area shape="rect" id="node4" href="classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="69,5,143,32"/>
+<area shape="rect" id="node2" href="classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" href="classfile.html" title="Class responsible to represent an individual file for analysis. " alt="" coords="105,5,143,32"/>
+<area shape="rect" id="node4" href="classlanguage.html" title="Class that represents a generic language. " alt="" coords="168,5,243,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -101,12 +102,19 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a681e46fac15f784fe55e415a236c1476">~parser</a> ()</td></tr>
 <tr class="memdesc:a681e46fac15f784fe55e415a236c1476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br /></td></tr>
 <tr class="separator:a681e46fac15f784fe55e415a236c1476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b662fbaddb120f669c7c78492bec30e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a8b662fbaddb120f669c7c78492bec30e">parse</a> (<a class="el" href="classfile.html">file</a> *sourceFile)=0</td></tr>
-<tr class="memdesc:a8b662fbaddb120f669c7c78492bec30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a source file.  <a href="#a8b662fbaddb120f669c7c78492bec30e">More...</a><br /></td></tr>
-<tr class="separator:a8b662fbaddb120f669c7c78492bec30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0c8293ed0943bdbd4200f0c9201d02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#ace0c8293ed0943bdbd4200f0c9201d02">parse</a> (<a class="el" href="classfile.html">file</a> *sourceFile)</td></tr>
+<tr class="memdesc:ace0c8293ed0943bdbd4200f0c9201d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a source file.  <a href="#ace0c8293ed0943bdbd4200f0c9201d02">More...</a><br /></td></tr>
+<tr class="separator:ace0c8293ed0943bdbd4200f0c9201d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9bc71afbcb401c99e1f4f0f6b6f0cdb"><td class="memItemLeft" align="right" valign="top">virtual parserType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#aa9bc71afbcb401c99e1f4f0f6b6f0cdb">getType</a> (void)=0</td></tr>
 <tr class="memdesc:aa9bc71afbcb401c99e1f4f0f6b6f0cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the parser type.  <a href="#aa9bc71afbcb401c99e1f4f0f6b6f0cdb">More...</a><br /></td></tr>
 <tr class="separator:aa9bc71afbcb401c99e1f4f0f6b6f0cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a066177b0209d9dda8731e332f4093f9f"><td class="memItemLeft" align="right" valign="top"><a id="a066177b0209d9dda8731e332f4093f9f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a066177b0209d9dda8731e332f4093f9f">specificParse</a> (void)=0</td></tr>
+<tr class="memdesc:a066177b0209d9dda8731e332f4093f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls a parser to process an open file. <br /></td></tr>
+<tr class="separator:a066177b0209d9dda8731e332f4093f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -118,6 +126,14 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="classfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a4e8b727144769c03cd75508f4bfd8eec">p_iFile</a></td></tr>
 <tr class="memdesc:a4e8b727144769c03cd75508f4bfd8eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current file being processed. <br /></td></tr>
 <tr class="separator:a4e8b727144769c03cd75508f4bfd8eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddae5b64610ddc35106c138679175f4"><td class="memItemLeft" align="right" valign="top"><a id="a5ddae5b64610ddc35106c138679175f4"></a>
+std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a5ddae5b64610ddc35106c138679175f4">iSourceFile</a></td></tr>
+<tr class="memdesc:a5ddae5b64610ddc35106c138679175f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream to read file. <br /></td></tr>
+<tr class="separator:a5ddae5b64610ddc35106c138679175f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad733d53d181fda3d467dce85fc8ec3cb"><td class="memItemLeft" align="right" valign="top"><a id="ad733d53d181fda3d467dce85fc8ec3cb"></a>
+<a class="el" href="classstatistics.html">statistics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#ad733d53d181fda3d467dce85fc8ec3cb">iStats</a></td></tr>
+<tr class="memdesc:ad733d53d181fda3d467dce85fc8ec3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal statistics for the current parsed file. <br /></td></tr>
+<tr class="separator:ad733d53d181fda3d467dce85fc8ec3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for parsing a file language code. </p>
@@ -161,8 +177,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8b662fbaddb120f669c7c78492bec30e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b662fbaddb120f669c7c78492bec30e">&#9670;&nbsp;</a></span>parse()</h2>
+<a id="ace0c8293ed0943bdbd4200f0c9201d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0c8293ed0943bdbd4200f0c9201d02">&#9670;&nbsp;</a></span>parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +187,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void parse </td>
+          <td class="memname">void parse </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classfile.html">file</a> *&#160;</td>
           <td class="paramname"><em>sourceFile</em></td><td>)</td>
@@ -180,7 +196,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -192,21 +208,33 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-
-<p>Implemented in <a class="el" href="classstream_parser.html#ace0c8293ed0943bdbd4200f0c9201d02">streamParser</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classparser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph.png" border="0" usemap="#classparser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph" alt=""/></div>
+<map name="classparser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph" id="classparser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph">
+<area shape="rect" id="node2" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="116,5,308,47"/>
+<area shape="rect" id="node3" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="108,71,316,98"/>
+<area shape="rect" id="node5" href="classfile.html#a0acc9f0424dd3f9ac4080b7ad7ca8297" title="Obtain the language identifier for the file. " alt="" coords="137,122,287,149"/>
+<area shape="rect" id="node7" href="classfile.html#a6b465994f8ae60c0c1a097b2a5aa2700" title="Obtain the file name. " alt="" coords="162,173,262,199"/>
+<area shape="rect" id="node4" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="364,71,520,98"/>
+<area shape="rect" id="node6" href="classfile.html#a23d63244808172d5d64653b1a3059765" title="Factory method to create file objects. " alt="" coords="399,122,485,149"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classparser_a8b662fbaddb120f669c7c78492bec30e_icgraph.png" border="0" usemap="#classparser_a8b662fbaddb120f669c7c78492bec30e_icgraph" alt=""/></div>
-<map name="classparser_a8b662fbaddb120f669c7c78492bec30e_icgraph" id="classparser_a8b662fbaddb120f669c7c78492bec30e_icgraph">
+<div class="center"><img src="classparser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph.png" border="0" usemap="#classparser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph" alt=""/></div>
+<map name="classparser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph" id="classparser_ace0c8293ed0943bdbd4200f0c9201d02_icgraph">
 <area shape="rect" id="node2" href="classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="108,5,175,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>code/parser/<a class="el" href="parser_8hh_source.html">parser.hh</a></li>
+<li>code/parser/parser.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

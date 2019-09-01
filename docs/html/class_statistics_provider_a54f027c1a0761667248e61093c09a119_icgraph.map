@@ -1,0 +1,7 @@
+<map id="setCapacity" name="setCapacity">
+<area shape="rect" id="node2" href="$classfile_set.html#a51c6c47af3c5d1fad5c9b6c6022c4982" title="Factory method for a set of files. " alt="" coords="145,5,251,32"/>
+<area shape="rect" id="node4" href="$class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="159,56,237,83"/>
+<area shape="rect" id="node3" href="$classfile_set.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc" title="Return a constant iterator proxy to the end of the files vector. " alt="" coords="331,5,419,32"/>
+<area shape="rect" id="node5" href="$classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="299,56,451,83"/>
+<area shape="rect" id="node6" href="$classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="499,56,659,83"/>
+</map>

@@ -64,10 +64,7 @@ protected:
 		/// @brief Interface to write statistics for the given item
 		/// @param [in] str   - A item name
 		/// @param [in] stats - The statistics to generate for the item
-		virtual void 			writeStats		( const char * str, statistics & stats 	)	= 0;
-
-		/// @brief Write summary statistics for the given language
-		virtual void			writeLangStats	( void									);
+		virtual void 			writeItem		( const char * str, statistics & stats 	)	= 0;
 
 		/// @brief Interface to write a report header
 		virtual void			writeHeader		( void 									)	= 0;
@@ -90,9 +87,6 @@ protected:
 
 		// Variables
 		bool					details;		///< Provide file statistics
-		std::size_t				nFiles;			///< Number of processed files
-		statistics				global;			///< Summary statistics for all processed files
-		std::set<languageType>	langTypes;		///< Set of processed language types
 
 		// Output redirect
 		std::streambuf * 		p_iStreamBuf;	///< Output buffer stream

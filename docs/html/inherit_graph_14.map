@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node1" href="$class_singleton.html" title="Singleton\&lt; LanguageProvider \&gt;" alt="" coords="5,5,209,32"/>
+<area shape="rect" id="node2" href="$class_language_provider.html" title="This class provides acts as a service provider of languages. " alt="" coords="257,5,384,32"/>
 </map>

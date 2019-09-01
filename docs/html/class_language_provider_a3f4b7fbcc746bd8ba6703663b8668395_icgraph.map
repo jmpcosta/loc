@@ -1,10 +1,4 @@
 <map id="getLanguage" name="getLanguage">
-<area shape="rect" id="node2" href="$classstream_parser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="155,19,295,45"/>
-<area shape="rect" id="node4" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="165,81,284,108"/>
-<area shape="rect" id="node7" href="$classreport.html#a1a892bdcd9efcf7d6b7cac50cc2136ca" title="Write summary statistics for the given language. " alt="" coords="149,157,300,184"/>
-<area shape="rect" id="node3" href="$classstream_parser.html#a3fb0ce71d6ab0c4ea9cc931508a9b5c6" title="Class destructor. " alt="" coords="348,5,543,32"/>
-<area shape="rect" id="node5" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="389,56,502,83"/>
-<area shape="rect" id="node6" href="$classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="619,107,723,133"/>
-<area shape="rect" id="node8" href="$classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="369,208,521,235"/>
-<area shape="rect" id="node9" href="$classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="591,208,751,235"/>
+<area shape="rect" id="node2" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="149,5,248,32"/>
+<area shape="rect" id="node3" href="$classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="296,5,407,32"/>
 </map>

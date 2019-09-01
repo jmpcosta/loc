@@ -1,0 +1,6 @@
+<map id="add" name="add">
+<area shape="rect" id="node2" href="$classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="104,5,197,32"/>
+<area shape="rect" id="node3" href="$classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="120,56,181,83"/>
+<area shape="rect" id="node4" href="$classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="115,107,186,133"/>
+<area shape="rect" id="node5" href="$classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="96,157,205,184"/>
+</map>

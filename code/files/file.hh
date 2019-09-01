@@ -18,11 +18,11 @@
 
 // Import C++ system headers
 #include <string>
+#include <filesystem>
 
 // Import application headers
 #include "trace_macros.hh"
 #include "loc_defs.hh"
-#include "statistics.hh"
 #include "language/languageType.hh"
 
 
@@ -47,23 +47,19 @@ public:
 		/// @return The file language identifier
 		languageType			getLanguageType	( void ) const	{ return iLang;		}
 
-		/// @brief Get access to the file statistics
-		/// @return A reference to the file statistics object
-		statistics & 			getStatistics	( void ) 		{ return iStats;	}
-
 		/// @brief Factory method to create file objects
 		/// @param [in] pathname - Name of the file path
 		/// @return Pointer to the new file object
-		static file  *			builder			( const std::string & pathname );
+		static file  *			builder			( const std::filesystem::path & pathname );
 
 private:
 		/// @brief Class constructor
-		/// @param [in] filename - Name of file for which the object will be constructed to represent
-								file			( const std::string & filename );
+		/// @param [in] filename	- Name of file for which the object will be constructed to represent
+		/// @param [in] lTye 		- Language identifier to associate with the file
+								file			( const std::string & filename, languageType lType );
 
 		std::string				iName;			///< The file name
 		languageType			iLang;			///< The Language identifier
-		statistics				iStats;			///< The file statistics
 
 		TRACE_CLASSNAME_DECLARATION
 };

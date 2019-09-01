@@ -1,0 +1,5 @@
+<map id="getName" name="getName">
+<area shape="rect" id="node2" href="$classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="132,5,239,32"/>
+<area shape="rect" id="node3" href="$classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="128,56,243,83"/>
+<area shape="rect" id="node4" href="$classconverter.html#a72dbb82162340105ee1ece149929b676" title="Convert a string to lower case. " alt="" coords="291,56,405,83"/>
+</map>

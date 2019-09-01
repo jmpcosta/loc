@@ -23,17 +23,18 @@
 
 // Import module declarations
 #include "trace.hh"
-#include "options.hh"
 #include "files/fileSet.hh"
 #include "language/LanguageProvider.hh"
+#include "statistics/StatisticsProvider.hh"
 #include "parser/streamParser.hh"
+
 
 using namespace std;
 
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Public Function definition
 //
 // *****************************************************************************************
 
@@ -53,45 +54,41 @@ streamParser::streamParser()
 }
 
 
-void streamParser::setAvailable( file * p_file, bool value )
+void streamParser::specificParse( void )
 {
- TRACE_POINT
+ std::string line;
 
- // Set availability of file statistics
- if( p_file != nullptr )
-	 p_file->getStatistics().setAvailable( value );
+ TRACE_ENTER
+
+ // Reset own variables
+ commentOpen   = false;
+ codeAvailable = false;
+
+ // Reserve capacity on the string to avoid reallocs
+ line.reserve( LOC_FILE_READ_BUFFER_SIZE );
+
+ iStats.setAvailable( true );
+ while( getline( iSourceFile, line ) )
+      {
+	 	iStats.addLine();
+	 	processLine( line );
+      }
+
+ if( iSourceFile.eof() ) iStats.addLine();			// May give one line for files with size 0 (TODO)
+
+ // Copy statistics to provider
+ StatisticsProvider::getInstance().addStatistics( p_iFile->getLanguageType(), (void *) p_iFile, iStats );
+
+ TRACE_EXIT
 }
 
-void streamParser::reset( file * p_file )
-{
- TRACE_POINT
-
- // Reset file stats
- if( p_file != nullptr )
-	 p_file->getStatistics().reset();
-
- p_file->getStatistics().setAvailable( true );
-}
 
 
-void streamParser::addLine( void )
-{
- if( p_iFile != nullptr )
-	 p_iFile->getStatistics().addLine();
-}
-
-void streamParser::addEmptyLine( void )
-{
- if( p_iFile != nullptr )
-	 p_iFile->getStatistics().addEmptyLine();
-}
-
-void streamParser::addLoc( void )
-{
- if( p_iFile != nullptr )
-	 p_iFile->getStatistics().addLoc();
-}
-
+// *****************************************************************************************
+//
+// Section: Private Function definition
+//
+// *****************************************************************************************
 
 
 
@@ -274,7 +271,7 @@ void streamParser::processLine( std::string & line )
  // Check for empty lines
  if( ! commentOpen && ( line.size() == 0 || ! hasInformation( line.c_str(), line.size() ) ) )
    {
-	 addEmptyLine();
+	 iStats.addEmptyLine();
 	 return;
    }
 
@@ -282,57 +279,11 @@ void streamParser::processLine( std::string & line )
 
  search( line, 0 );
 
- if( codeAvailable ) addLoc();
+ if( codeAvailable ) iStats.addLoc();
 
  TRACE_EXIT
 }
 
-
-
-void streamParser::parse( file * p_file )
-{
- std::string line;
-
- TRACE_ENTER
-
- if( p_file == nullptr ) return;	// Safety check
-
- p_iFile	= p_file;
- p_lang		= LanguageProvider::getInstance().getLanguage( p_file->getLanguageType() );
-
- if( p_lang == nullptr )
-   {
-	 cerr << "Error when retrieving the language instance. Skipping file parsing: " << p_file->getName() << endl;
-	 return;
-   }
-
- // Reset own variables
- commentOpen   = false;
- codeAvailable = false;
-
- reset( p_iFile );					// Reset file statistics
-
- // Open file for reading
- std::ifstream sourceFile( p_file->getName().c_str() );
-
- TRACE( " : Parsing file" , p_file->getName() )
-
- // Reserve capacity on the string to avoid reallocs
- line.reserve( LOC_FILE_READ_BUFFER_SIZE );
-
- if( sourceFile.is_open() )
-   {
-	 while( getline( sourceFile, line ) )
-	      {
-		 	addLine();
-		 	processLine( line );
-	      }
-
-     sourceFile.close();
-   }
-
- TRACE_EXIT
-}
 
 
 

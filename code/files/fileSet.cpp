@@ -26,6 +26,7 @@
 // Import module declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+#include "statistics/StatisticsProvider.hh"
 #include "files/file.hh"
 #include "files/fileSet.hh"
 
@@ -39,22 +40,6 @@ using namespace std::filesystem;
 
 TRACE_CLASSNAME( fileSet )
 
-file * fileSet::fileBuilder( const path & pathname )
-{
- std::string		filename;
- file  			*	p_file		= nullptr;
-
- if( is_regular_file( pathname ) )
-   {
-	 filename = pathname.generic_string();
-
-	 // TODO: Add only files that are known extensions of languages that this application supports
-
-	 p_file = file::builder( filename );
-   }
-
- return p_file;
-}
 
 fileSet * fileSet::directoryBuilder( const std::string & pathname )
 {
@@ -72,7 +57,7 @@ fileSet * fileSet::directoryBuilder( const std::string & pathname )
 
   for( const auto & it: dirIterator )
   	 {
-	   p_file = fileSet::fileBuilder( it.path() );
+	   p_file = file::builder( it.path() );
 	   if( p_file != nullptr )
 		   vec.push_back( p_file );
   	 }
@@ -105,11 +90,13 @@ fileSet * fileSet::builder( const std::string & pathname )
 	   p_files = fileSet::directoryBuilder( pathname );
    else
      {
-	   p_file = fileSet::fileBuilder( pname );
+	   p_file = file::builder( pname );
 	   if( p_file != nullptr )
 		   p_files = new fileSet( p_file );
      }
 
+   if( p_files != nullptr )
+	   StatisticsProvider::getInstance().setCapacity( p_files->locations.size() );
  }
 
  catch( const std::exception & e )

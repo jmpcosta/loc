@@ -8,24 +8,21 @@ CPP_SRCS += \
 ../code/commandLine.cpp \
 ../code/converter.cpp \
 ../code/main.cpp \
-../code/options.cpp \
-../code/statistics.cpp 
+../code/options.cpp 
 
 OBJS += \
 ./code/code.o \
 ./code/commandLine.o \
 ./code/converter.o \
 ./code/main.o \
-./code/options.o \
-./code/statistics.o 
+./code/options.o 
 
 CPP_DEPS += \
 ./code/code.d \
 ./code/commandLine.d \
 ./code/converter.d \
 ./code/main.d \
-./code/options.d \
-./code/statistics.d 
+./code/options.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

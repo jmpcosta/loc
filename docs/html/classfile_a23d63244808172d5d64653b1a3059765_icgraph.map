@@ -1,0 +1,7 @@
+<map id="builder" name="builder">
+<area shape="rect" id="node2" href="$classfile.html#a0acc9f0424dd3f9ac4080b7ad7ca8297" title="Obtain the language identifier for the file. " alt="" coords="113,5,239,32"/>
+<area shape="rect" id="node5" href="$classfile_set.html#a51c6c47af3c5d1fad5c9b6c6022c4982" title="Factory method for a set of files. " alt="" coords="123,56,229,83"/>
+<area shape="rect" id="node3" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="287,5,385,32"/>
+<area shape="rect" id="node4" href="$classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="433,5,544,32"/>
+<area shape="rect" id="node6" href="$classfile_set.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc" title="Return a constant iterator proxy to the end of the files vector. " alt="" coords="292,56,380,83"/>
+</map>

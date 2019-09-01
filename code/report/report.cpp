@@ -24,6 +24,8 @@
 #include "trace.hh"
 
 #include "language/LanguageProvider.hh"
+#include "statistics/StatisticsProvider.hh"
+//#include "statistics/walker.hh"
 
 #include "report/csvReport.hh"
 #include "report/textReport.hh"
@@ -39,6 +41,7 @@
 
 TRACE_CLASSNAME( report )
 
+// Factory method
 report * report::build( reportType type )
 {
  switch( type )
@@ -56,74 +59,36 @@ report::report( void )
 {
  TRACE_POINT
 
- nFiles			= 0;
  p_iStreamBuf	= nullptr;
  details		= false;
 }
 
 void report::writeFiles( fileSet * p_files )
 {
- LanguageProvider 		&	prov	= LanguageProvider::getInstance();
+ StatisticsProvider		&	prov	= StatisticsProvider::getInstance();
  std::filesystem::path		myPath;
 
  TRACE_POINT
 
+ if( ! details )	 return;
+
  // Print each file statistics
  for( auto it : *p_files )
     {
-	  statistics & stats	= it->getStatistics();
-	  languageType lType	= it->getLanguageType();
-
-	  if( stats.areAvailable() )
+	  if( prov.exists( it ) )
 	    {
-		  nFiles++;
+		  statistics & stats	= prov.getFile( it );
 
-		  // Add current file statistics to global
-		  global.addStats( stats );
-
-		  // Add current file statistics to respective language stats
-		  if( prov.isLanguageAvailable( lType ) )
-		    {
-			  langTypes.insert( lType );
-			  prov.getLanguage( lType )->getStatistics().addStats( stats );
-		    }
-
-		  if( details )
-		    {
+		  if( stats.areAvailable() )
+		  	{
 			  myPath = it->getName();
-			  writeStats( myPath.filename().generic_string().c_str(), stats );
-		    }
+			  writeItem( myPath.filename().generic_string().c_str(), stats );
+		  	}
 	    }
     }
 
  TRACE_EXIT
 }
-
-
-void report::writeLangStats( void )
-{
- LanguageProvider 		&	prov	= LanguageProvider::getInstance();
-
- TRACE_POINT
-
- // Print each file statistics
- for( auto it : langTypes )
-    {
-	  if( prov.isLanguageAvailable( it ) )
-	    {
-		  language * p_lang		= prov.getLanguage( it );
-		  statistics & stats	= p_lang->getStatistics();
-
-		  std::string lang = "Language ";
-		  lang += p_lang->getName();
-
-		  writeStats( lang.c_str(), stats );
-	    }
-    }
-
- TRACE_EXIT
-}
-
 
 
 void report::setOutput( progOptions & options )

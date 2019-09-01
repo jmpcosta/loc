@@ -84,14 +84,6 @@ Inheritance diagram for report:</div>
 <area shape="rect" id="node4" href="classxml_report.html" title="Class responsible for generating a CSV based report. " alt="" coords="219,80,301,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for report:</div>
-<div class="dyncontent">
-<div class="center"><img src="classreport__coll__graph.png" border="0" usemap="#report_coll__map" alt="Collaboration graph"/></div>
-<map name="report_coll__map" id="report_coll__map">
-<area shape="rect" id="node2" href="classstatistics.html" title="Class responsible for holding statistics. " alt="" coords="5,5,80,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,13 +107,9 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a22b8d46a0a31e7ec65b9371824dd34a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a22b8d46a0a31e7ec65b9371824dd34a2">writeStats</a> (const char *str, <a class="el" href="classstatistics.html">statistics</a> &amp;stats)=0</td></tr>
-<tr class="memdesc:a22b8d46a0a31e7ec65b9371824dd34a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to write statistics for the given item.  <a href="#a22b8d46a0a31e7ec65b9371824dd34a2">More...</a><br /></td></tr>
-<tr class="separator:a22b8d46a0a31e7ec65b9371824dd34a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a892bdcd9efcf7d6b7cac50cc2136ca"><td class="memItemLeft" align="right" valign="top"><a id="a1a892bdcd9efcf7d6b7cac50cc2136ca"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a1a892bdcd9efcf7d6b7cac50cc2136ca">writeLangStats</a> (void)</td></tr>
-<tr class="memdesc:a1a892bdcd9efcf7d6b7cac50cc2136ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write summary statistics for the given language. <br /></td></tr>
-<tr class="separator:a1a892bdcd9efcf7d6b7cac50cc2136ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764265f7926e7891ca62d3e218558047"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a764265f7926e7891ca62d3e218558047">writeItem</a> (const char *str, <a class="el" href="classstatistics.html">statistics</a> &amp;stats)=0</td></tr>
+<tr class="memdesc:a764265f7926e7891ca62d3e218558047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to write statistics for the given item.  <a href="#a764265f7926e7891ca62d3e218558047">More...</a><br /></td></tr>
+<tr class="separator:a764265f7926e7891ca62d3e218558047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa31a5884f3b72d86ab9238bc1932afda"><td class="memItemLeft" align="right" valign="top"><a id="aa31a5884f3b72d86ab9238bc1932afda"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#aa31a5884f3b72d86ab9238bc1932afda">writeHeader</a> (void)=0</td></tr>
 <tr class="memdesc:aa31a5884f3b72d86ab9238bc1932afda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to write a report header. <br /></td></tr>
@@ -147,18 +135,6 @@ Protected Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a41eb3fc9521864c83e143fb46e5323b2">details</a></td></tr>
 <tr class="memdesc:a41eb3fc9521864c83e143fb46e5323b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide file statistics. <br /></td></tr>
 <tr class="separator:a41eb3fc9521864c83e143fb46e5323b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc74cd159f75a43e38a8de757c000e94"><td class="memItemLeft" align="right" valign="top"><a id="abc74cd159f75a43e38a8de757c000e94"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#abc74cd159f75a43e38a8de757c000e94">nFiles</a></td></tr>
-<tr class="memdesc:abc74cd159f75a43e38a8de757c000e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of processed files. <br /></td></tr>
-<tr class="separator:abc74cd159f75a43e38a8de757c000e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b55c210f336c3827d8470f87e66fe3f"><td class="memItemLeft" align="right" valign="top"><a id="a2b55c210f336c3827d8470f87e66fe3f"></a>
-<a class="el" href="classstatistics.html">statistics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a2b55c210f336c3827d8470f87e66fe3f">global</a></td></tr>
-<tr class="memdesc:a2b55c210f336c3827d8470f87e66fe3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary statistics for all processed files. <br /></td></tr>
-<tr class="separator:a2b55c210f336c3827d8470f87e66fe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a841a0b10ed82225ab640682b485eff16"><td class="memItemLeft" align="right" valign="top"><a id="a841a0b10ed82225ab640682b485eff16"></a>
-std::set&lt; languageType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a841a0b10ed82225ab640682b485eff16">langTypes</a></td></tr>
-<tr class="memdesc:a841a0b10ed82225ab640682b485eff16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of processed language types. <br /></td></tr>
-<tr class="separator:a841a0b10ed82225ab640682b485eff16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a13f6dcb153a793dcde4d438e0ed3f7"><td class="memItemLeft" align="right" valign="top"><a id="a8a13f6dcb153a793dcde4d438e0ed3f7"></a>
 std::streambuf *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreport.html#a8a13f6dcb153a793dcde4d438e0ed3f7">p_iStreamBuf</a></td></tr>
 <tr class="memdesc:a8a13f6dcb153a793dcde4d438e0ed3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output buffer stream. <br /></td></tr>
@@ -261,27 +237,18 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classreport_a60a86df4dbf4cdc474aae16c0840d155_cgraph.png" border="0" usemap="#classreport_a60a86df4dbf4cdc474aae16c0840d155_cgraph" alt=""/></div>
 <map name="classreport_a60a86df4dbf4cdc474aae16c0840d155_cgraph" id="classreport_a60a86df4dbf4cdc474aae16c0840d155_cgraph">
-<area shape="rect" id="node2" href="classprog_options.html#a1f2a2289e019e8fa3fb02cfef830ad82" title="Are file statistics required. " alt="" coords="125,51,284,77"/>
-<area shape="rect" id="node3" href="classreport.html#a74611502f43eb6b6a7fd600c3a28cf66" title="Direct output either for console or file. " alt="" coords="165,101,244,128"/>
-<area shape="rect" id="node5" href="classreport.html#aa31a5884f3b72d86ab9238bc1932afda" title="Interface to write a report header. " alt="" coords="159,152,251,179"/>
-<area shape="rect" id="node6" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="165,203,244,229"/>
-<area shape="rect" id="node21" href="classreport.html#aa1116d7515bde1cb14dcfdeb4b86fc2b" title="Interface to write the report summary statistics. " alt="" coords="151,253,258,280"/>
-<area shape="rect" id="node22" href="classreport.html#a5702f02721cae4afe55178c550e214d7" title="Restore output to the console, in case the output was redirected to a file. " alt="" coords="154,304,255,331"/>
-<area shape="rect" id="node4" href="classprog_options.html#a8e26ebc1022ceffbc9b52ecbef63a6e7" title="What is the report pathname to generate? " alt="" coords="357,5,515,32"/>
-<area shape="rect" id="node7" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="340,57,532,98"/>
-<area shape="rect" id="node8" href="classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="359,123,513,149"/>
-<area shape="rect" id="node9" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="369,173,503,200"/>
-<area shape="rect" id="node13" href="class_language_provider.html#a37fdb0851aec96f6d421106cd840c614" title="Verify if a language is already provided. " alt="" coords="336,225,536,266"/>
-<area shape="rect" id="node14" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="332,291,540,317"/>
-<area shape="rect" id="node16" href="classlanguage.html#a04dda4f0a81c72ef23db823f3b9f66e7" title="Get a reference to the language statistics. " alt="" coords="359,341,513,368"/>
-<area shape="rect" id="node20" href="classreport.html#a22b8d46a0a31e7ec65b9371824dd34a2" title="Interface to write statistics for the given item. " alt="" coords="395,392,477,419"/>
-<area shape="rect" id="node10" href="classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="614,123,737,149"/>
-<area shape="rect" id="node11" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="609,173,741,200"/>
-<area shape="rect" id="node12" href="classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="590,224,761,251"/>
-<area shape="rect" id="node15" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="597,291,753,317"/>
-<area shape="rect" id="node17" href="classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="592,341,759,368"/>
-<area shape="rect" id="node18" href="classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="588,392,763,419"/>
-<area shape="rect" id="node19" href="classconverter.html#a72dbb82162340105ee1ece149929b676" title="Convert a string to lower case. " alt="" coords="811,392,925,419"/>
+<area shape="rect" id="node2" href="classprog_options.html#a1f2a2289e019e8fa3fb02cfef830ad82" title="Are file statistics required. " alt="" coords="125,11,284,37"/>
+<area shape="rect" id="node3" href="classreport.html#a74611502f43eb6b6a7fd600c3a28cf66" title="Direct output either for console or file. " alt="" coords="165,61,244,88"/>
+<area shape="rect" id="node5" href="classreport.html#aa31a5884f3b72d86ab9238bc1932afda" title="Interface to write a report header. " alt="" coords="159,112,251,139"/>
+<area shape="rect" id="node6" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="165,163,244,189"/>
+<area shape="rect" id="node12" href="classreport.html#aa1116d7515bde1cb14dcfdeb4b86fc2b" title="Interface to write the report summary statistics. " alt="" coords="151,213,258,240"/>
+<area shape="rect" id="node13" href="classreport.html#a5702f02721cae4afe55178c550e214d7" title="Restore output to the console, in case the output was redirected to a file. " alt="" coords="154,264,255,291"/>
+<area shape="rect" id="node4" href="classprog_options.html#a8e26ebc1022ceffbc9b52ecbef63a6e7" title="What is the report pathname to generate? " alt="" coords="349,5,506,32"/>
+<area shape="rect" id="node7" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="332,57,523,98"/>
+<area shape="rect" id="node8" href="class_statistics_provider.html#a8ffeb6a6059d47554d88f7ada48037ec" title="Verify if a given language statistics exists. " alt="" coords="365,122,490,163"/>
+<area shape="rect" id="node9" href="class_statistics_provider.html#a02c8c635725e69cced18dd7c9b21cde9" title="Get a reference to a file statistics. " alt="" coords="365,187,490,229"/>
+<area shape="rect" id="node10" href="classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="350,253,505,280"/>
+<area shape="rect" id="node11" href="classreport.html#a764265f7926e7891ca62d3e218558047" title="Interface to write statistics for the given item. " alt="" coords="389,304,465,331"/>
 </map>
 </div>
 <div class="dynheader">
@@ -382,20 +349,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classreport_a9f7633a2ccad558a76d12578a925beed_cgraph.png" border="0" usemap="#classreport_a9f7633a2ccad558a76d12578a925beed_cgraph" alt=""/></div>
 <map name="classreport_a9f7633a2ccad558a76d12578a925beed_cgraph" id="classreport_a9f7633a2ccad558a76d12578a925beed_cgraph">
-<area shape="rect" id="node2" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="140,5,332,47"/>
-<area shape="rect" id="node3" href="classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="159,71,313,98"/>
-<area shape="rect" id="node4" href="classstatistics.html#a8babe74768c1f783f1804ee175fe3f56" title="Add the provided statistics to the current ones. " alt="" coords="169,122,303,149"/>
-<area shape="rect" id="node8" href="class_language_provider.html#a37fdb0851aec96f6d421106cd840c614" title="Verify if a language is already provided. " alt="" coords="136,173,336,215"/>
-<area shape="rect" id="node9" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="132,239,340,266"/>
-<area shape="rect" id="node11" href="classlanguage.html#a04dda4f0a81c72ef23db823f3b9f66e7" title="Get a reference to the language statistics. " alt="" coords="159,290,313,317"/>
-<area shape="rect" id="node15" href="classreport.html#a22b8d46a0a31e7ec65b9371824dd34a2" title="Interface to write statistics for the given item. " alt="" coords="195,341,277,367"/>
-<area shape="rect" id="node5" href="classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de" title="Get the number of lines of code from statistics. " alt="" coords="414,71,537,98"/>
-<area shape="rect" id="node6" href="classstatistics.html#a9f8670f9c36882e88fbc423de845e98d" title="Get the number of processed lines from statistics. " alt="" coords="409,122,541,149"/>
-<area shape="rect" id="node7" href="classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d" title="Get the number of empty lines from statistics. " alt="" coords="390,173,561,199"/>
-<area shape="rect" id="node10" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="397,239,553,266"/>
-<area shape="rect" id="node12" href="classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="392,290,559,317"/>
-<area shape="rect" id="node13" href="classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="388,341,563,367"/>
-<area shape="rect" id="node14" href="classconverter.html#a72dbb82162340105ee1ece149929b676" title="Convert a string to lower case. " alt="" coords="611,341,725,367"/>
+<area shape="rect" id="node2" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="132,5,323,47"/>
+<area shape="rect" id="node3" href="class_statistics_provider.html#a8ffeb6a6059d47554d88f7ada48037ec" title="Verify if a given language statistics exists. " alt="" coords="165,71,290,112"/>
+<area shape="rect" id="node4" href="class_statistics_provider.html#a02c8c635725e69cced18dd7c9b21cde9" title="Get a reference to a file statistics. " alt="" coords="165,136,290,177"/>
+<area shape="rect" id="node5" href="classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="150,202,305,229"/>
+<area shape="rect" id="node6" href="classreport.html#a764265f7926e7891ca62d3e218558047" title="Interface to write statistics for the given item. " alt="" coords="189,253,265,279"/>
 </map>
 </div>
 <div class="dynheader">
@@ -410,8 +368,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a22b8d46a0a31e7ec65b9371824dd34a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22b8d46a0a31e7ec65b9371824dd34a2">&#9670;&nbsp;</a></span>writeStats()</h2>
+<a id="a764265f7926e7891ca62d3e218558047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764265f7926e7891ca62d3e218558047">&#9670;&nbsp;</a></span>writeItem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +378,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void writeStats </td>
+          <td class="memname">virtual void writeItem </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>str</em>, </td>
@@ -455,14 +413,11 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classreport_a22b8d46a0a31e7ec65b9371824dd34a2_icgraph.png" border="0" usemap="#classreport_a22b8d46a0a31e7ec65b9371824dd34a2_icgraph" alt=""/></div>
-<map name="classreport_a22b8d46a0a31e7ec65b9371824dd34a2_icgraph" id="classreport_a22b8d46a0a31e7ec65b9371824dd34a2_icgraph">
-<area shape="rect" id="node2" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="150,56,229,83"/>
-<area shape="rect" id="node4" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="541,81,603,108"/>
-<area shape="rect" id="node5" href="classreport.html#a1a892bdcd9efcf7d6b7cac50cc2136ca" title="Write summary statistics for the given language. " alt="" coords="135,157,244,184"/>
-<area shape="rect" id="node3" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="332,5,404,32"/>
-<area shape="rect" id="node6" href="classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="292,208,444,235"/>
-<area shape="rect" id="node7" href="classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="492,208,652,235"/>
+<div class="center"><img src="classreport_a764265f7926e7891ca62d3e218558047_icgraph.png" border="0" usemap="#classreport_a764265f7926e7891ca62d3e218558047_icgraph" alt=""/></div>
+<map name="classreport_a764265f7926e7891ca62d3e218558047_icgraph" id="classreport_a764265f7926e7891ca62d3e218558047_icgraph">
+<area shape="rect" id="node2" href="classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="129,56,208,83"/>
+<area shape="rect" id="node4" href="classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="376,56,439,83"/>
+<area shape="rect" id="node3" href="classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="256,5,328,32"/>
 </map>
 </div>
 

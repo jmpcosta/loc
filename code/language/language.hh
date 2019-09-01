@@ -23,7 +23,6 @@
 // Import own headers
 #include "trace_macros.hh"
 #include "loc_defs.hh"
-#include "statistics.hh"
 #include "language/comment.hh"
 #include "language/languageType.hh"
 #include "parser/parserType.hh"
@@ -83,10 +82,6 @@ public:
 		/// @return Name of the language
 		virtual const char *				getName			( void )					{ return name.c_str();		}
 
-		/// @brief Get a reference to the language statistics
-		/// @return The language statistics
-		virtual statistics &				getStatistics	( void )					{ return stats;				}
-
 		/// @brief Obtain the type of parser for a language
 		/// @return The type of parser required for the language
 		 parserType							getParserType	( void													);
@@ -105,7 +100,6 @@ protected:
 		// Specific language
 		languageType				lang;		///< ID of the language
 		std::string					name;		///< Name of the language
-		statistics					stats;		///< Statistics for the language
 
 		// Support more than one comment tokens in the language
 		std::vector<comment *>		comments;	///< List of comments of the programming language

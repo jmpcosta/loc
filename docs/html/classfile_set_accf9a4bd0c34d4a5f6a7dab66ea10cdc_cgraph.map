@@ -1,3 +1,6 @@
 <map id="end" name="end">
-<area shape="rect" id="node2" href="$classfile_set.html#a51c6c47af3c5d1fad5c9b6c6022c4982" title="Factory method for a set of files. " alt="" coords="96,5,156,32"/>
+<area shape="rect" id="node2" href="$classfile_set.html#a51c6c47af3c5d1fad5c9b6c6022c4982" title="Factory method for a set of files. " alt="" coords="96,64,156,91"/>
+<area shape="rect" id="node3" href="$classfile.html#a23d63244808172d5d64653b1a3059765" title="Factory method to create file objects. " alt="" coords="257,5,342,32"/>
+<area shape="rect" id="node4" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="204,57,395,98"/>
+<area shape="rect" id="node5" href="$class_statistics_provider.html#a54f027c1a0761667248e61093c09a119" title="Provide a hint to the this provider on how many statistic objects are required for files..." alt="" coords="237,122,362,163"/>
 </map>

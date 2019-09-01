@@ -17,15 +17,10 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-//#include <cstdint>
-//#include <iostream>
 
 // Import project headers
 #include "trace_macros.hh"
-#include "options.hh"
 #include "files/file.hh"
-#include "language/language.hh"
-#include "parser/parserType.hh"
 #include "parser/parser.hh"
 
 
@@ -45,10 +40,6 @@ public:
 		/// @brief Class destructor
 						~streamParser	() {}
 
-		/// @brief Parse a source file
-		/// @param [in] sourceFile - The input file to parse
-		void			parse			( file * sourceFile	);
-
 		/// @brief Obtain the parser type
 		/// @return The parser identifier
 		parserType		getType			( void				) { return parserType::stream; }
@@ -56,6 +47,9 @@ public:
 
 private:
 		// Methods
+
+		/// @brief Calls a parser to process an open file
+		void 			specificParse	( void				);
 
 		/// @brief Check if the C-String contains information
 		/// @param [in] str - C-String to check for information
@@ -82,14 +76,6 @@ private:
 		/// @brief Process an input line for information
 		/// @param [in] line  - String to search
 		void			processLine		( std::string & line							);
-
-		// Wrapper methods for statistics
-		void			reset			( file 	*	p_file								);
-		void			setAvailable	( file 	*	p_file, bool value					);
-		void			addLine			( void 											);
-		void			addEmptyLine	( void 											);
-		void			addLoc			( void 											);
-
 
 		// Variables
 		bool			codeAvailable;			///< Is Code available in line ?

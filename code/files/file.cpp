@@ -39,16 +39,12 @@ using namespace std::filesystem;
 TRACE_CLASSNAME( file )
 
 
-file::file( const std::string & filename )
+file::file( const std::string & filename, languageType lType )
 {
  TRACE_ENTER
 
  iName 		= filename;
-
- path			pathname	( filename, path::format::generic_format );
- std::string	extension	( pathname.extension().generic_string() );
-
- iLang		= LanguageProvider::getInstance().getLanguageType( extension );
+ iLang		= lType;
 
  TRACE_EXIT
 }
@@ -59,21 +55,30 @@ file::~file()
 }
 
 
-file * file::builder( const std::string & pathname )
+file * file::builder( const path & pathname )
 {
-  file * p_file = nullptr;
+ std::string		filename, fileExtension;
+ file 			*	p_file		= nullptr;
+ languageType		lType		= languageType::unknown;
 
   TRACE_ENTER
 
   try
   {
-	  path		pname( pathname, path::format::generic_format );
-
-	  if( is_regular_file( pname ) )
+	  if( is_regular_file( pathname ) )
 	    {
-		  TRACE( "New file:", pathname )
-		  p_file = new file( pathname );
+		  filename = pathname.generic_string();
+		  fileExtension = pathname.extension().generic_string();
+
+		  lType = LanguageProvider::getInstance().getLanguageType( fileExtension );
+
+		  if( lType != languageType::unknown )
+		    {
+			  TRACE( "New file:", pathname )
+			  p_file = new file( filename, lType );
+		    }
 	    }
+
   }
 
   catch( const std::exception & e )

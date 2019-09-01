@@ -47,7 +47,7 @@ language_bash::language_bash()
  TRACE_POINT
 
  lang = languageType::BASH;
- name = "BASH";
+ name = "Bash";
 }
 
 bool language_bash::isExtension( const char * p_extension )

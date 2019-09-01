@@ -1,0 +1,8 @@
+<map id="parse" name="parse">
+<area shape="rect" id="node2" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="116,5,308,47"/>
+<area shape="rect" id="node3" href="$class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="108,71,316,98"/>
+<area shape="rect" id="node5" href="$classfile.html#a0acc9f0424dd3f9ac4080b7ad7ca8297" title="Obtain the language identifier for the file. " alt="" coords="137,122,287,149"/>
+<area shape="rect" id="node7" href="$classfile.html#a6b465994f8ae60c0c1a097b2a5aa2700" title="Obtain the file name. " alt="" coords="162,173,262,199"/>
+<area shape="rect" id="node4" href="$classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="364,71,520,98"/>
+<area shape="rect" id="node6" href="$classfile.html#a23d63244808172d5d64653b1a3059765" title="Factory method to create file objects. " alt="" coords="399,122,485,149"/>
+</map>

@@ -67,30 +67,25 @@ inline void code::processFiles( fileSet * p_files )
     {
 	  TRACE( "Processing file:", it->getName() )
 
-	  if( it->getLanguageType() == languageType::unknown )
-	    { TRACE( "Unknown programming language: Skipping it !" ) }
-	  else
+	  lType = it->getLanguageType();
+	  if( lType == languageType::unknown )
 	    {
-		  lType = it->getLanguageType();
-		  if( lType == languageType::unknown )
-		    {
-			  cerr << "Unknown language. Skipping file." << endl;
-			  continue;
-		    }
-
-		  p_lang = prov.getLanguage( lType );
-		  if( p_lang == nullptr )
-		    {
-			  cerr << "No language available. Skip file." << endl;
-			  continue;
-		    }
-
-		  p_parser = prov.getParser( p_lang );
-		  if( p_parser == nullptr )
-			  cerr << "No parser available. Skip file." << endl;
-		  else
-			  p_parser->parse( it );
+		  TRACE( "Unknown programming language: Skipping file !" )
+		  continue;
 	    }
+
+	  p_lang = prov.getLanguage( lType );
+	  if( p_lang == nullptr )
+	    {
+		  cerr << "No language available. Skip file." << endl;
+		  continue;
+	    }
+
+	  p_parser = prov.getParser( p_lang );
+	  if( p_parser == nullptr )
+		  cerr << "No parser available. Skip file." << endl;
+	  else
+		  p_parser->parse( it );
     }
 
  TRACE_EXIT

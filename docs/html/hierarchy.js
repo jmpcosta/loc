@@ -6,6 +6,7 @@ var hierarchy =
     [ "converter", "classconverter.html", null ],
     [ "file", "classfile.html", null ],
     [ "fileSet", "classfile_set.html", null ],
+    [ "fileStatistics", "classfile_statistics.html", null ],
     [ "language", "classlanguage.html", [
       [ "language_batch", "classlanguage__batch.html", null ],
       [ "language_family_bourne", "classlanguage__family__bourne.html", [
@@ -33,6 +34,7 @@ var hierarchy =
       [ "language_python", "classlanguage__python.html", null ]
     ] ],
     [ "language_factory", "classlanguage__factory.html", null ],
+    [ "languageStatistics", "classlanguage_statistics.html", null ],
     [ "parser", "classparser.html", [
       [ "streamParser", "classstream_parser.html", null ]
     ] ],
@@ -46,6 +48,9 @@ var hierarchy =
     [ "Singleton< T >", "class_singleton.html", null ],
     [ "Singleton< LanguageProvider >", "class_singleton.html", [
       [ "LanguageProvider", "class_language_provider.html", null ]
+    ] ],
+    [ "Singleton< StatisticsProvider >", "class_singleton.html", [
+      [ "StatisticsProvider", "class_statistics_provider.html", null ]
     ] ],
     [ "statistics", "classstatistics.html", null ]
 ];

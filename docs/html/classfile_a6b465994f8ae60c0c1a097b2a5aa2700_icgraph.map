@@ -1,4 +1,4 @@
 <map id="getName" name="getName">
-<area shape="rect" id="node2" href="$classstream_parser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="128,5,268,32"/>
-<area shape="rect" id="node3" href="$classstream_parser.html#a3fb0ce71d6ab0c4ea9cc931508a9b5c6" title="Class destructor. " alt="" coords="316,5,511,32"/>
+<area shape="rect" id="node2" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="128,5,227,32"/>
+<area shape="rect" id="node3" href="$classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="275,5,385,32"/>
 </map>

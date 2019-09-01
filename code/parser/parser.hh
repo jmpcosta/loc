@@ -17,12 +17,13 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <fstream>
 
 // Import project headers
-#include "options.hh"
 #include "files/file.hh"
 #include "language/language.hh"
-
+#include "statistics/statistics.hh"
+#include "parser/parserType.hh"
 
 // *****************************************************************************************
 //
@@ -42,7 +43,7 @@ public:
 
 		/// @brief Parse a source file
 		/// @param [in] sourceFile - The input file to parse
-		virtual void		parse	( file * sourceFile	) = 0;
+		virtual void		parse	( file * sourceFile	);
 
 
 		/// @brief Obtain the parser type
@@ -50,9 +51,16 @@ public:
 		virtual parserType	getType	( void				) = 0;
 
 protected:
+		// Methods
+		/// @brief Calls a parser to process an open file
+		virtual void specificParse	( void				) = 0;
+
+
 		// Variables
 		language *		p_lang;					///< Pointer to a language object
 		file	 *		p_iFile;				///< Current file being processed
+		std::ifstream	iSourceFile;			///< Stream to read file
+		statistics		iStats;					///< Internal statistics for the current parsed file
 
 };
 

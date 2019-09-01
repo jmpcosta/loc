@@ -20,7 +20,7 @@
 #include <cstdint>
 
 // Import module declarations
-#include "statistics.hh"
+#include "statistics/statistics.hh"
 
 
 // *****************************************************************************************
@@ -38,6 +38,15 @@ statistics::statistics()
  i_available	= false;
 }
 
+statistics::statistics( statistics & s )
+{
+ i_loc			= s.i_loc;
+ i_nlines		= s.i_nlines;
+ i_nEmptyLines	= s.i_nEmptyLines;
+ i_available	= s.i_available;
+}
+
+
 void statistics::reset( void )
 {
  i_loc			= 0;
@@ -47,10 +56,13 @@ void statistics::reset( void )
 }
 
 
-void statistics::addStats( statistics & stats )
+void statistics::add( statistics & stats )
 {
- i_loc			+= stats.getLoc();
- i_nlines		+= stats.getLines();
- i_nEmptyLines	+= stats.getEmptyLines();
+ if( stats.areAvailable() )
+   {
+	 i_loc			+= stats.getLoc();
+	 i_nlines		+= stats.getLines();
+	 i_nEmptyLines	+= stats.getEmptyLines();
+   }
 }
 
