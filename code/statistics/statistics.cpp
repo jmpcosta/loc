@@ -38,7 +38,7 @@ statistics::statistics()
  i_available	= false;
 }
 
-statistics::statistics( statistics & s )
+statistics::statistics( const statistics & s )
 {
  i_loc			= s.i_loc;
  i_nlines		= s.i_nlines;

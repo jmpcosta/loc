@@ -37,7 +37,7 @@ public:
 					statistics();
 
 		/// @brief Class constructor using another statisics object
-					statistics( statistics & s );
+					statistics( const statistics & s );
 
 		/// @brief Class destructor
 					~statistics() {}

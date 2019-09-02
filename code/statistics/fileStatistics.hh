@@ -39,7 +39,7 @@ public:
 							fileStatistics		( const void * pf, statistics & s )	: iStats( s )	{ p_iFile = pf;	}
 
 		/// @brief Class constructor
-							fileStatistics		( const fileStatistics & fs ) { p_iFile = fs.p_iFile; iStats = fs.iStats; }
+							fileStatistics		( const fileStatistics & fs ) : iStats( fs.iStats ) { p_iFile = fs.p_iFile; }
 
 		/// @brief Class destructor
 							~fileStatistics		() {}
