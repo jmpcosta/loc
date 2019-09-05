@@ -1,7 +1,9 @@
 <map id="writeFiles" name="writeFiles">
-<area shape="rect" id="node2" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="132,5,323,47"/>
-<area shape="rect" id="node3" href="$class_statistics_provider.html#a8ffeb6a6059d47554d88f7ada48037ec" title="Verify if a given language statistics exists. " alt="" coords="165,71,290,112"/>
-<area shape="rect" id="node4" href="$class_statistics_provider.html#a02c8c635725e69cced18dd7c9b21cde9" title="Get a reference to a file statistics. " alt="" coords="165,136,290,177"/>
-<area shape="rect" id="node5" href="$classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="150,202,305,229"/>
-<area shape="rect" id="node6" href="$classreport.html#a764265f7926e7891ca62d3e218558047" title="Interface to write statistics for the given item. " alt="" coords="189,253,265,279"/>
+<area shape="rect" id="node2" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="141,5,331,47"/>
+<area shape="rect" id="node3" href="$class_statistics_provider.html#a8ffeb6a6059d47554d88f7ada48037ec" title="Verify if a given language statistics exists. " alt="" coords="173,71,299,112"/>
+<area shape="rect" id="node4" href="$class_statistics_provider.html#a02c8c635725e69cced18dd7c9b21cde9" title="Get a reference to a file statistics. " alt="" coords="173,136,299,177"/>
+<area shape="rect" id="node5" href="$classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4" title="Get the availability of statistics. " alt="" coords="159,202,313,229"/>
+<area shape="rect" id="node6" href="$classreport.html#a0cb74214e9c6b2dc1537964ae41a88c3" title="Interface to write statistics for the given item. " alt="" coords="198,253,274,279"/>
+<area shape="rect" id="node7" href="$class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="132,303,340,330"/>
+<area shape="rect" id="node8" href="$classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="388,303,544,330"/>
 </map>

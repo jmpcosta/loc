@@ -36,7 +36,7 @@ public:
 		/// @brief Default Class constructor
 					statistics();
 
-		/// @brief Class constructor using another statisics object
+		/// @brief Class constructor using another statistics object
 					statistics( const statistics & s );
 
 		/// @brief Class destructor
@@ -54,6 +54,9 @@ public:
 		/// @brief Add one more empty line to statistics
 		void		addEmptyLine	( void )		{ i_nEmptyLines++;		}
 
+		/// @brief Add one more empty line to statistics
+		void		addComment		( void )		{ i_nComments++;		}
+
 		/// @brief Get the number of lines of code from statistics
 		/// @return Lines of code
 		uint64_t	getLoc			( void )		{ return i_loc;			}
@@ -65,6 +68,10 @@ public:
 		/// @brief Get the number of empty lines from statistics
 		/// @return Number of empty lines
 		uint64_t	getEmptyLines	( void )		{ return i_nEmptyLines;	}
+
+		/// @brief  Get the number of comments from statistics
+		/// @return Number of commented lines
+		uint64_t	getComments		( void )		{ return i_nComments;	}
 
 		/// @brief Get the availability of statistics
 		/// @return True if available. False otherwise
@@ -84,6 +91,7 @@ private:
 		uint64_t	i_nlines;			///< Number of lines
 		uint64_t	i_loc;				///< Number of code lines
 		uint64_t	i_nEmptyLines;		///< Number of empty lines
+		uint64_t	i_nComments;		///< Number of comments
 
 		TRACE_CLASSNAME_DECLARATION
 };

@@ -46,7 +46,7 @@ inline void textReport::writeSeparator( void )
 {
  TRACE_POINT
 
- std::cout.width(100);
+ std::cout.width(140);
  std::cout.fill('=');
  std::cout << std::left << "=";
  std::cout << std::endl;
@@ -62,10 +62,16 @@ void textReport::writeHeader( void )
  std::cout << std::setw(40) << "File name";
 
  std::cout.fill(' ');
+ std::cout << std::setw(20) << "Language";
+
+ std::cout.fill(' ');
  std::cout << std::right << std::setw(20) << " Number of lines";
 
  std::cout.fill(' ');
  std::cout << std::setw(20) << " Empty lines";
+
+ std::cout.fill(' ');
+ std::cout << std::setw(15) << " Comments";
 
  std::cout.fill(' ');
  std::cout << std::setw(20) << " Lines of Code";
@@ -83,41 +89,43 @@ void textReport::writeSummary( void )
 
  TRACE_ENTER
 
- std::string msg = "Total (";
+ std::string msg = "Total: ";
  msg += std::to_string( prov.getNumberFiles() );
- msg += " files)";
+ msg += " file(s)";
 
  if( details ) writeSeparator();
 
  writeLangStats();
- writeItem( msg.c_str(), prov.getGlobal() );
+ writeItem( msg.c_str(), LOC_EMPTY_STRING, prov.getGlobal() );
 
  std::cout << std::endl;
 
  TRACE_EXIT
 }
 
-void textReport::writeItem( const char * str, statistics & stats )
+void textReport::writeItem( const char * p_name, const char * p_lang, statistics & stats )
 {
  TRACE_ENTER
 
- textReport::writeStatistics( str, stats );
+ textReport::writeStatistics( p_name, p_lang, stats );
 
  TRACE_EXIT
 }
 
-void textReport::writeStatistics( const char * str, statistics & stats )
+void textReport::writeStatistics( const char * p_name, const char * p_lang, statistics & stats )
 {
  TRACE_ENTER
 
  std::cout << std::left;
 
  std::cout.fill(' ');
- std::cout << std::setw(40) << str;
+ std::cout << std::setw(40) << p_name;
+ std::cout << std::setw(20) << p_lang;
 
  std::cout << std::right;
  std::cout << std::setw(20) << stats.getLines();
  std::cout << std::setw(20) << stats.getEmptyLines();
+ std::cout << std::setw(20) << stats.getComments();
  std::cout << std::setw(20) << stats.getLoc();
  std::cout << std::endl;
 

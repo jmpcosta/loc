@@ -46,14 +46,16 @@ public:
 private:
 		// Methods
 		/// @brief Write statistics for the given item to a file or standard output
-		/// @param [in] str   - A item name
-		/// @param [in] stats - The statistics to generate for the item
-		void			writeItem		( const char * str, statistics & s	);
+		/// @param [in] n - An item name
+		/// @param [in] l - An item language
+		/// @param [in] s - An item statistics
+		void			writeItem		( const char * n,  const char * l, statistics & s	);
 
 		/// @brief Write statistics for the given item to a file or standard output
-		/// @param [in] str   - A item name
-		/// @param [in] stats - The statistics to generate for the item
-		static void		writeStatistics	( const char * name, statistics & stats	);
+		/// @param [in] n - An item name
+		/// @param [in] l - An item language
+		/// @param [in] s - An item statistics
+		static void		writeStatistics	( const char * n,  const char * l, statistics & s	);
 
 		/// @brief Write a report header to a file or standard output
 		void			writeHeader		( void );

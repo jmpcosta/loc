@@ -65,4 +65,6 @@ const char	LOC_LINE_IGNORE_CHARS[]		= { ' ', '\t', '\0' };
 #define		LOC_OUTPUT_TYPE_CSV		"csv"
 #define		LOC_OUTPUT_TYPE_XML		"xml"
 
+#define		LOC_EMPTY_STRING		""
+
 #endif // LOC_DEFS_HH_

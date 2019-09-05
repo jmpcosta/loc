@@ -47,13 +47,17 @@ void xmlReport::writeHeader( void )
  std::cout << "<report>" 										<< std::endl;
  std::cout << "<header>" 										<< std::endl;
 
- std::cout << "<FileName name=\"File name\"/>" 					<< std::endl;
+ std::cout << "<filename name=\"File name\"/>" 					<< std::endl;
 
- std::cout << "<NumberOfLines name=\"Number of lines\"/>" 		<< std::endl;
+ std::cout << "<language name=\"Name of language\"/>"			<< std::endl;
 
- std::cout << "<EmptyLines name=\"Number of empty lines\"/>" 	<< std::endl;
+ std::cout << "<lines name=\"Number of lines\"/>" 				<< std::endl;
 
- std::cout << "<LOC name=\"Number of lines of code\"/>"      	<< std::endl;
+ std::cout << "<emptylines name=\"Number of empty lines\"/>" 	<< std::endl;
+
+ std::cout << "<comments name=\"Number of comments\"/>"	 		<< std::endl;
+
+ std::cout << "<loc name=\"Number of lines of code\"/>"      	<< std::endl;
 
  std::cout << "</header>" 										<< std::endl;
 
@@ -61,24 +65,26 @@ void xmlReport::writeHeader( void )
  std::cout << "<details>" 										<< std::endl;
 }
 
-void xmlReport::writeItem( const char * str, statistics & stats )
+void xmlReport::writeItem( const char * p_name, const char * p_lang, statistics & stats )
 {
  TRACE_ENTER
 
- xmlReport::writeStatistics( str, stats );
+ xmlReport::writeStatistics( p_name, p_lang, stats );
 
  TRACE_EXIT
 }
 
-void xmlReport::writeStatistics( const char * str, statistics & stats )
+void xmlReport::writeStatistics( const char * p_name, const char * p_lang, statistics & stats )
 {
  TRACE_ENTER
 
  std::cout << "<item>" 															<< std::endl;
 
- std::cout << "<filename>" 		<< str 						<< "</filename>"	<< std::endl;
+ std::cout << "<filename>" 		<< p_name					<< "</filename>"	<< std::endl;
+ std::cout << "<language>" 		<< p_lang					<< "</language>"	<< std::endl;
  std::cout << "<lines>" 		<< stats.getLines() 		<< "</lines>"		<< std::endl;
  std::cout << "<emptylines>" 	<< stats.getEmptyLines() 	<< "</emptylines>"	<< std::endl;
+ std::cout << "<comments>" 		<< stats.getComments()	 	<< "</comments>"	<< std::endl;
  std::cout << "<loc>" 			<< stats.getLoc() 			<< "</loc>"			<< std::endl;
 
  std::cout << "</item>" 														<< std::endl;
@@ -96,12 +102,12 @@ void xmlReport::writeSummary( void )
 
  std::cout << "<summary>" 		<< std::endl;
 
- std::string msg = "Total (";
+ std::string msg = "Total: ";
  msg += std::to_string( prov.getNumberFiles() );
- msg += " files)";
+ msg += " file(s)";
 
  writeLangStats();
- writeItem( msg.c_str(), prov.getGlobal() );
+ writeItem( msg.c_str(), LOC_EMPTY_STRING, prov.getGlobal() );
 
  std::cout << "</summary>" 		<< std::endl;
  std::cout << "</report>" 		<< std::endl;

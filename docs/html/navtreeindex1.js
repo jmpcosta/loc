@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"functions_vars.html":[0,3,2],
+"hierarchy.html":[0,2],
 "index.html":[],
 "language_8hh_source.html":[1,0,0,1,7],
 "language__awk_8hh_source.html":[1,0,0,1,1,0],

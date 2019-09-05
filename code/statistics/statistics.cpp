@@ -35,15 +35,17 @@ statistics::statistics()
  i_loc			= 0;
  i_nlines		= 0;
  i_nEmptyLines	= 0;
+ i_nComments	= 0;
  i_available	= false;
 }
 
-statistics::statistics( const statistics & s )
+statistics::statistics( const statistics & stats )
 {
- i_loc			= s.i_loc;
- i_nlines		= s.i_nlines;
- i_nEmptyLines	= s.i_nEmptyLines;
- i_available	= s.i_available;
+ i_loc			= stats.i_loc;
+ i_nlines		= stats.i_nlines;
+ i_nEmptyLines	= stats.i_nEmptyLines;
+ i_available	= stats.i_available;
+ i_nComments	= stats.i_nComments;
 }
 
 
@@ -52,17 +54,19 @@ void statistics::reset( void )
  i_loc			= 0;
  i_nlines		= 0;
  i_nEmptyLines	= 0;
+ i_nComments	= 0;
  i_available	= false;
 }
 
 
 void statistics::add( statistics & stats )
 {
- if( stats.areAvailable() )
+ if( stats.i_available )
    {
-	 i_loc			+= stats.getLoc();
-	 i_nlines		+= stats.getLines();
-	 i_nEmptyLines	+= stats.getEmptyLines();
+	 i_loc			+= stats.i_loc;;
+	 i_nlines		+= stats.i_nlines;
+	 i_nEmptyLines	+= stats.i_nEmptyLines;
+	 i_nComments	+= stats.i_nComments;
    }
 }
 

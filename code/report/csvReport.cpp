@@ -50,27 +50,30 @@ void csvReport::writeHeader( void )
 
  std::cout << "Empty lines"		<< csvReport::separator;
 
+ std::cout << "Comments"		<< csvReport::separator;
+
  std::cout << "Lines of Code";
 
  std::cout << std::endl;
 }
 
-void csvReport::writeItem( const char * str, statistics & stats )
+void csvReport::writeItem( const char * p_name, const char * p_lang, statistics & stats )
 {
  TRACE_ENTER
 
- csvReport::writeStatistics( str, stats );
+ csvReport::writeStatistics( p_name, p_lang, stats );
 
  TRACE_EXIT
 }
 
-void csvReport::writeStatistics( const char * str, statistics & stats )
+void csvReport::writeStatistics( const char * p_name, const char * p_lang, statistics & stats )
 {
  TRACE_ENTER
 
- std::cout << str 					<< separator;
+ std::cout << p_name				<< separator;
  std::cout << stats.getLines()      << separator;
  std::cout << stats.getEmptyLines() << separator;
+ std::cout << stats.getComments() 	<< separator;
  std::cout << stats.getLoc();
 
  std::cout << std::endl;

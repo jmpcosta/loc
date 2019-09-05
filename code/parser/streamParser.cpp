@@ -61,21 +61,20 @@ void streamParser::specificParse( void )
 
  TRACE_ENTER
 
+ // Reserve capacity on the string to avoid reallocs
+ line.reserve( LOC_FILE_READ_BUFFER_SIZE );
+
  // Reset own variables
  commentOpen   = false;
  codeAvailable = false;
 
- // Reserve capacity on the string to avoid reallocs
- line.reserve( LOC_FILE_READ_BUFFER_SIZE );
-
  iStats.setAvailable( true );
- while( getline( iSourceFile, line ) )
+
+ while( ! std::getline( iSourceFile, line ).eof() )
       {
 	 	iStats.addLine();
 	 	processLine( line );
       }
-
- if( iSourceFile.eof() ) iStats.addLine();			// May give one line for files with size 0 (TODO)
 
  // Copy statistics to provider
  StatisticsProvider::getInstance().addStatistics( p_iFile->getLanguageType(), (void *) p_iFile, iStats );
@@ -165,6 +164,8 @@ inline void streamParser::endComment( std::string & line, std::size_t start )
  if( token_pos != std::string::npos )
    {
 	 commentOpen = false;
+	 iStats.addComment();
+
 	 TRACE( "Search for remaining of the line starting at position: ", token_pos + len )
 	 search( line, token_pos + len );
    }
@@ -225,6 +226,7 @@ inline void streamParser::beginComment( std::string & line, std::size_t start )
 		 TRACE( "Comment has no end token.")
 
 		 commentOpen = false;
+		 iStats.addComment();
 
 		 len = token_pos - start;
 

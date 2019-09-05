@@ -50,40 +50,41 @@ public:
 		/// @brief Interface method to generate a report
 		/// @param [in] options - The operator selection
 		/// @param [in] files   - The files for which the report must be generated
-		virtual void			generate		( progOptions & options, fileSet * files );
+		virtual void			generate		( progOptions & options, fileSet * files	);
 
 		// Factory method
 		/// @brief Create a report of the type selected by the operator
 		/// @param [in] type - The report identifier
 		/// @return A pointer to the newly created report
-		static	report *		build( reportType type );
+		static	report *		build			( reportType type 							);
 
 protected:
 		// Methods
 
 		/// @brief Interface to write statistics for the given item
-		/// @param [in] str   - A item name
-		/// @param [in] stats - The statistics to generate for the item
-		virtual void 			writeItem		( const char * str, statistics & stats 	)	= 0;
+		/// @param [in] n - An item name
+		/// @param [in] l - An item language
+		/// @param [in] s - An item statistics
+		virtual void 			writeItem		( const char * n,  const char * l, statistics & s 	)	= 0;
 
 		/// @brief Interface to write a report header
-		virtual void			writeHeader		( void 									)	= 0;
+		virtual void			writeHeader		( void 												)	= 0;
 
 		/// @brief Write statistics for the file set
 		/// @param [in] files - The files for which the report must be generated
-		virtual void			writeFiles		( fileSet * files						);
+		virtual void			writeFiles		( fileSet * files									);
 
 		/// @brief Interface to write the report summary statistics
-		virtual void			writeSummary	( void 									)	= 0;
+		virtual void			writeSummary	( void 												)	= 0;
 
 
 		// For output redirect
 		/// @brief Direct output either for console or file
 		/// @param [in] options - Selected output medium
-		virtual void			setOutput		( progOptions & options 				);
+		virtual void			setOutput		( progOptions & options 							);
 
 		/// @brief Restore output to the console, in case the output was redirected to a file
-		virtual void			restoreOutput	( void					 				);
+		virtual void			restoreOutput	( void					 							);
 
 		// Variables
 		bool					details;		///< Provide file statistics

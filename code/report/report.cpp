@@ -65,7 +65,8 @@ report::report( void )
 
 void report::writeFiles( fileSet * p_files )
 {
- StatisticsProvider		&	prov	= StatisticsProvider::getInstance();
+ StatisticsProvider		&	sprov	= StatisticsProvider::getInstance();
+ LanguageProvider		&	lprov	= LanguageProvider::getInstance();
  std::filesystem::path		myPath;
 
  TRACE_POINT
@@ -75,14 +76,15 @@ void report::writeFiles( fileSet * p_files )
  // Print each file statistics
  for( auto it : *p_files )
     {
-	  if( prov.exists( it ) )
+	  if( sprov.exists( it ) )
 	    {
-		  statistics & stats	= prov.getFile( it );
+		  statistics & stats	= sprov.getFile( it );
 
 		  if( stats.areAvailable() )
 		  	{
 			  myPath = it->getName();
-			  writeItem( myPath.filename().generic_string().c_str(), stats );
+
+			  writeItem( myPath.filename().generic_string().c_str(), lprov.getLanguage( it->getLanguageType() )->getName(), stats );
 		  	}
 	    }
     }
@@ -126,7 +128,7 @@ void report::restoreOutput( void )
 
 
 
-void report::generate( progOptions & options, fileSet * p_files )
+void report::generate( progOptions & options, fileSet * files )
 {
  TRACE_ENTER
 
@@ -135,7 +137,7 @@ void report::generate( progOptions & options, fileSet * p_files )
  setOutput( options );
 
  writeHeader	();
- writeFiles		( p_files );
+ writeFiles		( files );
  writeSummary	();
 
  restoreOutput();

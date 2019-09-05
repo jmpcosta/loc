@@ -1,3 +1,5 @@
 <map id="walk" name="walk">
-<area shape="rect" id="node2" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="103,5,295,47"/>
+<area shape="rect" id="node2" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="111,5,303,47"/>
+<area shape="rect" id="node3" href="$class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="103,71,311,98"/>
+<area shape="rect" id="node4" href="$classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="359,71,515,98"/>
 </map>

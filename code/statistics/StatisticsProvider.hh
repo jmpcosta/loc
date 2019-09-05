@@ -103,21 +103,16 @@ private:
 template <typename F> void StatisticsProvider::walk( F func )
 {
  LanguageProvider	&	prov	= LanguageProvider::getInstance();
- languageType			type	= languageType::unknown;
-
 
  // For every element of the vector, call passed function on it
  for( auto i : iLanguages )
     {
-	 std::string str = "Language ";
-	 type = i.getType();
+	 std::string str = LOC_EMPTY_STRING;
 
-	 str += prov.getLanguage( type )->getName();
-	 str += " (";
 	 str += std::to_string( i.getNumberLanguages() );
-	 str += ")";
+	 str += " file(s) in";
 
-	  func( str.c_str(), i.getStatistics() );
+	  func( str.c_str(), prov.getLanguage( i.getType() )->getName(), i.getStatistics() );
     }
 }
 
