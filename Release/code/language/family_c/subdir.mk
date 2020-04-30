@@ -12,6 +12,7 @@ CPP_SRCS += \
 ../code/language/family_c/language_go.cpp \
 ../code/language/family_c/language_java.cpp \
 ../code/language/family_c/language_php.cpp \
+../code/language/family_c/language_rust.cpp \
 ../code/language/family_c/language_swift.cpp 
 
 OBJS += \
@@ -23,6 +24,7 @@ OBJS += \
 ./code/language/family_c/language_go.o \
 ./code/language/family_c/language_java.o \
 ./code/language/family_c/language_php.o \
+./code/language/family_c/language_rust.o \
 ./code/language/family_c/language_swift.o 
 
 CPP_DEPS += \
@@ -34,6 +36,7 @@ CPP_DEPS += \
 ./code/language/family_c/language_go.d \
 ./code/language/family_c/language_java.d \
 ./code/language/family_c/language_php.d \
+./code/language/family_c/language_rust.d \
 ./code/language/family_c/language_swift.d 
 
 

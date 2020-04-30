@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"functions.html":[0,3,0],
+"functions_func.html":[0,3,1],
+"functions_type.html":[0,3,3],
 "functions_vars.html":[0,3,2],
 "hierarchy.html":[0,2],
 "index.html":[],
@@ -27,7 +30,8 @@ var NAVTREEINDEX1 =
 "language__php_8hh_source.html":[1,0,0,1,1,7],
 "language__powershell_8hh_source.html":[1,0,0,1,5,1],
 "language__python_8hh_source.html":[1,0,0,1,4,2],
-"language__swift_8hh_source.html":[1,0,0,1,1,8],
+"language__rust_8hh_source.html":[1,0,0,1,1,8],
+"language__swift_8hh_source.html":[1,0,0,1,1,9],
 "language__xml_8hh_source.html":[1,0,0,1,3,2],
 "language_statistics_8hh_source.html":[1,0,0,4,1],
 "language_type_8hh_source.html":[1,0,0,1,12],

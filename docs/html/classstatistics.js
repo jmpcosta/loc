@@ -13,6 +13,7 @@ var classstatistics =
     [ "getEmptyLines", "classstatistics.html#aab201e0dd9071588ae5f60d3e6f9079d", null ],
     [ "getLines", "classstatistics.html#a9f8670f9c36882e88fbc423de845e98d", null ],
     [ "getLoc", "classstatistics.html#ae5294037d129a7e8a8e69dcf00d282de", null ],
+    [ "operator=", "classstatistics.html#adb041f041d2b03556cc7469945bc5f6e", null ],
     [ "reset", "classstatistics.html#a3aea9deb2a0bfea9ff05a898f4822e31", null ],
     [ "setAvailable", "classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e", null ]
 ];

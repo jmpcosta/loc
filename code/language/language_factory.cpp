@@ -65,6 +65,7 @@ language * language_factory::build( languageType type )
   	case languageType::XML:			p_lang = new language_xml();		 	break;
   	case languageType::HTML:		p_lang = new language_html();		 	break;
   	case languageType::AWK:			p_lang = new language_awk();		 	break;
+  	case languageType::RUST:		p_lang = new language_rust();		 	break;
 
 	// The next case is just to silence the compiler
   	case languageType::unknown:										break;
@@ -103,6 +104,7 @@ languageType language_factory::getLanguageType( const char * p_fileExtension  )
  if( isLanguage<language_xml>			( p_fileExtension ) ) return languageType::XML;
  if( isLanguage<language_html>			( p_fileExtension ) ) return languageType::HTML;
  if( isLanguage<language_awk>			( p_fileExtension ) ) return languageType::AWK;
+ if( isLanguage<language_rust>			( p_fileExtension ) ) return languageType::RUST;
 
  //if( isLanguage<language_fortran>			( p_fileExtension ) ) return languageType::FORTRAN;
  //if( isLanguage<language_cobol>			( p_fileExtension ) ) return languageType::COBOL;

@@ -22,6 +22,7 @@ var hierarchy =
         [ "language_go", "classlanguage__go.html", null ],
         [ "language_java", "classlanguage__java.html", null ],
         [ "language_php", "classlanguage__php.html", null ],
+        [ "language_rust", "classlanguage__rust.html", null ],
         [ "language_swift", "classlanguage__swift.html", null ]
       ] ],
       [ "language_family_ecma", "classlanguage__family__ecma.html", [

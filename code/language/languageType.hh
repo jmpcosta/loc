@@ -41,6 +41,7 @@ enum class languageType
 	XML			,
 	HTML		,
 	AWK			,
+	RUST		,
 	FORTRAN		,
 	COBOL		,
 	MAX

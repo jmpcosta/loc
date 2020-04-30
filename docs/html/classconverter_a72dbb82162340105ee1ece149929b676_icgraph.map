@@ -1,5 +1,5 @@
 <map id="lower" name="lower">
-<area shape="rect" id="node2" href="$classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="107,487,281,513"/>
+<area shape="rect" id="node2" href="$classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="107,512,281,539"/>
 <area shape="rect" id="node3" href="$classlanguage__bash.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="335,5,520,32"/>
 <area shape="rect" id="node4" href="$classlanguage__bourne.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="329,56,525,83"/>
 <area shape="rect" id="node5" href="$classlanguage__csh.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,107,517,133"/>
@@ -10,14 +10,15 @@
 <area shape="rect" id="node10" href="$classlanguage__go.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="342,360,513,387"/>
 <area shape="rect" id="node11" href="$classlanguage__java.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="337,411,518,437"/>
 <area shape="rect" id="node12" href="$classlanguage__php.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,461,517,488"/>
-<area shape="rect" id="node13" href="$classlanguage__swift.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="335,512,520,539"/>
-<area shape="rect" id="node14" href="$classlanguage__javascript.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="359,563,496,605"/>
-<area shape="rect" id="node15" href="$classlanguage__html.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="336,629,519,656"/>
-<area shape="rect" id="node16" href="$classlanguage__xml.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,680,517,707"/>
-<area shape="rect" id="node17" href="$classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c" title="Obtain the name of the language. " alt="" coords="360,731,495,757"/>
-<area shape="rect" id="node18" href="$classlanguage__fortran.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="330,781,525,808"/>
-<area shape="rect" id="node19" href="$classlanguage__perl.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,832,517,859"/>
-<area shape="rect" id="node20" href="$classlanguage__python.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="329,883,525,909"/>
-<area shape="rect" id="node21" href="$classlanguage__batch.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="333,933,522,960"/>
-<area shape="rect" id="node22" href="$classlanguage__powershell.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="356,985,499,1026"/>
+<area shape="rect" id="node13" href="$classlanguage__rust.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,512,517,539"/>
+<area shape="rect" id="node14" href="$classlanguage__swift.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="335,563,520,589"/>
+<area shape="rect" id="node15" href="$classlanguage__javascript.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="359,614,496,655"/>
+<area shape="rect" id="node16" href="$classlanguage__html.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="336,680,519,707"/>
+<area shape="rect" id="node17" href="$classlanguage__xml.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,731,517,757"/>
+<area shape="rect" id="node18" href="$classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c" title="Obtain the name of the language. " alt="" coords="360,781,495,808"/>
+<area shape="rect" id="node19" href="$classlanguage__fortran.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="330,832,525,859"/>
+<area shape="rect" id="node20" href="$classlanguage__perl.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="338,883,517,909"/>
+<area shape="rect" id="node21" href="$classlanguage__python.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="329,933,525,960"/>
+<area shape="rect" id="node22" href="$classlanguage__batch.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="333,984,522,1011"/>
+<area shape="rect" id="node23" href="$classlanguage__powershell.html#ad51e0ea19d75bb130630d3470972407b" title="Check if a file extension is a known extension for this programming language. " alt="" coords="356,1035,499,1077"/>
 </map>

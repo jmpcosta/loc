@@ -85,6 +85,8 @@ public:
 		/// @param [in] s - Statistics to add
 		void		add				( statistics & s );
 
+		/// @brief Define the default operator for the assignment operator
+		statistics &	operator=( const statistics & ) = default;
 
 private:
 		bool		i_available;		///< Are statistics available ?

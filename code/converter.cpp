@@ -63,7 +63,7 @@ void converter::lower( std::string & str )
  std::size_t i = 0;
 
  while( str[ i++ ] != '\0' )
-	    str[ i ] = tolower( (int) str[ i ] );
+	    str[ i ] = (unsigned char) tolower( (unsigned char) str[ i ] );
 
 }
 
@@ -73,7 +73,7 @@ void converter::lower( char * p_str )
  int i = 0;
 
  while( p_str[ i++ ] != '\0' )
-	    p_str[ i ] = tolower( (int) p_str[ i ] );
+	    p_str[ i ] = (unsigned char) tolower( (unsigned char) p_str[ i ] );
 
 }
 

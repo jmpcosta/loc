@@ -6,6 +6,7 @@
 <area shape="rect" id="node7" href="$classlanguage__go.html" title="Class responsible for implementing the GO language. " alt="" coords="319,208,414,235"/>
 <area shape="rect" id="node8" href="$classlanguage__java.html" title="Class responsible for implementing a Java language. " alt="" coords="314,259,419,285"/>
 <area shape="rect" id="node9" href="$classlanguage__php.html" title="Class responsible for implementing a PHP language. " alt="" coords="315,309,418,336"/>
-<area shape="rect" id="node10" href="$classlanguage__swift.html" title="Class responsible for implementing a C language. " alt="" coords="312,360,421,387"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="5,183,80,209"/>
+<area shape="rect" id="node10" href="$classlanguage__rust.html" title="Class responsible for implementing a Rust language. " alt="" coords="315,360,418,387"/>
+<area shape="rect" id="node11" href="$classlanguage__swift.html" title="Class responsible for implementing a C language. " alt="" coords="312,411,421,437"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="5,208,80,235"/>
 </map>

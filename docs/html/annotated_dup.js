@@ -31,6 +31,7 @@ var annotated_dup =
     [ "language_php", "classlanguage__php.html", "classlanguage__php" ],
     [ "language_powershell", "classlanguage__powershell.html", "classlanguage__powershell" ],
     [ "language_python", "classlanguage__python.html", "classlanguage__python" ],
+    [ "language_rust", "classlanguage__rust.html", "classlanguage__rust" ],
     [ "language_swift", "classlanguage__swift.html", "classlanguage__swift" ],
     [ "language_xml", "classlanguage__xml.html", "classlanguage__xml" ],
     [ "LanguageProvider", "class_language_provider.html", "class_language_provider" ],

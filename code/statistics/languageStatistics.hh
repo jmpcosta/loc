@@ -36,9 +36,12 @@ class languageStatistics
 {
 public:
 		/// @brief Class constructor
+		/// @param [in] lType - A language type
+		/// @param [in] s     - A language statistic instance
 						languageStatistics	( languageType lType, statistics & s ) : iStats( s ) { iType = lType; iNFiles = 1; }
 
 		/// @brief Class constructor
+		/// @param [in] ls - A language statistic instance
 						languageStatistics	( const languageStatistics & ls ) { iType = ls.iType; iNFiles = ls.iNFiles; iStats = ls.iStats; }
 
 		/// @brief Class destructor
@@ -61,7 +64,7 @@ public:
 
 		/// @brief Compare the language type, i.e. the language ID
 		/// @return True if language IDs are equal. False otherwise
-		bool	operator==( languageType key )													{ return (key == iType); }
+		bool					operator==( languageType key )									{ return (key == iType); }
 
 
 private:

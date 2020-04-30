@@ -8,6 +8,7 @@ var dir_445e2a0333bd65b617445abdcda3f95b =
     [ "language_go.hh", "language__go_8hh_source.html", null ],
     [ "language_java.hh", "language__java_8hh_source.html", null ],
     [ "language_php.hh", "language__php_8hh_source.html", null ],
+    [ "language_rust.hh", "language__rust_8hh_source.html", null ],
     [ "language_swift.hh", "language__swift_8hh_source.html", null ],
     [ "languages.hh", "family__c_2languages_8hh_source.html", null ]
 ];
