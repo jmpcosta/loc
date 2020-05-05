@@ -24,6 +24,7 @@ enum class languageType
 	CPP 		,
 	CSHARP		,
 	JAVA		,
+	OBJECTIVE_C ,
 	GO			,
 	PYTHON		,
 	PHP			,
@@ -42,8 +43,23 @@ enum class languageType
 	HTML		,
 	AWK			,
 	RUST		,
+	RUBY		,
 	FORTRAN		,
 	COBOL		,
+	LISP		,
+	SCHEME		,
+	LOGO		,
+	PROLOG		,
+	ALGOL		,
+	SIMULA		,
+	BETA		,
+	SMALLTALK	,
+	YAML		,
+	EIFFEL		,
+	PASCAL		,
+	ADA			,
+	IDL_OMG		,
+
 	MAX
 };
 

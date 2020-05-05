@@ -5,6 +5,7 @@ var classstatistics =
     [ "~statistics", "classstatistics.html#a149af26ee4d6aeea1ea2c102bf24844d", null ],
     [ "add", "classstatistics.html#a1d713e18eb431db14279a1df393d3ee2", null ],
     [ "addComment", "classstatistics.html#a9eabe5c7571ff03b0002ad57436d029b", null ],
+    [ "addComments", "classstatistics.html#a65cfa5e77c17f9bea9a391398e595fb8", null ],
     [ "addEmptyLine", "classstatistics.html#ae4203655eb90a652b1b1c6c123181c01", null ],
     [ "addLine", "classstatistics.html#ad759b7b7d50c537ede9843246fe4b991", null ],
     [ "addLoc", "classstatistics.html#af8ff123cf47ef11d892e47947d510fdd", null ],

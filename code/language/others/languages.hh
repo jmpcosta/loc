@@ -16,9 +16,12 @@
 //
 // *****************************************************************************************
 
-// Import all C family language headers
-//#include "language/others/language_fortran.hh"
+#include "language/others/language_fortran.hh"
+#include "language/others/language_forth.hh"
 #include "language/others/language_python.hh"
 #include "language/others/language_perl.hh"
+#include "language/others/language_yam.hh"
+#include "language/others/language_ruby.hh"
+#include "language/others/language_smalltalk.hh"
 
 #endif // LOC_OTHER_LANGUAGES_HH_

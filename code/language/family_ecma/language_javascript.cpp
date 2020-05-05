@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/family_ecma/language_javascript.hh"
 
@@ -32,7 +33,13 @@
 //
 // *****************************************************************************************
 
+// File extensions
 const char * LOC_LANGUAGE_JAVASCRIPT[] = { ".js", nullptr };
+
+// Comment tokens
+const char * LANGUAGE_JAVASCRIPT_TOKEN_SINGLE	= LOC_TOKEN_DOUBLE_SLASH;
+const char * LANGUAGE_JAVASCRIPT_TOKEN_START	= LOC_TOKEN_COMMENT_OPEN;
+const char * LANGUAGE_JAVASCRIPT_TOKEN_END		= LOC_TOKEN_COMMENT_CLOSE;
 
 // *****************************************************************************************
 //
@@ -49,6 +56,19 @@ language_javascript::language_javascript()
 
  lang = languageType::JAVASCRIPT;
  name = "JavaScript";
+
+ comment * p_cmt = new comment();
+
+ p_cmt->setStart( LANGUAGE_JAVASCRIPT_TOKEN_SINGLE );
+ comments.push_back( p_cmt );
+
+ p_cmt = new comment();
+ p_cmt->setStart( LANGUAGE_JAVASCRIPT_TOKEN_START	);
+ p_cmt->setEnd  ( LANGUAGE_JAVASCRIPT_TOKEN_END		);
+ p_cmt->setMultiline();
+
+ comments.push_back( p_cmt );
+
 }
 
 bool language_javascript::isExtension( const char * p_extension )

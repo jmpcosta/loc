@@ -1,4 +1,6 @@
 <map id="getParserType" name="getParserType">
 <area shape="rect" id="node2" href="$classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c" title="Obtain the name of the language. " alt="" coords="218,5,293,32"/>
-<area shape="rect" id="node3" href="$class_language_provider.html#a05d716b4c1d3863d38ef0366c77bb4e8" title="Obtain a language parser. " alt="" coords="160,56,351,83"/>
+<area shape="rect" id="node5" href="$class_language_provider.html#a05d716b4c1d3863d38ef0366c77bb4e8" title="Obtain a language parser. " alt="" coords="160,56,351,83"/>
+<area shape="rect" id="node3" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="399,5,497,32"/>
+<area shape="rect" id="node4" href="$classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="545,5,656,32"/>
 </map>

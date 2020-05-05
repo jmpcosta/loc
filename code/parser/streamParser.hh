@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <cstdint>
 
 // Import project headers
 #include "trace_macros.hh"
@@ -51,35 +52,34 @@ private:
 		/// @brief Calls a parser to process an open file
 		void 			specificParse	( void				);
 
-		/// @brief Check if the C-String contains information
-		/// @param [in] str - C-String to check for information
-		/// @param [in] len - Limit the search to a given length
+
+
+		/// @brief Check if the string contains information
+		/// @param [in] str - A string view
 		/// @return Success if information was found. False otherwise.
-		bool			hasInformation	( const char * str, std::size_t len 			);
+		bool			hasInfo			( const char * str, std::size_t length			);
 
 
-		/// @brief Search for information in a input line
-		/// @param [in] line  - String to search
-		/// @param [in] start - Index of the line where to search for information
-		void			search			( std::string & line, std::size_t start			);
+		/// @brief Search input for relevant information
+		/// @param [in] input - String to search
+		void			search			( std::string_view  input			);
 
 		/// @brief Search an input line for the end of language comment token
-		/// @param [in] line  - String to search
-		/// @param [in] start - Index of the line where to search for information
-		void			endComment		( std::string & line, std::size_t start			);
+		/// @param [in] input - String to search
+		void			endComment		( std::string_view  input			);
 
 		/// @brief Search an input line for any comment start token
-		/// @param [in] line  - String to search
-		/// @param [in] start - Index of the line where to search for information
-		void			beginComment	( std::string & line, std::size_t start			);
+		/// @param [in] input - String to search
+		void			beginComment	( std::string_view  input			);
 
 		/// @brief Process an input line for information
-		/// @param [in] line  - String to search
-		void			processLine		( std::string & line							);
+		/// @param [in] input - String to search
+		void			processLine		( std::string_view  line			);
 
 		// Variables
 		bool			codeAvailable;			///< Is Code available in line ?
 		bool			commentOpen;			///< Search for an end token ?
+		std::size_t		ncomments;				///< Number of comment lines
 
 		TRACE_CLASSNAME_DECLARATION
 

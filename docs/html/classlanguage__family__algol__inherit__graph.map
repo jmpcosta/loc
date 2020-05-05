@@ -1,0 +1,6 @@
+<map id="language_family_algol" name="language_family_algol">
+<area shape="rect" id="node3" href="$classlanguage__algol.html" title="Class responsible for implementing the Algol language. " alt="" coords="5,155,113,181"/>
+<area shape="rect" id="node4" href="$classlanguage__beta.html" title="Class responsible for implementing a C language. " alt="" coords="138,155,245,181"/>
+<area shape="rect" id="node5" href="$classlanguage__simula.html" title="Class responsible for implementing a Simula language. " alt="" coords="269,155,388,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="154,5,229,32"/>
+</map>

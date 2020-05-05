@@ -19,9 +19,11 @@
 // Include Standard headers
 #include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/family_c/language_c.hh"
 

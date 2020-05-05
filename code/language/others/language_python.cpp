@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/others/language_python.hh"
 
@@ -32,7 +33,12 @@
 //
 // *****************************************************************************************
 
+// Language File extensions
 const char * LOC_LANGUAGE_PYTHON[] = { ".py", nullptr };
+
+// Comment token
+const char * LANGUAGE_PYTHON_TOKEN_SINGLE	= LOC_TOKEN_COMMENT_HASH;
+
 
 // *****************************************************************************************
 //
@@ -51,7 +57,7 @@ language_python::language_python()
  name = "Python";
 
  comment * p_cmt = new comment();
- p_cmt->setStart( "#" );
+ p_cmt->setStart( LANGUAGE_PYTHON_TOKEN_SINGLE );
  comments.push_back( p_cmt );
 }
 

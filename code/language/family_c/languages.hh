@@ -16,15 +16,16 @@
 //
 // *****************************************************************************************
 
-// Import all C family language headers
+// Import all family language headers
 #include "language/family_c/language_c.hh"
 #include "language/family_c/language_cpp.hh"
 #include "language/family_c/language_java.hh"
 #include "language/family_c/language_csharp.hh"
 #include "language/family_c/language_awk.hh"
 #include "language/family_c/language_php.hh"
-#include "language/family_c/language_swift.hh"
 #include "language/family_c/language_go.hh"
 #include "language/family_c/language_rust.hh"
+#include "language/family_c/language_objective_c.hh"
+#include "language/family_c/language_swift.hh"
 
 #endif // LOC_FAMILY_C_LANGUAGES_HH_

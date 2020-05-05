@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Bourne language
+// Purpose:	Define the DOS Batch language
 //
 // *****************************************************************************************
 
@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/windows/language_batch.hh"
 
@@ -31,7 +32,11 @@
 //
 // *****************************************************************************************
 
+// File name extensions
 const char * LOC_LANGUAGE_BATCH[] = { ".bat", ".cmd", nullptr	};
+
+// Comment token
+constexpr const char * LANGUAGE_BATCH_TOKEN_SINGLE	= "rem";
 
 
 // *****************************************************************************************
@@ -51,7 +56,7 @@ language_batch::language_batch()
  name = "Batch";
 
  comment * p_cmt = new comment();
- p_cmt->setStart( "rem" );
+ p_cmt->setStart( LANGUAGE_BATCH_TOKEN_SINGLE );
  p_cmt->setMultipleCase();
  comments.push_back( p_cmt );
 

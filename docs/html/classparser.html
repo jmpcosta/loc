@@ -63,6 +63,7 @@ $(document).ready(function(){initNavTree('classparser.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">parser Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -115,9 +116,12 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a066177b0209d9dda8731e332f4093f9f">specificParse</a> (void)=0</td></tr>
 <tr class="memdesc:a066177b0209d9dda8731e332f4093f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls a parser to process an open file. <br /></td></tr>
 <tr class="separator:a066177b0209d9dda8731e332f4093f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c99766f48181a9b2c5895bfd1981e2d"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a3c99766f48181a9b2c5895bfd1981e2d">findToken</a> (const std::string &amp;what, const std::string &amp;where, std::size_t start)</td></tr>
-<tr class="memdesc:a3c99766f48181a9b2c5895bfd1981e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a comment token in string.  <a href="#a3c99766f48181a9b2c5895bfd1981e2d">More...</a><br /></td></tr>
-<tr class="separator:a3c99766f48181a9b2c5895bfd1981e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4749e764846f2dd4a455c943845ed234"><td class="memItemLeft" align="right" valign="top">static std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparser.html#a4749e764846f2dd4a455c943845ed234">findToken</a> (std::string_view token, std::string_view where, bool sensitive)</td></tr>
+<tr class="memdesc:a4749e764846f2dd4a455c943845ed234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a comment token in string.  <a href="#a4749e764846f2dd4a455c943845ed234">More...</a><br /></td></tr>
+<tr class="separator:a4749e764846f2dd4a455c943845ed234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -141,8 +145,8 @@ std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for parsing a file language code. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3c99766f48181a9b2c5895bfd1981e2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c99766f48181a9b2c5895bfd1981e2d">&#9670;&nbsp;</a></span>findToken()</h2>
+<a id="a4749e764846f2dd4a455c943845ed234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4749e764846f2dd4a455c943845ed234">&#9670;&nbsp;</a></span>findToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,20 +157,20 @@ std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">std::size_t findToken </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>what</em>, </td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>where</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>start</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sensitive</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -176,7 +180,7 @@ std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -184,18 +188,19 @@ std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Search a comment token in string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">what</td><td>- What to search (token) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">token</td><td>- What to search </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">where</td><td>- String where to search </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- Start position in string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sensitive</td><td>- Sensitive case search ? </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph.png" border="0" usemap="#classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph" alt=""/></div>
-<map name="classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph" id="classparser_a3c99766f48181a9b2c5895bfd1981e2d_icgraph">
-<area shape="rect" id="node2" href="classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="132,5,199,32"/>
+<div class="center"><img src="classparser_a4749e764846f2dd4a455c943845ed234_icgraph.png" border="0" usemap="#classparser_a4749e764846f2dd4a455c943845ed234_icgraph" alt=""/></div>
+<map name="classparser_a4749e764846f2dd4a455c943845ed234_icgraph" id="classparser_a4749e764846f2dd4a455c943845ed234_icgraph">
+<area shape="rect" id="node2" href="classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="192,5,259,32"/>
+<area shape="rect" id="node3" href="classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="132,56,319,83"/>
 </map>
 </div>
 
@@ -278,10 +283,11 @@ Here is the call graph for this function:</div>
 <map name="classparser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph" id="classparser_ace0c8293ed0943bdbd4200f0c9201d02_cgraph">
 <area shape="rect" id="node2" href="class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="116,5,308,47"/>
 <area shape="rect" id="node3" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="108,71,316,98"/>
-<area shape="rect" id="node5" href="classfile.html#a0acc9f0424dd3f9ac4080b7ad7ca8297" title="Obtain the language identifier for the file. " alt="" coords="137,122,287,149"/>
-<area shape="rect" id="node7" href="classfile.html#a6b465994f8ae60c0c1a097b2a5aa2700" title="Obtain the file name. " alt="" coords="162,173,262,199"/>
-<area shape="rect" id="node4" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="364,71,520,98"/>
-<area shape="rect" id="node6" href="classfile.html#a23d63244808172d5d64653b1a3059765" title="Factory method to create file objects. " alt="" coords="399,122,485,149"/>
+<area shape="rect" id="node5" href="classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c" title="Obtain the name of the language. " alt="" coords="145,122,279,149"/>
+<area shape="rect" id="node4" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="373,71,529,98"/>
+<area shape="rect" id="node6" href="classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="368,122,535,149"/>
+<area shape="rect" id="node7" href="classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="364,173,539,199"/>
+<area shape="rect" id="node8" href="classconverter.html#a72dbb82162340105ee1ece149929b676" title="Convert a string to lower case. " alt="" coords="587,173,701,199"/>
 </map>
 </div>
 <div class="dynheader">

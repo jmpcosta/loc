@@ -59,7 +59,7 @@ void textReport::writeHeader( void )
  std::cout << std::left << std::endl;
 
  std::cout.fill(' ');
- std::cout << std::setw(40) << "File name";
+ std::cout << std::setw(40) << "File";
 
  std::cout.fill(' ');
  std::cout << std::setw(20) << "Language";
@@ -96,6 +96,7 @@ void textReport::writeSummary( void )
  if( details ) writeSeparator();
 
  writeLangStats();
+ writeSeparator();
  writeItem( msg.c_str(), LOC_EMPTY_STRING, prov.getGlobal() );
 
  std::cout << std::endl;

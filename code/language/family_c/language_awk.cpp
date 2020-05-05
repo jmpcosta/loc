@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/family_c/language_awk.hh"
 
@@ -32,7 +33,13 @@
 //
 // *****************************************************************************************
 
+// Language file extensions
 const char * LOC_LANGUAGE_AWK[] = { ".awk", nullptr };
+
+
+// Comment tokens
+const char * LANGUAGE_AWK_TOKEN_SINGLE = LOC_TOKEN_COMMENT_HASH;
+
 
 // *****************************************************************************************
 //
@@ -54,7 +61,7 @@ language_awk::language_awk()
 
  comment * p_cmt = new comment();
 
- p_cmt->setStart( "#" );
+ p_cmt->setStart( LANGUAGE_AWK_TOKEN_SINGLE );
  comments.push_back( p_cmt );
 }
 

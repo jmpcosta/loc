@@ -41,17 +41,8 @@ TRACE_CLASSNAME( file )
 
 file::file( const std::string & filename, languageType lType )
 {
- TRACE_ENTER
-
  iName 		= filename;
  iLang		= lType;
-
- TRACE_EXIT
-}
-
-file::~file()
-{
- TRACE_POINT
 }
 
 

@@ -37,7 +37,7 @@ class file
 {
 public:
 		/// @brief Class destructor
-								~file			( void );
+								~file			( void ) {}
 
 		/// @brief Obtain the file name
 		/// @return Name of this file

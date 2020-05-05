@@ -72,7 +72,7 @@ bool language::checkExtension( const char * p_extension, const char ** p_extensi
 	 TRACE( "Searching extension:", p_ext )
 
 	 while( p_extensionList[ i ] != nullptr )
-      	  {
+      	  {			// TODO: Case insensitive file extension match
 		 	if( strcmp( p_extensionList[ i ], p_ext ) == 0 )	// Strings match
 		 	  {
 		 		TRACE( "Exiting with language extension:", p_ext )

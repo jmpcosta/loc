@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/windows/language_powershell.hh"
 
@@ -32,8 +33,13 @@
 //
 // *****************************************************************************************
 
+// Language file extensions
 const char * LOC_LANGUAGE_PSHELL[] = { ".ps1", "psm1", ".ps2", ".msh2", nullptr	};
 
+// Comment tokens
+constexpr const char * LANGUAGE_POWERSHELL_TOKEN_SINGLE	= "#";
+constexpr const char * LANGUAGE_POWERSHELL_TOKEN_START	= "<#";
+constexpr const char * LANGUAGE_POWERSHELL_TOKEN_END	= "#>";
 
 // *****************************************************************************************
 //
@@ -54,12 +60,12 @@ language_powershell::language_powershell()
  name = "Powershell";
 
  p_cmt = new comment();
- p_cmt->setStart( "#" );
+ p_cmt->setStart( LANGUAGE_POWERSHELL_TOKEN_SINGLE );
  comments.push_back( p_cmt );
 
  p_cmt = new comment();
- p_cmt->setStart( "<#" );
- p_cmt->setEnd  ( "#>" );
+ p_cmt->setStart( LANGUAGE_POWERSHELL_TOKEN_START	);
+ p_cmt->setEnd  ( LANGUAGE_POWERSHELL_TOKEN_END		);
  p_cmt->setMultiline();
  comments.push_back( p_cmt );
 

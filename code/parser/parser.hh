@@ -56,10 +56,10 @@ protected:
 		virtual void 			specificParse	( void				) = 0;
 
 		/// @brief Search a comment token in string
-		/// @param [in] what  - What to search (token)
-		/// @param [in] where - String where to search
-		/// @param [in] start - Start position in string
-		virtual std::size_t		findToken		( const std::string & what, const std::string & where, std::size_t start );
+		/// @param [in] token     - What to search
+		/// @param [in] where     - String where to search
+		/// @param [in] sensitive - Sensitive case search ?
+		static std::size_t		findToken		( std::string_view token, std::string_view where, bool sensitive );
 
 		// Variables
 		language *		p_lang;					///< Pointer to a language object
@@ -67,6 +67,7 @@ protected:
 		std::ifstream	iSourceFile;			///< Stream to read file
 		statistics		iStats;					///< Internal statistics for the current parsed file
 
+		TRACE_CLASSNAME_DECLARATION
 };
 
 

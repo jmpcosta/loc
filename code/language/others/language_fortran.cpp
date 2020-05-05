@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/others/language_fortran.hh"
 
@@ -32,7 +33,11 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_FORTRAN[] = { ".c", ".h", ".hhh", nullptr };
+// Language file extensions
+const char * LOC_LANGUAGE_FORTRAN[] = { ".f90", ".f77", nullptr };
+
+// Comment tokens
+constexpr const char * LANGUAGE_FORTRAN_TOKEN_SINGLE	= "!";
 
 // *****************************************************************************************
 //
@@ -51,7 +56,7 @@ language_fortran::language_fortran()
  name = "Fortran";
 
  comment * p_cmt = new comment();
- p_cmt->setStart( "!" );
+ p_cmt->setStart( LANGUAGE_FORTRAN_TOKEN_SINGLE );
  p_cmt->setMultipleCase();
  comments.push_back( p_cmt );
 }

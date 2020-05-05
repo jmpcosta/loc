@@ -62,7 +62,7 @@ inline void code::processFiles( fileSet * p_files )
 
  LanguageProvider & prov	= LanguageProvider::getInstance();
 
- // Get insight for the set of file
+ // Get insight for the set of files
  for( auto it : *p_files )
     {
 	  TRACE( "Processing file:", it->getName() )

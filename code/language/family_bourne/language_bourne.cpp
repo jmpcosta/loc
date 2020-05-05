@@ -18,9 +18,11 @@
 
 // Include Standard headers
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/family_bourne/language_bourne.hh"
 

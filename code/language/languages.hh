@@ -20,8 +20,14 @@
 #include "language/family_c/languages.hh"
 #include "language/family_bourne/languages.hh"
 #include "language/windows/languages.hh"
-#include "language/family_sgml/languages.hh"
 #include "language/family_ecma/languages.hh"
+#include "language/family_pascal/languages.hh"
+#include "language/family_sgml/languages.hh"
+#include "language/family_basic/languages.hh"
+#include "language/family_prolog/languages.hh"
+#include "language/family_lisp/languages.hh"
+#include "language/family_algol/languages.hh"
+#include "language/family_idl/languages.hh"
 #include "language/others/languages.hh"
 
 

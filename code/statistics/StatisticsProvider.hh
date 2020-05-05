@@ -110,7 +110,6 @@ template <typename F> void StatisticsProvider::walk( F func )
 	 std::string str = LOC_EMPTY_STRING;
 
 	 str += std::to_string( i.getNumberLanguages() );
-	 str += " file(s) in";
 
 	  func( str.c_str(), prov.getLanguage( i.getType() )->getName(), i.getStatistics() );
     }

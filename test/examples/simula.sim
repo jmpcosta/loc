@@ -1,0 +1,13 @@
+! ***************************************************************************************** ;
+!																							;
+! File description:																			;
+!																							;
+! Author:	Joao Costa																		;
+! Purpose:	Simula programming language example												;
+!																							;
+! ***************************************************************************************** ;
+
+Begin
+   OutText ("Hello World");
+   Outimage;
+End;

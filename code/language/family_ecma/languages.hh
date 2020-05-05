@@ -18,6 +18,6 @@
 
 // Import all ECMAScript family language headers
 #include "language/family_ecma/language_javascript.hh"
-
+#include "language/family_ecma/language_eiffel.hh"
 
 #endif // LOC_FAMILY_ECMA_LANGUAGES_HH_

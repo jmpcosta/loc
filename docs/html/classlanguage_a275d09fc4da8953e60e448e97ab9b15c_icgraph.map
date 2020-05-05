@@ -1,6 +1,4 @@
 <map id="getName" name="getName">
-<area shape="rect" id="node2" href="$classreport.html#a1a892bdcd9efcf7d6b7cac50cc2136ca" title="Write summary statistics for the given language. " alt="" coords="128,31,279,57"/>
-<area shape="rect" id="node3" href="$classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="351,5,455,32"/>
-<area shape="rect" id="node4" href="$classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="327,56,479,83"/>
-<area shape="rect" id="node5" href="$classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="527,56,687,83"/>
+<area shape="rect" id="node2" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="128,5,227,32"/>
+<area shape="rect" id="node3" href="$classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="275,5,385,32"/>
 </map>

@@ -14,9 +14,15 @@ RM := rm -rf
 -include code/language/windows/subdir.mk
 -include code/language/others/subdir.mk
 -include code/language/family_sgml/subdir.mk
+-include code/language/family_prolog/subdir.mk
+-include code/language/family_pascal/subdir.mk
+-include code/language/family_lisp/subdir.mk
+-include code/language/family_idl/subdir.mk
 -include code/language/family_ecma/subdir.mk
 -include code/language/family_c/subdir.mk
 -include code/language/family_bourne/subdir.mk
+-include code/language/family_basic/subdir.mk
+-include code/language/family_algol/subdir.mk
 -include code/language/subdir.mk
 -include code/files/subdir.mk
 -include code/subdir.mk

@@ -14,18 +14,24 @@
 //
 // *****************************************************************************************
 
-// Include OSAPI C++ headers
-
-// Include Standard headers
-
-// Import module declarations
-
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
 #include "language/comment.hh"
 #include "language/languageType.hh"
 
+// Import module declarations
 #include "language/family_bourne/language_family_bourne.hh"
+
+
+
+// *****************************************************************************************
+//
+// Section: Constants
+//
+// *****************************************************************************************
+
+const char * LANGUAGE_FAMILY_BOURNE_TOKEN_SINGLE = LOC_TOKEN_COMMENT_HASH;
 
 
 // *****************************************************************************************
@@ -45,7 +51,7 @@ language_family_bourne::language_family_bourne( void )
  lang = languageType::BOURNE;
 
  p_cmt = new comment();
- p_cmt->setStart( "#" );
+ p_cmt->setStart( LANGUAGE_FAMILY_BOURNE_TOKEN_SINGLE );
  comments.push_back( p_cmt );
 }
 

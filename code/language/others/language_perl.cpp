@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Define the Python language
+// Purpose:	Define the Perl language
 //
 // *****************************************************************************************
 
@@ -17,11 +17,12 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/languageType.hh"
 #include "language/others/language_perl.hh"
 
@@ -32,7 +33,11 @@
 //
 // *****************************************************************************************
 
+// Language File extensions
 const char * LOC_LANGUAGE_PERL[] = { ".pl", nullptr };
+
+// Comment token
+const char * LANGUAGE_PERL_TOKEN_SINGLE	= LOC_TOKEN_COMMENT_HASH;
 
 // *****************************************************************************************
 //
@@ -51,7 +56,7 @@ language_perl::language_perl()
  name = "Perl";
 
  comment * p_cmt = new comment();
- p_cmt->setStart( "#" );
+ p_cmt->setStart( LANGUAGE_PERL_TOKEN_SINGLE );
  comments.push_back( p_cmt );
 }
 

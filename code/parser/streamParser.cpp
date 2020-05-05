@@ -21,16 +21,28 @@
 #include <fstream>
 #include <filesystem>
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
+#include "loc_defs.hh"
 #include "files/fileSet.hh"
 #include "converter.hh"
 #include "language/LanguageProvider.hh"
 #include "statistics/StatisticsProvider.hh"
+
+// Import module declarations
 #include "parser/streamParser.hh"
 
-
 using namespace std;
+
+
+
+// *****************************************************************************************
+//
+// Section: Constants and internal variables
+//
+// *****************************************************************************************
+
+TRACE_CLASSNAME( streamParser )
 
 
 // *****************************************************************************************
@@ -39,7 +51,6 @@ using namespace std;
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( streamParser )
 
 
 streamParser::streamParser()
@@ -50,19 +61,22 @@ streamParser::streamParser()
  codeAvailable	= false;
  commentOpen	= false;
  p_iFile		= nullptr;
+ ncomments		= 0;
 
  TRACE_EXIT
 }
 
 
+
 void streamParser::specificParse( void )
 {
- std::string line;
+ std::string		input;
+ std::string_view	line;
 
  TRACE_ENTER
 
  // Reserve capacity on the string to avoid reallocs
- line.reserve( LOC_FILE_READ_BUFFER_SIZE );
+ // input.reserve( LOC_FILE_READ_BUFFER_SIZE );
 
  // Reset own variables
  commentOpen   = false;
@@ -70,10 +84,18 @@ void streamParser::specificParse( void )
 
  iStats.setAvailable( true );
 
- while( ! std::getline( iSourceFile, line ).eof() )
+ while( std::getline( iSourceFile, input ) )
       {
-	 	iStats.addLine();
-	 	processLine( line );
+	    iStats.addLine();
+	    if( input.size() == 0 )
+	    	iStats.addEmptyLine();
+	    else
+	      {
+	    	line = input;
+	    	processLine( line );
+	      }
+
+	    if( iSourceFile.eof() ) break;
       }
 
  // Copy statistics to provider
@@ -93,15 +115,15 @@ void streamParser::specificParse( void )
 
 
 // Check if there are relevant characters in the string up to a given search length
-bool streamParser::hasInformation( const char * str, std::size_t len )
+bool streamParser::hasInfo( const char * str, std::size_t length )
 {
- std::size_t	i, j, ignore;
+ uint16_t	i, j, ignore;
 
  TRACE_ENTER
 
- TRACE( "Receiving string (", str, ") with size: ", len )
+ TRACE( "Receiving string with size: ", length )
 
- for( i = 0; i < len; i++ )
+ for( i = 0; i < length; i++ )
     {
 	  // Compare each character of the C-string with the list of ignore character list
 	  j = 0; ignore = 0;
@@ -127,31 +149,26 @@ bool streamParser::hasInformation( const char * str, std::size_t len )
 
 
 
-inline void streamParser::endComment( std::string & line, std::size_t start )
+
+
+inline void streamParser::endComment( std::string_view input )
 {
- std::size_t				len 		= 0;
  std::size_t				token_pos	= std::string::npos;
+ std::size_t				token_size	= 0;
+ std::string_view			rest;
  language::iterator			it;
 
- TRACE_IF( const char 	*			ptr			= &(line.c_str()[ start ]); )
-
- TRACE_ENTER
-
- TRACE( "Searching for end comment token in string |", ptr, "|" )
+ TRACE( "Entering with size:", input.size() )
 
  for( it = p_lang->begin() ; it != p_lang->end(); it++ )
     {
-	  if( ! (*it)->hasEnd() )
-		  continue;
+	  token_size = (*it)->getEnd().size();
 
-	  len		= (*it)->getEnd().length();
+	  if( ! (*it)->hasEnd() )	continue;
 
-	  if( (*it)->isSingleCase())
-		  token_pos = line.find( (*it)->getEnd(), start );				// Use fast version
-	  else
-		  token_pos = findToken( (*it)->getEnd(), line, start );		// Slower version
+	  token_pos = parser::findToken( (*it)->getEnd(), input, (*it)->isSingleCase() );
 
-	  TRACE( "End token (", len, "): |", (*it)->getEnd(), "|" );
+	  TRACE( "End token (", token_size, "): |", (*it)->getEnd(), "|" );
 
       if( token_pos != std::string::npos )
     	{
@@ -160,113 +177,103 @@ inline void streamParser::endComment( std::string & line, std::size_t start )
     	}
     }
 
- // End comment found, check for code on the remaining of the line
  if( token_pos != std::string::npos )
    {
-	 commentOpen = false;
-	 iStats.addComment();
+	 TRACE( "End comment found, check for code on the remaining of the line: ", token_pos + token_size )
 
-	 TRACE( "Search for remaining of the line starting at position: ", token_pos + len )
-	 search( line, token_pos + len );
+	 commentOpen = false;
+	 iStats.addComments( ncomments );
+
+	 input.remove_prefix( token_pos + token_size );
+	 TRACE( "After erasure:", input )
+	 search( input );
    }
 
 TRACE_EXIT
 }
 
 
-// Process begin comment
-inline void streamParser::beginComment( std::string & line, std::size_t start )
+
+
+inline void streamParser::beginComment( std::string_view input )
 {
- std::size_t				len			= 0;
  std::size_t				token_pos	= std::string::npos;
- const char 	*			ptr			= &(line.c_str()[ start ]);
+ std::size_t				token_size	= 0;
  language::iterator			it;
 
  TRACE_ENTER
 
  TRACE( "Searching for start comment token" )
 
+ ncomments = 0;
+
  for( it = p_lang->begin(); it != p_lang->end(); it++ )
     {
-	  TRACE( "Start token:", (*it)->getStart() );
+	  token_size = (*it)->getStart().size();
 
-	  len = (*it)->getStart().length();
+	  TRACE( token_size, " - Token (", (*it)->getStart(), ")" );
+	  TRACE( "Token is single case:",  (*it)->isSingleCase() );
 
-	  TRACE( "Token length:", len );
-	  TRACE( "Token is case sensitive:", (*it)->isSingleCase() ? "true": "false" );
-
-	  if( (*it)->isSingleCase() )
-		  token_pos = line.find( (*it)->getStart(), start );			// Use fast version
-	  else
-		  token_pos = findToken( (*it)->getStart(), line, start );		// Slower version
+	  token_pos = parser::findToken( (*it)->getStart(), input, (*it)->isSingleCase() );
 
       if( token_pos != std::string::npos )
         {
-    	  TRACE( "Found comment start token")
+    	  TRACE( "Found comment start token at location:", token_pos )
     	  break;
         }
     }
 
- // No start of a comment found, check for code on the remaining of the line
  if( token_pos == std::string::npos )
    {
-	 len = line.size() - start;
+	 TRACE( "No begin comment found, check for code availability", input.size() );
 
-	 TRACE( "Line length:", line.size() );
-	 TRACE( "subline length:", ptr );
-
-	 if( hasInformation( ptr, len ) )
-		 codeAvailable = true;
+	 ncomments = 0;
+	 if( hasInfo( input.data(), input.size() ) )		 codeAvailable = true;
+	 else												 iStats.addEmptyLine();
    }
  else	// Comment found, check type
    {
-	 // If the comment is a single token, ignore the rest of the line
+	 if( token_pos > 0 )
+	   {
+		 TRACE( "Check if there is code before begin comment token" )
+
+		 if( hasInfo( input.data(), token_pos ) )			// Check the first part of the line
+			 codeAvailable = true;
+	   }
+
 	 if( ! (*it)->hasEnd() )
 	   {
-		 TRACE( "Comment has no end token.")
+		 TRACE( "Single comment Token. Ignoring the rest of the line." )
 
-		 commentOpen = false;
+		 commentOpen	= false;
+		 ncomments		= 0;
 		 iStats.addComment();
-
-		 len = token_pos - start;
-
-		 TRACE( "Search length:", len )
-
-		 if( token_pos > 0 && hasInformation( ptr, len ) )
-			 codeAvailable = true;
-
-		 TRACE_EXIT
-		 return;
 	   }
 	 else
 	   {
-		 // Check if there is code before begin comment token
-		 if( token_pos > 0 && hasInformation( ptr, token_pos - 1 ) )
-			 codeAvailable = true;
+		 TRACE( "Multi comment Token. Search for comment end." )
 
-	     commentOpen = true;
-	     search( line, token_pos + len );	// Check for the end
+	     commentOpen = true; ncomments++;
+		 input.remove_prefix( token_pos + token_size );
+		 TRACE( "After erasure:", input )
+	     search( input );
 	   }
    }
 
-
  TRACE_EXIT
 }
 
 
 
-
-void streamParser::search( std::string & line, std::size_t start )
+void streamParser::search( std::string_view input )
 {
- TRACE( "Entering with start position:", start );
+ TRACE( "Entering with input size:", input.size() )
 
  // Recursion Stop condition
- if( start < line.size() && ! codeAvailable )
+ if( input.size() > 0 && ! codeAvailable )
    {
-	 if( commentOpen )
-		 endComment		( line, start );	// Looking for end comment token
-	 else
-		 beginComment	( line, start );	// Look for start comment token
+	 if( commentOpen )		 endComment		( input );	// Looking for end comment token
+	 else					 beginComment	( input );	// Look for start comment token
    }
 
  TRACE_EXIT
@@ -274,27 +281,18 @@ void streamParser::search( std::string & line, std::size_t start )
 
 
 
-void streamParser::processLine( std::string & line )
+void streamParser::processLine( std::string_view line )
 {
- TRACE( "------------------------------------------------------------" )
- TRACE( "Entering with commentOpen:", commentOpen ? "true": "false" )
+ TRACE( "Entering ------------------------------------------------" )
+ TRACE( "Processing line (", iStats.getLines(), ") with commentOpen:", commentOpen ? "true": "false" )
 
- // Check for empty lines
- if( ! commentOpen && ( line.size() == 0 || ! hasInformation( line.c_str(), line.size() ) ) )
-   {
-	 iStats.addEmptyLine();
-	 return;
-   }
+ codeAvailable	= false;
 
- codeAvailable = false;
-
- search( line, 0 );
+ search( line );
 
  if( codeAvailable ) iStats.addLoc();
 
  TRACE_EXIT
 }
-
-
 
 

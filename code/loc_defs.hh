@@ -49,13 +49,11 @@
 
 
 // *****************************************************************************************
-// OS INdependent
+// OS Independent
 // *****************************************************************************************
 
-#define		LOC_FILE_READ_BUFFER_SIZE	1024
-#define		LOC_LANGUAGE_DEFAULT_SIZE	10		// Initial reserve capacity for languages
-
-const char	LOC_LINE_IGNORE_CHARS[]		= { ' ', '\t', '\0' };
+#define		LOC_FILE_READ_BUFFER_SIZE	1000000
+#define		LOC_LANGUAGE_DEFAULT_SIZE	100		// Initial reserve capacity for languages
 
 #define		LOC_SWITCH_DETAILS		"-d"
 #define		LOC_SWITCH_OUTPUT_FILE	"-o"
@@ -66,5 +64,18 @@ const char	LOC_LINE_IGNORE_CHARS[]		= { ' ', '\t', '\0' };
 #define		LOC_OUTPUT_TYPE_XML		"xml"
 
 #define		LOC_EMPTY_STRING		""
+
+
+// Most used expressions defined at the project level
+constexpr const char	LOC_LINE_IGNORE_CHARS[]			= { ' ', '\t', '\0' };
+constexpr const char *	LOC_TOKEN_DOUBLE_SLASH			= "//";
+constexpr const char *	LOC_TOKEN_COMMENT_OPEN			= "/*";
+constexpr const char *	LOC_TOKEN_COMMENT_CLOSE			= "*/";
+constexpr const char *	LOC_TOKEN_COMMENT_HASH			= "#";
+constexpr const char *	LOC_TOKEN_COMMENT_SEMICOLON		= ";";
+constexpr const char *	LOC_TOKEN_COMMENT_DQUOTE		= "\"";
+constexpr const char *	LOC_TOKEN_COMMENT_DHYFEN		= "--";
+constexpr const char *	LOC_TOKEN_COMMENT_REM			= "rem";
+constexpr const char *	LOC_TOKEN_COMENT_DBSLASH		= "\\";
 
 #endif // LOC_DEFS_HH_

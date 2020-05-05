@@ -17,7 +17,6 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <algorithm>
@@ -29,6 +28,17 @@
 #include "parser/parser.hh"
 
 using namespace std;
+
+
+
+// *****************************************************************************************
+//
+// Section: Constants and internal variables
+//
+// *****************************************************************************************
+
+
+TRACE_CLASSNAME( parser )
 
 
 // *****************************************************************************************
@@ -63,16 +73,27 @@ void parser::parse( file * p_file )
 
 }
 
-// Insensitive Case search
-std::size_t parser::findToken( const std::string & what, const std::string & where, std::size_t start )
+
+// Each comment token must be set in the language to lower case, this avoids an extra std::transform
+std::size_t parser::findToken( std::string_view token, std::string_view data, bool sensitive )
 {
- // Not very efficient..
- std::string what_cpy	= what;
- std::string where_cpy	= where ;
+ std::size_t		pos = std::string::npos;
 
- std::transform( what_cpy.begin(),  what_cpy.end(),  what_cpy.begin(),  ::tolower );
- std::transform( where_cpy.begin(), where_cpy.end(), where_cpy.begin(), ::tolower );
+ TRACE( "Entering with (", token, "), (", data, "):", sensitive )
 
- return where_cpy.find( what_cpy, start );
+ if( sensitive )
+	 pos = data.find( token.data(), 0, token.size() );
+ else
+   {
+	 // Not very efficient.. but not performance relevant
+	 std::string where { data };
+
+	 std::transform( where.begin(), where.end(), where.begin(), ::tolower );
+
+	 pos = where.find( token );
+   }
+
+ TRACE( "Exiting with token location:", pos )
+
+ return pos;
 }
-

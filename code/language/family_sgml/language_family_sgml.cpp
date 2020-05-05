@@ -18,14 +18,24 @@
 
 // Include Standard headers
 
-// Import module declarations
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import module declarations
 #include "language/comment.hh"
 #include "language/languageType.hh"
 #include "language/family_sgml/language_family_sgml.hh"
 
 
+// *****************************************************************************************
+//
+// Section: Constants
+//
+// *****************************************************************************************
+
+constexpr const char * LANGUAGE_FAMILY_SGML_TOKEN_START	= "<!--";
+constexpr const char * LANGUAGE_FAMILY_SGML_TOKEN_END	= "-->";
 
 // *****************************************************************************************
 //
@@ -42,8 +52,8 @@ language_family_sgml::language_family_sgml( void )
 
  comment * p_cmt = new comment();
 
- p_cmt->setStart( "<!--" );
- p_cmt->setEnd  ( "-->"  );
+ p_cmt->setStart( LANGUAGE_FAMILY_SGML_TOKEN_START	);
+ p_cmt->setEnd  ( LANGUAGE_FAMILY_SGML_TOKEN_END  	);
  p_cmt->setMultiline();
 
  comments.push_back( p_cmt );

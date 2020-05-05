@@ -22,6 +22,8 @@
 // Import application headers
 #include "loc_defs.hh"
 #include "trace_macros.hh"
+
+// Import module headers
 #include "language/language.hh"
 
 
@@ -32,7 +34,7 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing a C language
+/// @brief Class responsible for implementing a Fortran language
 class language_fortran : public language
 {
 public:

@@ -1,0 +1,17 @@
+// *****************************************************************************************
+/*
+   File description:
+ 
+   Author:	Joao Costa
+   Purpose:	YAM language example
+*/
+// *****************************************************************************************
+
+module HelloApp
+{
+  interface Hello
+  {
+  string sayHello();
+  oneway void shutdown();
+  };
+};

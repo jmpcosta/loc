@@ -1,0 +1,15 @@
+# *****************************************************************************************
+#
+# File description:
+#
+# Author:	Joao Costa
+# Purpose:	Algol programming language example
+#
+# *****************************************************************************************
+
+comment	The typical Hello World in Algol; comment 
+       
+program HiFolks;
+ begin
+    print 'Hello world';
+ end;

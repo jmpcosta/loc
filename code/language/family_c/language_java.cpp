@@ -18,9 +18,11 @@
 
 // Include Standard headers
 
-// Import project headers
+// Import project declarations
 #include "trace.hh"
 #include "loc_defs.hh"
+
+// Import project headers
 #include "language/comment.hh"
 #include "language/languageType.hh"
 #include "language/family_c/language_java.hh"

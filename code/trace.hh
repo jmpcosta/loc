@@ -20,6 +20,7 @@
 #include <iostream>
 
 
+
 // *****************************************************************************************
 //
 // Section: Trace API declaration/definition
@@ -30,12 +31,22 @@
 #ifdef LOC_TRACING
 
 // Trace template composed of the next two entries
+template <std::string_view>
+void trace( std::string_view value )
+{
+ for( const auto & i: value )
+	  std::cerr << i;
+
+ std::cerr << std::endl;
+}
+
 template <typename V>
 void trace( const V & value  )
 {
  std::cerr << value;
  std::cerr << std::endl;
 }
+
 
 template <typename V, typename... R>
 void trace( const V & value, const R & ... rest  )
