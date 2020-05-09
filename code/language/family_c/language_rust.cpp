@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_RUST[] = { ".rs", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -53,10 +51,6 @@ language_rust::language_rust()
  name = "Rust";
 }
 
-bool language_rust::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_RUST );
-}
 
 
 

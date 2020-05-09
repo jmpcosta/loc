@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// File extensions
-const char * LOC_LANGUAGE_EIFFEL[] = { ".e", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_EIFFEL_TOKEN_SINGLE = LOC_TOKEN_DOUBLE_SLASH;
 
@@ -62,10 +59,6 @@ language_eiffel::language_eiffel()
  comments.push_back( p_cmt );
 }
 
-bool language_eiffel::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_EIFFEL );
-}
 
 
 

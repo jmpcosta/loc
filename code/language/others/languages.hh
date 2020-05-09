@@ -23,5 +23,7 @@
 #include "language/others/language_yam.hh"
 #include "language/others/language_ruby.hh"
 #include "language/others/language_smalltalk.hh"
+#include "language/others/language_scala.hh"
+#include "language/others/language_kotlin.hh"
 
 #endif // LOC_OTHER_LANGUAGES_HH_

@@ -33,7 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_SIMULA[] = { ".sim", nullptr };
 
 // *****************************************************************************************
 //
@@ -52,10 +51,6 @@ language_simula::language_simula()
  name = "Simula";
 }
 
-bool language_simula::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_SIMULA );
-}
 
 
 

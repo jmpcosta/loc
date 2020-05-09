@@ -33,7 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_CSH[] = { ".csh", nullptr	};
 
 // *****************************************************************************************
 //
@@ -53,8 +52,4 @@ language_csh::language_csh()
 }
 
 
-bool language_csh::isExtension( const char * p_extension )
-{
-	return language::checkExtension( p_extension, LOC_LANGUAGE_CSH );
-}
 

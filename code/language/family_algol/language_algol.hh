@@ -21,6 +21,8 @@
 // Import application headers
 #include "loc_defs.hh"
 #include "trace_macros.hh"
+
+// Import own headers
 #include "language/family_algol/language_family_algol.hh"
 
 
@@ -37,11 +39,6 @@ class language_algol : public language_family_algol
 public:
 		/// @brief Class constructor
 								language_algol	( void				);
-
-		/// @brief Check if a file extension is a known extension for this programming language
-		/// @param [in] ext - File extension
-		/// @return True if the language is a known extension for the language
-		static	bool			isExtension		( const char * ext	);
 
 private:
 

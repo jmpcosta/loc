@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_BOURNE[] = { ".sh", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -53,9 +51,5 @@ language_bourne::language_bourne()
 }
 
 
-bool language_bourne::isExtension( const char * p_extension )
-{
-	return language::checkExtension( p_extension, LOC_LANGUAGE_BOURNE );
-}
 
 

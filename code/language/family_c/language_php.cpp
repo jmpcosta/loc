@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_PHP[] = { ".php", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -52,10 +50,6 @@ language_php::language_php()
  name = "PHP";
 }
 
-bool language_php::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_PHP );
-}
 
 
 

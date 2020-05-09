@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_BASH[] = { ".bash", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -52,9 +50,5 @@ language_bash::language_bash()
  name = "Bash";
 }
 
-bool language_bash::isExtension( const char * p_extension )
-{
-	return language::checkExtension( p_extension, LOC_LANGUAGE_BASH );
-}
 
 

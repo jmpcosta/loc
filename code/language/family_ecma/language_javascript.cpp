@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// File extensions
-const char * LOC_LANGUAGE_JAVASCRIPT[] = { ".js", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_JAVASCRIPT_TOKEN_SINGLE	= LOC_TOKEN_DOUBLE_SLASH;
 const char * LANGUAGE_JAVASCRIPT_TOKEN_START	= LOC_TOKEN_COMMENT_OPEN;
@@ -71,10 +68,6 @@ language_javascript::language_javascript()
 
 }
 
-bool language_javascript::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_JAVASCRIPT );
-}
 
 
 

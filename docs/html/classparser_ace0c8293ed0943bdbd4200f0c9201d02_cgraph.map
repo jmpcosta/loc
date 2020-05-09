@@ -2,8 +2,6 @@
 <area shape="rect" id="node2" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="116,5,308,47"/>
 <area shape="rect" id="node3" href="$class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395" title="Obtain a language object pointer for a given language. " alt="" coords="108,71,316,98"/>
 <area shape="rect" id="node5" href="$classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c" title="Obtain the name of the language. " alt="" coords="145,122,279,149"/>
-<area shape="rect" id="node4" href="$classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="373,71,529,98"/>
-<area shape="rect" id="node6" href="$classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="368,122,535,149"/>
-<area shape="rect" id="node7" href="$classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="364,173,539,199"/>
-<area shape="rect" id="node8" href="$classconverter.html#a72dbb82162340105ee1ece149929b676" title="Convert a string to lower case. " alt="" coords="587,173,701,199"/>
+<area shape="rect" id="node4" href="$classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776" title="Create a new language object. " alt="" coords="369,71,525,98"/>
+<area shape="rect" id="node6" href="$classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538" title="Obtain the type of parser for a language. " alt="" coords="364,122,531,149"/>
 </map>

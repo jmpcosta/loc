@@ -77,7 +77,7 @@ inline void code::processFiles( fileSet * p_files )
 	  p_lang = prov.getLanguage( lType );
 	  if( p_lang == nullptr )
 	    {
-		  cerr << "No language available. Skip file." << endl;
+		  TRACE( "No language available. Skip file." )
 		  continue;
 	    }
 

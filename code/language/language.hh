@@ -87,15 +87,7 @@ public:
 		 parserType							getParserType	( void													);
 
 protected:
-		// Methods
-
-		/// @brief Check if the extension is used to identify the language
-		/// @param [in] extension - File Extension
-		/// @param [in] extensionList - The list of known extensions for this language
-		/// @return True if the extension matches one of the known language file extensions. False otherwise
-		static  bool						checkExtension	( const char * extension, const char ** extensionList	);
-
-		// Variables
+		 // Variables
 
 		// Specific language
 		languageType				lang;		///< ID of the language

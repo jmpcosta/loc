@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language file extensions
-const char * LOC_LANGUAGE_PSHELL[] = { ".ps1", "psm1", ".ps2", ".msh2", nullptr	};
-
 // Comment tokens
 constexpr const char * LANGUAGE_POWERSHELL_TOKEN_SINGLE	= "#";
 constexpr const char * LANGUAGE_POWERSHELL_TOKEN_START	= "<#";
@@ -69,11 +66,6 @@ language_powershell::language_powershell()
  p_cmt->setMultiline();
  comments.push_back( p_cmt );
 
-}
-
-bool language_powershell::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_PSHELL );
 }
 
 

@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_GO[] = { ".go", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -52,11 +50,5 @@ language_go::language_go()
  lang = languageType::GO;
  name = "GO";
 }
-
-bool language_go::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_GO );
-}
-
 
 

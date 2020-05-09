@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language file extensions
-const char * LOC_LANGUAGE_FORTH[] = { ".fth", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_FORTH_TOKEN_SINGLE	= LOC_TOKEN_COMENT_DBSLASH;
 const char * LANGUAGE_FORTH_TOKEN_START		= "(";
@@ -68,11 +65,6 @@ language_forth::language_forth()
 
  comments.push_back( p_cmt );
 
-}
-
-bool language_forth::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_FORTH );
 }
 
 

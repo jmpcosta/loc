@@ -34,7 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_JAVA[] = { ".java", ".jav", nullptr };
 
 // *****************************************************************************************
 //
@@ -51,11 +50,6 @@ language_java::language_java()
 
  lang = languageType::JAVA;
  name = "Java";
-}
-
-bool language_java::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_JAVA );
 }
 
 

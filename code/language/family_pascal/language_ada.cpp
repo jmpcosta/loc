@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language File extensions
-const char * LOC_LANGUAGE_ADA[] = { ".adb", ".ads", nullptr };
-
 // Comment token
 const char * LANGUAGE_ADA_TOKEN_SINGLE	= LOC_TOKEN_COMMENT_DHYFEN;
 
@@ -58,11 +55,6 @@ language_ada::language_ada()
  comment * p_cmt = new comment();
  p_cmt->setStart( LANGUAGE_ADA_TOKEN_SINGLE );
  comments.push_back( p_cmt );
-}
-
-bool language_ada::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_ADA );
 }
 
 

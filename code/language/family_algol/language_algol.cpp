@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// File extensions
-const char * LOC_LANGUAGE_ALGOL[] = { ".algol", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_ALGOL_TOKEN_SINGLE	= LOC_TOKEN_DOUBLE_SLASH;
 const char * LANGUAGE_ALGOL_TOKEN_START		= "comment";
@@ -70,10 +67,6 @@ language_algol::language_algol()
  comments.push_back( p_cmt );
 }
 
-bool language_algol::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_ALGOL );
-}
 
 
 

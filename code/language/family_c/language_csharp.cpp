@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_CSHARP[] = { ".cs", nullptr };
-
 
 // *****************************************************************************************
 //
@@ -54,9 +52,5 @@ language_csharp::language_csharp()
 }
 
 
-bool language_csharp::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_CSHARP );
-}
 
 

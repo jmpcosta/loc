@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_HTML[] = { ".html", ".htm", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -50,11 +48,6 @@ language_html::language_html()
 
  lang = languageType::HTML;
  name = "HTML";
-}
-
-bool language_html::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_HTML );
 }
 
 

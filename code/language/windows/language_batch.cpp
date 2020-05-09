@@ -32,9 +32,6 @@
 //
 // *****************************************************************************************
 
-// File name extensions
-const char * LOC_LANGUAGE_BATCH[] = { ".bat", ".cmd", nullptr	};
-
 // Comment token
 constexpr const char * LANGUAGE_BATCH_TOKEN_SINGLE	= "rem";
 
@@ -62,10 +59,5 @@ language_batch::language_batch()
 
 }
 
-
-bool language_batch::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_BATCH );
-}
 
 

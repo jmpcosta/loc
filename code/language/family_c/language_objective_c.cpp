@@ -32,7 +32,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_OBJECTIVE_C[] = { ".m", nullptr };
 
 // *****************************************************************************************
 //
@@ -51,10 +50,6 @@ language_objective_c::language_objective_c()
  name = "Objective C";
 }
 
-bool language_objective_c::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_OBJECTIVE_C );
-}
 
 
 

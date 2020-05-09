@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// File extensions
-const char * LOC_LANGUAGE_BETA[] = { ".beta", ".bet", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_BETA_TOKEN_SINGLE	= LOC_TOKEN_DOUBLE_SLASH;
 const char * LANGUAGE_BETA_TOKEN_START	= "(*";
@@ -69,11 +66,6 @@ language_beta::language_beta()
 
  comments.push_back( p_cmt );
 
-}
-
-bool language_beta::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_BETA );
 }
 
 

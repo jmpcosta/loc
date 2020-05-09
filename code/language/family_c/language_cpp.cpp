@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_CPP[] = { ".c++", ".cc", ".cpp", ".hh", ".cls", ".cxx", ".h++", ".hpp", ".hxx", nullptr	};
-
 
 // *****************************************************************************************
 //
@@ -53,10 +51,5 @@ language_cpp::language_cpp()
  name = "C++";
 }
 
-
-bool language_cpp::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_CPP );
-}
 
 

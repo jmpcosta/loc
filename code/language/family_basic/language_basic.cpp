@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// File extensions
-const char * LOC_LANGUAGE_BASIC[] = { ".bas", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_BASIC_TOKEN_SINGLE	= LOC_TOKEN_COMMENT_REM;
 
@@ -61,10 +58,6 @@ language_basic::language_basic()
  comments.push_back( p_cmt );
 }
 
-bool language_basic::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_BASIC );
-}
 
 
 

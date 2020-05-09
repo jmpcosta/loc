@@ -136,9 +136,3 @@ languageType LanguageProvider::getLanguageType( const char * p_fileExtension )
  return iLFactory.getLanguageType( p_fileExtension );
 }
 
-
-languageType LanguageProvider::getLanguageType( const std::string & fileExtension )
-{
- return iLFactory.getLanguageType( fileExtension );
-}
-

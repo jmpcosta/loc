@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language File extensions
-const char * LOC_LANGUAGE_PYTHON[] = { ".py", nullptr };
-
 // Comment token
 const char * LANGUAGE_PYTHON_TOKEN_SINGLE	= LOC_TOKEN_COMMENT_HASH;
 
@@ -59,11 +56,6 @@ language_python::language_python()
  comment * p_cmt = new comment();
  p_cmt->setStart( LANGUAGE_PYTHON_TOKEN_SINGLE );
  comments.push_back( p_cmt );
-}
-
-bool language_python::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_PYTHON );
 }
 
 

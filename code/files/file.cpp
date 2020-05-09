@@ -58,11 +58,12 @@ file * file::builder( const path & pathname )
   {
 	  if( is_regular_file( pathname ) )
 	    {
-		  filename = pathname.generic_string();
+		  filename 		= pathname.generic_string();
 		  fileExtension = pathname.extension().generic_string();
 
-		  lType = LanguageProvider::getInstance().getLanguageType( fileExtension );
+		  lType = LanguageProvider::getInstance().getLanguageType( fileExtension.c_str() );
 
+		  // If supported language, add it to the list
 		  if( lType != languageType::unknown )
 		    {
 			  TRACE( "New file:", pathname )

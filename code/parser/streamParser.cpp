@@ -20,6 +20,8 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <string>
+#include <string_view>
 
 // Import project declarations
 #include "trace.hh"

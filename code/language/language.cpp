@@ -59,39 +59,6 @@ language::~language()
 
 
 
-bool language::checkExtension( const char * p_extension, const char ** p_extensionList )
-{
- int i = 0;
-
- if( p_extension != nullptr && p_extensionList != nullptr )
-   {
-	 std::string ext( p_extension );
-	 converter::lower( ext );
-	 const char * p_ext = ext.c_str();
-
-	 TRACE( "Searching extension:", p_ext )
-
-	 while( p_extensionList[ i ] != nullptr )
-      	  {			// TODO: Case insensitive file extension match
-		 	if( strcmp( p_extensionList[ i ], p_ext ) == 0 )	// Strings match
-		 	  {
-		 		TRACE( "Exiting with language extension:", p_ext )
-
-	 			return true;
-		 	  }
-		 	i++;
-      	  }
-   }
-
- TRACE( "Unknown language" )
-
- TRACE_EXIT
-
- return false;
-}
-
-
-
 parserType language::getParserType( void )
 {
  return parserType::stream;	// Set a default parser type

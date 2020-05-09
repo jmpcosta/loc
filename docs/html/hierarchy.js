@@ -59,15 +59,18 @@ var hierarchy =
       ] ],
       [ "language_forth", "classlanguage__forth.html", null ],
       [ "language_fortran", "classlanguage__fortran.html", null ],
+      [ "language_kotlin", "classlanguage__kotlin.html", null ],
       [ "language_perl", "classlanguage__perl.html", null ],
       [ "language_powershell", "classlanguage__powershell.html", null ],
       [ "language_python", "classlanguage__python.html", null ],
       [ "language_ruby", "classlanguage__ruby.html", null ],
+      [ "language_scala", "classlanguage__scala.html", null ],
       [ "language_smalltalk", "classlanguage__smalltalk.html", null ],
       [ "language_yam", "classlanguage__yam.html", null ]
     ] ],
     [ "language_factory", "classlanguage__factory.html", null ],
     [ "languageStatistics", "classlanguage_statistics.html", null ],
+    [ "loc_language_info", "structloc__language__info.html", null ],
     [ "parser", "classparser.html", [
       [ "streamParser", "classstream_parser.html", null ]
     ] ],

@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="5,1120,80,1147"/>
+<area shape="rect" id="node1" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="5,1171,80,1197"/>
 <area shape="rect" id="node2" href="$classlanguage__batch.html" title="Class responsible for implementing a BATCH language. " alt="" coords="153,56,266,83"/>
 <area shape="rect" id="node3" href="$classlanguage__family__algol.html" title="Class responsible for implementing a language of the Algol family. " alt="" coords="134,107,285,133"/>
 <area shape="rect" id="node7" href="$classlanguage__family__basic.html" title="Class responsible for implementing a language of the Algol family. " alt="" coords="132,195,287,221"/>
@@ -13,12 +13,14 @@
 <area shape="rect" id="node38" href="$classlanguage__family__sgml.html" title="Class responsible for implementing a SGML language. " alt="" coords="134,1171,285,1197"/>
 <area shape="rect" id="node41" href="$classlanguage__forth.html" title="Class responsible for implementing a Forth language. " alt="" coords="156,1221,263,1248"/>
 <area shape="rect" id="node42" href="$classlanguage__fortran.html" title="Class responsible for implementing a Fortran language. " alt="" coords="150,1272,269,1299"/>
-<area shape="rect" id="node43" href="$classlanguage__perl.html" title="Class responsible for implementing the Perl language. " alt="" coords="158,1323,261,1349"/>
-<area shape="rect" id="node44" href="$classlanguage__powershell.html" title="Class responsible for implementing the Powershell language. " alt="" coords="138,1373,281,1400"/>
-<area shape="rect" id="node45" href="$classlanguage__python.html" title="Class responsible for implementing the python language. " alt="" coords="149,1424,269,1451"/>
-<area shape="rect" id="node46" href="$classlanguage__ruby.html" title="Class responsible for implementing the Ruby language. " alt="" coords="156,1475,263,1501"/>
-<area shape="rect" id="node47" href="$classlanguage__smalltalk.html" title="Class responsible for implementing the Smalltalk language. " alt="" coords="143,1525,276,1552"/>
-<area shape="rect" id="node48" href="$classlanguage__yam.html" title="Class responsible for implementing the Perl language. " alt="" coords="156,1576,263,1603"/>
+<area shape="rect" id="node43" href="$classlanguage__kotlin.html" title="Class responsible for implementing the kotlin language. " alt="" coords="153,1323,265,1349"/>
+<area shape="rect" id="node44" href="$classlanguage__perl.html" title="Class responsible for implementing the Perl language. " alt="" coords="158,1373,261,1400"/>
+<area shape="rect" id="node45" href="$classlanguage__powershell.html" title="Class responsible for implementing the Powershell language. " alt="" coords="138,1424,281,1451"/>
+<area shape="rect" id="node46" href="$classlanguage__python.html" title="Class responsible for implementing the python language. " alt="" coords="149,1475,269,1501"/>
+<area shape="rect" id="node47" href="$classlanguage__ruby.html" title="Class responsible for implementing the Ruby language. " alt="" coords="156,1525,263,1552"/>
+<area shape="rect" id="node48" href="$classlanguage__scala.html" title="Class responsible for implementing the Scala language. " alt="" coords="153,1576,265,1603"/>
+<area shape="rect" id="node49" href="$classlanguage__smalltalk.html" title="Class responsible for implementing the Smalltalk language. " alt="" coords="143,1627,276,1653"/>
+<area shape="rect" id="node50" href="$classlanguage__yam.html" title="Class responsible for implementing the Perl language. " alt="" coords="156,1677,263,1704"/>
 <area shape="rect" id="node4" href="$classlanguage__algol.html" title="Class responsible for implementing the Algol language. " alt="" coords="358,5,466,32"/>
 <area shape="rect" id="node5" href="$classlanguage__beta.html" title="Class responsible for implementing a C language. " alt="" coords="359,56,465,83"/>
 <area shape="rect" id="node6" href="$classlanguage__simula.html" title="Class responsible for implementing a Simula language. " alt="" coords="353,107,471,133"/>

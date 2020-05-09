@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language File extensions
-const char * LOC_LANGUAGE_PERL[] = { ".pl", nullptr };
-
 // Comment token
 const char * LANGUAGE_PERL_TOKEN_SINGLE	= LOC_TOKEN_COMMENT_HASH;
 
@@ -58,11 +55,6 @@ language_perl::language_perl()
  comment * p_cmt = new comment();
  p_cmt->setStart( LANGUAGE_PERL_TOKEN_SINGLE );
  comments.push_back( p_cmt );
-}
-
-bool language_perl::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_PERL );
 }
 
 

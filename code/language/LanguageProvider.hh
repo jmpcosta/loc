@@ -62,11 +62,6 @@ public:
 		/// @return Language Identifier
 		languageType				getLanguageType		( const char * ext 			);
 
-		/// @brief Obtain the language identifier based on the file extension
-		/// @param [in] ext - File extension
-		/// @return Language Identifier
-		languageType				getLanguageType		( const std::string & ext	);
-
 private:
 		// Methods
 

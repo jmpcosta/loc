@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language file extensions
-const char * LOC_LANGUAGE_FORTRAN[] = { ".f90", ".f77", nullptr };
-
 // Comment tokens
 constexpr const char * LANGUAGE_FORTRAN_TOKEN_SINGLE	= "!";
 
@@ -59,11 +56,6 @@ language_fortran::language_fortran()
  p_cmt->setStart( LANGUAGE_FORTRAN_TOKEN_SINGLE );
  p_cmt->setMultipleCase();
  comments.push_back( p_cmt );
-}
-
-bool language_fortran::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_FORTRAN );
 }
 
 

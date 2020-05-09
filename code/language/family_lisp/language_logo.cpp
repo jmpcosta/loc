@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_LOGO[] = { ".scm", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -52,10 +50,6 @@ language_logo::language_logo()
  name = "Logo";
 }
 
-bool language_logo::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_LOGO );
-}
 
 
 

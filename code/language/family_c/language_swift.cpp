@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_SWIFT[] = { ".swift", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -51,11 +49,6 @@ language_swift::language_swift()
 
  lang = languageType::SWIFT;
  name = "Swift";
-}
-
-bool language_swift::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_SWIFT );
 }
 
 

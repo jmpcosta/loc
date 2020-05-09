@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// File extensions
-const char * LOC_LANGUAGE_PASCAL[] = { ".pl", nullptr };
-
 // Comment tokens
 const char * LANGUAGE_PASCAL_TOKEN_SINGLE	= LOC_TOKEN_DOUBLE_SLASH;
 const char * LANGUAGE_PASCAL_TOKEN_START1	= LOC_TOKEN_COMMENT_OPEN;
@@ -78,11 +75,6 @@ language_pascal::language_pascal()
 
  comments.push_back( p_cmt );
 
-}
-
-bool language_pascal::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_PASCAL );
 }
 
 

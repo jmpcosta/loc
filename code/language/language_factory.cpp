@@ -17,7 +17,7 @@
 // Include OSAPI C++ headers
 
 // Include Standard headers
-#include <string>
+#include <cstring>
 
 // Import project headers
 #include "trace.hh"
@@ -39,6 +39,59 @@
 TRACE_CLASSNAME( language_factory )
 
 
+language_factory::language_factory()
+{
+	lang[0 ] = (void *) &LOC_LANGUAGE_PF_A;
+	lang[1 ] = (void *) &LOC_LANGUAGE_PF_B;
+	lang[2 ] = (void *) &LOC_LANGUAGE_PF_C;
+	lang[3 ] = (void *) &LOC_LANGUAGE_PF_D;
+	lang[4 ] = (void *) &LOC_LANGUAGE_PF_E;
+	lang[5 ] = (void *) &LOC_LANGUAGE_PF_F;
+	lang[6 ] = (void *) &LOC_LANGUAGE_PF_G;
+	lang[7 ] = (void *) &LOC_LANGUAGE_PF_H;
+	lang[8 ] = (void *) &LOC_LANGUAGE_PF_I;
+	lang[9 ] = (void *) &LOC_LANGUAGE_PF_J;
+	lang[10] = (void *) &LOC_LANGUAGE_PF_K;
+	lang[11] = (void *) &LOC_LANGUAGE_PF_L;
+	lang[12] = (void *) &LOC_LANGUAGE_PF_M;
+	lang[13] = (void *) &LOC_LANGUAGE_PF_N;
+	lang[14] = (void *) &LOC_LANGUAGE_PF_O;
+	lang[15] = (void *) &LOC_LANGUAGE_PF_P;
+	lang[16] = (void *) &LOC_LANGUAGE_PF_Q;
+	lang[17] = (void *) &LOC_LANGUAGE_PF_R;
+	lang[18] = (void *) &LOC_LANGUAGE_PF_S;
+	lang[19] = (void *) &LOC_LANGUAGE_PF_T;
+	lang[20] = (void *) &LOC_LANGUAGE_PF_U;
+	lang[21] = (void *) &LOC_LANGUAGE_PF_V;
+	lang[22] = (void *) &LOC_LANGUAGE_PF_W;
+	lang[23] = (void *) &LOC_LANGUAGE_PF_X;
+	lang[24] = (void *) &LOC_LANGUAGE_PF_Y;
+	lang[25] = (void *) &LOC_LANGUAGE_PF_Z;
+}
+
+
+
+inline languageType language_factory::getType( void * p_language, const char * ext )
+{
+  if( p_language == nullptr ) return languageType::unknown;;
+
+  const LanguageInfo * p_lang = (const LanguageInfo *) p_language;
+
+  TRACE( "Entering with File extension:", ext )
+  int i = 0;
+  while( p_lang[ i ].id != languageType::none )
+       {
+	     TRACE( "Searching extension", p_lang[ i ].name )
+	  	 if( strcmp( ext, p_lang[ i ].name ) == 0 )
+	  		 return p_lang[ i ].id;
+
+	     i++;
+       }
+
+  return languageType::unknown;;
+}
+
+
 language * language_factory::build( languageType type )
 {
  language * p_lang	= nullptr;
@@ -47,6 +100,8 @@ language * language_factory::build( languageType type )
 
  switch( type )
  {
+ 	 case languageType::unknown:											break;
+
  	// SGML Family
 	case languageType::HTML:		p_lang = new language_html();		 	break;
 	case languageType::XML:			p_lang = new language_xml();		 	break;
@@ -74,6 +129,8 @@ language * language_factory::build( languageType type )
   	case languageType::YAML: 		p_lang = new language_yam();			break;
   	case languageType::SMALLTALK: 	p_lang = new language_smalltalk();		break;
   	case languageType::FORTRAN: 	p_lang = new language_fortran();		break;
+  	case languageType::KOTLIN: 		p_lang = new language_kotlin();			break;
+  	case languageType::SCALA:	 	p_lang = new language_scala();			break;
 
   	// Bourne family
   	case languageType::BOURNE: 		p_lang = new language_bourne(); 		break;
@@ -107,8 +164,6 @@ language * language_factory::build( languageType type )
   	 // Interface description language family
   	case languageType::IDL_OMG:		p_lang = new language_idl_omg();	 	break;
 
-	// The next case is just to silence the compiler
-  	case languageType::unknown:												break;
   	default:																break;
  }
 
@@ -120,80 +175,31 @@ language * language_factory::build( languageType type )
 
 languageType language_factory::getLanguageType( const char * p_fileExtension  )
 {
+ languageType type = languageType::unknown;
+
  TRACE_ENTER
 
- // C family of languages
- if( isLanguage<language_c>				( p_fileExtension ) ) return languageType::C;
- if( isLanguage<language_cpp>			( p_fileExtension ) ) return languageType::CPP;
- if( isLanguage<language_java>			( p_fileExtension ) ) return languageType::JAVA;
- if( isLanguage<language_csharp>		( p_fileExtension ) ) return languageType::CSHARP;
- if( isLanguage<language_objective_c>	( p_fileExtension ) ) return languageType::OBJECTIVE_C;
- if( isLanguage<language_php>			( p_fileExtension ) ) return languageType::PHP;
- if( isLanguage<language_swift>			( p_fileExtension ) ) return languageType::SWIFT;
- if( isLanguage<language_go>			( p_fileExtension ) ) return languageType::GO;
- if( isLanguage<language_rust>			( p_fileExtension ) ) return languageType::RUST;
- if( isLanguage<language_awk>			( p_fileExtension ) ) return languageType::AWK;
+ if( p_fileExtension    == nullptr || p_fileExtension[0] != '.' )	return type;
+ if( p_fileExtension[1] == '\0' )	 								return type;
 
- // Bourne family shells
- if( isLanguage<language_bash>			( p_fileExtension ) ) return languageType::BASH;
- if( isLanguage<language_bourne>		( p_fileExtension ) ) return languageType::BOURNE;
- if( isLanguage<language_csh>			( p_fileExtension ) ) return languageType::CSH;
+ // Which index to use?
+ int index = -1;
 
- // SGML languages
- if( isLanguage<language_html>			( p_fileExtension ) ) return languageType::HTML;
- if( isLanguage<language_xml>			( p_fileExtension ) ) return languageType::XML;
+ if( p_fileExtension[1] < 123 && p_fileExtension[1] > 64 )
+   {
+	 if( p_fileExtension[1] < 91 )		index = p_fileExtension[1] - 65;	// Capital letters
+	 else
+		 if( p_fileExtension[1] > 96 )	index = p_fileExtension[1] - 97;	// Small letters
+   }
 
- // ECMA family
- if( isLanguage<language_javascript>	( p_fileExtension ) ) return languageType::JAVASCRIPT;
- if( isLanguage<language_eiffel>		( p_fileExtension ) ) return languageType::EIFFEL;
+ if( index == -1 )	return type;		// No valid first letter of the file extension was found
 
- // Windows/Microsoft languages
- if( isLanguage<language_batch>			( p_fileExtension ) ) return languageType::BATCH;
- if( isLanguage<language_powershell>	( p_fileExtension ) ) return languageType::POWERSHELL;
- //if( isLanguage<language_basic>			( p_fileExtension ) ) return languageType::BASIC;
+ TRACE( "File extension index:", index )
 
- // Other languages
- if( isLanguage<language_fortran>			( p_fileExtension ) ) return languageType::FORTRAN;
- if( isLanguage<language_python>		( p_fileExtension ) ) return languageType::PYTHON;
- if( isLanguage<language_perl>			( p_fileExtension ) ) return languageType::PERL;
- if( isLanguage<language_ruby>			( p_fileExtension ) ) return languageType::RUBY;
- if( isLanguage<language_smalltalk>		( p_fileExtension ) ) return languageType::SMALLTALK;
- if( isLanguage<language_yam>			( p_fileExtension ) ) return languageType::YAML;
+ type = getType( lang[ index ], &p_fileExtension[1] );
 
- //if( isLanguage<language_cobol>			( p_fileExtension ) ) return languageType::COBOL;
+ TRACE( "Leaving with type:", std::static_cast<int>(type) )
 
-
- // BASIC family
- if( isLanguage<language_basic>			( p_fileExtension ) ) return languageType::BASIC;
-
- // Pascal family of languages
- if( isLanguage<language_pascal>		( p_fileExtension ) ) return languageType::PASCAL;
- if( isLanguage<language_ada>			( p_fileExtension ) ) return languageType::ADA;
-
- // Prolog family
- if( isLanguage<language_prolog>		( p_fileExtension ) ) return languageType::PROLOG;
-
- // List family
- if( isLanguage<language_lisp>			( p_fileExtension ) ) return languageType::LISP;
- if( isLanguage<language_scheme>		( p_fileExtension ) ) return languageType::SCHEME;
- if( isLanguage<language_logo>			( p_fileExtension ) ) return languageType::LOGO;
-
- // Algol family
- if( isLanguage<language_algol>			( p_fileExtension ) ) return languageType::ALGOL;
- if( isLanguage<language_simula>		( p_fileExtension ) ) return languageType::SIMULA;
- if( isLanguage<language_beta>			( p_fileExtension ) ) return languageType::BETA;
-
- // Interface description language family
- if( isLanguage<language_idl_omg>		( p_fileExtension ) ) return languageType::IDL_OMG;
-
- TRACE_EXIT
-
- return languageType::unknown;
+ return type;
 }
 
-
-
-languageType language_factory::getLanguageType( const std::string & fileExtension  )
-{
- return getLanguageType( fileExtension.c_str() );
-}

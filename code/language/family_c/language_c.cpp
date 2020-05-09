@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_C[] = { ".c", ".h", ".hhh", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -53,10 +51,6 @@ language_c::language_c()
  name = "C";
 }
 
-bool language_c::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_C );
-}
 
 
 

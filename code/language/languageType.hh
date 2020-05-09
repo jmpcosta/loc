@@ -18,9 +18,10 @@
 
 enum class languageType
 {
-	autodetect	= -1,
+	autodetect	= -2,
 	unknown		= -1,
-	C			= 0,
+	none		= 0,
+	C			= 1,
 	CPP 		,
 	CSHARP		,
 	JAVA		,
@@ -29,6 +30,7 @@ enum class languageType
 	PYTHON		,
 	PHP			,
 	SWIFT		,
+	D			,
 	BASH		,
 	BOURNE		,
 	CSH			,
@@ -45,6 +47,7 @@ enum class languageType
 	RUST		,
 	RUBY		,
 	FORTRAN		,
+	FORTH		,
 	COBOL		,
 	LISP		,
 	SCHEME		,
@@ -59,9 +62,13 @@ enum class languageType
 	PASCAL		,
 	ADA			,
 	IDL_OMG		,
+	SCALA		,
+	KOTLIN		,
 
 	MAX
 };
+
+
 
 
 

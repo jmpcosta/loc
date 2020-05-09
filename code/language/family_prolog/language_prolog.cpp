@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_PROLOG[] = { ".pl", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -53,10 +51,6 @@ language_prolog::language_prolog()
  name = "Prolog";
 }
 
-bool language_prolog::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_PROLOG );
-}
 
 
 

@@ -33,8 +33,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_XML[] = { ".xml", ".xsl", ".xslt", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -50,11 +48,6 @@ language_xml::language_xml()
 
  lang = languageType::XML;
  name = "XML";
-}
-
-bool language_xml::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_XML );
 }
 
 

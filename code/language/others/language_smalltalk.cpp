@@ -33,9 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language File extensions
-const char * LOC_LANGUAGE_SMALLTALK[] = { ".sm", nullptr };
-
 // Comment token
 const char * LANGUAGE_SMALLTALK_TOKEN_SINGLE = LOC_TOKEN_COMMENT_DQUOTE;
 
@@ -60,11 +57,6 @@ language_smalltalk::language_smalltalk()
  p_cmt->setEnd  ( LANGUAGE_SMALLTALK_TOKEN_SINGLE	);
 
  comments.push_back( p_cmt );
-}
-
-bool language_smalltalk::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_SMALLTALK );
 }
 
 

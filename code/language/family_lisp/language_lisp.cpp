@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_LISP[] = { ".lisp", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -51,11 +49,6 @@ language_lisp::language_lisp()
 
  lang = languageType::LISP;
  name = "Lisp";
-}
-
-bool language_lisp::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_LISP );
 }
 
 

@@ -34,8 +34,6 @@
 //
 // *****************************************************************************************
 
-const char * LOC_LANGUAGE_SCHEME[] = { ".scm", nullptr };
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -53,10 +51,6 @@ language_scheme::language_scheme()
  name = "Scheme";
 }
 
-bool language_scheme::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_SCHEME );
-}
 
 
 

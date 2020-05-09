@@ -61,8 +61,7 @@ $(document).ready(function(){initNavTree('classlanguage__c.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">language_c Class Reference</div>  </div>
 </div><!--header-->
@@ -139,12 +138,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a1bf768aaf4a3208f34fbd4fa1865b538 inherit pub_methods_classlanguage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the type of parser for a language.  <a href="classlanguage.html#a1bf768aaf4a3208f34fbd4fa1865b538">More...</a><br /></td></tr>
 <tr class="separator:a1bf768aaf4a3208f34fbd4fa1865b538 inherit pub_methods_classlanguage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad51e0ea19d75bb130630d3470972407b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__c.html#ad51e0ea19d75bb130630d3470972407b">isExtension</a> (const char *ext)</td></tr>
-<tr class="memdesc:ad51e0ea19d75bb130630d3470972407b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a file extension is a known extension for this programming language.  <a href="#ad51e0ea19d75bb130630d3470972407b">More...</a><br /></td></tr>
-<tr class="separator:ad51e0ea19d75bb130630d3470972407b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classlanguage"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classlanguage')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classlanguage.html">language</a></td></tr>
@@ -156,10 +149,6 @@ typedef std::vector&lt; <a class="el" href="classcomment.html">comment</a> * &gt
 typedef std::vector&lt; <a class="el" href="classcomment.html">comment</a> * &gt;::<a class="el" href="classlanguage.html#a59b39c095326d1b50e22378bcbfda163">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage.html#a59b39c095326d1b50e22378bcbfda163">const_iterator</a></td></tr>
 <tr class="memdesc:a59b39c095326d1b50e22378bcbfda163 inherit pub_types_classlanguage"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for the language comment constant iterator. <br /></td></tr>
 <tr class="separator:a59b39c095326d1b50e22378bcbfda163 inherit pub_types_classlanguage"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_methods_classlanguage"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classlanguage')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classlanguage.html">language</a></td></tr>
-<tr class="memitem:a0f3ce42ce15692674f7d935ff9cbc1fd inherit pro_static_methods_classlanguage"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd">checkExtension</a> (const char *extension, const char **extensionList)</td></tr>
-<tr class="memdesc:a0f3ce42ce15692674f7d935ff9cbc1fd inherit pro_static_methods_classlanguage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the extension is used to identify the language.  <a href="classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd">More...</a><br /></td></tr>
-<tr class="separator:a0f3ce42ce15692674f7d935ff9cbc1fd inherit pro_static_methods_classlanguage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classlanguage"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classlanguage')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classlanguage.html">language</a></td></tr>
 <tr class="memitem:ab58b85b32e98f63649d99eddb8fa7b02 inherit pro_attribs_classlanguage"><td class="memItemLeft" align="right" valign="top"><a id="ab58b85b32e98f63649d99eddb8fa7b02"></a>
 languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage.html#ab58b85b32e98f63649d99eddb8fa7b02">lang</a></td></tr>
@@ -176,52 +165,7 @@ std::vector&lt; <a class="el" href="classcomment.html">comment</a> * &gt;&#160;<
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for implementing a C language. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad51e0ea19d75bb130630d3470972407b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad51e0ea19d75bb130630d3470972407b">&#9670;&nbsp;</a></span>isExtension()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isExtension </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>ext</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check if a file extension is a known extension for this programming language. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ext</td><td>- File extension </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the language is a known extension for the language </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classlanguage__c_ad51e0ea19d75bb130630d3470972407b_cgraph.png" border="0" usemap="#classlanguage__c_ad51e0ea19d75bb130630d3470972407b_cgraph" alt=""/></div>
-<map name="classlanguage__c_ad51e0ea19d75bb130630d3470972407b_cgraph" id="classlanguage__c_ad51e0ea19d75bb130630d3470972407b_cgraph">
-<area shape="rect" id="node2" href="classlanguage.html#a0f3ce42ce15692674f7d935ff9cbc1fd" title="Check if the extension is used to identify the language. " alt="" coords="144,5,319,32"/>
-<area shape="rect" id="node3" href="classconverter.html#a72dbb82162340105ee1ece149929b676" title="Convert a string to lower case. " alt="" coords="367,5,481,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>code/language/family_c/<a class="el" href="language__c_8hh_source.html">language_c.hh</a></li>
 <li>code/language/family_c/language_c.cpp</li>
 </ul>

@@ -33,10 +33,6 @@
 //
 // *****************************************************************************************
 
-// Language file extensions
-const char * LOC_LANGUAGE_AWK[] = { ".awk", nullptr };
-
-
 // Comment tokens
 const char * LANGUAGE_AWK_TOKEN_SINGLE = LOC_TOKEN_COMMENT_HASH;
 
@@ -65,10 +61,6 @@ language_awk::language_awk()
  comments.push_back( p_cmt );
 }
 
-bool language_awk::isExtension( const char * p_extension )
-{
- return language::checkExtension( p_extension, LOC_LANGUAGE_AWK );
-}
 
 
 
