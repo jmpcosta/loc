@@ -52,7 +52,7 @@
 // OS Independent
 // *****************************************************************************************
 
-#define		LOC_FILE_READ_BUFFER_SIZE	1000000
+#define		LOC_FILE_READ_BUFFER_SIZE	65000
 #define		LOC_LANGUAGE_DEFAULT_SIZE	100		// Initial reserve capacity for languages
 
 #define		LOC_SWITCH_DETAILS		"-d"

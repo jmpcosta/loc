@@ -1,3 +1,4 @@
 <map id="language_fortran" name="language_fortran">
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="27,5,102,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a Fortran language." alt="" coords="5,80,139,107"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="31,5,113,32"/>
 </map>

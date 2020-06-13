@@ -1,4 +1,7 @@
 <map id="getName" name="getName">
-<area shape="rect" id="node2" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file. " alt="" coords="128,5,227,32"/>
-<area shape="rect" id="node3" href="$classparser.html#a681e46fac15f784fe55e415a236c1476" title="Class destructor. " alt="" coords="275,5,385,32"/>
+<area shape="rect" id="node1" title="Obtain the name of the language." alt="" coords="364,64,447,91"/>
+<area shape="rect" id="node2" href="$classparser.html#ace0c8293ed0943bdbd4200f0c9201d02" title="Parse a source file." alt="" coords="195,5,301,32"/>
+<area shape="rect" id="node3" href="$class_statistics_provider.html#aaccc311b85dc53d9e503b54998aadee9" title="Template method to walk through the language container." alt="" coords="180,57,316,98"/>
+<area shape="rect" id="node4" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set." alt="" coords="182,123,314,149"/>
+<area shape="rect" id="node5" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report." alt="" coords="5,123,132,149"/>
 </map>

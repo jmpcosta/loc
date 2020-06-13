@@ -1,3 +1,4 @@
 <map id="streamParser" name="streamParser">
-<area shape="rect" id="node2" href="$classparser.html" title="Class responsible for parsing a file language code. " alt="" coords="26,5,85,32"/>
+<area shape="rect" id="node1" title="Class responsible for parsing a file language code." alt="" coords="5,80,113,107"/>
+<area shape="rect" id="node2" href="$classparser.html" title="Class responsible for parsing a file language code." alt="" coords="28,5,91,32"/>
 </map>

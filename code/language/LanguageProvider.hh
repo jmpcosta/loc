@@ -18,6 +18,7 @@
 
 // Import C++ system headers
 #include <vector>
+#include <mutex>
 
 // Import application headers
 #include "trace_macros.hh"

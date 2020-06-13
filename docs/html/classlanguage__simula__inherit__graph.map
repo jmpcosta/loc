@@ -1,4 +1,5 @@
 <map id="language_simula" name="language_simula">
-<area shape="rect" id="node2" href="$classlanguage__family__algol.html" title="Class responsible for implementing a language of the Algol family. " alt="" coords="5,80,156,107"/>
-<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="43,5,118,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a Simula language." alt="" coords="24,155,157,181"/>
+<area shape="rect" id="node2" href="$classlanguage__family__algol.html" title="Class responsible for implementing a language of the Algol family." alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="49,5,132,32"/>
 </map>

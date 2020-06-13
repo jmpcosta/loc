@@ -1,5 +1,5 @@
 <map id="areAvailable" name="areAvailable">
-<area shape="rect" id="node2" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="147,31,265,57"/>
-<area shape="rect" id="node3" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="313,5,427,32"/>
-<area shape="rect" id="node4" href="$classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="475,31,579,57"/>
+<area shape="rect" id="node1" title="Get the availability of statistics." alt="" coords="360,5,463,32"/>
+<area shape="rect" id="node2" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set." alt="" coords="180,5,312,32"/>
+<area shape="rect" id="node3" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report." alt="" coords="5,5,132,32"/>
 </map>

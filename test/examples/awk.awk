@@ -11,7 +11,7 @@ BEGIN{
 	# Do nothing
 }
 {
- # Process each input line here !
+    # Process each input line here !
 }
 END{
 	print "Hello World\n" ;

@@ -1,6 +1,7 @@
 <map id="language_family_bourne" name="language_family_bourne">
-<area shape="rect" id="node3" href="$classlanguage__bash.html" title="Class responsible for implementing a BASH language. " alt="" coords="5,155,115,181"/>
-<area shape="rect" id="node4" href="$classlanguage__bourne.html" title="Class responsible for implementing a Bourne shell language. " alt="" coords="139,155,259,181"/>
-<area shape="rect" id="node5" href="$classlanguage__csh.html" title="Class responsible for implementing a CSH shell language. " alt="" coords="283,155,386,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="161,5,236,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a language for the Bourne shell family of languages." alt="" coords="126,80,309,107"/>
+<area shape="rect" id="node3" href="$classlanguage__bash.html" title="Class responsible for implementing a BASH language." alt="" coords="5,155,125,181"/>
+<area shape="rect" id="node4" href="$classlanguage__bourne.html" title="Class responsible for implementing a Bourne shell language." alt="" coords="150,155,285,181"/>
+<area shape="rect" id="node5" href="$classlanguage__csh.html" title="Class responsible for implementing a CSH shell language." alt="" coords="309,155,419,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="176,5,259,32"/>
 </map>

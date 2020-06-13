@@ -45,7 +45,7 @@ const char * LANGUAGE_KOTLIN_TOKEN_END		= LOC_TOKEN_COMMENT_CLOSE;
 //
 // *****************************************************************************************
 
-TRACE_CLASSNAME( language_scala )
+TRACE_CLASSNAME( language_kotlin )
 
 
 language_kotlin::language_kotlin()

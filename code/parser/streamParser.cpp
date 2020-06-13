@@ -40,7 +40,7 @@ using namespace std;
 
 // *****************************************************************************************
 //
-// Section: Constants and internal variables
+// Section: Constants and other variables
 //
 // *****************************************************************************************
 
@@ -76,9 +76,6 @@ void streamParser::specificParse( void )
  std::string_view	line;
 
  TRACE_ENTER
-
- // Reserve capacity on the string to avoid reallocs
- // input.reserve( LOC_FILE_READ_BUFFER_SIZE );
 
  // Reset own variables
  commentOpen   = false;

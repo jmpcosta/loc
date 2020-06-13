@@ -32,14 +32,22 @@
 
 using namespace std;
 
+
+
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Constants and other variables
 //
 // *****************************************************************************************
 
 TRACE_CLASSNAME( code )
 
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 code::code()
 {
@@ -90,6 +98,7 @@ inline void code::processFiles( fileSet * p_files )
 
  TRACE_EXIT
 }
+
 
 inline void code::generateReport( progOptions & options, fileSet * p_files )
 {

@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../code/language/family_c/language_c.cpp \
 ../code/language/family_c/language_cpp.cpp \
 ../code/language/family_c/language_csharp.cpp \
+../code/language/family_c/language_d.cpp \
 ../code/language/family_c/language_family_c.cpp \
 ../code/language/family_c/language_go.cpp \
 ../code/language/family_c/language_java.cpp \
@@ -21,6 +22,7 @@ OBJS += \
 ./code/language/family_c/language_c.o \
 ./code/language/family_c/language_cpp.o \
 ./code/language/family_c/language_csharp.o \
+./code/language/family_c/language_d.o \
 ./code/language/family_c/language_family_c.o \
 ./code/language/family_c/language_go.o \
 ./code/language/family_c/language_java.o \
@@ -34,6 +36,7 @@ CPP_DEPS += \
 ./code/language/family_c/language_c.d \
 ./code/language/family_c/language_cpp.d \
 ./code/language/family_c/language_csharp.d \
+./code/language/family_c/language_d.d \
 ./code/language/family_c/language_family_c.d \
 ./code/language/family_c/language_go.d \
 ./code/language/family_c/language_java.d \
@@ -47,7 +50,7 @@ CPP_DEPS += \
 code/language/family_c/%.o: ../code/language/family_c/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -std=c++17 -I"${LOC_DIR}/code" -O2 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -std=c++2a -I"${LOC_DIR}/code" -O2 -Wall -c -fmessage-length=0 -fstack-protector-all -Wformat=2 -Wformat-security -Wstrict-overflow -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

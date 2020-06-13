@@ -27,6 +27,7 @@ var hierarchy =
         [ "language_c", "classlanguage__c.html", null ],
         [ "language_cpp", "classlanguage__cpp.html", null ],
         [ "language_csharp", "classlanguage__csharp.html", null ],
+        [ "language_d", "classlanguage__d.html", null ],
         [ "language_go", "classlanguage__go.html", null ],
         [ "language_java", "classlanguage__java.html", null ],
         [ "language_objective_c", "classlanguage__objective__c.html", null ],

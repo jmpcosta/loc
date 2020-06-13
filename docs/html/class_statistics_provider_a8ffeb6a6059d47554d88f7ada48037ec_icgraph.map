@@ -1,8 +1,5 @@
 <map id="exists" name="exists">
-<area shape="rect" id="node2" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set. " alt="" coords="111,56,229,83"/>
-<area shape="rect" id="node5" href="$class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="131,107,209,133"/>
-<area shape="rect" id="node3" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="297,5,410,32"/>
-<area shape="rect" id="node4" href="$classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="505,31,609,57"/>
-<area shape="rect" id="node6" href="$classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="277,107,429,133"/>
-<area shape="rect" id="node7" href="$classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="477,107,637,133"/>
+<area shape="rect" id="node1" title="Verify if a given language statistics exists." alt="" coords="360,5,421,32"/>
+<area shape="rect" id="node2" href="$classreport.html#a9f7633a2ccad558a76d12578a925beed" title="Write statistics for the file set." alt="" coords="180,5,312,32"/>
+<area shape="rect" id="node3" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report." alt="" coords="5,5,132,32"/>
 </map>

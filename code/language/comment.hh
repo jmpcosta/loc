@@ -47,7 +47,7 @@ public:
 
 		/// @brief Obtain the comment start token
 		/// @return Start token string
-		std::string_view 		getStart			( void ) const						{ return start;  			}
+		std::string_view 		getStart			( void ) 							{ return start;  			}
 
 		/// @brief Identify the ending of a comment by a end token
 		/// @param [in] token - string end token
@@ -59,7 +59,7 @@ public:
 
 		/// @brief Obtain the comment end token
 		/// @return End token string
-		std::string_view		getEnd				( void ) const 						{ return end;  				}
+		std::string_view		getEnd				( void ) 	 						{ return end;  				}
 
 		/// @brief Has the comment an end token?
 		/// @return True if comment also comprises an end token. False otherwise

@@ -1,3 +1,4 @@
 <map id="parse" name="parse">
-<area shape="rect" id="node2" href="$classconverter.html#a212ba7aab6137d8a0e1d7c9dd9f6346a" title="Convert a source string to an UTF&#45;8 string. " alt="" coords="108,5,225,32"/>
+<area shape="rect" id="node1" title="Parse the program command line parameters." alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node2" href="$classconverter.html#a212ba7aab6137d8a0e1d7c9dd9f6346a" title="Convert a source string to an UTF&#45;8 string." alt="" coords="112,5,239,32"/>
 </map>

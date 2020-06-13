@@ -1,3 +1,4 @@
 <map id="language_python" name="language_python">
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="28,5,103,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing the python language." alt="" coords="5,80,140,107"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="31,5,114,32"/>
 </map>

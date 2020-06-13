@@ -21,6 +21,7 @@ var annotated_dup =
     [ "language_cpp", "classlanguage__cpp.html", "classlanguage__cpp" ],
     [ "language_csh", "classlanguage__csh.html", "classlanguage__csh" ],
     [ "language_csharp", "classlanguage__csharp.html", "classlanguage__csharp" ],
+    [ "language_d", "classlanguage__d.html", "classlanguage__d" ],
     [ "language_eiffel", "classlanguage__eiffel.html", "classlanguage__eiffel" ],
     [ "language_factory", "classlanguage__factory.html", "classlanguage__factory" ],
     [ "language_family_algol", "classlanguage__family__algol.html", "classlanguage__family__algol" ],

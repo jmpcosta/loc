@@ -1,5 +1,6 @@
 <map id="report" name="report">
-<area shape="rect" id="node2" href="$classcsv_report.html" title="Class responsible for generating a CSV based report. " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" href="$classtext_report.html" title="Class responsible for generating a text based report. " alt="" coords="112,80,195,107"/>
-<area shape="rect" id="node4" href="$classxml_report.html" title="Class responsible for generating a CSV based report. " alt="" coords="219,80,301,107"/>
+<area shape="rect" id="node1" title="Class that represents a generic report." alt="" coords="131,5,193,32"/>
+<area shape="rect" id="node2" href="$classcsv_report.html" title="Class responsible for generating a CSV based report." alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$classtext_report.html" title="Class responsible for generating a text based report." alt="" coords="117,80,207,107"/>
+<area shape="rect" id="node4" href="$classxml_report.html" title="Class responsible for generating a CSV based report." alt="" coords="231,80,322,107"/>
 </map>

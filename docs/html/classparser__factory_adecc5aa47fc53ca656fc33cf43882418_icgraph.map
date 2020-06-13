@@ -1,4 +1,4 @@
 <map id="build" name="build">
-<area shape="rect" id="node2" href="$class_language_provider.html#a05d716b4c1d3863d38ef0366c77bb4e8" title="Obtain a language parser. " alt="" coords="103,5,293,32"/>
-<area shape="rect" id="node3" href="$classparser__factory.html#a1770f449594350a268160a1285d93ceb" title="Class destructor. " alt="" coords="141,56,255,83"/>
+<area shape="rect" id="node1" title="Create a new parser object." alt="" coords="261,5,316,32"/>
+<area shape="rect" id="node2" href="$class_language_provider.html#a05d716b4c1d3863d38ef0366c77bb4e8" title="Obtain a language parser." alt="" coords="5,5,213,32"/>
 </map>

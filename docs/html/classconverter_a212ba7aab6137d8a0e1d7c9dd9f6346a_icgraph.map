@@ -1,4 +1,4 @@
 <map id="UTF8" name="UTF8">
-<area shape="rect" id="node2" href="$classcommand_line.html#ae340cdcd75843b7d243234c71a57b447" title="Parse the program command line parameters. " alt="" coords="108,5,251,32"/>
-<area shape="rect" id="node3" href="$classcommand_line.html#a2da0afe2c52ad625febffad115a8bc52" title="Class destructor. " alt="" coords="299,5,499,32"/>
+<area shape="rect" id="node1" title="Convert a source string to an UTF&#45;8 string." alt="" coords="212,5,268,32"/>
+<area shape="rect" id="node2" href="$classcommand_line.html#ae340cdcd75843b7d243234c71a57b447" title="Parse the program command line parameters." alt="" coords="5,5,164,32"/>
 </map>

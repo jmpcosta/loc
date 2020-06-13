@@ -1,4 +1,5 @@
 <map id="language_family_basic" name="language_family_basic">
-<area shape="rect" id="node3" href="$classlanguage__basic.html" title="Class responsible for implementing the BASIC language. " alt="" coords="27,155,139,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="45,5,120,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a language of the Algol family." alt="" coords="5,80,177,107"/>
+<area shape="rect" id="node3" href="$classlanguage__basic.html" title="Class responsible for implementing the BASIC language." alt="" coords="30,155,153,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="50,5,133,32"/>
 </map>

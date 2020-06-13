@@ -114,6 +114,7 @@ language * language_factory::build( languageType type )
 	case languageType::JAVA: 		p_lang = new language_java();			break;
 	case languageType::CPP: 		p_lang = new language_cpp();			break;
 	case languageType::C: 	 		p_lang = new language_c();				break;
+	case languageType::D: 	 		p_lang = new language_d();				break;
   	case languageType::SWIFT: 		p_lang = new language_swift();			break;
   	case languageType::GO: 	 		p_lang = new language_go();				break;
   	case languageType::CSHARP: 		p_lang = new language_csharp();			break;
@@ -198,7 +199,7 @@ languageType language_factory::getLanguageType( const char * p_fileExtension  )
 
  type = getType( lang[ index ], &p_fileExtension[1] );
 
- TRACE( "Leaving with type:", std::static_cast<int>(type) )
+ TRACE( "Leaving with type:",  static_cast<int>(type) )
 
  return type;
 }

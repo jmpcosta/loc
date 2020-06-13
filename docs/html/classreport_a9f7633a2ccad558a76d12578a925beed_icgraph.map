@@ -1,4 +1,4 @@
 <map id="writeFiles" name="writeFiles">
-<area shape="rect" id="node2" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report. " alt="" coords="132,5,204,32"/>
-<area shape="rect" id="node3" href="$classreport.html#a60af300b1209d2042c3e9d11ecc59308" title="Class constructor. " alt="" coords="252,31,315,57"/>
+<area shape="rect" id="node1" title="Write statistics for the file set." alt="" coords="133,5,219,32"/>
+<area shape="rect" id="node2" href="$classreport.html#a60a86df4dbf4cdc474aae16c0840d155" title="Interface method to generate a report." alt="" coords="5,5,85,32"/>
 </map>

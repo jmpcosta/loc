@@ -1,3 +1,4 @@
 <map id="textReport" name="textReport">
-<area shape="rect" id="node2" href="$classreport.html" title="Class that represents a generic report. " alt="" coords="19,5,74,32"/>
+<area shape="rect" id="node1" title="Class responsible for generating a text based report." alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node2" href="$classreport.html" title="Class that represents a generic report." alt="" coords="20,5,81,32"/>
 </map>

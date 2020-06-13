@@ -1,3 +1,4 @@
 <map id="addStatistics" name="addStatistics">
-<area shape="rect" id="node2" href="$classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones. " alt="" coords="152,5,256,32"/>
+<area shape="rect" id="node1" title="Add the provided statistics to the current ones." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$classstatistics.html#a1d713e18eb431db14279a1df393d3ee2" title="Add the provided statistics to the current ones." alt="" coords="160,5,273,32"/>
 </map>

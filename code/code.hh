@@ -21,12 +21,14 @@
 #include <cstdint>
 #include <iostream>
 
-#include "files/file.hh"
-#include "files/fileSet.hh"
-#include "language/language.hh"
 #include "trace_macros.hh"
 #include "options.hh"
 
+
+#include "files/file.hh"
+#include "files/fileSet.hh"
+#include "language/language.hh"
+#include "parser/parser.hh"
 
 // *****************************************************************************************
 //
@@ -52,6 +54,8 @@ public:
 
 private:
 		// Methods
+		static void		processFile		( parser * p, file * file						);
+
 		/// @brief Process a set of files
 		/// @param [in] files   - The list of file objects to process
 		void			processFiles	( fileSet * files								);

@@ -1,5 +1,6 @@
 <map id="builder" name="builder">
-<area shape="rect" id="node2" href="$classfile.html#a23d63244808172d5d64653b1a3059765" title="Factory method to create file objects. " alt="" coords="166,5,251,32"/>
-<area shape="rect" id="node3" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance. " alt="" coords="113,57,304,98"/>
-<area shape="rect" id="node4" href="$class_statistics_provider.html#a54f027c1a0761667248e61093c09a119" title="Provide a hint to the this provider on how many statistic objects are required for files..." alt="" coords="146,122,271,163"/>
+<area shape="rect" id="node1" title="Factory method for a set of files." alt="" coords="5,64,72,91"/>
+<area shape="rect" id="node2" href="$classfile.html#a23d63244808172d5d64653b1a3059765" title="Factory method to create file objects." alt="" coords="179,5,273,32"/>
+<area shape="rect" id="node3" href="$class_singleton.html#a15a52e5f0d6e7969779a5a2033acbda5" title="Obtain a reference to the singleton instance." alt="" coords="120,57,332,98"/>
+<area shape="rect" id="node4" href="$class_statistics_provider.html#a54f027c1a0761667248e61093c09a119" title="Provide a hint to the this provider on how many statistic objects are required for files." alt="" coords="158,122,294,163"/>
 </map>

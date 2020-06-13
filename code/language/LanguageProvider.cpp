@@ -97,11 +97,12 @@ parser * LanguageProvider::getParser( language * p_lang )
 		  return p_parser;
 		}
 
+
  // If no current language parser exists, create one
  if( p_parser == nullptr )
 	 p_parser = iPFactory.build( pType );
 
- // If we were able to create such parser, add it to the list
+	 // If we were able to create such parser, add it to the list
  if( p_parser != nullptr )
    {
 	 TRACE( "New parser added to list:" )

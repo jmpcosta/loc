@@ -1,4 +1,5 @@
 <map id="language_html" name="language_html">
-<area shape="rect" id="node2" href="$classlanguage__family__sgml.html" title="Class responsible for implementing a SGML language. " alt="" coords="5,80,156,107"/>
-<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="43,5,118,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing the HTML language." alt="" coords="31,155,150,181"/>
+<area shape="rect" id="node2" href="$classlanguage__family__sgml.html" title="Class responsible for implementing a SGML language." alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="49,5,132,32"/>
 </map>

@@ -1,10 +1,6 @@
 <map id="add" name="add">
-<area shape="rect" id="node2" href="$classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file. " alt="" coords="96,5,275,32"/>
-<area shape="rect" id="node3" href="$classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language. " alt="" coords="121,57,250,98"/>
-<area shape="rect" id="node4" href="$classstatistics.html#a0d671aa5a3c77aaad36f58ede633699e" title="Set statistics to an available state. " alt="" coords="139,123,232,149"/>
-<area shape="rect" id="node5" href="$class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones. " alt="" coords="123,174,248,215"/>
-<area shape="rect" id="node6" href="$classstream_parser.html#a64c365468896bbbfa18b725b146e2dfe" title="Class constructor. " alt="" coords="323,152,509,179"/>
-<area shape="rect" id="node7" href="$class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3" title="Get a reference to the global statistics. " alt="" coords="353,203,479,245"/>
-<area shape="rect" id="node8" href="$classtext_report.html#a3f7cd5578b9f10fc5ed8908e44445368" title="Class constructor. " alt="" coords="557,211,709,237"/>
-<area shape="rect" id="node9" href="$classtext_report.html#a46842b3bf7c9e1e41f9bf3e1d1b34ccc" title="Class destructor. " alt="" coords="757,211,917,237"/>
+<area shape="rect" id="node1" title="Add the provided statistics to the current ones." alt="" coords="248,64,295,91"/>
+<area shape="rect" id="node2" href="$classfile_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current file." alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node3" href="$classlanguage_statistics.html#a5eb5d030a65073d7ea0ff1643fa11dd4" title="Add statistics to the current language." alt="" coords="31,57,174,98"/>
+<area shape="rect" id="node4" href="$class_statistics_provider.html#a23eb3a8ab45e93ab15ee711b7956a0e4" title="Add the provided statistics to the current ones." alt="" coords="35,122,171,163"/>
 </map>

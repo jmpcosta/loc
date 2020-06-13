@@ -1,4 +1,4 @@
 <map id="getLanguageType" name="getLanguageType">
-<area shape="rect" id="node2" href="$classlanguage__factory.html#a6f0bb997c95dd465f1f6752427754a1e" title="Class destructor. " alt="" coords="233,5,362,32"/>
-<area shape="rect" id="node3" href="$class_language_provider.html#a5c88a519ce8e2267e0462857de39ff13" title="Obtain the language identifier based on the file extension. " alt="" coords="179,56,416,83"/>
+<area shape="rect" id="node1" title="Obtain a language identifier based on a file extension." alt="" coords="315,5,451,32"/>
+<area shape="rect" id="node2" href="$class_language_provider.html#a5c88a519ce8e2267e0462857de39ff13" title="Obtain the language identifier based on the file extension." alt="" coords="5,5,267,32"/>
 </map>

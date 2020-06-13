@@ -27,9 +27,6 @@
 #include "language/LanguageProvider.hh"
 #include "parser/parser.hh"
 
-using namespace std;
-
-
 
 // *****************************************************************************************
 //
@@ -56,7 +53,7 @@ void parser::parse( file * p_file )
 
  if( p_lang == nullptr )
    {
-	 cerr << "Error when retrieving the language instance. Skipping file parsing: " << p_file->getName() << endl;
+	 std::cerr << "Error when retrieving the language instance. Skipping file parsing: " << p_file->getName() << std::endl;
 	 return;
    }
 

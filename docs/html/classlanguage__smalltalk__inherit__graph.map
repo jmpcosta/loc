@@ -1,3 +1,4 @@
 <map id="language_smalltalk" name="language_smalltalk">
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="35,5,109,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing the Smalltalk language." alt="" coords="5,80,156,107"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="39,5,122,32"/>
 </map>

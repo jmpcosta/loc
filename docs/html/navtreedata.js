@@ -1,3 +1,25 @@
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2019 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var NAVTREE =
 [
   [ "LOC", "index.html", [
@@ -12,8 +34,8 @@ var NAVTREE =
         [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
@@ -21,7 +43,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_language_provider_8hh_source.html",
-"classstatistics.html#a632d2626f70e1cb99de33fd65a2659e4"
+"classstatistics.html#a1d713e18eb431db14279a1df393d3ee2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

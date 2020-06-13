@@ -1,5 +1,6 @@
 <map id="language_family_ecma" name="language_family_ecma">
-<area shape="rect" id="node3" href="$classlanguage__eiffel.html" title="Class responsible for implementing a JavaScript language. " alt="" coords="5,155,115,181"/>
-<area shape="rect" id="node4" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language. " alt="" coords="139,155,277,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="96,5,171,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a language representing the ECMAScript family of languages." alt="" coords="61,80,235,107"/>
+<area shape="rect" id="node3" href="$classlanguage__eiffel.html" title="Class responsible for implementing a JavaScript language." alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language." alt="" coords="153,155,306,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="107,5,189,32"/>
 </map>

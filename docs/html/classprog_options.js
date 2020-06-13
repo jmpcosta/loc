@@ -10,7 +10,7 @@ var classprog_options =
     [ "setFormat", "classprog_options.html#ac05823f1a4a117e5139839a400cb4315", null ],
     [ "setLanguage", "classprog_options.html#a1aabd4b79435d6f34257d2528d029f2c", null ],
     [ "setOutput", "classprog_options.html#ae65c76f2442129abfef459bbf21574da", null ],
-    [ "setPath", "classprog_options.html#a8f39c41cb8dc25eb08948ab3f53c0c88", null ],
     [ "setPath", "classprog_options.html#a92b9d676e4233dfb1ab0fd8fed16bd6a", null ],
+    [ "setPath", "classprog_options.html#a8f39c41cb8dc25eb08948ab3f53c0c88", null ],
     [ "setVerbose", "classprog_options.html#a55aae48c059a4b9f47c47fcf0dba42bf", null ]
 ];

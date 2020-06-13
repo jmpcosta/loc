@@ -1,3 +1,4 @@
 <map id="language_scala" name="language_scala">
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language. " alt="" coords="24,5,99,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing the Scala language." alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="25,5,108,32"/>
 </map>
