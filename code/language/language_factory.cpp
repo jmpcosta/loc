@@ -109,6 +109,8 @@ language * language_factory::build( languageType type )
 	// ECMA family
 	case languageType::JAVASCRIPT:	p_lang = new language_javascript();	 	break;
 	case languageType::EIFFEL:		p_lang = new language_eiffel();		 	break;
+	case languageType::DART:		p_lang = new language_dart();		 	break;
+	case languageType::FSHARP:		p_lang = new language_fsharp();		 	break;
 
 	// C Family
 	case languageType::JAVA: 		p_lang = new language_java();			break;
@@ -130,6 +132,7 @@ language * language_factory::build( languageType type )
   	case languageType::YAML: 		p_lang = new language_yam();			break;
   	case languageType::SMALLTALK: 	p_lang = new language_smalltalk();		break;
   	case languageType::FORTRAN: 	p_lang = new language_fortran();		break;
+  	case languageType::FORTH:	 	p_lang = new language_forth();			break;
   	case languageType::KOTLIN: 		p_lang = new language_kotlin();			break;
   	case languageType::SCALA:	 	p_lang = new language_scala();			break;
 

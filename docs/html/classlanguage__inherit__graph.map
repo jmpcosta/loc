@@ -1,26 +1,26 @@
 <map id="language" name="language">
-<area shape="rect" id="node1" title="Class that represents a generic language." alt="" coords="5,1221,88,1248"/>
+<area shape="rect" id="node1" title="Class that represents a generic language." alt="" coords="5,1247,88,1273"/>
 <area shape="rect" id="node2" href="$classlanguage__batch.html" title="Class responsible for implementing a BATCH language." alt="" coords="165,56,290,83"/>
 <area shape="rect" id="node3" href="$classlanguage__family__algol.html" title="Class responsible for implementing a language of the Algol family." alt="" coords="142,107,313,133"/>
 <area shape="rect" id="node7" href="$classlanguage__family__basic.html" title="Class responsible for implementing a language of the Algol family." alt="" coords="141,195,313,221"/>
 <area shape="rect" id="node9" href="$classlanguage__family__bourne.html" title="Class responsible for implementing a language for the Bourne shell family of languages." alt="" coords="136,284,319,311"/>
 <area shape="rect" id="node13" href="$classlanguage__family__c.html" title="Class responsible for implementing a language of the C family." alt="" coords="155,639,300,665"/>
-<area shape="rect" id="node25" href="$classlanguage__family__ecma.html" title="Class responsible for implementing a language representing the ECMAScript family of languages." alt="" coords="140,968,315,995"/>
-<area shape="rect" id="node28" href="$classlanguage__family__idl.html" title="Class responsible for implementing a language of the C family." alt="" coords="150,1019,305,1045"/>
-<area shape="rect" id="node30" href="$classlanguage__family__lisp.html" title="Class responsible for implementing a language of the Lisp family." alt="" coords="147,1069,308,1096"/>
-<area shape="rect" id="node34" href="$classlanguage__family__pascal.html" title="Class responsible for implementing a language of the C family." alt="" coords="137,1120,317,1147"/>
-<area shape="rect" id="node37" href="$classlanguage__family__prolog.html" title="Class responsible for implementing a language of the C family." alt="" coords="138,1171,317,1197"/>
-<area shape="rect" id="node39" href="$classlanguage__family__sgml.html" title="Class responsible for implementing a SGML language." alt="" coords="142,1221,313,1248"/>
-<area shape="rect" id="node40" href="$classlanguage__forth.html" title="Class responsible for implementing a Forth language." alt="" coords="167,1272,287,1299"/>
-<area shape="rect" id="node41" href="$classlanguage__fortran.html" title="Class responsible for implementing a Fortran language." alt="" coords="161,1323,294,1349"/>
-<area shape="rect" id="node42" href="$classlanguage__kotlin.html" title="Class responsible for implementing the kotlin language." alt="" coords="165,1373,290,1400"/>
-<area shape="rect" id="node43" href="$classlanguage__perl.html" title="Class responsible for implementing the Perl language." alt="" coords="170,1424,285,1451"/>
-<area shape="rect" id="node44" href="$classlanguage__powershell.html" title="Class responsible for implementing the Powershell language." alt="" coords="147,1475,307,1501"/>
-<area shape="rect" id="node45" href="$classlanguage__python.html" title="Class responsible for implementing the python language." alt="" coords="160,1525,295,1552"/>
-<area shape="rect" id="node46" href="$classlanguage__ruby.html" title="Class responsible for implementing the Ruby language." alt="" coords="168,1576,287,1603"/>
-<area shape="rect" id="node47" href="$classlanguage__scala.html" title="Class responsible for implementing the Scala language." alt="" coords="166,1627,289,1653"/>
-<area shape="rect" id="node48" href="$classlanguage__smalltalk.html" title="Class responsible for implementing the Smalltalk language." alt="" coords="152,1677,303,1704"/>
-<area shape="rect" id="node49" href="$classlanguage__yam.html" title="Class responsible for implementing the Perl language." alt="" coords="168,1728,287,1755"/>
+<area shape="rect" id="node25" href="$classlanguage__family__ecma.html" title="Class responsible for implementing a language representing the ECMAScript family of languages." alt="" coords="140,993,315,1020"/>
+<area shape="rect" id="node30" href="$classlanguage__family__idl.html" title="Class responsible for implementing a language of the C family." alt="" coords="150,1044,305,1071"/>
+<area shape="rect" id="node32" href="$classlanguage__family__lisp.html" title="Class responsible for implementing a language of the Lisp family." alt="" coords="147,1095,308,1121"/>
+<area shape="rect" id="node36" href="$classlanguage__family__pascal.html" title="Class responsible for implementing a language of the C family." alt="" coords="137,1145,317,1172"/>
+<area shape="rect" id="node38" href="$classlanguage__family__prolog.html" title="Class responsible for implementing a language of the C family." alt="" coords="138,1196,317,1223"/>
+<area shape="rect" id="node39" href="$classlanguage__family__sgml.html" title="Class responsible for implementing a SGML language." alt="" coords="142,1247,313,1273"/>
+<area shape="rect" id="node40" href="$classlanguage__forth.html" title="Class responsible for implementing a Forth language." alt="" coords="167,1297,287,1324"/>
+<area shape="rect" id="node41" href="$classlanguage__fortran.html" title="Class responsible for implementing a Fortran language." alt="" coords="161,1348,294,1375"/>
+<area shape="rect" id="node42" href="$classlanguage__kotlin.html" title="Class responsible for implementing the kotlin language." alt="" coords="165,1399,290,1425"/>
+<area shape="rect" id="node43" href="$classlanguage__perl.html" title="Class responsible for implementing the Perl language." alt="" coords="170,1449,285,1476"/>
+<area shape="rect" id="node44" href="$classlanguage__powershell.html" title="Class responsible for implementing the Powershell language." alt="" coords="147,1500,307,1527"/>
+<area shape="rect" id="node45" href="$classlanguage__python.html" title="Class responsible for implementing the python language." alt="" coords="160,1551,295,1577"/>
+<area shape="rect" id="node46" href="$classlanguage__ruby.html" title="Class responsible for implementing the Ruby language." alt="" coords="168,1601,287,1628"/>
+<area shape="rect" id="node47" href="$classlanguage__scala.html" title="Class responsible for implementing the Scala language." alt="" coords="166,1652,289,1679"/>
+<area shape="rect" id="node48" href="$classlanguage__smalltalk.html" title="Class responsible for implementing the Smalltalk language." alt="" coords="152,1703,303,1729"/>
+<area shape="rect" id="node49" href="$classlanguage__yam.html" title="Class responsible for implementing the Perl language." alt="" coords="168,1753,287,1780"/>
 <area shape="rect" id="node4" href="$classlanguage__algol.html" title="Class responsible for implementing the Algol language." alt="" coords="387,5,509,32"/>
 <area shape="rect" id="node5" href="$classlanguage__beta.html" title="Class responsible for implementing a C language." alt="" coords="389,56,507,83"/>
 <area shape="rect" id="node6" href="$classlanguage__simula.html" title="Class responsible for implementing a Simula language." alt="" coords="381,107,515,133"/>
@@ -39,13 +39,13 @@
 <area shape="rect" id="node22" href="$classlanguage__php.html" title="Class responsible for implementing a PHP language." alt="" coords="391,765,505,792"/>
 <area shape="rect" id="node23" href="$classlanguage__rust.html" title="Class responsible for implementing a Rust language." alt="" coords="391,816,505,843"/>
 <area shape="rect" id="node24" href="$classlanguage__swift.html" title="Class responsible for implementing a C language." alt="" coords="388,867,508,893"/>
-<area shape="rect" id="node26" href="$classlanguage__eiffel.html" title="Class responsible for implementing a JavaScript language." alt="" coords="387,917,509,944"/>
-<area shape="rect" id="node27" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language." alt="" coords="371,968,525,995"/>
-<area shape="rect" id="node29" href="$classlanguage__idl__omg.html" title="Class responsible for implementing the OMG IDL language." alt="" coords="377,1019,519,1045"/>
-<area shape="rect" id="node31" href="$classlanguage__lisp.html" title="Class responsible for implementing a C language." alt="" coords="392,1069,504,1096"/>
-<area shape="rect" id="node32" href="$classlanguage__logo.html" title="Class responsible for implementing a C language." alt="" coords="389,1120,507,1147"/>
-<area shape="rect" id="node33" href="$classlanguage__scheme.html" title="Class responsible for implementing a C language." alt="" coords="378,1171,518,1197"/>
-<area shape="rect" id="node35" href="$classlanguage__ada.html" title="Class responsible for implementing the Ada language." alt="" coords="391,1221,505,1248"/>
-<area shape="rect" id="node36" href="$classlanguage__pascal.html" title="Class responsible for implementing a C language." alt="" coords="383,1272,513,1299"/>
-<area shape="rect" id="node38" href="$classlanguage__prolog.html" title="Class responsible for implementing a C language." alt="" coords="383,1323,513,1349"/>
+<area shape="rect" id="node26" href="$classlanguage__dart.html" title="Class responsible for implementing the language." alt="" coords="391,917,505,944"/>
+<area shape="rect" id="node27" href="$classlanguage__eiffel.html" title="Class responsible for implementing a JavaScript language." alt="" coords="387,968,509,995"/>
+<area shape="rect" id="node28" href="$classlanguage__fsharp.html" title="Class responsible for implementing a JavaScript language." alt="" coords="383,1019,513,1045"/>
+<area shape="rect" id="node29" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language." alt="" coords="371,1069,525,1096"/>
+<area shape="rect" id="node31" href="$classlanguage__idl__omg.html" title="Class responsible for implementing the OMG IDL language." alt="" coords="377,1120,519,1147"/>
+<area shape="rect" id="node33" href="$classlanguage__lisp.html" title="Class responsible for implementing a C language." alt="" coords="392,1171,504,1197"/>
+<area shape="rect" id="node34" href="$classlanguage__logo.html" title="Class responsible for implementing a C language." alt="" coords="389,1221,507,1248"/>
+<area shape="rect" id="node35" href="$classlanguage__scheme.html" title="Class responsible for implementing a C language." alt="" coords="378,1272,518,1299"/>
+<area shape="rect" id="node37" href="$classlanguage__ada.html" title="Class responsible for implementing the Ada language." alt="" coords="391,1323,505,1349"/>
 </map>

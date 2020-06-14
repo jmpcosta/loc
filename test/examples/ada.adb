@@ -1,18 +1,14 @@
-# *****************************************************************************************
-#
-# File description:
-#
-# Author:	Joao Costa
-# Purpose:	ADA programming language example
-#
-# *****************************************************************************************
+-- *****************************************************************************************
+--
+-- File description:
+--
+-- Author:	Joao Costa
+-- Purpose:	ADA programming language example
+--
+-- *****************************************************************************************
 
-BEGIN{
-	# Do nothing
-}
-{
- # Process each input line here !
-}
-END{
-	print "Hello World\n" ;
-}
+with Ada.Text_IO; use Ada.Text_IO;
+procedure Hello is
+begin
+   Put_Line ("Hello, world!");
+end Hello;

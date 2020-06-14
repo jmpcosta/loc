@@ -24,13 +24,14 @@ enum class languageType
 	C			= 1,
 	CPP 		,
 	CSHARP		,
+	D			,
+	DART		,
 	JAVA		,
 	OBJECTIVE_C ,
 	GO			,
 	PYTHON		,
 	PHP			,
 	SWIFT		,
-	D			,
 	BASH		,
 	BOURNE		,
 	CSH			,
@@ -64,6 +65,7 @@ enum class languageType
 	IDL_OMG		,
 	SCALA		,
 	KOTLIN		,
+	FSHARP		,
 
 	MAX
 };

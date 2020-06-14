@@ -36,7 +36,9 @@ var hierarchy =
         [ "language_swift", "classlanguage__swift.html", null ]
       ] ],
       [ "language_family_ecma", "classlanguage__family__ecma.html", [
+        [ "language_dart", "classlanguage__dart.html", null ],
         [ "language_eiffel", "classlanguage__eiffel.html", null ],
+        [ "language_fsharp", "classlanguage__fsharp.html", null ],
         [ "language_javascript", "classlanguage__javascript.html", null ]
       ] ],
       [ "language_family_idl", "classlanguage__family__idl.html", [

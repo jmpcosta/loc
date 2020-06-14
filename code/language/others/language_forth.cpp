@@ -52,8 +52,8 @@ language_forth::language_forth()
 {
  TRACE_POINT
 
- lang = languageType::FORTRAN;
- name = "Fortran";
+ lang = languageType::FORTH;
+ name = "Forth";
 
  comment * p_cmt = new comment();
  p_cmt->setStart( LANGUAGE_FORTH_TOKEN_SINGLE );

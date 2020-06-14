@@ -34,7 +34,7 @@
 // *****************************************************************************************
 
 // Comment tokens
-const char * LANGUAGE_EIFFEL_TOKEN_SINGLE = LOC_TOKEN_DOUBLE_SLASH;
+const char * LANGUAGE_EIFFEL_TOKEN_SINGLE = LOC_TOKEN_COMMENT_DHYFEN;
 
 
 // *****************************************************************************************

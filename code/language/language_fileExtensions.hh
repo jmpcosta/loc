@@ -39,7 +39,7 @@ typedef loc_language_info	LanguageInfo;
 
 
 constexpr const LanguageInfo LOC_LANGUAGE_PF_A[] = {
-				{ languageType::ADA, 		"ada" 	},
+				{ languageType::ADA, 		"adb" 	},
 				{ languageType::ADA, 		"ads" 	},
 				{ languageType::ALGOL, 		"algol" },
 				{ languageType::AWK, 		"awk" 	},
@@ -73,20 +73,25 @@ constexpr LanguageInfo LOC_LANGUAGE_PF_C[] = {
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_D[] = {
 				{ languageType::D, 			"d" 	},
+				{ languageType::DART, 		"dart" 	},
 				{ languageType::none, 		"" 		}
 
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_E[] = {
-				{ languageType::EIFFEL,	"	e" 	},
-				{ languageType::none, 		"" 		}
+				{ languageType::EIFFEL,		"e"	},
+				{ languageType::none, 		"" 	}
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_F[] = {
-				{ languageType::FORTH,		"fth" 	},
-				{ languageType::FORTRAN,	"f77" 	},
-				{ languageType::FORTRAN,	"f90" 	},
-				{ languageType::none, 		"" 		}
+				{ languageType::FORTH,		"fth" 		},
+				{ languageType::FORTRAN,	"f77" 		},
+				{ languageType::FORTRAN,	"f90" 		},
+				{ languageType::FSHARP,		"fs" 		},
+				{ languageType::FSHARP,		"fsi" 		},
+				{ languageType::FSHARP,		"fsx" 		},
+				{ languageType::FSHARP,		"fsscript" 	},
+				{ languageType::none, 		"" 			}
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_G[] = {

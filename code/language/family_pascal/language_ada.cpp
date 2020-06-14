@@ -14,8 +14,6 @@
 //
 // *****************************************************************************************
 
-// Include OSAPI C++ headers
-
 // Include Standard headers
 
 // Import project declarations

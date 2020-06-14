@@ -4,18 +4,24 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../code/language/family_ecma/language_dart.cpp \
 ../code/language/family_ecma/language_eiffel.cpp \
 ../code/language/family_ecma/language_family_ecma.cpp \
+../code/language/family_ecma/language_fsharp.cpp \
 ../code/language/family_ecma/language_javascript.cpp 
 
 OBJS += \
+./code/language/family_ecma/language_dart.o \
 ./code/language/family_ecma/language_eiffel.o \
 ./code/language/family_ecma/language_family_ecma.o \
+./code/language/family_ecma/language_fsharp.o \
 ./code/language/family_ecma/language_javascript.o 
 
 CPP_DEPS += \
+./code/language/family_ecma/language_dart.d \
 ./code/language/family_ecma/language_eiffel.d \
 ./code/language/family_ecma/language_family_ecma.d \
+./code/language/family_ecma/language_fsharp.d \
 ./code/language/family_ecma/language_javascript.d 
 
 
