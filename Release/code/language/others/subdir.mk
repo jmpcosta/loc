@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../code/language/others/language_assembler.cpp \
 ../code/language/others/language_forth.cpp \
 ../code/language/others/language_fortran.cpp \
 ../code/language/others/language_kotlin.cpp \
@@ -15,6 +16,7 @@ CPP_SRCS += \
 ../code/language/others/language_yam.cpp 
 
 OBJS += \
+./code/language/others/language_assembler.o \
 ./code/language/others/language_forth.o \
 ./code/language/others/language_fortran.o \
 ./code/language/others/language_kotlin.o \
@@ -26,6 +28,7 @@ OBJS += \
 ./code/language/others/language_yam.o 
 
 CPP_DEPS += \
+./code/language/others/language_assembler.d \
 ./code/language/others/language_forth.d \
 ./code/language/others/language_fortran.d \
 ./code/language/others/language_kotlin.d \

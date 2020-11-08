@@ -135,6 +135,7 @@ language * language_factory::build( languageType type )
   	case languageType::FORTH:	 	p_lang = new language_forth();			break;
   	case languageType::KOTLIN: 		p_lang = new language_kotlin();			break;
   	case languageType::SCALA:	 	p_lang = new language_scala();			break;
+  	case languageType::ASSEMBLER: 	p_lang = new language_assembler();		break;
 
   	// Bourne family
   	case languageType::BOURNE: 		p_lang = new language_bourne(); 		break;

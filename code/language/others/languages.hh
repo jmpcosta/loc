@@ -25,5 +25,6 @@
 #include "language/others/language_smalltalk.hh"
 #include "language/others/language_scala.hh"
 #include "language/others/language_kotlin.hh"
+#include "language/others/language_assembler.hh"
 
 #endif // LOC_OTHER_LANGUAGES_HH_

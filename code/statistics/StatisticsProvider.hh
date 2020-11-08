@@ -107,9 +107,9 @@ template <typename F> void StatisticsProvider::walk( F func )
  // For every element of the vector, call passed function on it
  for( auto i : iLanguages )
     {
-	 std::string str = LOC_EMPTY_STRING;
+	  std::string str = LOC_EMPTY_STRING;
 
-	 str += std::to_string( i.getNumberLanguages() );
+	  str += std::to_string( i.getNumberLanguages() );
 
 	  func( str.c_str(), prov.getLanguage( i.getType() )->getName(), i.getStatistics() );
     }

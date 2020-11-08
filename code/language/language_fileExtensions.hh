@@ -43,6 +43,7 @@ constexpr const LanguageInfo LOC_LANGUAGE_PF_A[] = {
 				{ languageType::ADA, 		"ads" 	},
 				{ languageType::ALGOL, 		"algol" },
 				{ languageType::AWK, 		"awk" 	},
+				{ languageType::ASSEMBLER,	"asm" 	},
 				{ languageType::none, 		"" 		}
 };
 

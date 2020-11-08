@@ -64,7 +64,7 @@ public:
 
 		/// @brief Compare the language type, i.e. the language ID
 		/// @return True if language IDs are equal. False otherwise
-		bool					operator==( languageType key )									{ return (key == iType); }
+		bool			operator==			( languageType key )								{ return (key == iType); }
 
 
 private:

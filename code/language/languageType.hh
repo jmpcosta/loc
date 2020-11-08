@@ -66,6 +66,7 @@ enum class languageType
 	SCALA		,
 	KOTLIN		,
 	FSHARP		,
+	ASSEMBLER	,
 
 	MAX
 };
