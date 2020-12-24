@@ -21,5 +21,6 @@
 #include "language/family_ecma/language_eiffel.hh"
 #include "language/family_ecma/language_dart.hh"
 #include "language/family_ecma/language_fsharp.hh"
+#include "language/family_ecma/language_haxe.hh"
 
 #endif // LOC_FAMILY_ECMA_LANGUAGES_HH_

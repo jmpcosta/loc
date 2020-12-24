@@ -22,6 +22,7 @@ enum class languageType
 	unknown		= -1,
 	none		= 0,
 	C			= 1,
+	ML			,
 	CPP 		,
 	CSHARP		,
 	D			,
@@ -67,6 +68,24 @@ enum class languageType
 	KOTLIN		,
 	FSHARP		,
 	ASSEMBLER	,
+
+	// New languages
+	ODIN		,
+	ZIG			,
+	CRYSTAL		,
+	HAXE		,
+	CLOSURE		,
+	ELENA		,
+	JULIA		,
+	LUA			,
+	MODULA		,
+	NIM			,
+	OCAML		,
+	VALA		,
+	TCL			,
+	JADE		,
+	HASKELL		,
+	MAKE		,
 
 	MAX
 };

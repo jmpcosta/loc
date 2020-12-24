@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import C++ system headers
+#include <filesystem>
 
 // Import project headers
 #include "trace_macros.hh"
@@ -46,9 +47,9 @@ public:
 		language 	*		build				( languageType lang					);
 
 		/// @brief Obtain a language identifier based on a file extension
-		/// @param [in] fileExtension - The given file extension
+		/// @param [in] pathname - The path to a file
 		/// @return The language identifier for the file extension
-		languageType		getLanguageType		( const char   *     fileExtension	);
+		languageType		getLanguageType		( const std::filesystem::path & pathname );
 
 private:
 
@@ -58,6 +59,16 @@ private:
 		/// @param [in] what  - The file extension to search
 		/// @return The language identifier for the file extension
 		languageType		getType				( void * where, const char * what	);
+
+		/// @brief Obtain a language identifier based on a file name
+		/// @param [in] filename - Name of file to test for know language mappings
+		/// @return The language identifier
+		languageType		getType				( const std::string & filename		);
+
+		/// @brief Retrieve the index for the file extensions array
+		/// @param [in] c - First meaningfull file extension character
+		/// @return The array index
+		int					getAlphaIndex		( char c 							);
 
 		// Variables
 		void * lang[ LOG_LANGUAGE_FEXT_AZ ];

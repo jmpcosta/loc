@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LOC
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Count lines of code</div>
   </td>
@@ -85,9 +85,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af0c78f9ed1fabd465bc13caaa3d34776"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlanguage.html">language</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776">build</a> (languageType lang)</td></tr>
 <tr class="memdesc:af0c78f9ed1fabd465bc13caaa3d34776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new language object.  <a href="classlanguage__factory.html#af0c78f9ed1fabd465bc13caaa3d34776">More...</a><br /></td></tr>
 <tr class="separator:af0c78f9ed1fabd465bc13caaa3d34776"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad819a6b810d0f7bc942e163a4338aad"><td class="memItemLeft" align="right" valign="top">languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__factory.html#aad819a6b810d0f7bc942e163a4338aad">getLanguageType</a> (const char *fileExtension)</td></tr>
-<tr class="memdesc:aad819a6b810d0f7bc942e163a4338aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language identifier based on a file extension.  <a href="classlanguage__factory.html#aad819a6b810d0f7bc942e163a4338aad">More...</a><br /></td></tr>
-<tr class="separator:aad819a6b810d0f7bc942e163a4338aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481242b3a65af2ae4a658529f2640a8c"><td class="memItemLeft" align="right" valign="top">languageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlanguage__factory.html#a481242b3a65af2ae4a658529f2640a8c">getLanguageType</a> (const std::filesystem::path &amp;pathname)</td></tr>
+<tr class="memdesc:a481242b3a65af2ae4a658529f2640a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a language identifier based on a file extension.  <a href="classlanguage__factory.html#a481242b3a65af2ae4a658529f2640a8c">More...</a><br /></td></tr>
+<tr class="separator:a481242b3a65af2ae4a658529f2640a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for creating new specific languages. </p>
@@ -132,8 +132,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aad819a6b810d0f7bc942e163a4338aad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad819a6b810d0f7bc942e163a4338aad">&#9670;&nbsp;</a></span>getLanguageType()</h2>
+<a id="a481242b3a65af2ae4a658529f2640a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481242b3a65af2ae4a658529f2640a8c">&#9670;&nbsp;</a></span>getLanguageType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,8 +141,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">languageType getLanguageType </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fileExtension</em></td><td>)</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>pathname</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -151,7 +151,7 @@ Here is the caller graph for this function:</div>
 <p>Obtain a language identifier based on a file extension. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fileExtension</td><td>- The given file extension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>- The path to a file </td></tr>
   </table>
   </dd>
 </dl>
@@ -159,10 +159,10 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classlanguage__factory_aad819a6b810d0f7bc942e163a4338aad_icgraph.png" border="0" usemap="#classlanguage__factory_aad819a6b810d0f7bc942e163a4338aad_icgraph" alt=""/></div>
-<map name="classlanguage__factory_aad819a6b810d0f7bc942e163a4338aad_icgraph" id="classlanguage__factory_aad819a6b810d0f7bc942e163a4338aad_icgraph">
+<div class="center"><img src="classlanguage__factory_a481242b3a65af2ae4a658529f2640a8c_icgraph.png" border="0" usemap="#classlanguage__factory_a481242b3a65af2ae4a658529f2640a8c_icgraph" alt=""/></div>
+<map name="classlanguage__factory_a481242b3a65af2ae4a658529f2640a8c_icgraph" id="classlanguage__factory_a481242b3a65af2ae4a658529f2640a8c_icgraph">
 <area shape="rect" title="Obtain a language identifier based on a file extension." alt="" coords="315,5,451,32"/>
-<area shape="rect" href="class_language_provider.html#a5c88a519ce8e2267e0462857de39ff13" title="Obtain the language identifier based on the file extension." alt="" coords="5,5,267,32"/>
+<area shape="rect" href="class_language_provider.html#a481242b3a65af2ae4a658529f2640a8c" title="Obtain the language identifier based on the file extension." alt="" coords="5,5,267,32"/>
 </map>
 </div>
 

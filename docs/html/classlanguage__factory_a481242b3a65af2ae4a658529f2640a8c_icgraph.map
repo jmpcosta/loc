@@ -1,0 +1,4 @@
+<map id="getLanguageType" name="getLanguageType">
+<area shape="rect" id="node1" title="Obtain a language identifier based on a file extension." alt="" coords="315,5,451,32"/>
+<area shape="rect" id="node2" href="$class_language_provider.html#a481242b3a65af2ae4a658529f2640a8c" title="Obtain the language identifier based on the file extension." alt="" coords="5,5,267,32"/>
+</map>

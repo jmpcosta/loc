@@ -77,5 +77,7 @@ constexpr const char *	LOC_TOKEN_COMMENT_DQUOTE		= "\"";
 constexpr const char *	LOC_TOKEN_COMMENT_DHYFEN		= "--";
 constexpr const char *	LOC_TOKEN_COMMENT_REM			= "rem";
 constexpr const char *	LOC_TOKEN_COMENT_DBSLASH		= "\\";
+constexpr const char *	LOC_TOKEN_COMENT_PARSTAR		= "(*";
+constexpr const char *	LOC_TOKEN_COMENT_STARPAR		= "*)";
 
 #endif // LOC_DEFS_HH_

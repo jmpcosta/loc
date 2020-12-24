@@ -32,7 +32,7 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing a C language
+/// @brief Class responsible for implementing the Lisp language
 class language_lisp : public language_family_lisp
 {
 public:

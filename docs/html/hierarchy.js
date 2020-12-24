@@ -8,7 +8,10 @@ var hierarchy =
     [ "fileSet", "classfile_set.html", null ],
     [ "fileStatistics", "classfile_statistics.html", null ],
     [ "language", "classlanguage.html", [
+      [ "language_assembler", "classlanguage__assembler.html", null ],
       [ "language_batch", "classlanguage__batch.html", null ],
+      [ "language_crystal", "classlanguage__crystal.html", null ],
+      [ "language_elena", "classlanguage__elena.html", null ],
       [ "language_family_algol", "classlanguage__family__algol.html", [
         [ "language_algol", "classlanguage__algol.html", null ],
         [ "language_beta", "classlanguage__beta.html", null ],
@@ -20,7 +23,9 @@ var hierarchy =
       [ "language_family_bourne", "classlanguage__family__bourne.html", [
         [ "language_bash", "classlanguage__bash.html", null ],
         [ "language_bourne", "classlanguage__bourne.html", null ],
-        [ "language_csh", "classlanguage__csh.html", null ]
+        [ "language_csh", "classlanguage__csh.html", null ],
+        [ "language_make", "classlanguage__make.html", null ],
+        [ "language_tcl", "classlanguage__tcl.html", null ]
       ] ],
       [ "language_family_c", "classlanguage__family__c.html", [
         [ "language_awk", "classlanguage__awk.html", null ],
@@ -31,26 +36,36 @@ var hierarchy =
         [ "language_go", "classlanguage__go.html", null ],
         [ "language_java", "classlanguage__java.html", null ],
         [ "language_objective_c", "classlanguage__objective__c.html", null ],
+        [ "language_odin", "classlanguage__odin.html", null ],
         [ "language_php", "classlanguage__php.html", null ],
         [ "language_rust", "classlanguage__rust.html", null ],
-        [ "language_swift", "classlanguage__swift.html", null ]
+        [ "language_swift", "classlanguage__swift.html", null ],
+        [ "language_vala", "classlanguage__vala.html", null ],
+        [ "language_zig", "classlanguage__zig.html", null ]
       ] ],
       [ "language_family_ecma", "classlanguage__family__ecma.html", [
         [ "language_dart", "classlanguage__dart.html", null ],
         [ "language_eiffel", "classlanguage__eiffel.html", null ],
         [ "language_fsharp", "classlanguage__fsharp.html", null ],
+        [ "language_haxe", "classlanguage__haxe.html", null ],
         [ "language_javascript", "classlanguage__javascript.html", null ]
       ] ],
       [ "language_family_idl", "classlanguage__family__idl.html", [
         [ "language_idl_omg", "classlanguage__idl__omg.html", null ]
       ] ],
       [ "language_family_lisp", "classlanguage__family__lisp.html", [
+        [ "language_closure", "classlanguage__closure.html", null ],
         [ "language_lisp", "classlanguage__lisp.html", null ],
         [ "language_logo", "classlanguage__logo.html", null ],
         [ "language_scheme", "classlanguage__scheme.html", null ]
       ] ],
+      [ "language_family_ml", "classlanguage__family__ml.html", [
+        [ "language_ml", "classlanguage__ml.html", null ],
+        [ "language_ocaml", "classlanguage__ocaml.html", null ]
+      ] ],
       [ "language_family_pascal", "classlanguage__family__pascal.html", [
         [ "language_ada", "classlanguage__ada.html", null ],
+        [ "language_modula", "classlanguage__modula.html", null ],
         [ "language_pascal", "classlanguage__pascal.html", null ]
       ] ],
       [ "language_family_prolog", "classlanguage__family__prolog.html", [
@@ -62,7 +77,12 @@ var hierarchy =
       ] ],
       [ "language_forth", "classlanguage__forth.html", null ],
       [ "language_fortran", "classlanguage__fortran.html", null ],
+      [ "language_haskell", "classlanguage__haskell.html", null ],
+      [ "language_jade", "classlanguage__jade.html", null ],
+      [ "language_julia", "classlanguage__julia.html", null ],
       [ "language_kotlin", "classlanguage__kotlin.html", null ],
+      [ "language_lua", "classlanguage__lua.html", null ],
+      [ "language_nim", "classlanguage__nim.html", null ],
       [ "language_perl", "classlanguage__perl.html", null ],
       [ "language_powershell", "classlanguage__powershell.html", null ],
       [ "language_python", "classlanguage__python.html", null ],

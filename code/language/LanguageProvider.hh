@@ -19,6 +19,8 @@
 // Import C++ system headers
 #include <vector>
 #include <mutex>
+#include <filesystem>
+#include <string>
 
 // Import application headers
 #include "trace_macros.hh"
@@ -59,9 +61,9 @@ public:
 		language		*			getLanguage			( languageType which	);
 
 		/// @brief Obtain the language identifier based on the file extension
-		/// @param [in] ext - File extension
+		/// @param [in] pathname - Path to file
 		/// @return Language Identifier
-		languageType				getLanguageType		( const char * ext 			);
+		languageType				getLanguageType		( const std::filesystem::path & pathname );
 
 private:
 		// Methods

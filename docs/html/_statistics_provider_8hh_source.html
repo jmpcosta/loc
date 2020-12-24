@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LOC
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Count lines of code</div>
   </td>
@@ -145,9 +145,9 @@ $(document).ready(function(){initNavTree('_statistics_provider_8hh_source.html',
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span class="comment">// For every element of the vector, call passed function on it</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; <span class="keywordflow">for</span>( <span class="keyword">auto</span> i : iLanguages )</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;     std::string str = LOC_EMPTY_STRING;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      std::string str = LOC_EMPTY_STRING;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;     str += std::to_string( i.getNumberLanguages() );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      str += std::to_string( i.getNumberLanguages() );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      func( str.c_str(), prov.<a class="code" href="class_language_provider.html#a3f4b7fbcc746bd8ba6703663b8668395">getLanguage</a>( i.getType() )-&gt;<a class="code" href="classlanguage.html#a275d09fc4da8953e60e448e97ab9b15c">getName</a>(), i.getStatistics() );</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('_statistics_provider_8hh_source.html',
 <div class="ttc" id="aclass_singleton_html"><div class="ttname"><a href="class_singleton.html">Singleton</a></div><div class="ttdoc">Define a generic Singleton.</div><div class="ttdef"><b>Definition:</b> singleton.hh:24</div></div>
 <div class="ttc" id="aclass_statistics_provider_html_a9cb0bc012bd78f3fe69e3893fa21969f"><div class="ttname"><a href="class_statistics_provider.html#a9cb0bc012bd78f3fe69e3893fa21969f">StatisticsProvider::~StatisticsProvider</a></div><div class="ttdeci">~StatisticsProvider(void)</div><div class="ttdoc">Class destructor.</div><div class="ttdef"><b>Definition:</b> StatisticsProvider.cpp:37</div></div>
 <div class="ttc" id="aclass_statistics_provider_html_acd47682552d7039bc3583e5c64c094c3"><div class="ttname"><a href="class_statistics_provider.html#acd47682552d7039bc3583e5c64c094c3">StatisticsProvider::getGlobal</a></div><div class="ttdeci">statistics &amp; getGlobal(void)</div><div class="ttdoc">Get a reference to the global statistics.</div><div class="ttdef"><b>Definition:</b> StatisticsProvider.hh:57</div></div>
-<div class="ttc" id="aclass_language_provider_html"><div class="ttname"><a href="class_language_provider.html">LanguageProvider</a></div><div class="ttdoc">This class provides acts as a service provider of languages.</div><div class="ttdef"><b>Definition:</b> LanguageProvider.hh:40</div></div>
+<div class="ttc" id="aclass_language_provider_html"><div class="ttname"><a href="class_language_provider.html">LanguageProvider</a></div><div class="ttdoc">This class provides acts as a service provider of languages.</div><div class="ttdef"><b>Definition:</b> LanguageProvider.hh:42</div></div>
 <div class="ttc" id="aclassfile_statistics_html"><div class="ttname"><a href="classfile_statistics.html">fileStatistics</a></div><div class="ttdoc">Class responsible for holding statistics for a file.</div><div class="ttdef"><b>Definition:</b> fileStatistics.hh:35</div></div>
 <div class="ttc" id="aclass_statistics_provider_html_a54f027c1a0761667248e61093c09a119"><div class="ttname"><a href="class_statistics_provider.html#a54f027c1a0761667248e61093c09a119">StatisticsProvider::setCapacity</a></div><div class="ttdeci">void setCapacity(std::size_t size)</div><div class="ttdoc">Provide a hint to the this provider on how many statistic objects are required for files.</div><div class="ttdef"><b>Definition:</b> StatisticsProvider.cpp:104</div></div>
 <div class="ttc" id="aclass_statistics_provider_html_ab4feca00c7593b1ca92ce4f1298f929c"><div class="ttname"><a href="class_statistics_provider.html#ab4feca00c7593b1ca92ce4f1298f929c">StatisticsProvider::getNumberLanguages</a></div><div class="ttdeci">std::size_t getNumberLanguages(void)</div><div class="ttdoc">Get the number of parser processed languages.</div><div class="ttdef"><b>Definition:</b> StatisticsProvider.hh:48</div></div>

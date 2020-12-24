@@ -48,7 +48,6 @@ file::file( const std::string & filename, languageType lType )
 
 file * file::builder( const path & pathname )
 {
- std::string		filename, fileExtension;
  file 			*	p_file		= nullptr;
  languageType		lType		= languageType::unknown;
 
@@ -58,16 +57,14 @@ file * file::builder( const path & pathname )
   {
 	  if( is_regular_file( pathname ) )
 	    {
-		  filename 		= pathname.generic_string();
-		  fileExtension = pathname.extension().generic_string();
 
-		  lType = LanguageProvider::getInstance().getLanguageType( fileExtension.c_str() );
+		  lType = LanguageProvider::getInstance().getLanguageType( pathname );
 
 		  // If supported language, add it to the list
 		  if( lType != languageType::unknown )
 		    {
 			  TRACE( "New file:", pathname )
-			  p_file = new file( filename, lType );
+			  p_file = new file( pathname.generic_string(), lType );
 		    }
 	    }
 

@@ -31,7 +31,7 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing a C language
+/// @brief Class responsible for implementing the Pascal language
 class language_pascal : public language_family_pascal
 {
 public:

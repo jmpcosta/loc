@@ -19,5 +19,6 @@
 // Import all family language headers
 #include "language/family_pascal/language_pascal.hh"
 #include "language/family_pascal/language_ada.hh"
+#include "language/family_pascal/language_modula.hh"
 
 #endif // LOC_FAMILY_PASCAL_LANGUAGES_HH_

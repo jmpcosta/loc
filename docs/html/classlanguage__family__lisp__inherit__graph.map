@@ -1,7 +1,8 @@
 <map id="language_family_lisp" name="language_family_lisp">
-<area shape="rect" id="node1" title="Class responsible for implementing a language of the Lisp family." alt="" coords="119,80,281,107"/>
-<area shape="rect" id="node3" href="$classlanguage__lisp.html" title="Class responsible for implementing a C language." alt="" coords="5,155,117,181"/>
-<area shape="rect" id="node4" href="$classlanguage__logo.html" title="Class responsible for implementing a C language." alt="" coords="141,155,259,181"/>
-<area shape="rect" id="node5" href="$classlanguage__scheme.html" title="Class responsible for implementing a C language." alt="" coords="283,155,423,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="159,5,241,32"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a language of the Lisp family." alt="" coords="210,80,371,107"/>
+<area shape="rect" id="node3" href="$classlanguage__closure.html" title="Class responsible for implementing the Closure language." alt="" coords="5,155,141,181"/>
+<area shape="rect" id="node4" href="$classlanguage__lisp.html" title="Class responsible for implementing the Lisp language." alt="" coords="165,155,277,181"/>
+<area shape="rect" id="node5" href="$classlanguage__logo.html" title="Class responsible for implementing a C language." alt="" coords="301,155,419,181"/>
+<area shape="rect" id="node6" href="$classlanguage__scheme.html" title="Class responsible for implementing a C language." alt="" coords="443,155,583,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="249,5,332,32"/>
 </map>

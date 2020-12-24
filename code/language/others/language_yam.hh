@@ -32,7 +32,7 @@
 // *****************************************************************************************
 
 
-/// @brief Class responsible for implementing the Perl language
+/// @brief Class responsible for implementing the YAM language
 class language_yam : public language
 {
 public:

@@ -69,6 +69,8 @@ constexpr LanguageInfo LOC_LANGUAGE_PF_C[] = {
 				{ languageType::COBOL, 		"cbl" 	},
 				{ languageType::COBOL, 		"cob" 	},
 				{ languageType::COBOL, 		"cpy" 	},
+				{ languageType::CLOSURE,	"clj" 	},
+				{ languageType::CRYSTAL,	"cr" 	},
 				{ languageType::none, 		"" 		}
 };
 
@@ -107,8 +109,10 @@ constexpr LanguageInfo LOC_LANGUAGE_PF_H[] = {
 				{ languageType::CPP,		"hpp" 	},
 				{ languageType::HTML,		"htm" 	},
 				{ languageType::HTML,		"html" 	},
+				{ languageType::HAXE,		"hx" 	},
 				{ languageType::CPP,		"hxx" 	},
 				{ languageType::CPP,		"h++" 	},
+				{ languageType::HASKELL,	"hs" 	},
 				{ languageType::none, 		"" 		}
 };
 
@@ -121,6 +125,8 @@ constexpr LanguageInfo LOC_LANGUAGE_PF_J[] = {
 				{ languageType::JAVASCRIPT,	"js"	},
 				{ languageType::JAVA,		"jav"	},
 				{ languageType::JAVA,		"java"	},
+				{ languageType::JADE,		"jade"	},
+				{ languageType::JULIA,		"jl"	},
 				{ languageType::none, 		""		}
 };
 
@@ -130,22 +136,31 @@ constexpr LanguageInfo LOC_LANGUAGE_PF_K[] = {
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_L[] = {
-				{ languageType::LOGO, 		"lg"	},
+				{ languageType::ELENA, 		"l"		},
 				{ languageType::LISP,		"lisp"	},
+				{ languageType::LOGO, 		"lg"	},
+				{ languageType::HASKELL,	"lhs" 	},
+				{ languageType::LUA,		"lua"	},
 				{ languageType::none, 		""		}
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_M[] = {
 				{ languageType::OBJECTIVE_C,"m"		},
+				{ languageType::MODULA, 	"m2"	},
+				{ languageType::MODULA, 	"m3"	},
+				{ languageType::OCAML, 		"ml"	},
+				{ languageType::OCAML, 		"mli"	},
 				{ languageType::POWERSHELL, "msh2"	},
 				{ languageType::none, 		""		}
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_N[] = {
+				{ languageType::NIM, 		"nim"	},
 				{ languageType::none, 		""		}
 };
 
 constexpr LanguageInfo LOC_LANGUAGE_PF_O[] = {
+				{ languageType::ODIN,		"odin"	},
 				{ languageType::none,		""		}
 };
 
@@ -179,11 +194,14 @@ constexpr LanguageInfo LOC_LANGUAGE_PF_S[] = {
 				{ languageType::SIMULA,		"sim"	},
 				{ languageType::BOURNE,		"sh"	},
 				{ languageType::SMALLTALK,	"sm"	},
+				{ languageType::ML,			"sml"	},
 				{ languageType::SWIFT,		"swift" },
 				{ languageType::none, 		""		}
 };
 
 constexpr const LanguageInfo LOC_LANGUAGE_PF_T[] = {
+				{ languageType::TCL,		"tbc"   },
+				{ languageType::TCL,		"tcl"   },
 				{ languageType::none, 		""		}
 };
 
@@ -192,6 +210,7 @@ constexpr const LanguageInfo LOC_LANGUAGE_PF_U[] = {
 };
 
 constexpr const LanguageInfo LOC_LANGUAGE_PF_V[] = {
+				{ languageType::VALA,		"vala"	},
 				{ languageType::none, 		""		}
 };
 
@@ -212,10 +231,16 @@ constexpr const LanguageInfo LOC_LANGUAGE_PF_Y[] = {
 };
 
 constexpr const LanguageInfo LOC_LANGUAGE_PF_Z[] = {
+				{ languageType::ZIG,		"zig"	},
 				{ languageType::none, 		""		}
 };
 
 
+constexpr const LanguageInfo LOC_LANGUAGE_FILENAMES[] = {
+				{ languageType::MAKE,		"Makefile"	},
+				{ languageType::MAKE,		"makefile"	},
+				{ languageType::none, 		""		}
+};
 
 
 

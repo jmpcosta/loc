@@ -132,8 +132,8 @@ bool LanguageProvider::isLanguageAvailable( languageType which )
 }
 
 
-languageType LanguageProvider::getLanguageType( const char * p_fileExtension )
+languageType LanguageProvider::getLanguageType( const std::filesystem::path & pathname )
 {
- return iLFactory.getLanguageType( p_fileExtension );
+ return iLFactory.getLanguageType( pathname );
 }
 

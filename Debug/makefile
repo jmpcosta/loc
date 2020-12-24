@@ -16,6 +16,7 @@ RM := rm -rf
 -include code/language/family_sgml/subdir.mk
 -include code/language/family_prolog/subdir.mk
 -include code/language/family_pascal/subdir.mk
+-include code/language/family_ml/subdir.mk
 -include code/language/family_lisp/subdir.mk
 -include code/language/family_idl/subdir.mk
 -include code/language/family_ecma/subdir.mk

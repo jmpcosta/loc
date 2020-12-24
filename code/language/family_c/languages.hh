@@ -28,5 +28,8 @@
 #include "language/family_c/language_objective_c.hh"
 #include "language/family_c/language_swift.hh"
 #include "language/family_c/language_d.hh"
+#include "language/family_c/language_zig.hh"
+#include "language/family_c/language_odin.hh"
+#include "language/family_c/language_vala.hh"
 
 #endif // LOC_FAMILY_C_LANGUAGES_HH_

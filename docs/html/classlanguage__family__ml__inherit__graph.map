@@ -1,0 +1,6 @@
+<map id="language_family_ml" name="language_family_ml">
+<area shape="rect" id="node1" title="Class responsible for implementing a language of the ML family." alt="" coords="52,80,207,107"/>
+<area shape="rect" id="node3" href="$classlanguage__ml.html" title="Class responsible for implementing the ML language." alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node4" href="$classlanguage__ocaml.html" title="Class responsible for implementing the OCAML language." alt="" coords="137,155,266,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="88,5,171,32"/>
+</map>

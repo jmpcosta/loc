@@ -1,7 +1,9 @@
 <map id="language_family_bourne" name="language_family_bourne">
-<area shape="rect" id="node1" title="Class responsible for implementing a language for the Bourne shell family of languages." alt="" coords="126,80,309,107"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a language for the Bourne shell family of languages." alt="" coords="273,80,455,107"/>
 <area shape="rect" id="node3" href="$classlanguage__bash.html" title="Class responsible for implementing a BASH language." alt="" coords="5,155,125,181"/>
 <area shape="rect" id="node4" href="$classlanguage__bourne.html" title="Class responsible for implementing a Bourne shell language." alt="" coords="150,155,285,181"/>
 <area shape="rect" id="node5" href="$classlanguage__csh.html" title="Class responsible for implementing a CSH shell language." alt="" coords="309,155,419,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="176,5,259,32"/>
+<area shape="rect" id="node6" href="$classlanguage__make.html" title="Class responsible for implementing a Makefile language." alt="" coords="444,155,569,181"/>
+<area shape="rect" id="node7" href="$classlanguage__tcl.html" title="Class responsible for implementing a TCL shell language." alt="" coords="594,155,699,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="323,5,405,32"/>
 </map>

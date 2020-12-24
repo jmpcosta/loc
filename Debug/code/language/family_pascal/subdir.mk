@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../code/language/family_pascal/language_ada.cpp \
 ../code/language/family_pascal/language_family_pascal.cpp \
+../code/language/family_pascal/language_modula.cpp \
 ../code/language/family_pascal/language_pascal.cpp 
 
 OBJS += \
 ./code/language/family_pascal/language_ada.o \
 ./code/language/family_pascal/language_family_pascal.o \
+./code/language/family_pascal/language_modula.o \
 ./code/language/family_pascal/language_pascal.o 
 
 CPP_DEPS += \
 ./code/language/family_pascal/language_ada.d \
 ./code/language/family_pascal/language_family_pascal.d \
+./code/language/family_pascal/language_modula.d \
 ./code/language/family_pascal/language_pascal.d 
 
 

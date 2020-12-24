@@ -20,6 +20,7 @@
 #include "language/family_lisp/language_lisp.hh"
 #include "language/family_lisp/language_logo.hh"
 #include "language/family_lisp/language_scheme.hh"
+#include "language/family_lisp/language_closure.hh"
 
 
 #endif // LOC_FAMILY_LISP_LANGUAGES_HH_

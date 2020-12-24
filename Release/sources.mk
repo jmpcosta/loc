@@ -33,6 +33,7 @@ code/language/family_c \
 code/language/family_ecma \
 code/language/family_idl \
 code/language/family_lisp \
+code/language/family_ml \
 code/language/family_pascal \
 code/language/family_prolog \
 code/language/family_sgml \

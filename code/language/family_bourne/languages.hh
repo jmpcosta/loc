@@ -20,7 +20,7 @@
 #include "language/family_bourne/language_csh.hh"
 #include "language/family_bourne/language_bash.hh"
 #include "language/family_bourne/language_bourne.hh"
-
-
+#include "language/family_bourne/language_tcl.hh"
+#include "language/family_bourne/language_make.hh"
 
 #endif // LOC_FAMILY_BOURNE_LANGUAGES_HH_

@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../code/language/family_ecma/language_eiffel.cpp \
 ../code/language/family_ecma/language_family_ecma.cpp \
 ../code/language/family_ecma/language_fsharp.cpp \
+../code/language/family_ecma/language_haxe.cpp \
 ../code/language/family_ecma/language_javascript.cpp 
 
 OBJS += \
@@ -15,6 +16,7 @@ OBJS += \
 ./code/language/family_ecma/language_eiffel.o \
 ./code/language/family_ecma/language_family_ecma.o \
 ./code/language/family_ecma/language_fsharp.o \
+./code/language/family_ecma/language_haxe.o \
 ./code/language/family_ecma/language_javascript.o 
 
 CPP_DEPS += \
@@ -22,6 +24,7 @@ CPP_DEPS += \
 ./code/language/family_ecma/language_eiffel.d \
 ./code/language/family_ecma/language_family_ecma.d \
 ./code/language/family_ecma/language_fsharp.d \
+./code/language/family_ecma/language_haxe.d \
 ./code/language/family_ecma/language_javascript.d 
 
 

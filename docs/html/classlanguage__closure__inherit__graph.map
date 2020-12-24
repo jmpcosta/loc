@@ -1,0 +1,5 @@
+<map id="language_closure" name="language_closure">
+<area shape="rect" id="node1" title="Class responsible for implementing the Closure language." alt="" coords="18,155,154,181"/>
+<area shape="rect" id="node2" href="$classlanguage__family__lisp.html" title="Class responsible for implementing a language of the Lisp family." alt="" coords="5,80,167,107"/>
+<area shape="rect" id="node3" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="45,5,127,32"/>
+</map>

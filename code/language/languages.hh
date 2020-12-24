@@ -28,6 +28,7 @@
 #include "language/family_lisp/languages.hh"
 #include "language/family_algol/languages.hh"
 #include "language/family_idl/languages.hh"
+#include "language/family_ml/languages.hh"
 #include "language/others/languages.hh"
 
 

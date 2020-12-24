@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../code/language/family_ecma/language_eiffel.cpp \
 ../code/language/family_ecma/language_family_ecma.cpp \
 ../code/language/family_ecma/language_fsharp.cpp \
+../code/language/family_ecma/language_haxe.cpp \
 ../code/language/family_ecma/language_javascript.cpp 
 
 OBJS += \
@@ -15,6 +16,7 @@ OBJS += \
 ./code/language/family_ecma/language_eiffel.o \
 ./code/language/family_ecma/language_family_ecma.o \
 ./code/language/family_ecma/language_fsharp.o \
+./code/language/family_ecma/language_haxe.o \
 ./code/language/family_ecma/language_javascript.o 
 
 CPP_DEPS += \
@@ -22,6 +24,7 @@ CPP_DEPS += \
 ./code/language/family_ecma/language_eiffel.d \
 ./code/language/family_ecma/language_family_ecma.d \
 ./code/language/family_ecma/language_fsharp.d \
+./code/language/family_ecma/language_haxe.d \
 ./code/language/family_ecma/language_javascript.d 
 
 
@@ -29,7 +32,7 @@ CPP_DEPS += \
 code/language/family_ecma/%.o: ../code/language/family_ecma/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -std=c++17 -I"${LOC_DIR}/code" -O2 -Wall -c -fmessage-length=0 -fstack-protector-all -Wformat=2 -Wformat-security -Wstrict-overflow -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -std=c++17 -I"${LOC_DIR}/code" -O2 -flto -Wall -c -fmessage-length=0 -fstack-protector-all -Wformat=2 -Wformat-security -Wstrict-overflow -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

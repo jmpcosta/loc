@@ -1,8 +1,9 @@
 <map id="language_family_ecma" name="language_family_ecma">
-<area shape="rect" id="node1" title="Class responsible for implementing a language representing the ECMAScript family of languages." alt="" coords="193,80,367,107"/>
+<area shape="rect" id="node1" title="Class responsible for implementing a language representing the ECMAScript family of languages." alt="" coords="269,80,443,107"/>
 <area shape="rect" id="node3" href="$classlanguage__dart.html" title="Class responsible for implementing the language." alt="" coords="5,155,120,181"/>
 <area shape="rect" id="node4" href="$classlanguage__eiffel.html" title="Class responsible for implementing a JavaScript language." alt="" coords="144,155,267,181"/>
 <area shape="rect" id="node5" href="$classlanguage__fsharp.html" title="Class responsible for implementing a JavaScript language." alt="" coords="291,155,421,181"/>
-<area shape="rect" id="node6" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language." alt="" coords="446,155,599,181"/>
-<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="239,5,321,32"/>
+<area shape="rect" id="node6" href="$classlanguage__haxe.html" title="Class responsible for implementing a JavaScript language." alt="" coords="445,155,565,181"/>
+<area shape="rect" id="node7" href="$classlanguage__javascript.html" title="Class responsible for implementing a JavaScript language." alt="" coords="590,155,743,181"/>
+<area shape="rect" id="node2" href="$classlanguage.html" title="Class that represents a generic language." alt="" coords="315,5,397,32"/>
 </map>

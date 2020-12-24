@@ -18,6 +18,7 @@
 
 // Include Standard headers
 #include <cstring>
+#include <string>
 
 // Import project headers
 #include "trace.hh"
@@ -29,6 +30,7 @@
 #include "language/language_fileExtensions.hh"
 #include "language_factory.hh"
 
+using namespace std;
 
 // *****************************************************************************************
 //
@@ -92,6 +94,27 @@ inline languageType language_factory::getType( void * p_language, const char * e
 }
 
 
+inline languageType language_factory::getType( const string & filename )
+{
+  if( filename.size() == 0 ) return languageType::unknown;;
+
+  TRACE( "Entering with File name:", filename )
+
+  int i = 0;
+  while( LOC_LANGUAGE_FILENAMES[ i ].id != languageType::none )
+       {
+	     TRACE( "Searching filename: ", LOC_LANGUAGE_FILENAMES[ i ].name )
+
+	  	 if( strcmp( filename.c_str(), LOC_LANGUAGE_FILENAMES[ i ].name ) == 0 )
+	  		 return LOC_LANGUAGE_FILENAMES[ i ].id;
+
+	     i++;
+       }
+
+  return languageType::unknown;;
+}
+
+
 language * language_factory::build( languageType type )
 {
  language * p_lang	= nullptr;
@@ -111,6 +134,7 @@ language * language_factory::build( languageType type )
 	case languageType::EIFFEL:		p_lang = new language_eiffel();		 	break;
 	case languageType::DART:		p_lang = new language_dart();		 	break;
 	case languageType::FSHARP:		p_lang = new language_fsharp();		 	break;
+	case languageType::HAXE:		p_lang = new language_haxe();		 	break;
 
 	// C Family
 	case languageType::JAVA: 		p_lang = new language_java();			break;
@@ -124,6 +148,9 @@ language * language_factory::build( languageType type )
   	case languageType::OBJECTIVE_C:	p_lang = new language_objective_c(); 	break;
   	case languageType::PHP:			p_lang = new language_php();		 	break;
   	case languageType::AWK:			p_lang = new language_awk();		 	break;
+  	case languageType::ODIN:		p_lang = new language_odin();		 	break;
+  	case languageType::ZIG:			p_lang = new language_zig();		 	break;
+  	case languageType::VALA:		p_lang = new language_vala();		 	break;
 
   	// Other languages
   	case languageType::PYTHON: 		p_lang = new language_python();			break;
@@ -136,26 +163,34 @@ language * language_factory::build( languageType type )
   	case languageType::KOTLIN: 		p_lang = new language_kotlin();			break;
   	case languageType::SCALA:	 	p_lang = new language_scala();			break;
   	case languageType::ASSEMBLER: 	p_lang = new language_assembler();		break;
+  	case languageType::LUA:		 	p_lang = new language_lua();			break;
+  	case languageType::ELENA: 		p_lang = new language_elena();			break;
+  	case languageType::CRYSTAL: 	p_lang = new language_crystal();		break;
+  	case languageType::JULIA:	 	p_lang = new language_julia();			break;
+  	case languageType::NIM:		 	p_lang = new language_nim();			break;
+  	case languageType::JADE:	 	p_lang = new language_jade();			break;
+  	case languageType::HASKELL:	 	p_lang = new language_haskell();		break;
 
   	// Bourne family
   	case languageType::BOURNE: 		p_lang = new language_bourne(); 		break;
   	case languageType::BASH:		p_lang = new language_bash();	 		break;
   	case languageType::CSH:			p_lang = new language_csh();	 		break;
+  	case languageType::TCL:			p_lang = new language_tcl();	 		break;
+  	case languageType::MAKE:		p_lang = new language_make();	 		break;
 
   	// Windows languages
   	case languageType::BATCH:		p_lang = new language_batch();	 		break;
   	case languageType::POWERSHELL:	p_lang = new language_powershell();	 	break;
+  	case languageType::BASIC:		p_lang = new language_basic();		 	break;
 
   	// Prolog
   	case languageType::PROLOG:		p_lang = new language_prolog();		 	break;
-
-  	// Prolog
-  	case languageType::BASIC:		p_lang = new language_basic();		 	break;
 
   	// Lisp family
   	case languageType::LISP:		p_lang = new language_lisp();		 	break;
   	case languageType::LOGO:		p_lang = new language_logo();		 	break;
   	case languageType::SCHEME:		p_lang = new language_scheme();		 	break;
+  	case languageType::CLOSURE:		p_lang = new language_closure();	 	break;
 
   	// Algol family
   	case languageType::ALGOL:		p_lang = new language_algol();		 	break;
@@ -165,6 +200,11 @@ language * language_factory::build( languageType type )
   	// Pascal family
   	case languageType::PASCAL:		p_lang = new language_pascal();		 	break;
   	case languageType::ADA:			p_lang = new language_ada();		 	break;
+  	case languageType::MODULA:		p_lang = new language_modula();		 	break;
+
+  	// ML family
+  	case languageType::ML:			p_lang = new language_ml();			 	break;
+  	case languageType::OCAML:		p_lang = new language_ocaml();		 	break;
 
   	 // Interface description language family
   	case languageType::IDL_OMG:		p_lang = new language_idl_omg();	 	break;
@@ -178,30 +218,50 @@ language * language_factory::build( languageType type )
 }
 
 
-languageType language_factory::getLanguageType( const char * p_fileExtension  )
+inline int language_factory::getAlphaIndex( char c )
+{
+ int index = -1;
+
+ if( c < 123 && c > 64 )
+   {
+	 if(      c < 91 )	index = c - 65;	// Capital letters
+	 else if( c > 96 )	index = c - 97;	// Small letters
+   }
+
+ return index;
+}
+
+languageType language_factory::getLanguageType( const std::filesystem::path & pathname  )
 {
  languageType type = languageType::unknown;
+ string filename, fileExtension;
 
  TRACE_ENTER
 
- if( p_fileExtension    == nullptr || p_fileExtension[0] != '.' )	return type;
- if( p_fileExtension[1] == '\0' )	 								return type;
+ try
+ {
+	 filename 		= pathname.filename().generic_string();
+	 fileExtension	= pathname.extension().generic_string();
 
- // Which index to use?
- int index = -1;
+	 const char * p_ext	= fileExtension.c_str();
+	 char e 		= p_ext[1];
 
- if( p_fileExtension[1] < 123 && p_fileExtension[1] > 64 )
-   {
-	 if( p_fileExtension[1] < 91 )		index = p_fileExtension[1] - 65;	// Capital letters
-	 else
-		 if( p_fileExtension[1] > 96 )	index = p_fileExtension[1] - 97;	// Small letters
-   }
+	 if( p_ext == nullptr || p_ext[0] != '.' || e == '\0')	// No filename extension found, use filename itself to search for a language mapping
+		 type = getType( filename );
+	 else													// There is a filename extension, use it when searching the language
+	   {
+		 int index = getAlphaIndex( e );
 
- if( index == -1 )	return type;		// No valid first letter of the file extension was found
+		 if( index == -1 )	return type;		// No valid first letter of the file extension was found
 
- TRACE( "File extension index:", index )
+		 TRACE( "File extension index:", index )
 
- type = getType( lang[ index ], &p_fileExtension[1] );
+		 type = getType( lang[ index ], &p_ext[1] );
+	   }
+ }
+
+ catch( const std::exception & e )
+      { std::cerr << "Exception found: " << e.what() << std::endl; }
 
  TRACE( "Leaving with type:",  static_cast<int>(type) )
 
